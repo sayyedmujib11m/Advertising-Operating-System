@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>United Steps - Awareness</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_orange.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_orange.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="39eecaf7-2d7b-8057-8565-d26beb25755e" class="page sans" data-notion-page-icon="/icons/photo-landscape_orange.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/></div><h1 class="page-title" dir="auto">United Steps - Awareness</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="39eecaf7-2d7b-80ed-b0d8-c95b7832c536" class="image" data-notion-image="United%20Steps%20-%20Awareness/1000374141.jpg" dir="ltr"><a href="United%20Steps%20-%20Awareness/1000374141.jpg"><img style="width:300px" src="United%20Steps%20-%20Awareness/1000374141.jpg"/></a></figure><figure id="39eecaf7-2d7b-80dc-9156-f5c55d6d3c7e" class="image" data-notion-image="United%20Steps%20-%20Awareness/1000374140.jpg" dir="ltr"><a href="United%20Steps%20-%20Awareness/1000374140.jpg"><img style="width:300px" src="United%20Steps%20-%20Awareness/1000374140.jpg"/></a></figure><hr id="39eecaf7-2d7b-80c9-98c1-fda883dc2294" dir="auto"/><p id="39eecaf7-2d7b-803e-8d3e-ca3fb5bf7faf" class="" dir="auto">Basic Information</p><p id="39eecaf7-2d7b-8014-ad31-e6a77f9ef87e" class="" dir="auto">Industry: Awareness / Empathy Campaign</p><p id="39eecaf7-2d7b-8013-8af3-e765b82cbf8e" class="" dir="auto">Advertisement Type: Social Awareness</p><p id="39eecaf7-2d7b-8042-9844-dda3b01dae5f" class="" dir="auto">Medium: Social Media / Print</p><hr id="39eecaf7-2d7b-8083-9c33-ea7e52d32dd2" dir="auto"/><p id="39eecaf7-2d7b-80f9-b99b-e5407494abcc" class="" dir="auto">Business Goal</p><p id="39eecaf7-2d7b-8080-8fee-db3c4954892e" class="" dir="auto">Encourage empathy by reminding people that every pair of shoes carries an unseen life story.</p><hr id="39eecaf7-2d7b-8097-a18b-fcb9f7b84bf9" dir="auto"/><p id="39eecaf7-2d7b-80b4-a361-e2ab73fe6629" class="" dir="auto">Communication Objective</p><p id="39eecaf7-2d7b-8090-a431-ed82c7a469fc" class="" dir="auto">You cannot understand someone&#x27;s struggles until you experience their journey.</p><hr id="39eecaf7-2d7b-808c-af97-fa407fe51ff2" dir="auto"/><p id="39eecaf7-2d7b-80a1-90d8-c65568b8cf10" class="" dir="auto">Communication Direction</p><p id="39eecaf7-2d7b-80d8-bd7e-ca6cdd8ae78c" class="" dir="auto">Every shoe carries an untold story.</p><hr id="39eecaf7-2d7b-80b5-b26a-d5cc6406962e" dir="auto"/><p id="39eecaf7-2d7b-803e-b29a-c23ab2852780" class="" dir="auto">Big Idea</p><p id="39eecaf7-2d7b-8088-bf4d-ecd157915a56" class="" dir="auto">The owner&#x27;s life is revealed through the shadow cast by the shoe, rather than the shoe itself.</p><p id="39eecaf7-2d7b-8047-ad42-fbf73ad71645" class="" dir="auto">The shoe remains ordinary.</p><p id="39eecaf7-2d7b-80ff-9f93-e160fd4a615d" class="" dir="auto">The shadow reveals the extraordinary.</p><hr id="39eecaf7-2d7b-80fa-96bd-f92908a03518" dir="auto"/><p id="39eecaf7-2d7b-80c2-bd02-c3b19a82060b" class="" dir="auto">Visual Thinking System</p><p id="39eecaf7-2d7b-8049-be87-f7e5b4b662f4" class="" dir="auto">Primary</p><p id="39eecaf7-2d7b-809b-b0c9-d4051ae57baa" class="" dir="auto">Shadow Storytelling (Existing System)</p><p id="39eecaf7-2d7b-80df-bae6-c6346a79497b" class="" dir="auto">The advertisement communicates through information hidden inside the shadow rather than inside the visible object.</p><hr id="39eecaf7-2d7b-80d4-8358-c10a6cef601d" dir="auto"/><p id="39eecaf7-2d7b-80a9-b8d8-f31df48ecab7" class="" dir="auto">Structure</p><p id="39eecaf7-2d7b-8093-810f-d339136acfd7" class="" dir="auto">Product<br/>↓<br/>Shadow<br/>↓<br/>Hidden Identity / Story<br/>↓<br/>Emotional Meaning</p><hr id="39eecaf7-2d7b-8040-a614-c1fb9c59d5d9" dir="auto"/><p id="39eecaf7-2d7b-806d-b246-d5c9d5ba010a" class="" dir="auto">Campaign Executions</p><p id="39eecaf7-2d7b-8013-81d7-e7c053d4368e" class="" dir="auto">Execution 01 — Running Shoes</p><p id="39eecaf7-2d7b-804e-8f72-c39d3ea505a8" class="" dir="auto">Visible Object:</p><p id="39eecaf7-2d7b-802b-8fc2-d957e427de94" class="" dir="auto">Running shoes</p><p id="39eecaf7-2d7b-802b-872d-dcaf26a376f1" class="" dir="auto">Shadow:</p><p id="39eecaf7-2d7b-802b-9622-f502daf6f63c" class="" dir="auto">Disabled runner using a prosthetic blade</p><p id="39eecaf7-2d7b-8096-b141-db68098fda38" class="" dir="auto">Communication:</p><p id="39eecaf7-2d7b-80f7-bc9c-fef834b7a3d9" class="" dir="auto">Those running shoes belong to someone carrying a struggle you cannot immediately see.</p><hr id="39eecaf7-2d7b-808f-8b34-ef43b78643c1" dir="auto"/><p id="39eecaf7-2d7b-80a3-9b04-f050c01b9b06" class="" dir="auto">Execution 02 — Hiking Boots</p><p id="39eecaf7-2d7b-8056-b6be-ef6e24bd9511" class="" dir="auto">Visible Object:</p><p id="39eecaf7-2d7b-80f9-8798-ffddb0f2a162" class="" dir="auto">Hiking boots</p><p id="39eecaf7-2d7b-80b5-b334-f7b22f785fb4" class="" dir="auto">Shadow:</p><p id="39eecaf7-2d7b-8019-9429-e528d3e04165" class="" dir="auto">Mountain climber suspended on a rope</p><p id="39eecaf7-2d7b-8089-a74b-d2a6334bd22f" class="" dir="auto">Communication:</p><p id="39eecaf7-2d7b-804c-bc7f-d903b971f850" class="" dir="auto">These boots represent years of dangerous climbs and determination.</p><hr id="39eecaf7-2d7b-8042-b416-e072f70dcba6" dir="auto"/><p id="39eecaf7-2d7b-802a-97e0-d22bcedd2ab7" class="" dir="auto">Both executions preserve exactly the same communication system.</p><p id="39eecaf7-2d7b-80a5-ab72-fe2c15b472bb" class="" dir="auto">Only the life story changes.</p><hr id="39eecaf7-2d7b-8085-bc7b-da3fd8f8eceb" dir="auto"/><p id="39eecaf7-2d7b-80eb-88f1-f3de2580e495" class="" dir="auto">Supporting Systems</p><p id="39eecaf7-2d7b-8073-8efa-e95160ae7704" class="" dir="auto">Symbolic Association</p><p id="39eecaf7-2d7b-800e-a2a1-d6cf45017493" class="" dir="auto">Emotional Storytelling</p><p id="39eecaf7-2d7b-80a4-bafe-d56b7526cbb8" class="" dir="auto">Minimal Composition</p><hr id="39eecaf7-2d7b-8002-8300-cba30ba51a37" dir="auto"/><p id="39eecaf7-2d7b-8075-8494-ede4268fb66e" class="" dir="auto">Graphic Design Observations</p><p id="39eecaf7-2d7b-8084-907a-ef77aeeffac8" class="" dir="auto">Composition</p><p id="39eecaf7-2d7b-809a-a7f3-fdc6e6461cc1" class="" dir="auto">Outstanding.</p><p id="39eecaf7-2d7b-80a8-81e6-c3ce63f2a5af" class="" dir="auto">Almost 80% negative space.</p><p id="39eecaf7-2d7b-80a9-b9bc-d586da359d6d" class="" dir="auto">Nothing competes with the idea.</p><hr id="39eecaf7-2d7b-8080-a299-c04c468ddc6b" dir="auto"/><p id="39eecaf7-2d7b-80c6-adb3-ca3f4930b8b7" class="" dir="auto">Hierarchy</p><p id="39eecaf7-2d7b-80c6-88e3-db3bd97cc1e4" class="" dir="auto">Eye flow:</p><p id="39eecaf7-2d7b-804f-9b2b-d0871a020506" class="" dir="auto">Shoes →</p><p id="39eecaf7-2d7b-80f9-a04a-c35427212b2a" class="" dir="auto">Shadow →</p><p id="39eecaf7-2d7b-80ce-9214-c0db6ef66444" class="" dir="auto">Headline →</p><p id="39eecaf7-2d7b-80cb-b6c7-fc135a61f709" class="" dir="auto">Copy</p><p id="39eecaf7-2d7b-803f-b623-dbf4c841fb52" class="" dir="auto">Perfect.</p><hr id="39eecaf7-2d7b-8025-892e-c2328eb1ad60" dir="auto"/><p id="39eecaf7-2d7b-80b4-9088-ea3f5dc2b258" class="" dir="auto">Colour</p><p id="39eecaf7-2d7b-80b6-a889-deaf41fb924b" class="" dir="auto">Single background colour.</p><p id="39eecaf7-2d7b-80ec-a67c-fa5ec1a9f8a4" class="" dir="auto">No unnecessary elements.</p><p id="39eecaf7-2d7b-8059-8256-cf8928a06220" class="" dir="auto">The simplicity strengthens the metaphor.</p><hr id="39eecaf7-2d7b-804a-be86-e09e9bd4135b" dir="auto"/><p id="39eecaf7-2d7b-80a9-8e9e-f33aadf7b33a" class="" dir="auto">Photography</p><p id="39eecaf7-2d7b-806d-b1dc-f383d8aed63e" class="" dir="auto">Very believable lighting.</p><p id="39eecaf7-2d7b-809f-9d0b-ecae20814780" class="" dir="auto">The shadow feels physically natural.</p><p id="39eecaf7-2d7b-8073-ace1-ee9a6aa42a06" class="" dir="auto">Without convincing lighting, the campaign would fail.</p><hr id="39eecaf7-2d7b-8012-b809-d28735fade4d" dir="auto"/><p id="39eecaf7-2d7b-809d-b4a9-c05457384573" class="" dir="auto">Why This Campaign Works</p><p id="39eecaf7-2d7b-8065-9397-ce6300e20de9" class="" dir="auto">Instead of saying</p><blockquote id="39eecaf7-2d7b-8030-947a-fcf2c6b08b8f" class="" dir="auto">&quot;Don&#x27;t judge people.&quot;</blockquote><p id="39eecaf7-2d7b-80bd-8f30-ce6ca8a24ede" class="" dir="auto">it asks</p><blockquote id="39eecaf7-2d7b-804d-a318-da5e63deb9cf" class="" dir="auto">&quot;What if their shoes could reveal their life?&quot;</blockquote><p id="39eecaf7-2d7b-8099-af6b-d11f70e9e0d3" class="" dir="auto">The shadow becomes the storyteller.</p><hr id="39eecaf7-2d7b-80d1-9ddf-d029449b1e8a" dir="auto"/><p id="39eecaf7-2d7b-80f5-8f23-ddd4dfa662ea" class="" dir="auto">Reusable Knowledge</p><p id="39eecaf7-2d7b-808e-935a-f8b582a8403f" class="" dir="auto">Excellent for</p><p id="39eecaf7-2d7b-80c4-a185-f64abb9416f3" class="" dir="auto">NGO</p><p id="39eecaf7-2d7b-80d2-8464-c04595e9cb7b" class="" dir="auto">Mental Health</p><p id="39eecaf7-2d7b-8042-8fc1-f100aae5a696" class="" dir="auto">Disability Awareness</p><p id="39eecaf7-2d7b-804a-82fd-da6ace4e74f3" class="" dir="auto">Veterans</p><p id="39eecaf7-2d7b-8080-ab09-fd129c020e9d" class="" dir="auto">Insurance</p><p id="39eecaf7-2d7b-80b7-a872-e281dd146a48" class="" dir="auto">Healthcare</p><p id="39eecaf7-2d7b-8028-9f60-edbd68e6e2c5" class="" dir="auto">Education</p><p id="39eecaf7-2d7b-80cc-8b3c-d1485630f6f8" class="" dir="auto">CSR</p><p id="39eecaf7-2d7b-803c-b79e-e1d8b247482b" class="" dir="auto">Recruitment</p><p id="39eecaf7-2d7b-805c-83ad-f92c4091734d" class="" dir="auto">Sports</p><p id="39eecaf7-2d7b-80eb-a62c-e1f0b4d63da6" class="" dir="auto">Social Campaigns</p><hr id="39eecaf7-2d7b-8080-b6b3-fa4c43e252f5" dir="auto"/><p id="39eecaf7-2d7b-804e-9bdf-db923a9b5eb7" class="" dir="auto">Why This Campaign Is Valuable</p><p id="39eecaf7-2d7b-80c7-8852-f89affcbb4a0" class="" dir="auto">This campaign demonstrates that hidden information doesn&#x27;t always need to be inside the object.</p><p id="39eecaf7-2d7b-804f-8043-f8025c3f7a69" class="" dir="auto">Sometimes it can exist in:</p><p id="39eecaf7-2d7b-8065-b072-e8057684bef6" class="" dir="auto">reflection</p><p id="39eecaf7-2d7b-80a1-94cb-c04d7ffba432" class="" dir="auto">shadow</p><p id="39eecaf7-2d7b-8068-a9a9-e4a1fd6fa9fb" class="" dir="auto">silhouette</p><p id="39eecaf7-2d7b-808a-b848-ecfd77edb9ab" class="" dir="auto">negative space</p><p id="39eecaf7-2d7b-802b-9951-cd3396f5efeb" class="" dir="auto">This expands how the Shadow Storytelling system can be applied.</p><hr id="39eecaf7-2d7b-8011-8ebd-d6725ee7194a" dir="auto"/><p id="39eecaf7-2d7b-804e-92af-cb48e8079188" class="" dir="auto">Knowledge Contribution</p><p id="39eecaf7-2d7b-8024-9bb7-cad66f0199b2" class="" dir="auto">Communication Strategy: ★★★★★</p><p id="39eecaf7-2d7b-80b5-8bdc-cad2a20411bf" class="" dir="auto">Visual Systems: ★★★★★</p><p id="39eecaf7-2d7b-808f-baf5-ff87be52a340" class="" dir="auto">Graphic Design: ★★★★★</p><p id="39eecaf7-2d7b-8086-b2bd-cb8aff96cf80" class="" dir="auto">Photography: ★★★★★</p><p id="39eecaf7-2d7b-80ce-93d7-f747ed2aa86e" class="" dir="auto">Typography: ★★★☆☆</p><p id="39eecaf7-2d7b-80d4-ad0f-ce43be131146" class="" dir="auto">Festival Integration: N/A</p><p id="39eecaf7-2d7b-8032-9758-c67b40ac8e31" class="" dir="auto">Overall Contribution: Exceptional</p><hr id="39eecaf7-2d7b-8056-a8e7-ce51c6a044e6" dir="auto"/><h2 id="39fecaf7-2d7b-80be-8e9e-d46dec351ecf" class="" dir="auto">Related Modules</h2><p id="39fecaf7-2d7b-8039-afb0-ebca88298eeb" class="" dir="auto">Section A<br/>• Module F — Communication Objective @f</p><p id="39fecaf7-2d7b-800a-a61c-fe93417da2f0" class="" dir="auto">Section B<br/>• Module G — Big Idea</p><p id="39fecaf7-2d7b-802e-b4ca-ea2eaeb732e0" class="" dir="auto">Section C<br/>• Shadow Storytelling<br/>• Product Integration</p><hr id="f1007bcc-027a-4204-a581-01300edbf8e4" dir="auto"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

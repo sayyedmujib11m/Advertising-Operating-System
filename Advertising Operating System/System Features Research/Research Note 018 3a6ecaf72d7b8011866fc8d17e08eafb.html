@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Research Note 018</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a6ecaf7-2d7b-8011-866f-c8d17e08eafb" class="page sans"><header><h1 class="page-title" dir="auto">Research Note 018</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h1 id="3a6ecaf7-2d7b-802e-941a-d9078203016d" class="" dir="auto">Title</h1><p id="3a6ecaf7-2d7b-8004-822f-e16548a7080a" class="" dir="auto"><strong>Advertisement Library Maturity Assessment &amp; Evidence Readiness Report</strong></p><hr id="3a6ecaf7-2d7b-80e9-bc2a-e028f4d7690c" dir="auto"/><h2 id="3a6ecaf7-2d7b-8046-a3b3-cd023142cfb5" class="" dir="auto">Purpose</h2><p id="3a6ecaf7-2d7b-803f-8ff0-f6999f5bf1e5" class="" dir="auto">To evaluate whether the Advertisement Library has reached sufficient evidence density to continue developing future modules of the Advertising Operating System.</p><p id="3a6ecaf7-2d7b-804b-97ce-d3627713a610" class="" dir="auto">This research does not evaluate individual advertisements.</p><p id="3a6ecaf7-2d7b-808c-95d6-cf5400671a63" class="" dir="auto">Instead, it evaluates the Advertisement Library as an evidence system.</p><hr id="3a6ecaf7-2d7b-800e-a8b5-d174b9af49fa" dir="auto"/><h1 id="3a6ecaf7-2d7b-8068-b53e-da5456730525" class="" dir="auto">Initial Observation</h1><p id="3a6ecaf7-2d7b-80ab-9c5e-e4aa694ade47" class="" dir="auto">When the Advertisement Library was first created, each advertisement represented an isolated observation.</p><p id="3a6ecaf7-2d7b-8059-9d5a-f38d1e1cb714" class="" dir="auto">The objective was simply to reverse engineer successful advertisements.</p><p id="3a6ecaf7-2d7b-806d-9537-c428799f263a" class="" dir="auto">After analysing the current library, the role of the Advertisement Library has fundamentally changed.</p><p id="3a6ecaf7-2d7b-80ca-a3d9-fd9b3f70887d" class="" dir="auto">It is no longer functioning as a collection of advertisement analyses.</p><p id="3a6ecaf7-2d7b-80a8-9ba1-d0a174076f40" class="" dir="auto">It is functioning as an evidence base from which reusable advertising knowledge is emerging.</p><p id="3a6ecaf7-2d7b-802f-baa5-f5a683d73593" class="" dir="auto">This is an important architectural milestone.</p><p id="3a6ecaf7-2d7b-8063-9db6-fe1ae7e840af" class="" dir="auto">The Operating System is beginning to derive theory from evidence instead of validating pre-existing theory.</p><hr id="3a6ecaf7-2d7b-80ba-8321-dbb199a1c14f" dir="auto"/><h1 id="3a6ecaf7-2d7b-80c1-a377-c4c861f6b65f" class="" dir="auto">Major Discovery 01</h1><h2 id="3a6ecaf7-2d7b-80d5-a03e-dfaad32a65ce" class="" dir="auto">The Library Has Transitioned From Individual Examples To Evidence Clusters</h2><p id="3a6ecaf7-2d7b-80c5-b355-c547612df92a" class="" dir="auto">Earlier, advertisements existed independently.</p><p id="3a6ecaf7-2d7b-8044-a446-ee38409aaf1e" class="" dir="auto">Today, advertisements naturally group into families.</p><p id="3a6ecaf7-2d7b-80e6-8c84-cb940f635c30" class="" dir="auto">Examples include:</p><ul id="3a6ecaf7-2d7b-806a-b71a-c1fe9362bc99" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Negative Space</li></ul><ul id="3a6ecaf7-2d7b-8088-9d15-c4f194617a12" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Shape-Based Concepts</li></ul><ul id="3a6ecaf7-2d7b-80b2-81e1-d391c88466de" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Communication</li></ul><ul id="3a6ecaf7-2d7b-805a-9dc0-dd3b5143e0d1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Graphic-Based Concepts</li></ul><ul id="3a6ecaf7-2d7b-8076-9732-cbd27061983d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Transformation</li></ul><ul id="3a6ecaf7-2d7b-804a-86ab-ff08d3763e08" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Concepts</li></ul><ul id="3a6ecaf7-2d7b-8024-926b-f0f32f062102" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphors</li></ul><p id="3a6ecaf7-2d7b-80e2-a372-e35330959d5b" class="" dir="auto">This changes the type of knowledge that can be extracted.</p><p id="3a6ecaf7-2d7b-806f-a299-f5b1c6976764" class="" dir="auto">Previously we could describe:</p><blockquote id="3a6ecaf7-2d7b-802c-9062-c6005e817fc1" class="" dir="auto">&quot;How does this advertisement work?&quot;</blockquote><p id="3a6ecaf7-2d7b-807b-ac8a-dede984cdca3" class="" dir="auto">Now we can investigate:</p><ul id="3a6ecaf7-2d7b-8082-8ac9-e1aeba56c5aa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What do all advertisements within this visual system have in common?</li></ul><ul id="3a6ecaf7-2d7b-8082-853a-f020969a80ae" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Where do they differ?</li></ul><ul id="3a6ecaf7-2d7b-803b-b420-e54d57a92dfb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What are the boundaries of the system?</li></ul><ul id="3a6ecaf7-2d7b-8019-a163-e4a6f7284a89" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What combinations repeatedly appear?</li></ul><ul id="3a6ecaf7-2d7b-80a6-b72a-c2c5236e50b6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What mistakes should be avoided?</li></ul><p id="3a6ecaf7-2d7b-8005-ab6c-e4726627c02c" class="" dir="auto">The Advertisement Library has therefore moved from example collection to comparative evidence.</p><hr id="3a6ecaf7-2d7b-8092-8549-cdb87cff4fe0" dir="auto"/><h1 id="3a6ecaf7-2d7b-802a-97b5-df671b92fd1e" class="" dir="auto">Major Discovery 02</h1><h2 id="3a6ecaf7-2d7b-809a-b5c8-e572ece35052" class="" dir="auto">The Advertisement Library Is Beginning To Generate Section B</h2><p id="3a6ecaf7-2d7b-8043-9a90-e8019c16bdf6" class="" dir="auto">Originally Section B stopped after Module G because there was insufficient evidence to continue.</p><p id="3a6ecaf7-2d7b-80e1-a895-e0b797a1539e" class="" dir="auto">The current Advertisement Library exposes repeated evidence for several future reasoning modules.</p><h3 id="3a6ecaf7-2d7b-80c6-8233-e6d72b2c0024" class="" dir="auto">Communication Objective</h3><p id="3a6ecaf7-2d7b-8052-8952-d27c6237b15b" class="" dir="auto">Repeated evidence now clearly separates:</p><p id="3a6ecaf7-2d7b-8009-94fd-ed894b1d7feb" class="" dir="auto">Business Goal</p><p id="3a6ecaf7-2d7b-8098-9871-e9b9bc469aa2" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-809f-9e63-e41e9513ec05" class="" dir="auto">Communication Objective</p><p id="3a6ecaf7-2d7b-80af-b04d-d39d7155ac01" class="" dir="auto">This module is now supported by multiple examples across industries.</p><hr id="3a6ecaf7-2d7b-8058-92d6-eeb97917f200" dir="auto"/><h3 id="3a6ecaf7-2d7b-8009-8506-c8df6ef7c840" class="" dir="auto">Communication Direction</h3><p id="3a6ecaf7-2d7b-80a7-8829-d7369fab7af8" class="" dir="auto">The evidence has become significantly stronger.</p><p id="3a6ecaf7-2d7b-802c-ab92-ceaff5fa7718" class="" dir="auto">Multiple advertisements demonstrate that identical products can communicate through completely different directions.</p><p id="3a6ecaf7-2d7b-80b9-bc2f-c6adf1bef931" class="" dir="auto">Communication Direction is now observable rather than theoretical.</p><hr id="3a6ecaf7-2d7b-8018-b386-db56efe0f7bc" dir="auto"/><h3 id="3a6ecaf7-2d7b-8089-9a33-d666dd2df67d" class="" dir="auto">Big Idea</h3><p id="3a6ecaf7-2d7b-80ba-9c9d-cd62d0af472f" class="" dir="auto">When Module H was postponed, there was insufficient evidence to define it objectively.</p><p id="3a6ecaf7-2d7b-8099-86c1-cb0c2de7e8a5" class="" dir="auto">The current library reveals recurring families of Big Ideas.</p><p id="3a6ecaf7-2d7b-8032-9ff6-df3578ec22e7" class="" dir="auto">Examples include:</p><ul id="3a6ecaf7-2d7b-8070-8f2e-f73338c22b71" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product becomes evidence</li></ul><ul id="3a6ecaf7-2d7b-80fa-99df-e15fd830ddd5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product becomes metaphor</li></ul><ul id="3a6ecaf7-2d7b-8039-8de0-c58422a76f8e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Absence communicates</li></ul><ul id="3a6ecaf7-2d7b-80bd-a653-ed14536c944a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Transformation communicates</li></ul><ul id="3a6ecaf7-2d7b-80c0-a747-fd71c610cba6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Construction communicates</li></ul><ul id="3a6ecaf7-2d7b-80f0-a061-c36e589a074a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Graphic symbolism communicates</li></ul><p id="3a6ecaf7-2d7b-80f1-9d1f-f4db7a4c87cc" class="" dir="auto">The evidence is now sufficient to begin drafting Module H.</p><p id="3a6ecaf7-2d7b-8027-b636-f9033e3a04fa" class="" dir="auto">The module should still remain open for refinement as additional evidence accumulates.</p><hr id="3a6ecaf7-2d7b-80d0-812e-c0e446e84798" dir="auto"/><h3 id="3a6ecaf7-2d7b-809b-a49c-e9ac391b30ee" class="" dir="auto">Visual System Selection</h3><p id="3a6ecaf7-2d7b-80bc-ac81-e7621a11b2d6" class="" dir="auto">The library now contains examples where similar communication directions are executed using different visual systems.</p><p id="3a6ecaf7-2d7b-8002-b601-e825e3574066" class="" dir="auto">This introduces a new research question:</p><p id="3a6ecaf7-2d7b-801c-b1f3-c3b637877e52" class="" dir="auto">Why was one visual system selected instead of another?</p><p id="3a6ecaf7-2d7b-8060-8f9f-fa6a78cbfb88" class="" dir="auto">The evidence required for Module I has begun to emerge.</p><hr id="3a6ecaf7-2d7b-806a-86c1-e6c03f91755c" dir="auto"/><h1 id="3a6ecaf7-2d7b-803a-9019-c7bea6c6d187" class="" dir="auto">Major Discovery 03</h1><h2 id="3a6ecaf7-2d7b-80d4-9d1d-d011b1c2cdc3" class="" dir="auto">Section C Has Become More Stable</h2><p id="3a6ecaf7-2d7b-8021-9dff-e856893320da" class="" dir="auto">Earlier, there was a tendency to create new visual systems whenever a unique advertisement appeared.</p><p id="3a6ecaf7-2d7b-800c-85c7-f21385dcd70e" class="" dir="auto">The current library demonstrates increasing evidence density within existing systems.</p><p id="3a6ecaf7-2d7b-8095-8443-f04fad760240" class="" dir="auto">Instead of expanding taxonomy, the library is strengthening taxonomy.</p><p id="3a6ecaf7-2d7b-8071-bb2f-f0a74be2f967" class="" dir="auto">This indicates that the current visual systems are becoming more stable.</p><hr id="3a6ecaf7-2d7b-80f4-a526-d8906846241b" dir="auto"/><h1 id="3a6ecaf7-2d7b-8014-9c1d-d76cfbd39e2a" class="" dir="auto">Major Discovery 04</h1><h2 id="3a6ecaf7-2d7b-8049-aff3-e1f24067a8cb" class="" dir="auto">Knowledge Contribution Has Changed Acceptance Criteria</h2><p id="3a6ecaf7-2d7b-8053-a9dc-ddd0c1b059c6" class="" dir="auto">Originally, advertisements were accepted because they demonstrated interesting execution.</p><p id="3a6ecaf7-2d7b-8042-a609-d810f7ab8d8b" class="" dir="auto">The addition of Knowledge Contribution introduces a higher standard.</p><p id="3a6ecaf7-2d7b-808c-887e-d1a414599e0e" class="" dir="auto">Each accepted advertisement must now answer:</p><p id="3a6ecaf7-2d7b-8098-a837-ccb91be6eee9" class="" dir="auto">&quot;What new knowledge does this advertisement contribute to the Operating System?&quot;</p><p id="3a6ecaf7-2d7b-804c-a53d-fd84af13e223" class="" dir="auto">This shifts the Advertisement Library from inspiration collection to knowledge engineering.</p><hr id="3a6ecaf7-2d7b-80a0-afc2-cd2dc03f5ca3" dir="auto"/><h1 id="3a6ecaf7-2d7b-8089-8952-e569af43db34" class="" dir="auto">Major Discovery 05</h1><h2 id="3a6ecaf7-2d7b-8027-8a9a-c8478ed83fa3" class="" dir="auto">Research Notes Are Becoming Architecture Decisions</h2><p id="3a6ecaf7-2d7b-803d-ba89-e4bfc761a5cd" class="" dir="auto">Research Notes were originally observations.</p><p id="3a6ecaf7-2d7b-808d-8f2b-efc9ca0a76a3" class="" dir="auto">They are now influencing future module design.</p><p id="3a6ecaf7-2d7b-803f-ba82-c80edd3be19b" class="" dir="auto">Examples include:</p><ul id="3a6ecaf7-2d7b-803b-8af2-ca996dd58d89" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Evidence-first module development</li></ul><ul id="3a6ecaf7-2d7b-8087-8949-eb073382c19e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Communication versus presentation</li></ul><ul id="3a6ecaf7-2d7b-800e-9938-d171d72b20db" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Campaign scalability</li></ul><ul id="3a6ecaf7-2d7b-807d-a645-eb6c2f405ad3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Knowledge contribution</li></ul><ul id="3a6ecaf7-2d7b-80ae-9706-eec3dbc6c193" class="bulleted-list" dir="auto"><li style="list-style-type:disc">System validation</li></ul><p id="3a6ecaf7-2d7b-80fc-912f-c55474ac35bc" class="" dir="auto">Research Notes are increasingly defining how the Operating System evolves.</p><hr id="3a6ecaf7-2d7b-80c6-bf79-e4942f7d018d" dir="auto"/><h1 id="3a6ecaf7-2d7b-8047-a095-ca634db4d7ef" class="" dir="auto">Gap Analysis</h1><h2 id="3a6ecaf7-2d7b-809c-88a6-c64bb1c1709a" class="" dir="auto">Gap 01</h2><h3 id="3a6ecaf7-2d7b-8045-a719-db84f0fba9ad" class="" dir="auto">Comparative Evidence Is Missing</h3><p id="3a6ecaf7-2d7b-8048-b7c9-cb6697aa7aa8" class="" dir="auto">Advertisements are currently analysed individually.</p><p id="3a6ecaf7-2d7b-8034-b144-c2cb069a43d4" class="" dir="auto">The next stage of learning should compare advertisements belonging to the same visual system.</p><p id="3a6ecaf7-2d7b-809e-98e0-cfc77b9d91ec" class="" dir="auto">Each comparison should identify:</p><ul id="3a6ecaf7-2d7b-807e-ac88-f9139b41c699" class="bulleted-list" dir="auto"><li style="list-style-type:disc">common structure</li></ul><ul id="3a6ecaf7-2d7b-805b-b787-d568671a99ee" class="bulleted-list" dir="auto"><li style="list-style-type:disc">variations</li></ul><ul id="3a6ecaf7-2d7b-807e-8a85-c5422f17c347" class="bulleted-list" dir="auto"><li style="list-style-type:disc">hybrid systems</li></ul><ul id="3a6ecaf7-2d7b-804c-9e93-f9cfe86f7fea" class="bulleted-list" dir="auto"><li style="list-style-type:disc">limitations</li></ul><ul id="3a6ecaf7-2d7b-80f5-96cf-d83f5082f3ac" class="bulleted-list" dir="auto"><li style="list-style-type:disc">failure conditions</li></ul><p id="3a6ecaf7-2d7b-804f-a07b-fe53d71f6aff" class="" dir="auto">Future modules should be written primarily from comparative analysis rather than isolated advertisement analysis.</p><hr id="3a6ecaf7-2d7b-8067-83af-fcba92144130" dir="auto"/><h2 id="3a6ecaf7-2d7b-807b-a5f8-f2c8fbd37ae1" class="" dir="auto">Gap 02</h2><h3 id="3a6ecaf7-2d7b-806b-becb-f11722bc8558" class="" dir="auto">Failure Boundaries Are Underdeveloped</h3><p id="3a6ecaf7-2d7b-8077-9d1a-de611d4babac" class="" dir="auto">The library explains why advertisements succeed.</p><p id="3a6ecaf7-2d7b-809d-8414-d2f91d0d2241" class="" dir="auto">It rarely explains where a visual system begins to fail.</p><p id="3a6ecaf7-2d7b-8054-b0c9-eb172061754a" class="" dir="auto">Future evidence should document:</p><ul id="3a6ecaf7-2d7b-8085-9119-caf654f6895a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">when the system becomes confusing</li></ul><ul id="3a6ecaf7-2d7b-8072-9128-c99b8e839bf5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">when communication weakens</li></ul><ul id="3a6ecaf7-2d7b-80f8-830b-c8274816cd82" class="bulleted-list" dir="auto"><li style="list-style-type:disc">when symbolism becomes excessive</li></ul><ul id="3a6ecaf7-2d7b-80f5-81c1-ea55846f35a2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">when visual complexity reduces clarity</li></ul><p id="3a6ecaf7-2d7b-804f-9867-f5b47402b4f3" class="" dir="auto">Negative evidence will strengthen future modules.</p><hr id="3a6ecaf7-2d7b-801b-9f45-fb2395ec6930" dir="auto"/><h2 id="3a6ecaf7-2d7b-80cc-8381-f023e25986ee" class="" dir="auto">Gap 03</h2><h3 id="3a6ecaf7-2d7b-8055-9139-e97192d402aa" class="" dir="auto">Graphic Design Knowledge Is Present But Not Yet Extracted</h3><p id="3a6ecaf7-2d7b-803b-8541-e2b920083385" class="" dir="auto">The library already contains repeated evidence relating to:</p><ul id="3a6ecaf7-2d7b-80ab-9855-e1f1ee6bec6b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">composition</li></ul><ul id="3a6ecaf7-2d7b-8026-acf3-f949b9bf148e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">hierarchy</li></ul><ul id="3a6ecaf7-2d7b-80a3-b32e-e45b127911b2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">negative space</li></ul><ul id="3a6ecaf7-2d7b-80f4-b7f2-d99cba749645" class="bulleted-list" dir="auto"><li style="list-style-type:disc">balance</li></ul><ul id="3a6ecaf7-2d7b-80ca-b306-f60475718671" class="bulleted-list" dir="auto"><li style="list-style-type:disc">eye movement</li></ul><ul id="3a6ecaf7-2d7b-8010-a343-f7f11ee94a4a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">typography</li></ul><ul id="3a6ecaf7-2d7b-8030-8557-dc118a04a425" class="bulleted-list" dir="auto"><li style="list-style-type:disc">colour relationships</li></ul><ul id="3a6ecaf7-2d7b-8042-88e7-d6985276ab06" class="bulleted-list" dir="auto"><li style="list-style-type:disc">white space</li></ul><ul id="3a6ecaf7-2d7b-80cb-9b45-d3a283610c57" class="bulleted-list" dir="auto"><li style="list-style-type:disc">product dominance</li></ul><p id="3a6ecaf7-2d7b-80b7-b495-c561467eb5ae" class="" dir="auto">These observations exist inside advertisements but have not yet been systematically extracted.</p><p id="3a6ecaf7-2d7b-80aa-8364-ec453ff5b2ab" class="" dir="auto">The evidence is now sufficient to begin building a Graphic Design Operating System.</p><hr id="3a6ecaf7-2d7b-8009-9b1a-f1584f4e3c3e" dir="auto"/><h2 id="3a6ecaf7-2d7b-8029-bcb8-c290cce850d5" class="" dir="auto">Gap 04</h2><h3 id="3a6ecaf7-2d7b-806b-880a-ec8d31c1aff3" class="" dir="auto">Photography Knowledge Is Also Embedded</h3><p id="3a6ecaf7-2d7b-8043-a8eb-e0f4aaea8339" class="" dir="auto">Repeated evidence now exists for:</p><ul id="3a6ecaf7-2d7b-808a-9afc-d35c3f54d8f0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">product lighting</li></ul><ul id="3a6ecaf7-2d7b-803e-8e63-d4d69dc100d4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">luxury lighting</li></ul><ul id="3a6ecaf7-2d7b-80e6-8a6f-f1818d35341e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">food styling</li></ul><ul id="3a6ecaf7-2d7b-805b-bbf3-e8a9a1283290" class="bulleted-list" dir="auto"><li style="list-style-type:disc">camera angle</li></ul><ul id="3a6ecaf7-2d7b-80e7-b378-dc144f5e4ab7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">perspective</li></ul><ul id="3a6ecaf7-2d7b-80e7-8c34-d26c6395d5c2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">environmental lighting</li></ul><ul id="3a6ecaf7-2d7b-80e8-b303-ca1d0be7325b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">product presentation</li></ul><p id="3a6ecaf7-2d7b-803d-8619-d78f00e3275f" class="" dir="auto">Photography knowledge is present throughout the Advertisement Library.</p><p id="3a6ecaf7-2d7b-80b5-8786-ff32aa97874c" class="" dir="auto">It simply has not yet been separated into its own evidence base.</p><p id="3a6ecaf7-2d7b-80d2-8a60-e998225301ce" class="" dir="auto">The evidence is sufficient to begin constructing a Photography Operating System.</p><hr id="3a6ecaf7-2d7b-80b0-b2dd-f4ce20445028" dir="auto"/><h2 id="3a6ecaf7-2d7b-8098-bea2-c07964727336" class="" dir="auto">Gap 05</h2><h3 id="3a6ecaf7-2d7b-800a-8b82-d178bdbb531f" class="" dir="auto">Copywriting Requires Additional Evidence</h3><p id="3a6ecaf7-2d7b-80b6-81f6-d431ff698b5d" class="" dir="auto">Compared with advertising reasoning, graphic design and photography, copywriting remains relatively underrepresented.</p><p id="3a6ecaf7-2d7b-8096-8aa7-fdbb8ba5c42d" class="" dir="auto">More headline-focused advertisements should be collected before developing a dedicated copywriting module.</p><hr id="3a6ecaf7-2d7b-80d6-8c2a-ea00d18573bc" dir="auto"/><h1 id="3a6ecaf7-2d7b-80e7-adfa-c72407dd076f" class="" dir="auto">Module Readiness Assessment</h1><h2 id="3a6ecaf7-2d7b-808f-b3d9-eef5242a2cfb" class="" dir="auto">Section A</h2><p id="3a6ecaf7-2d7b-80d7-b017-d888cd02cf63" class="" dir="auto">Ready.</p><p id="3a6ecaf7-2d7b-8032-a9de-eec4f3ad9664" class="" dir="auto">No significant evidence gaps identified.</p><hr id="3a6ecaf7-2d7b-80c8-8795-e84bb4b2983b" dir="auto"/><h2 id="3a6ecaf7-2d7b-805b-9cb8-e00c65b88719" class="" dir="auto">Module G</h2><p id="3a6ecaf7-2d7b-80d2-a303-c207bb07c457" class="" dir="auto">Strongly supported.</p><p id="3a6ecaf7-2d7b-80eb-b99f-f3420a854333" class="" dir="auto">Current evidence validates its reasoning framework.</p><hr id="3a6ecaf7-2d7b-80a5-8ff3-cbddf1757e8a" dir="auto"/><h2 id="3a6ecaf7-2d7b-80ec-8c4d-dd8e095d842d" class="" dir="auto">Module H — Big Idea</h2><p id="3a6ecaf7-2d7b-80b6-9f15-cab4ac27acda" class="" dir="auto">Ready for the first evidence-based draft.</p><p id="3a6ecaf7-2d7b-8034-a796-d2602a254ff6" class="" dir="auto">Further refinement should continue as evidence grows.</p><hr id="3a6ecaf7-2d7b-8014-b369-cc3d52d0c2b5" dir="auto"/><h2 id="3a6ecaf7-2d7b-800f-9cda-e6ce3fe46873" class="" dir="auto">Module I — Visual System Selection</h2><p id="3a6ecaf7-2d7b-80c0-b49c-e5d20dd63081" class="" dir="auto">Evidence emerging.</p><p id="3a6ecaf7-2d7b-8068-a82f-eda4f663d526" class="" dir="auto">Additional comparative analysis recommended before formalisation.</p><hr id="3a6ecaf7-2d7b-80dd-81a2-db9d4eb21a20" dir="auto"/><h2 id="3a6ecaf7-2d7b-8086-b43d-e88d47cffdf5" class="" dir="auto">Module J — Execution Framework</h2><p id="3a6ecaf7-2d7b-8075-bed5-c39b91389ddf" class="" dir="auto">Depends on extraction of Graphic Design and Photography knowledge.</p><p id="3a6ecaf7-2d7b-808b-bc87-e6329c2b6a5b" class="" dir="auto">Current evidence is sufficient to begin research.</p><hr id="3a6ecaf7-2d7b-803a-9073-cc22eb26f2b2" dir="auto"/><h2 id="3a6ecaf7-2d7b-8068-bef8-c61a2e421ee7" class="" dir="auto">Graphic Design Operating System</h2><p id="3a6ecaf7-2d7b-8073-b3ae-e58b4b250e92" class="" dir="auto">Evidence readiness: High.</p><p id="3a6ecaf7-2d7b-802b-90f0-cffe173128a6" class="" dir="auto">The Advertisement Library now contains enough repeated observations to begin systematic extraction.</p><hr id="3a6ecaf7-2d7b-80e9-ba52-d1113f4bf1b4" dir="auto"/><h2 id="3a6ecaf7-2d7b-8058-a6da-c24266d1b356" class="" dir="auto">Photography Operating System</h2><p id="3a6ecaf7-2d7b-800f-9db3-e9455d5d3a54" class="" dir="auto">Evidence readiness: High.</p><p id="3a6ecaf7-2d7b-8010-8b02-c2f5ab1bed75" class="" dir="auto">Repeated execution patterns have become visible across multiple industries.</p><hr id="3a6ecaf7-2d7b-80ca-97fc-c9a4e0a1d30e" dir="auto"/><h2 id="3a6ecaf7-2d7b-8070-856b-e8097bf14c4c" class="" dir="auto">Copywriting Operating System</h2><p id="3a6ecaf7-2d7b-800b-b633-d724deddabb6" class="" dir="auto">Evidence readiness: Moderate.</p><p id="3a6ecaf7-2d7b-80fe-8ac4-edb97dbf3314" class="" dir="auto">Requires additional focused evidence collection.</p><hr id="3a6ecaf7-2d7b-8008-ac43-fa783d8db2c4" dir="auto"/><h1 id="3a6ecaf7-2d7b-80d8-b622-c3a907552694" class="" dir="auto">Most Important Observation</h1><p id="3a6ecaf7-2d7b-8095-b805-c03d4e0718ac" class="" dir="auto">The Advertisement Library has achieved its original purpose.</p><p id="3a6ecaf7-2d7b-80cc-a28c-d71f49a59a86" class="" dir="auto">It is no longer validating existing theory.</p><p id="3a6ecaf7-2d7b-80d1-b1de-ddf040671e2a" class="" dir="auto">It is generating new theory.</p><p id="3a6ecaf7-2d7b-8037-9ea2-dbba1efca31c" class="" dir="auto">Future progress should therefore prioritise:</p><ul id="3a6ecaf7-2d7b-8053-a3e5-ef28d9d3a401" class="bulleted-list" dir="auto"><li style="list-style-type:disc">strengthening evidence density within existing visual systems,</li></ul><ul id="3a6ecaf7-2d7b-807c-8cc1-f3a9c3ddd2df" class="bulleted-list" dir="auto"><li style="list-style-type:disc">comparative analysis across advertisements,</li></ul><ul id="3a6ecaf7-2d7b-804b-8db4-ce533420561e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">extraction of execution knowledge,</li></ul><ul id="3a6ecaf7-2d7b-80c4-82ba-d9ce0e32c441" class="bulleted-list" dir="auto"><li style="list-style-type:disc">and continuation of evidence-driven module development.</li></ul><hr id="3a6ecaf7-2d7b-8030-a289-df7bbfe47ab1" dir="auto"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

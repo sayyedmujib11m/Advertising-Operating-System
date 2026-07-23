@@ -1,0 +1,773 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>ENO — Relief Can&#x27;t Wait</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_blue.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_blue.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="398ecaf7-2d7b-80b9-80d7-c286447927e9" class="page sans" data-notion-page-icon="/icons/photo-landscape_blue.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/></div><h1 class="page-title" dir="auto">ENO — Relief Can&#x27;t Wait</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="398ecaf7-2d7b-805a-9f64-fa8ea97d5b56" class="" dir="auto">Advertisement </p><figure id="398ecaf7-2d7b-8083-8ff6-e6de5eaee2cd" class="image" data-notion-image="ENO%20%E2%80%94%20Relief%20Can&#x27;t%20Wait/1000371664.jpg" dir="ltr"><a href="ENO%20%E2%80%94%20Relief%20Can&#x27;t%20Wait/1000371664.jpg"><img style="width:300px" src="ENO%20%E2%80%94%20Relief%20Can&#x27;t%20Wait/1000371664.jpg"/></a></figure><p id="398ecaf7-2d7b-8044-82d2-d28c902da9ef" class="" dir="auto">
+</p><h2 id="398ecaf7-2d7b-8004-85e3-fc926d0f9ce6" class="" dir="auto">Basic Information</h2><p id="398ecaf7-2d7b-803d-9f2c-e340bcac22da" class="" dir="auto">Brand: ENO</p><p id="398ecaf7-2d7b-80af-a3d9-fbdfa7de6daf" class="" dir="auto">Industry: Healthcare / OTC Digestive Relief</p><p id="398ecaf7-2d7b-8079-af53-ed869160da0d" class="" dir="auto">Advertisement Type: Product Benefit Advertisement</p><p id="398ecaf7-2d7b-804d-9a4b-c0426ec9ae9d" class="" dir="auto">Medium: Print / Social Media Static</p><hr id="398ecaf7-2d7b-80cd-af6c-e9aa508a92d7" dir="auto"/><h3 id="398ecaf7-2d7b-8075-8688-c0875b6f34c2" class="" dir="auto">Creative Reverse Engineering</h3><p id="398ecaf7-2d7b-8034-b7ab-c3ed440130d9" class="" dir="auto">Business Goal</p><p id="398ecaf7-2d7b-80c3-97f2-fef01ae18e1b" class="" dir="auto">Strengthen ENO&#x27;s positioning as the fastest solution for acidity and indigestion.</p><hr id="398ecaf7-2d7b-80d8-afab-c62e4962723a" dir="auto"/><h3 id="398ecaf7-2d7b-80e8-9d4a-c67cb4188e86" class="" dir="auto">Communication Objective</h3><p id="398ecaf7-2d7b-809c-86e9-c6d0a6572c98" class="" dir="auto">Convince people that acidity relief should be immediate because discomfort becomes unbearable if delayed.</p><hr id="398ecaf7-2d7b-8067-9fc9-cc4e9fd3720b" dir="auto"/><h3 id="398ecaf7-2d7b-8083-a5c6-fdb534cc73a8" class="" dir="auto">Communication Direction</h3><p id="398ecaf7-2d7b-80dc-bf1e-ceb5bbfd026f" class="" dir="auto">Relief is urgent. Waiting is not an option.</p><hr id="398ecaf7-2d7b-8066-b5f5-f369bd048ddb" dir="auto"/><h3 id="398ecaf7-2d7b-8058-a14f-c3e175b6a0a3" class="" dir="auto">Big Idea</h3><blockquote id="398ecaf7-2d7b-80cb-afe8-f581985d3ecf" class="" dir="auto">Extreme discomfort demands immediate relief.</blockquote><p id="398ecaf7-2d7b-80d2-9e33-f08bf8cb055a" class="" dir="auto">Why this qualifies as a Big Idea:</p><blockquote id="398ecaf7-2d7b-8055-9c58-dc8c8ddf71dc" class="" dir="auto">It can generate multiple distinct executions while communicating the same communication direction.</blockquote><p id="398ecaf7-2d7b-8009-833e-c9ddd37453de" class="" dir="auto">Possible alternative executions:</p><ul id="398ecaf7-2d7b-80f7-b202-de3564065702" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A lion clutching its stomach.</li></ul><ul id="398ecaf7-2d7b-807d-a163-ec1e553932c1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">An elephant after overeating.</li></ul><ul id="398ecaf7-2d7b-80e6-b4b3-c40622b404a3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A businessman during an important meeting.</li></ul><ul id="398ecaf7-2d7b-8091-bb10-c6aa25968633" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A traveller on a long flight.</li></ul><ul id="398ecaf7-2d7b-80b1-b4f1-fb490ff0f751" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A wedding guest after a heavy meal.</li></ul><p id="398ecaf7-2d7b-80b0-b137-da4305299ec2" class="" dir="auto">Different executions.</p><p id="398ecaf7-2d7b-8065-982f-c1cf1ddc178b" class="" dir="auto">One Big Idea.</p><hr id="398ecaf7-2d7b-80cf-923e-f09fce7e5523" dir="auto"/><h3 id="398ecaf7-2d7b-80ce-9cbb-f40326e43d86" class="" dir="auto">Visual Thinking System</h3><p id="398ecaf7-2d7b-803f-88f3-c798f8b98892" class="" dir="auto">Primary</p><ul id="398ecaf7-2d7b-801f-92f6-ed83a0fbd533" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Animal-Based Visual Metaphor</li></ul><p id="398ecaf7-2d7b-802c-9fc7-e715c6459676" class="" dir="auto">Supporting</p><ul id="398ecaf7-2d7b-805a-923d-c7b0bb77f2fc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product Benefit Conceptual Advertising</li></ul><ul id="398ecaf7-2d7b-801b-856a-ecc2957723cb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Storytelling</li></ul><hr id="398ecaf7-2d7b-800c-a1c6-eaeea6a9148c" dir="auto"/><h3 id="398ecaf7-2d7b-802e-b309-edb7cb9cba4c" class="" dir="auto">Why This Visual System?</h3><p id="398ecaf7-2d7b-8009-b03a-ccda66d807de" class="" dir="auto">Acidity is an invisible problem.</p><p id="398ecaf7-2d7b-8022-aa82-c0927bb24923" class="" dir="auto">An animal metaphor exaggerates the discomfort without making the advertisement unpleasant to look at.</p><p id="398ecaf7-2d7b-8026-aaa4-c9d2979cf9c0" class="" dir="auto">The bear instantly communicates physical strength, appetite and intense discomfort, making the benefit easier to understand.</p><hr id="398ecaf7-2d7b-80af-9e0f-ea6cfb675467" dir="auto"/><h3 id="398ecaf7-2d7b-8029-bf7e-ff699494926d" class="" dir="auto">Final Execution</h3><p id="398ecaf7-2d7b-806d-a850-e64d5b61c161" class="" dir="auto">A bear sits in a forest holding its stomach after eating.</p><p id="398ecaf7-2d7b-80ea-ad82-fd9bf2ecccf9" class="" dir="auto">The surrounding fruits and honey quietly suggest overeating.</p><p id="398ecaf7-2d7b-8062-9357-e47ed99db236" class="" dir="auto">ENO appears as the immediate solution.</p><p id="398ecaf7-2d7b-80d0-b351-c58c3cee5b98" class="" dir="auto">The headline, &quot;Relief can&#x27;t wait.&quot;, confirms what the visual has already communicated.</p><hr id="398ecaf7-2d7b-808e-bbbf-e41c66e4a834" dir="auto"/><h3 id="398ecaf7-2d7b-80de-84c0-f627091256f5" class="" dir="auto">Why This Advertisement Works</h3><p id="398ecaf7-2d7b-8017-845e-df2e3d35c90c" class="" dir="auto">The bear immediately attracts attention.</p><p id="398ecaf7-2d7b-8028-a0b6-d035ad41cdd7" class="" dir="auto">Human-like body language creates empathy.</p><p id="398ecaf7-2d7b-8067-ad1f-cdc3ef2e56e2" class="" dir="auto">The environment explains the cause without additional copy.</p><p id="398ecaf7-2d7b-80a8-968b-c42373c4c74c" class="" dir="auto">The product benefit is understood within seconds.</p><p id="398ecaf7-2d7b-8012-8e4c-f9ee7e431941" class="" dir="auto">The headline reinforces rather than explains the idea.</p><hr id="398ecaf7-2d7b-8028-b5f8-cf5dac35e2e8" dir="auto"/><h3 id="398ecaf7-2d7b-8061-9e97-fbc052c01e71" class="" dir="auto">Reusable Principles</h3><p id="398ecaf7-2d7b-80bf-927d-c55395bc2d55" class="" dir="auto">Principle 01</p><p id="398ecaf7-2d7b-8016-a079-eba8a7e26cc2" class="" dir="auto">Invisible problems become stronger when converted into visible metaphors.</p><hr id="398ecaf7-2d7b-80b7-acc4-e5d25ee5ae9a" dir="auto"/><p id="398ecaf7-2d7b-80e0-b256-c3132dc22417" class="" dir="auto">Principle 02</p><p id="398ecaf7-2d7b-80e7-aded-dde90cdb123f" class="" dir="auto">Animals can exaggerate human experiences while remaining visually engaging.</p><hr id="398ecaf7-2d7b-80a8-9c08-e70d37be0408" dir="auto"/><p id="398ecaf7-2d7b-80f7-9061-e2de5b82335f" class="" dir="auto">Principle 03</p><p id="398ecaf7-2d7b-8052-8767-ee946954e797" class="" dir="auto">Body language often communicates pain faster than facial expressions.</p><hr id="398ecaf7-2d7b-8076-aa34-d01440b92c2d" dir="auto"/><p id="398ecaf7-2d7b-80c8-946d-fac2b3c3fd15" class="" dir="auto">Principle 04</p><p id="398ecaf7-2d7b-8079-8799-c656cc4ad70d" class="" dir="auto">Supporting elements should explain the cause without becoming the focus.</p><hr id="398ecaf7-2d7b-80e3-8411-dafb526d9627" dir="auto"/><p id="398ecaf7-2d7b-80b3-a59b-d03504f1efb2" class="" dir="auto">Principle 05</p><p id="398ecaf7-2d7b-8007-abbe-c755e79604b7" class="" dir="auto">When the visual carries the story, copy only needs to reinforce the message.</p><hr id="398ecaf7-2d7b-808b-8fa7-d4f36bce7b84" dir="auto"/><h3 id="398ecaf7-2d7b-8036-b19c-fa7a09135cfb" class="" dir="auto">Critical Evaluation</h3><p id="398ecaf7-2d7b-80bd-bb77-d6f2d856f236" class="" dir="auto">Strengths</p><p id="398ecaf7-2d7b-800e-af88-fdf652ec23b1" class="" dir="auto">Instantly memorable visual.</p><p id="398ecaf7-2d7b-8097-8dfe-d7114a665814" class="" dir="auto">Strong product-benefit communication.</p><p id="398ecaf7-2d7b-80e5-9971-c52b51b71681" class="" dir="auto">Excellent use of animal metaphor.</p><p id="398ecaf7-2d7b-8027-b5b6-d039a7ac21aa" class="" dir="auto">Minimal reliance on copy.</p><p id="398ecaf7-2d7b-802c-a138-db1fbf44b8c7" class="" dir="auto">Limitations</p><p id="398ecaf7-2d7b-80c0-ae64-f2c59391eced" class="" dir="auto">The execution depends on the audience interpreting the bear as a metaphor rather than a literal animal with a stomach ache.</p><hr id="398ecaf7-2d7b-8035-bf20-c714b3099903" dir="auto"/><h3 id="398ecaf7-2d7b-80e0-8962-fca53bb007da" class="" dir="auto">Core Learning</h3><blockquote id="398ecaf7-2d7b-808e-b622-d435a65313cf" class="" dir="auto">When a product solves an invisible problem, use a memorable visual metaphor to make the benefit immediately visible.</blockquote><hr id="398ecaf7-2d7b-8020-8ca4-eb8962ab2287" dir="auto"/><h3 id="398ecaf7-2d7b-8041-9121-e039bb36b5dd" class="" dir="auto">Related Modules</h3><p id="398ecaf7-2d7b-80e7-87b7-cc5abf3b3001" class="" dir="auto">Section A → <a href="../Section%20A%20Foundations/Module%20C%20How%20People%20Notice,%20Think%20&amp;%20Respond%20to%20Adv%20395ecaf72d7b80e399cafa2a9d41f729.html" data-notion-page-id="395ecaf7-2d7b-80e3-99ca-fa2a9d41f729" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module C. How People Notice, Think &amp; Respond to Advertisements</a> </p><p id="398ecaf7-2d7b-80ca-bf84-c8fd2b5cc8d7" class="" dir="auto">Section A → <a href="../Section%20A%20Foundations/Module%20D%20Visual%20Communication%20395ecaf72d7b8000a0ddf8d585f99551.html" data-notion-page-id="395ecaf7-2d7b-8000-a0dd-f8d585f99551" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module D. Visual Communication</a></p><p id="398ecaf7-2d7b-803e-81f4-fbd8dde22766" class="" dir="auto">Module F → <a href="../Section%20A%20Foundations/Module%20F%20Finding%20the%20Real%20Brief%20396ecaf72d7b808dbdebee7d2fd3ddfb.html" data-notion-page-id="396ecaf7-2d7b-808d-bdeb-ee7d2fd3ddfb" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module F. Finding the Real Brief</a> </p><p id="398ecaf7-2d7b-8056-8dc9-cbd1517b11c8" class="" dir="auto">Module G → <a href="../Section%20B%20Creative%20Reasoning/Module%20G%20Generating%20Advertising%20Directions%20397ecaf72d7b808a9de7d10f69c40502.html" data-notion-page-id="397ecaf7-2d7b-808a-9de7-d10f69c40502" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_green.svg"/>Module G. Generating Advertising Directions</a></p><p id="398ecaf7-2d7b-8093-a028-fa9f6e131199" class="" dir="auto">Module H → Finding the Big Idea (Future)</p><p id="398ecaf7-2d7b-80a4-b217-def1146ae260" class="" dir="auto">Section C → Animal-Based Visual Metaphor Advertising (Future)</p><hr id="398ecaf7-2d7b-8093-ac0a-ee06cbb78a04" dir="auto"/><p id="398ecaf7-2d7b-80b1-b933-edd238493b77" class="" dir="auto">Creative Pattern</p><p id="398ecaf7-2d7b-8008-86e7-f40629d79048" class="" dir="auto">Invisible Problem → Visible Metaphor → Product Solution</p><hr id="39cecaf7-2d7b-80da-927b-f9fb15278624" dir="auto"/><p id="39cecaf7-2d7b-80b9-9aa0-e73dc75dc299" class="" dir="auto">Knowledge Contribution</p><p id="39cecaf7-2d7b-80bf-b45f-f9db8dd27dba" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-806f-9e84-d8c597bec44c" class="" dir="auto">Communication Strategy: ★★★★★</p><ul id="39cecaf7-2d7b-800a-bbae-e67df927f5df" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Time Compression</li></ul><ul id="39cecaf7-2d7b-8082-8cfe-e0ffee919764" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product Benefit Visualization</li></ul><p id="39cecaf7-2d7b-80ad-839d-f84acab13663" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-804e-8e24-dfbd096dfc7b" class="" dir="auto">Visual Systems: ★★★★★</p><ul id="39cecaf7-2d7b-801a-8651-daf26c0906a8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Cause &amp; Effect</li></ul><ul id="39cecaf7-2d7b-80d9-b372-e3e95fdfce24" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphor</li></ul><p id="39cecaf7-2d7b-80c5-a180-c17e642a7a72" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-8021-993f-d22073a3f672" class="" dir="auto">Graphic Design: ★★★☆☆</p><p id="39cecaf7-2d7b-80fd-8fac-ebb55971b7be" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-8036-9f09-d4d7ad994cca" class="" dir="auto">Photography: ★★★☆☆</p><p id="39cecaf7-2d7b-808c-acff-f54158a03ee9" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-801d-8033-cc5069a550fa" class="" dir="auto">Overall Contribution: Very High</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

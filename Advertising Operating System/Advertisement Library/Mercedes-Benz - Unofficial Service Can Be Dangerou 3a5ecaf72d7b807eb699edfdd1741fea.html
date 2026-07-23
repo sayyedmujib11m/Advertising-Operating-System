@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Mercedes-Benz - Unofficial Service Can Be Dangerous</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_pink.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_pink.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a5ecaf7-2d7b-807e-b699-edfdd1741fea" class="page sans" data-notion-page-icon="/icons/photo-landscape_pink.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/></div><h1 class="page-title" dir="auto">Mercedes-Benz - Unofficial Service Can Be Dangerous</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a6ecaf7-2d7b-80ee-9aed-fe07f20698d8" class="image" data-notion-image="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/7ef8aa5b285188b83a7632347e5e0caa.jpg" dir="ltr"><a href="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/7ef8aa5b285188b83a7632347e5e0caa.jpg"><img style="width:703.984375px" src="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/7ef8aa5b285188b83a7632347e5e0caa.jpg"/></a></figure><figure id="3a6ecaf7-2d7b-800a-ad3f-c729b864e120" class="image" data-notion-image="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/0e2550ea4f26a870a839239d10635032.jpg" dir="ltr"><a href="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/0e2550ea4f26a870a839239d10635032.jpg"><img style="width:547.984375px" src="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/0e2550ea4f26a870a839239d10635032.jpg"/></a></figure><figure id="3a6ecaf7-2d7b-8070-a870-c793b4e4bae3" class="image" data-notion-image="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/ccef442277b3b233fc1d6ea708b2aedc.jpg" dir="ltr"><a href="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/ccef442277b3b233fc1d6ea708b2aedc.jpg"><img style="width:583.984375px" src="Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou/ccef442277b3b233fc1d6ea708b2aedc.jpg"/></a></figure><h1 id="3a6ecaf7-2d7b-805c-bb6d-c330e83099cd" class="" dir="auto">Campaign Information</h1><p id="3a6ecaf7-2d7b-80a8-a3b1-f127ae953488" class="" dir="auto">
+</p><div id="3a6ecaf7-2d7b-807f-bcf7-ca536442b354" class="column-list" data-notion-column-list="" dir="auto"><div id="3a6ecaf7-2d7b-8075-a602-e0e9a4888407" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6ecaf7-2d7b-80d3-8256-dbc5fb2e8848" class="" dir="auto"><strong>Brand:</strong> Mercedes-Benz</p></div><div id="3a6ecaf7-2d7b-806e-8082-f60817e5a1d3" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6ecaf7-2d7b-8057-b783-c2d13e3540d1" class="" dir="auto"><strong>Campaign:</strong> Unofficial Service Can Be Dangerous</p></div><div id="3a6ecaf7-2d7b-8091-b631-fd09456a8f33" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6ecaf7-2d7b-80ba-ad45-ec68bc28eab7" class="" dir="auto"><strong>Category:</strong> Automobile After-sales Service</p></div><div id="3a6ecaf7-2d7b-80aa-b3d1-e9cfd7803689" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6ecaf7-2d7b-8049-8dbb-c5d8a2b87204" class="" dir="auto"><strong>Communication Goal</strong></p></div><div id="3a6ecaf7-2d7b-808c-8c0b-c93bffcdca3e" style="width:100%" class="column" data-notion-column-ratio="1" dir="auto"><p id="3a6ecaf7-2d7b-808d-bc8e-f61b15eb15c4" class="" dir="auto">Encourage owners to use authorized Mercedes service centers instead of unofficial mechanics.</p></div></div><hr id="3a6ecaf7-2d7b-8043-8149-de36c2c3ef9b" dir="auto"/><h1 id="3a6ecaf7-2d7b-8045-9f15-c5b37b5d3e31" class="" dir="auto">Business Problem</h1><p id="3a6ecaf7-2d7b-80d9-949a-d573fce9749a" class="" dir="auto">Mercedes cannot simply claim:</p><blockquote id="3a6ecaf7-2d7b-8007-927e-c56982f36ba4" class="" dir="auto">&quot;Our service is better.&quot;</blockquote><p id="3a6ecaf7-2d7b-80e4-a355-f1bce56fe6a2" class="" dir="auto">Consumers have heard that many times.</p><p id="3a6ecaf7-2d7b-8028-a9c4-dc838d29de94" class="" dir="auto">Instead, they change the framing.</p><p id="3a6ecaf7-2d7b-80ea-95ad-f22d5be62760" class="" dir="auto">The problem is no longer:</p><p id="3a6ecaf7-2d7b-8069-ba70-c0a753a8be0f" class="" dir="auto">Official vs Unofficial.</p><p id="3a6ecaf7-2d7b-80da-b530-f2a186193649" class="" dir="auto">The problem becomes:</p><p id="3a6ecaf7-2d7b-802f-9db3-fb813ed79f68" class="" dir="auto">Safe vs Dangerous.</p><p id="3a6ecaf7-2d7b-80a4-96cc-ef4627bd4adf" class="" dir="auto">That immediately increases perceived risk.</p><hr id="3a6ecaf7-2d7b-807f-8df9-da85f6d645d0" dir="auto"/><h1 id="3a6ecaf7-2d7b-8099-a9af-db0ff7b5f17b" class="" dir="auto">Communication Direction</h1><p id="3a6ecaf7-2d7b-80af-9724-ee0ef7495027" class="" dir="auto"><strong>Reframe the mechanic as the danger instead of the solution.</strong></p><p id="3a6ecaf7-2d7b-8020-80cd-f988e6909820" class="" dir="auto">Everything else follows from this.</p><hr id="3a6ecaf7-2d7b-805a-81a5-c52ebb4f3dd9" dir="auto"/><h1 id="3a6ecaf7-2d7b-8049-879d-e97279eb95b7" class="" dir="auto">Big Idea</h1><p id="3a6ecaf7-2d7b-80f9-add2-c60ccf13b5f8" class="" dir="auto"><strong>An unofficial mechanic may look ordinary—but hidden beneath the surface is something dangerous.</strong></p><p id="3a6ecaf7-2d7b-80be-99d8-dd8314204372" class="" dir="auto">Notice:</p><p id="3a6ecaf7-2d7b-805b-a342-c15637693b73" class="" dir="auto">The campaign never shows:</p><ul id="3a6ecaf7-2d7b-80ea-8060-d30a50c8af61" class="bulleted-list" dir="auto"><li style="list-style-type:disc">broken engine</li></ul><ul id="3a6ecaf7-2d7b-80e8-bfd7-e078b49c9e63" class="bulleted-list" dir="auto"><li style="list-style-type:disc">poor repairs</li></ul><ul id="3a6ecaf7-2d7b-8079-aa82-d6e2802ff9f6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">fake parts</li></ul><p id="3a6ecaf7-2d7b-80c2-8a9d-d084341799bc" class="" dir="auto">Instead,</p><p id="3a6ecaf7-2d7b-809d-af22-f7f21043de3e" class="" dir="auto">it visualizes</p><p id="3a6ecaf7-2d7b-80a3-bbe1-f830942a823c" class="" dir="auto"><strong>hidden danger.</strong></p><p id="3a6ecaf7-2d7b-803f-8d29-d34945beb4a9" class="" dir="auto">That is the campaign&#x27;s central creative thought.</p><hr id="3a6ecaf7-2d7b-8029-b3f8-de8e8f6e2790" dir="auto"/><h1 id="3a6ecaf7-2d7b-808e-b2e2-e407bf216b47" class="" dir="auto">Advertisement 1 — Adjustable Wrench</h1><p id="3a6ecaf7-2d7b-8053-ac9e-cdc4bace3418" class="" dir="auto">The adjustable wrench casts the shadow of a monster with sharp teeth.</p><h2 id="3a6ecaf7-2d7b-8077-9664-fd90691d867d" class="" dir="auto">Communication</h2><p id="3a6ecaf7-2d7b-80af-a5e4-e9455e9e91a8" class="" dir="auto">The mechanic&#x27;s tool becomes a predator.</p><p id="3a6ecaf7-2d7b-8088-a340-dab6f9a9ee05" class="" dir="auto">Meaning:</p><p id="3a6ecaf7-2d7b-8036-a2fd-ed85a79f4b8d" class="" dir="auto">The tool itself appears dangerous because it represents unofficial servicing.</p><h3 id="3a6ecaf7-2d7b-8049-b7f7-c7c56979135c" class="" dir="auto">Primary Visual System</h3><p id="3a6ecaf7-2d7b-801a-a219-f4a77ed918cc" class="" dir="auto">✅ Shadow Metaphor</p><p id="3a6ecaf7-2d7b-805f-a52b-eaad8f98079a" class="" dir="auto">The actual object is harmless.</p><p id="3a6ecaf7-2d7b-800a-841b-d3720e68a242" class="" dir="auto">The shadow reveals its hidden meaning.</p><h3 id="3a6ecaf7-2d7b-8013-a637-c8e7b1ae9c12" class="" dir="auto">Secondary Systems</h3><ul id="3a6ecaf7-2d7b-80e8-aede-cec949ea0c68" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Concept</li></ul><ul id="3a6ecaf7-2d7b-8058-9bc2-e3b17aa79e4d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphor</li></ul><ul id="3a6ecaf7-2d7b-8049-bb09-c31d70198538" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimalism</li></ul><hr id="3a6ecaf7-2d7b-80d8-bbf9-fd1d0b58ac6c" dir="auto"/><h1 id="3a6ecaf7-2d7b-80cb-a032-f9b67ea20355" class="" dir="auto">Advertisement 2 — Ring Spanner</h1><p id="3a6ecaf7-2d7b-80f2-adc7-f9acb4c1130e" class="" dir="auto">The ring end casts the shadow of a hanging noose.</p><p id="3a6ecaf7-2d7b-80ae-922e-fa31de80484b" class="" dir="auto">Meaning:</p><p id="3a6ecaf7-2d7b-8042-9c8c-dce6f8a9b5fd" class="" dir="auto">Using unofficial service could ultimately &quot;cost your life.&quot;</p><p id="3a6ecaf7-2d7b-8088-956d-e7b10dc48d87" class="" dir="auto">Not literally.</p><p id="3a6ecaf7-2d7b-8016-b63e-e120f1b0ca99" class="" dir="auto">It exaggerates risk emotionally.</p><h3 id="3a6ecaf7-2d7b-80de-8b51-faa11f3ae4ee" class="" dir="auto">Primary Visual System</h3><p id="3a6ecaf7-2d7b-80ba-85fa-cc57c464de64" class="" dir="auto">✅ Shadow Metaphor</p><p id="3a6ecaf7-2d7b-80a3-99e5-f43a64d5d87f" class="" dir="auto">Again,</p><p id="3a6ecaf7-2d7b-80a8-8cd7-c3f99ff26c4e" class="" dir="auto">the shadow carries the message.</p><h3 id="3a6ecaf7-2d7b-80e9-bc35-c6313e28ec96" class="" dir="auto">Secondary Systems</h3><ul id="3a6ecaf7-2d7b-80e5-8d69-eb6707184c01" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Concept</li></ul><ul id="3a6ecaf7-2d7b-80d7-b637-f4f38ffc4668" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphor</li></ul><ul id="3a6ecaf7-2d7b-8076-a2bc-de3a48b718f5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimalism</li></ul><hr id="3a6ecaf7-2d7b-8066-a085-e8a61166936f" dir="auto"/><h1 id="3a6ecaf7-2d7b-80a5-b19b-f1d339986cf7" class="" dir="auto">Advertisement 3 — Car Breakdown</h1><p id="3a6ecaf7-2d7b-80e1-90f0-f2525a9a0599" class="" dir="auto">This execution changes scale.</p><p id="3a6ecaf7-2d7b-80a7-a065-cd4ca8c07f56" class="" dir="auto">A man inspects his broken Mercedes.</p><p id="3a6ecaf7-2d7b-80ab-9193-ec64de03151a" class="" dir="auto">Behind him,</p><p id="3a6ecaf7-2d7b-8059-b1ac-ed8d3559577b" class="" dir="auto">the shadows create a giant dinosaur attacking him.</p><p id="3a6ecaf7-2d7b-80b3-bb34-d1671800cf31" class="" dir="auto">The mechanic isn&#x27;t visible.</p><p id="3a6ecaf7-2d7b-801d-86d2-f844201a704e" class="" dir="auto">The danger is invisible.</p><h3 id="3a6ecaf7-2d7b-80cd-8f68-c6bde1270b6b" class="" dir="auto">Primary Visual System</h3><p id="3a6ecaf7-2d7b-80a1-beb9-ce086a6edba7" class="" dir="auto">✅ Shadow Metaphor</p><p id="3a6ecaf7-2d7b-80f5-84c7-f24b9692a1a9" class="" dir="auto">Again,</p><p id="3a6ecaf7-2d7b-8050-ae2d-e77c1393df43" class="" dir="auto">danger is communicated only through the shadow.</p><h3 id="3a6ecaf7-2d7b-80dd-9952-def6db27f45f" class="" dir="auto">Secondary Systems</h3><ul id="3a6ecaf7-2d7b-8072-bc3b-e6324741ec47" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale &amp; Proportion</li></ul><ul id="3a6ecaf7-2d7b-8026-bcf3-f1161878147a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphor</li></ul><ul id="3a6ecaf7-2d7b-806b-8f4e-df27a58386d4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Concept</li></ul><hr id="3a6ecaf7-2d7b-8064-be62-eaf20937906c" dir="auto"/><h1 id="3a6ecaf7-2d7b-8093-b28f-f84ec21cfbbb" class="" dir="auto">Campaign Scalability</h1><p id="3a6ecaf7-2d7b-8039-aaed-c2b3b110533e" class="" dir="auto">This is the strongest lesson.</p><p id="3a6ecaf7-2d7b-807c-b618-e3e5add4b463" class="" dir="auto">The campaign does <strong>not</strong> create three different concepts.</p><p id="3a6ecaf7-2d7b-80f9-b14b-de35f7ca5f9f" class="" dir="auto">Instead:</p><p id="3a6ecaf7-2d7b-8083-b8a6-fd2a149a87ab" class="" dir="auto">Communication Direction</p><p id="3a6ecaf7-2d7b-8025-bcbe-c0445a752009" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-8028-8031-cd3d6c650e86" class="" dir="auto">Hidden danger</p><p id="3a6ecaf7-2d7b-80e9-9017-c7102b21bf78" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-80db-8bc9-c65de03e8511" class="" dir="auto">Big Idea</p><p id="3a6ecaf7-2d7b-8071-92c2-fced44be6588" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-805d-aae8-c0e290c99f23" class="" dir="auto">Unofficial servicing creates unseen threats</p><p id="3a6ecaf7-2d7b-80a7-8843-e720b7e85cc4" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-8020-a458-ce3434d07507" class="" dir="auto">Execution 1</p><p id="3a6ecaf7-2d7b-8054-b137-f9457962b458" class="" dir="auto">Monster shadow</p><p id="3a6ecaf7-2d7b-80fe-952c-e76d4a25b411" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-80ab-b8ff-c241d9ea3e44" class="" dir="auto">Execution 2</p><p id="3a6ecaf7-2d7b-805d-9467-ebf0ac6f6ff9" class="" dir="auto">Noose shadow</p><p id="3a6ecaf7-2d7b-8094-89eb-f63d7cbb61e8" class="" dir="auto">↓</p><p id="3a6ecaf7-2d7b-801d-aff8-ec3c07461858" class="" dir="auto">Execution 3</p><p id="3a6ecaf7-2d7b-800e-8e3e-cc7502723d0f" class="" dir="auto">Predator shadow</p><p id="3a6ecaf7-2d7b-8051-b424-d43f5191fed2" class="" dir="auto">Same idea.</p><p id="3a6ecaf7-2d7b-805c-bef2-c735648b1115" class="" dir="auto">Different symbols.</p><hr id="3a6ecaf7-2d7b-8079-b7de-c35bae7f6016" dir="auto"/><h1 id="3a6ecaf7-2d7b-80c2-8b86-fa3a82842937" class="" dir="auto">Why this campaign works</h1><p id="3a6ecaf7-2d7b-8002-b8ef-d03fc62f64d0" class="" dir="auto">Instead of proving:</p><p id="3a6ecaf7-2d7b-801b-8360-d46af4d1c388" class="" dir="auto">Mercedes service is better,</p><p id="3a6ecaf7-2d7b-804f-9089-cf4b1f1244f2" class="" dir="auto">it asks:</p><blockquote id="3a6ecaf7-2d7b-800c-8010-d4821b50b83d" class="" dir="auto"><strong>Would you trust someone who is secretly dangerous?</strong></blockquote><p id="3a6ecaf7-2d7b-80d8-8828-efe8c385c606" class="" dir="auto">Fear becomes stronger than technical reasoning.</p><hr id="3a6ecaf7-2d7b-8070-957f-cb12abe472bf" dir="auto"/><h1 id="3a6ecaf7-2d7b-8056-9ef7-cea87994d4e3" class="" dir="auto">Consumer Psychology</h1><p id="3a6ecaf7-2d7b-809b-9d63-f9a442c81422" class="" dir="auto">People usually choose unauthorized mechanics because:</p><ul id="3a6ecaf7-2d7b-804c-8d4d-c4effb2e3e00" class="bulleted-list" dir="auto"><li style="list-style-type:disc">cheaper</li></ul><ul id="3a6ecaf7-2d7b-8006-ba0d-e42605d69199" class="bulleted-list" dir="auto"><li style="list-style-type:disc">nearby</li></ul><ul id="3a6ecaf7-2d7b-80c3-a7b0-d81c124ad399" class="bulleted-list" dir="auto"><li style="list-style-type:disc">familiar</li></ul><ul id="3a6ecaf7-2d7b-8091-ac1e-e0f087e51d77" class="bulleted-list" dir="auto"><li style="list-style-type:disc">convenient</li></ul><p id="3a6ecaf7-2d7b-80ee-a5c7-fa24a2c8b6dc" class="" dir="auto">Mercedes doesn&#x27;t argue against price.</p><p id="3a6ecaf7-2d7b-80db-9754-f403e7090bb8" class="" dir="auto">Instead,</p><p id="3a6ecaf7-2d7b-80c7-bac9-d2711fc883e3" class="" dir="auto">it introduces uncertainty.</p><p id="3a6ecaf7-2d7b-80c3-8a27-fb69a73be602" class="" dir="auto">After seeing the campaign,</p><p id="3a6ecaf7-2d7b-80b5-9a8e-e9b3da552657" class="" dir="auto">people begin wondering:</p><blockquote id="3a6ecaf7-2d7b-8007-bacf-f8f78fd4339f" class="" dir="auto">&quot;What if saving money costs me much more?&quot;</blockquote><p id="3a6ecaf7-2d7b-8025-a112-db105f3c4514" class="" dir="auto">That&#x27;s a more powerful persuasion strategy.</p><hr id="3a6ecaf7-2d7b-802c-a230-fbfd5e703450" dir="auto"/><h1 id="3a6ecaf7-2d7b-804b-8c1a-f7553da9ac1e" class="" dir="auto">Visual Thinking Systems</h1><table id="3a6ecaf7-2d7b-8082-90ec-fe2410b0337b" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-80e1-be06-e5075b76e7ed" dir="ltr"><th id="SgzI" class="simple-table-header-color simple-table-header">Visual System</th><th id="@NtB" class="simple-table-header-color simple-table-header">Strength</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-8014-af94-d61e4a46a496" dir="ltr"><td id="SgzI" class="">Shadow Metaphor</td><td id="@NtB" class="">★★★★★ (Primary)</td></tr><tr id="3a6ecaf7-2d7b-809d-b5c2-ce413e57b8e3" dir="ltr"><td id="SgzI" class="">Visual Metaphor</td><td id="@NtB" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8068-a3df-ebb9f2fe58b5" dir="ltr"><td id="SgzI" class="">Symbolic Concept</td><td id="@NtB" class="">★★★★☆</td></tr><tr id="3a6ecaf7-2d7b-80e3-aaba-c0ad8d4efb7e" dir="ltr"><td id="SgzI" class="">Minimalist Concept</td><td id="@NtB" class="">★★★★☆ (Ads 1 &amp; 2)</td></tr><tr id="3a6ecaf7-2d7b-805a-a5a3-f6934d36032d" dir="ltr"><td id="SgzI" class="">Scale &amp; Proportion</td><td id="@NtB" class="">★★★☆☆ (Ad 3 only)</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-80a8-973c-ca9cf83f96e2" dir="auto"/><h1 id="3a6ecaf7-2d7b-801e-9a72-dafbc681bd82" class="" dir="auto">Knowledge Contribution</h1><p id="3a6ecaf7-2d7b-80bd-ae01-dc133314a79a" class="" dir="auto">This campaign contributes several reusable principles to your Operating System:</p><ol type="1" id="3a6ecaf7-2d7b-80e6-8170-eff24521761e" class="numbered-list" start="1" dir="auto"><li><strong>Campaign scalability:</strong> One communication direction can generate many executions without changing the underlying idea.</li></ol><ol type="1" id="3a6ecaf7-2d7b-801f-892a-d4c9eccf567a" class="numbered-list" start="2" dir="auto"><li><strong>Shadow Metaphor:</strong> Shadows can communicate the hidden nature of a threat more effectively than depicting the threat directly.</li></ol><ol type="1" id="3a6ecaf7-2d7b-8027-8fa4-ee9ef55a3178" class="numbered-list" start="3" dir="auto"><li><strong>Risk reframing:</strong> Transform a functional service decision into a personal safety decision to increase persuasion.</li></ol><ol type="1" id="3a6ecaf7-2d7b-8096-8939-dc608bebfca5" class="numbered-list" start="4" dir="auto"><li><strong>Consistent symbolic language:</strong> A campaign can vary its symbols (monster, noose, dinosaur) while preserving the same emotional meaning.</li></ol><ol type="1" id="3a6ecaf7-2d7b-80e1-9a08-d161c0139ed3" class="numbered-list" start="5" dir="auto"><li><strong>Show the consequence, not the process:</strong> The ads never depict poor repairs or faulty parts; they visualize the emotional consequence of trusting the wrong service.</li></ol><h2 id="3a6ecaf7-2d7b-806f-982f-d311bb82852b" class="" dir="auto">Module Tagging (for your Advertisement Library)</h2><p id="3a6ecaf7-2d7b-8043-9296-e8acb4e235b4" class="" dir="auto"><strong>Primary Module</strong></p><ul id="3a6ecaf7-2d7b-8042-a1ce-f59720dcbe67" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Shadow Metaphor Ads</li></ul><p id="3a6ecaf7-2d7b-8053-9096-cb50d3249021" class="" dir="auto"><strong>Secondary Modules</strong></p><ul id="3a6ecaf7-2d7b-80d6-805a-c9fdceee73dd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphor Ads</li></ul><ul id="3a6ecaf7-2d7b-8053-950b-d43a8054e1b6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Concept Ads</li></ul><ul id="3a6ecaf7-2d7b-8036-ab42-fbd0d299e8e4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimalist Conceptual Ads</li></ul><ul id="3a6ecaf7-2d7b-8047-923f-e9c60939278c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale and Proportion Ads</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

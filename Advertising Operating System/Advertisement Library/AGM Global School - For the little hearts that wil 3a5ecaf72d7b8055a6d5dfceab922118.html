@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>AGM Global School - For the little hearts that will build our nation&#x27;s tomorrow</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_yellow.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_yellow.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a5ecaf7-2d7b-8055-a6d5-dfceab922118" class="page sans" data-notion-page-icon="/icons/photo-landscape_yellow.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/></div><h1 class="page-title" dir="auto">AGM Global School - F<em>or the little hearts that will build our nation&#x27;s tomorrow</em></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a5ecaf7-2d7b-804d-8b56-e28dc4c0ff61" class="image" data-notion-image="AGM%20Global%20School%20-%20For%20the%20little%20hearts%20that%20wil/image.png" dir="ltr"><a href="AGM%20Global%20School%20-%20For%20the%20little%20hearts%20that%20wil/image.png"><img style="width:704px" src="AGM%20Global%20School%20-%20For%20the%20little%20hearts%20that%20wil/image.png"/></a></figure><h1 id="3a5ecaf7-2d7b-80fd-8493-c57a12ebf456" class="" dir="auto">Advertisement Deconstruction</h1><h2 id="3a5ecaf7-2d7b-80e5-bce7-f3db534b8694" class="" dir="auto">Basic Information</h2><p id="3a5ecaf7-2d7b-808c-a709-ebafb369e4f0" class="" dir="auto"><strong>Brand:</strong> AGM Global School (CBSE)</p><p id="3a5ecaf7-2d7b-80d3-9772-e44d0d1fee7f" class="" dir="auto"><strong>Industry:</strong> Education / School</p><p id="3a5ecaf7-2d7b-803d-97e9-e69472617f16" class="" dir="auto"><strong>Campaign Type:</strong> Occasion Branding</p><p id="3a5ecaf7-2d7b-80bf-b1d5-fedd3d3b73d3" class="" dir="auto"><strong>Occasion:</strong> Children&#x27;s Day</p><p id="3a5ecaf7-2d7b-806f-a8db-e1f6e180bed4" class="" dir="auto"><strong>Headline / Message</strong></p><blockquote id="3a5ecaf7-2d7b-8022-8854-c2e6fd937c52" class="" dir="auto"><em>&quot;The children of today will make the India of tomorrow. The way we bring them up will determine the future.&quot;</em> — Jawaharlal Nehru</blockquote><p id="3a5ecaf7-2d7b-80b7-8254-c39783910062" class="" dir="auto">Supporting Line:</p><blockquote id="3a5ecaf7-2d7b-80fd-9016-cf4854f442aa" class="" dir="auto"><em>Happy Children&#x27;s Day — For the little hearts that will build our nation&#x27;s tomorrow.</em></blockquote><hr id="3a5ecaf7-2d7b-80fb-9f30-c206a6fdadc9" dir="auto"/><h1 id="3a5ecaf7-2d7b-80fb-b3fa-df9d269b4a86" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a5ecaf7-2d7b-8090-841e-eeb7eae1a4ac" class="" dir="auto">Business Goal</h2><p id="3a5ecaf7-2d7b-8087-aa68-c748713750cf" class="" dir="auto">Strengthen AGM Global School&#x27;s brand image by positioning the school as an institution that nurtures future nation builders rather than merely providing academic education.</p><p id="3a5ecaf7-2d7b-80d1-ac81-cd938dcff0f4" class="" dir="auto">This is a <strong>brand positioning campaign</strong>, not an admissions campaign.</p><hr id="3a5ecaf7-2d7b-80cc-ba5f-d85b9c9b8bb9" dir="auto"/><h2 id="3a5ecaf7-2d7b-801c-8f4e-f6de9b287e82" class="" dir="auto">Communication Objective</h2><p id="3a5ecaf7-2d7b-80b2-8c5c-eab2269bcca2" class="" dir="auto">Create an emotional association between children&#x27;s education and India&#x27;s future, making parents perceive the school as a place where tomorrow&#x27;s responsible citizens are shaped.</p><hr id="3a5ecaf7-2d7b-80c8-8499-e95e43554e99" dir="auto"/><h2 id="3a5ecaf7-2d7b-801c-b87e-e18a480d7bd4" class="" dir="auto">Communication Direction</h2><p id="3a5ecaf7-2d7b-8059-8197-fb43bc3ccbf5" class="" dir="auto">Instead of communicating:</p><blockquote id="3a5ecaf7-2d7b-80c6-a802-fa645e836fe1" class="" dir="auto">&quot;Our school offers quality education.&quot;</blockquote><p id="3a5ecaf7-2d7b-809d-892c-ca2ef184d3e9" class="" dir="auto">the advertisement communicates:</p><blockquote id="3a5ecaf7-2d7b-8001-abc8-dae229a1a0ee" class="" dir="auto"><strong>Every child educated today contributes to building the India of tomorrow.</strong></blockquote><p id="3a5ecaf7-2d7b-80e5-8856-d9703680a9b9" class="" dir="auto">The institution becomes a facilitator of nation-building.</p><hr id="3a5ecaf7-2d7b-800a-b2b6-caf328e1aea3" dir="auto"/><h2 id="3a5ecaf7-2d7b-803a-b313-c3779e5bfad0" class="" dir="auto">Big Idea</h2><p id="3a5ecaf7-2d7b-80a7-8b0b-e914794d94dc" class="" dir="auto"><strong>Children are physically constructing the map of India, just as education helps them build the nation&#x27;s future.</strong></p><p id="3a5ecaf7-2d7b-8092-9025-d7182b96db71" class="" dir="auto">The act of playing with blocks becomes a metaphor for shaping the country.</p><p id="3a5ecaf7-2d7b-80d8-9048-dcba3a19cd7a" class="" dir="auto">This transforms an ordinary classroom activity into a symbolic representation of education&#x27;s larger purpose.</p><hr id="3a5ecaf7-2d7b-8001-92d0-f9692f19d4ca" dir="auto"/><h1 id="3a5ecaf7-2d7b-804f-b3ac-f61afb9c5e09" class="" dir="auto">Visual Thinking System</h1><h3 id="3a5ecaf7-2d7b-80a1-97b7-c3d75180f4f7" class="" dir="auto">Primary</h3><p id="3a5ecaf7-2d7b-80ac-be25-d9f548c9c0e9" class="" dir="auto"><strong>Shape-Based Conceptual Ads</strong></p><p id="3a5ecaf7-2d7b-8099-bd3b-da9e5d2229c5" class="" dir="auto">The central visual is built around the recognizable shape of India.</p><p id="3a5ecaf7-2d7b-8094-bbcb-e030c1b81875" class="" dir="auto">The country&#x27;s outline is not merely decorative—it carries the entire communication.</p><hr id="3a5ecaf7-2d7b-80dd-8a6d-f35a248bae82" dir="auto"/><h3 id="3a5ecaf7-2d7b-805a-b44b-db1187e53d4a" class="" dir="auto">Supporting</h3><p id="3a5ecaf7-2d7b-801a-9530-ee165e5e1bd4" class="" dir="auto"><strong>Symbolic Concept Ads</strong></p><p id="3a5ecaf7-2d7b-804d-9069-ee54bb00c317" class="" dir="auto">The India map functions as a symbol of the nation&#x27;s future, while the coloured building blocks symbolize education, growth, and development.</p><hr id="3a5ecaf7-2d7b-807c-aff8-d4e2104212e8" dir="auto"/><h1 id="3a5ecaf7-2d7b-80f0-8e5f-dd9f32c5fe13" class="" dir="auto">Why This Visual Thinking System?</h1><p id="3a5ecaf7-2d7b-80ba-86e6-c49201e8c53d" class="" dir="auto">Instead of showing students studying or teachers teaching—a common education advertisement cliché—the designer uses a symbolic construction activity.</p><p id="3a5ecaf7-2d7b-80e5-acae-f32650f963f5" class="" dir="auto">The visual immediately connects:</p><p id="3a5ecaf7-2d7b-808f-85c7-d4a9b832b373" class="" dir="auto">Children</p><p id="3a5ecaf7-2d7b-8052-9b77-cff35d65cd5b" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-8091-a652-d82e5cbbe2c4" class="" dir="auto">Building Blocks</p><p id="3a5ecaf7-2d7b-8021-abe5-c73398d250e6" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-80aa-aad5-e0cc6861b3f8" class="" dir="auto">India</p><p id="3a5ecaf7-2d7b-804a-b0ce-c7e213d99d17" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-8079-b7fe-fbabb0f7b462" class="" dir="auto">Nation Building</p><p id="3a5ecaf7-2d7b-80e5-8d2e-ea325798ae69" class="" dir="auto">The metaphor is easy to decode while remaining emotionally engaging.</p><hr id="3a5ecaf7-2d7b-80b7-856b-ff2dc707b73e" dir="auto"/><h1 id="3a5ecaf7-2d7b-80af-8005-cdb80c8abf82" class="" dir="auto">Final Execution</h1><h3 id="3a5ecaf7-2d7b-808f-bde3-f4fc67776e2d" class="" dir="auto">Hero</h3><p id="3a5ecaf7-2d7b-80d5-a70a-cfe5e0336cb8" class="" dir="auto">Children collaboratively building a large map of India using coloured toy bricks.</p><h3 id="3a5ecaf7-2d7b-80e4-ba72-d05bb1b1324f" class="" dir="auto">Supporting Elements</h3><ul id="3a5ecaf7-2d7b-807e-83ff-d57fd91441da" class="bulleted-list" dir="auto"><li style="list-style-type:disc">School campus environment</li></ul><ul id="3a5ecaf7-2d7b-8050-8dea-e88535022e51" class="bulleted-list" dir="auto"><li style="list-style-type:disc">National tricolour represented through block colours</li></ul><ul id="3a5ecaf7-2d7b-8042-a1ce-dee673b1eafa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Jawaharlal Nehru quotation</li></ul><ul id="3a5ecaf7-2d7b-80e9-b75f-e86abcf83fc3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Children&#x27;s Day greeting</li></ul><ul id="3a5ecaf7-2d7b-807b-8656-efe8e9cb72a8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">School branding and contact information</li></ul><p id="3a5ecaf7-2d7b-8003-9700-f6ede2a36507" class="" dir="auto">The composition places the conceptual visual at the centre while allowing branding and supporting information to remain secondary.</p><hr id="3a5ecaf7-2d7b-8063-bb9e-f41da5fa6102" dir="auto"/><h1 id="3a5ecaf7-2d7b-809c-b042-e70127cc0f06" class="" dir="auto">Why This Advertisement Works</h1><h3 id="3a5ecaf7-2d7b-80ba-856b-ca7949b84f2e" class="" dir="auto">1. Education is visualized instead of explained.</h3><p id="3a5ecaf7-2d7b-80ed-b68f-da941d028a41" class="" dir="auto">Rather than relying on words about learning, the advertisement lets children actively &quot;build&quot; India.</p><hr id="3a5ecaf7-2d7b-8086-8524-f0f1daf51001" dir="auto"/><h3 id="3a5ecaf7-2d7b-8023-8176-f57db0354dca" class="" dir="auto">2. Strong occasion relevance.</h3><p id="3a5ecaf7-2d7b-8018-9766-d7858b2cc589" class="" dir="auto">Children&#x27;s Day naturally aligns with themes of childhood, learning, and the nation&#x27;s future.</p><p id="3a5ecaf7-2d7b-80da-8bbd-f46631e361a1" class="" dir="auto">The occasion feels integrated rather than attached.</p><hr id="3a5ecaf7-2d7b-80e4-87b2-d705268e0a47" dir="auto"/><h3 id="3a5ecaf7-2d7b-80f2-a98b-f924ab7c45bd" class="" dir="auto">3. Clear symbolic communication.</h3><p id="3a5ecaf7-2d7b-80d8-a0b4-ef4bea723cb1" class="" dir="auto">The India map is universally recognizable.</p><p id="3a5ecaf7-2d7b-8029-aa99-fc0c14bd62a0" class="" dir="auto">The metaphor requires very little cognitive effort.</p><hr id="3a5ecaf7-2d7b-8015-bacc-eca5458f8ecd" dir="auto"/><h3 id="3a5ecaf7-2d7b-80d5-a864-c753307e50dd" class="" dir="auto">4. Emotional optimism.</h3><p id="3a5ecaf7-2d7b-808d-bd89-deede7cf7975" class="" dir="auto">The smiling children, collaborative activity, and bright environment reinforce hope and aspiration.</p><hr id="3a5ecaf7-2d7b-80b0-b17e-e3bcb3d0e480" dir="auto"/><h1 id="3a5ecaf7-2d7b-8042-b4a3-fcbce1da672c" class="" dir="auto">Reusable Principles</h1><h3 id="3a5ecaf7-2d7b-8001-8aa5-f1b905845475" class="" dir="auto">Principle 1</h3><p id="3a5ecaf7-2d7b-80cc-96e6-ed4b9807800c" class="" dir="auto">Abstract educational outcomes can become tangible through symbolic construction activities.</p><hr id="3a5ecaf7-2d7b-8003-9a6d-d4acc7781d79" dir="auto"/><h3 id="3a5ecaf7-2d7b-8016-8a5b-e65688ea300f" class="" dir="auto">Principle 2</h3><p id="3a5ecaf7-2d7b-8045-811a-e6585a18fef5" class="" dir="auto">Children performing an action can communicate educational philosophy more effectively than children simply posing.</p><hr id="3a5ecaf7-2d7b-80b3-a627-d881abb22041" dir="auto"/><h3 id="3a5ecaf7-2d7b-80a7-b8cd-c22ef1686894" class="" dir="auto">Principle 3</h3><p id="3a5ecaf7-2d7b-8033-b672-e7f59db7886d" class="" dir="auto">National identity can be integrated through meaningful symbolism rather than patriotic decoration alone.</p><hr id="3a5ecaf7-2d7b-8028-8e93-d9a4e6837c5e" dir="auto"/><h3 id="3a5ecaf7-2d7b-80fa-835e-d974d40330bf" class="" dir="auto">Principle 4</h3><p id="3a5ecaf7-2d7b-8015-97ed-de9bfb45ae2a" class="" dir="auto">Occasion campaigns become stronger when the occasion naturally supports the institution&#x27;s long-term positioning.</p><hr id="3a5ecaf7-2d7b-80e3-ab12-ec9173d3472b" dir="auto"/><h1 id="3a5ecaf7-2d7b-8099-a0f8-e89936803495" class="" dir="auto">Critical Evaluation</h1><h2 id="3a5ecaf7-2d7b-8092-8c61-fcfb828b6af5" class="" dir="auto">Strengths</h2><ul id="3a5ecaf7-2d7b-80e4-a6d3-e96be87e682e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong conceptual central visual</li></ul><ul id="3a5ecaf7-2d7b-8093-9c53-c7671b52006a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent Children&#x27;s Day relevance</li></ul><ul id="3a5ecaf7-2d7b-8073-8e5a-dfca20f69dd7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Positive emotional tone</li></ul><ul id="3a5ecaf7-2d7b-80f6-8da0-d03087157960" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Clear educational positioning</li></ul><ul id="3a5ecaf7-2d7b-8050-a366-f97557a8dd01" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Good integration of national symbolism</li></ul><ul id="3a5ecaf7-2d7b-808d-9c5e-c13578b8346d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Memorable visual metaphor</li></ul><hr id="3a5ecaf7-2d7b-8073-a790-f48e18a4297f" dir="auto"/><h2 id="3a5ecaf7-2d7b-80c2-a1dc-ea09a08a454f" class="" dir="auto">Weaknesses</h2><p id="3a5ecaf7-2d7b-80da-af1f-e5ac4fe6a5df" class="" dir="auto">The execution relies heavily on the <strong>map of India</strong> to communicate the idea.</p><p id="3a5ecaf7-2d7b-802c-806f-fc9b5f39d54d" class="" dir="auto">Without the map shape, the concept would become significantly weaker.</p><p id="3a5ecaf7-2d7b-80b1-8a3c-f87848a29cc3" class="" dir="auto">Additionally, the Nehru quote occupies considerable visual attention and competes slightly with the original campaign message instead of reinforcing it.</p><hr id="3a5ecaf7-2d7b-80fe-a9ad-eaedd7fe21e1" dir="auto"/><h1 id="3a5ecaf7-2d7b-8086-ab33-d9ac96437324" class="" dir="auto">Alternative Creative Routes</h1><p id="3a5ecaf7-2d7b-80ad-9cc2-efc1d792ffd2" class="" dir="auto">Instead of constructing the India map, alternative executions could include:</p><ul id="3a5ecaf7-2d7b-80a5-a75b-dbcbb89f7213" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Children planting saplings that gradually form the outline of India.</li></ul><ul id="3a5ecaf7-2d7b-80ab-9b91-d1605e538adc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Students assembling puzzle pieces representing different values (knowledge, compassion, innovation) to complete India.</li></ul><ul id="3a5ecaf7-2d7b-80f4-8e9e-dba4dbdfd6ab" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Classroom objects collaboratively forming India&#x27;s silhouette.</li></ul><p id="3a5ecaf7-2d7b-80ec-b29c-ea291158d941" class="" dir="auto">These would preserve the nation-building concept while exploring different symbolic executions.</p><hr id="3a5ecaf7-2d7b-80ac-9f23-ce951b9b550f" dir="auto"/><h1 id="3a5ecaf7-2d7b-8048-a0e8-d04d3ed30647" class="" dir="auto">Core Learning</h1><p id="3a5ecaf7-2d7b-8016-8ef0-eb09c34e1135" class="" dir="auto">This advertisement demonstrates how <strong>a physical activity can become a metaphor for an institution&#x27;s purpose</strong>.</p><p id="3a5ecaf7-2d7b-804d-8e47-d698dc896397" class="" dir="auto">Instead of saying that education builds the future, it visualizes the process through children collaboratively constructing the nation&#x27;s shape.</p><p id="3a5ecaf7-2d7b-8060-b25a-f3b8b60ec799" class="" dir="auto">It is a strong example of translating an abstract educational promise into a simple, emotionally resonant visual.</p><hr id="3a5ecaf7-2d7b-80c5-bacc-fb5885ca4fa9" dir="auto"/><h1 id="3a5ecaf7-2d7b-8030-85d2-f25452b5a721" class="" dir="auto">Related Modules</h1><h2 id="3a5ecaf7-2d7b-8032-8c4c-d16c1cc50aa1" class="" dir="auto">Section A</h2><ul id="3a5ecaf7-2d7b-8075-98a3-c12126065ada" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module C – How People Notice, Think &amp; Respond to Advertising</strong><p id="3a5ecaf7-2d7b-80dd-91e4-c354bc4d39d9" class="" dir="auto">Uses a familiar national symbol and collaborative action to create immediate recognition and emotional engagement.</p></li></ul><ul id="3a5ecaf7-2d7b-8068-8603-ea701faaed64" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module D – Visual Communication</strong><p id="3a5ecaf7-2d7b-8018-8d67-c4644230e9af" class="" dir="auto">Demonstrates how a visual metaphor can communicate institutional values with minimal explanatory text.</p></li></ul><ul id="3a5ecaf7-2d7b-80a6-9d7d-e270e67e231a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module E – From Features to Identity</strong><p id="3a5ecaf7-2d7b-80cf-9dbe-da30a468361d" class="" dir="auto">The school shifts from offering education (feature) to shaping future citizens (identity).</p></li></ul><hr id="3a5ecaf7-2d7b-80e7-b5c7-c8b9f5c8aa8e" dir="auto"/><h2 id="3a5ecaf7-2d7b-8005-b0a3-dc39a9930fe2" class="" dir="auto">Section B</h2><ul id="3a5ecaf7-2d7b-8007-a384-c0fb1b66bd6e" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module G – Generating Advertising Directions</strong><p id="3a5ecaf7-2d7b-803b-87e1-fdc53d1d937c" class="" dir="auto">Strong example of selecting a purpose-driven communication direction instead of promoting facilities or admissions.</p></li></ul><ul id="3a5ecaf7-2d7b-802d-9fe4-e6fe70fda464" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Future Module – Communication Objective</strong><p id="3a5ecaf7-2d7b-8084-b7f7-e9ad848f3773" class="" dir="auto">Distinguishes the business objective (brand positioning) from the emotional message (building India&#x27;s future).</p></li></ul><ul id="3a5ecaf7-2d7b-80d1-ba04-d5b7e8a932df" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Future Module – Big Idea</strong><p id="3a5ecaf7-2d7b-8046-b6d8-d01fa50c951b" class="" dir="auto">Valuable evidence of converting an abstract promise into a single visual metaphor.</p></li></ul><hr id="3a5ecaf7-2d7b-80a2-8de7-f3054275ad63" dir="auto"/><h2 id="3a5ecaf7-2d7b-80e6-b351-e4f2d930cb1d" class="" dir="auto">Section C</h2><ul id="3a5ecaf7-2d7b-8085-88b8-e054dc156b07" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Shape-Based Conceptual Ads</strong></li></ul><ul id="3a5ecaf7-2d7b-80b9-a338-f856e532a9dd" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Symbolic Concept Ads</strong></li></ul><hr id="3a5ecaf7-2d7b-80a1-847d-e919544fb5d6" dir="auto"/><h1 id="3a5ecaf7-2d7b-8097-8a56-ff8d8bdb6dfe" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a5ecaf7-2d7b-80d8-b618-fed2a87600ed" class="" dir="auto">Creative Reasoning ★★★★★</h3><p id="3a5ecaf7-2d7b-809b-8caf-c1f2ac9fd2c8" class="" dir="auto">Excellent example of translating an institutional philosophy into a simple conceptual action.</p><h3 id="3a5ecaf7-2d7b-802e-bc36-e22577835b57" class="" dir="auto">Visual Thinking ★★★★☆</h3><p id="3a5ecaf7-2d7b-80be-9dca-fc1abd8fcd1b" class="" dir="auto">Strong use of <strong>Shape-Based Conceptual Ads</strong> reinforced by symbolic meaning.</p><h3 id="3a5ecaf7-2d7b-8098-afe7-ffe4dd886ca6" class="" dir="auto">Graphic Design ★★★★☆</h3><p id="3a5ecaf7-2d7b-804b-ab2f-e9848f155996" class="" dir="auto">Balanced composition with good focus on the hero visual, though the quotation competes slightly with the campaign&#x27;s own messaging.</p><h3 id="3a5ecaf7-2d7b-80d7-8f54-d2e5b0ba1d9f" class="" dir="auto">Photography ★★★★☆</h3><p id="3a5ecaf7-2d7b-80ac-b332-e871c1db0833" class="" dir="auto">Natural child expressions and believable interaction support the authenticity of the concept.</p><h3 id="3a5ecaf7-2d7b-805d-a1b2-dc61103da185" class="" dir="auto">Overall Contribution ★★★★☆</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

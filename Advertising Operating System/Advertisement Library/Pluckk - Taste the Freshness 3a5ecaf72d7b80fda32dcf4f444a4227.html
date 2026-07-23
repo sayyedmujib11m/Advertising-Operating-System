@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Pluckk - Taste the Freshness</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_yellow.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_yellow.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a5ecaf7-2d7b-80fd-a32d-cf4f444a4227" class="page sans" data-notion-page-icon="/icons/photo-landscape_yellow.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/></div><h1 class="page-title" dir="auto">Pluckk - Taste the Freshness</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a5ecaf7-2d7b-801d-8526-da3681791c93" class="image" data-notion-image="Pluckk%20-%20Taste%20the%20Freshness/image.png" dir="ltr"><a href="Pluckk%20-%20Taste%20the%20Freshness/image.png"><img style="width:704px" src="Pluckk%20-%20Taste%20the%20Freshness/image.png"/></a></figure><h1 id="3a5ecaf7-2d7b-8073-bb12-dc47d9a631b2" class="" dir="auto">Advertisement Deconstruction</h1><h2 id="3a5ecaf7-2d7b-80e7-9b1c-f9552d2ff416" class="" dir="auto">Basic Information</h2><p id="3a5ecaf7-2d7b-8030-b1a8-db944f748143" class="" dir="auto"><strong>Brand:</strong> Pluckk</p><p id="3a5ecaf7-2d7b-80ba-a5d1-fb3d1edbf573" class="" dir="auto"><strong>Industry:</strong> Fresh Produce / Whole Fruit Juice</p><p id="3a5ecaf7-2d7b-80a5-8db7-d343d3e8185e" class="" dir="auto"><strong>Campaign Type:</strong> Product Communication</p><p id="3a5ecaf7-2d7b-803a-a664-deb5c6fba5ec" class="" dir="auto"><strong>Objective Type:</strong> Product Positioning</p><p id="3a5ecaf7-2d7b-80a1-b066-c57cb8d694bb" class="" dir="auto"><strong>Headline</strong></p><blockquote id="3a5ecaf7-2d7b-8062-a973-db89ba1ebe6d" class="" dir="auto"><strong>Pure Fruit. Nothing Else.</strong></blockquote><p id="3a5ecaf7-2d7b-8065-829d-d0bf06780c5e" class="" dir="auto"><strong>Supporting Copy</strong></p><ul id="3a5ecaf7-2d7b-8078-b068-d3940694576c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Taste the Freshness</li></ul><ul id="3a5ecaf7-2d7b-80fe-948f-ca62cc32c0c0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Nature Unbottled</li></ul><ul id="3a5ecaf7-2d7b-807d-bc7f-d9d479da6440" class="bulleted-list" dir="auto"><li style="list-style-type:disc">No Added Sugar, No Preservatives</li></ul><hr id="3a5ecaf7-2d7b-800a-b2b1-f822afc173ff" dir="auto"/><h1 id="3a5ecaf7-2d7b-8003-9723-d2874c5e68e0" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a5ecaf7-2d7b-8067-8056-eb0c28501b75" class="" dir="auto">Business Goal</h2><p id="3a5ecaf7-2d7b-803e-b84a-c2e6af2795f8" class="" dir="auto">Position Pluckk&#x27;s bottled juice as a genuinely natural product made only from fruit, differentiating it from processed fruit beverages containing sugar, concentrates, preservatives or artificial ingredients.</p><hr id="3a5ecaf7-2d7b-8031-ae47-dbd0764e3211" dir="auto"/><h2 id="3a5ecaf7-2d7b-8036-955c-e26efe9c4373" class="" dir="auto">Communication Objective</h2><p id="3a5ecaf7-2d7b-80bd-b758-f1b7a0a6d171" class="" dir="auto">Convince consumers that the juice inside the bottle is essentially fresh fruit in bottled form—not an artificially manufactured beverage.</p><p id="3a5ecaf7-2d7b-80e3-92b4-da2d17da9733" class="" dir="auto">The campaign aims to reduce skepticism around packaged juices.</p><hr id="3a5ecaf7-2d7b-80f3-b512-efb864645212" dir="auto"/><h2 id="3a5ecaf7-2d7b-80e4-84b5-ccb851449fbd" class="" dir="auto">Communication Direction</h2><p id="3a5ecaf7-2d7b-803d-8a26-ef26a1ae1f25" class="" dir="auto">Rather than claiming:</p><blockquote id="3a5ecaf7-2d7b-80c2-a558-e3aa0efc47de" class="" dir="auto">&quot;Our juice is 100% natural.&quot;</blockquote><p id="3a5ecaf7-2d7b-8062-be71-de1ce087e4c7" class="" dir="auto">the advertisement demonstrates:</p><blockquote id="3a5ecaf7-2d7b-8085-a15e-eaf83afc21c7" class="" dir="auto"><strong>The bottle contains nothing except freshly cut fruit.</strong></blockquote><p id="3a5ecaf7-2d7b-80db-a214-d204426285aa" class="" dir="auto">The communication relies on visual proof instead of verbal claims.</p><hr id="3a5ecaf7-2d7b-804c-b98e-caea21a23687" dir="auto"/><h2 id="3a5ecaf7-2d7b-80f2-b30c-c1f3cdee4ddf" class="" dir="auto">Big Idea</h2><p id="3a5ecaf7-2d7b-8028-9253-fc8b4c87692c" class="" dir="auto"><strong>The bottle is visually &quot;prepared&quot; exactly like fresh fruit.</strong></p><p id="3a5ecaf7-2d7b-803e-b7a8-ce0a9f2c43e1" class="" dir="auto">Instead of pouring juice into the bottle, the advertisement imagines someone slicing fresh raspberries and pomegranates directly into it.</p><p id="3a5ecaf7-2d7b-802d-8aeb-fe0094bc0ddd" class="" dir="auto">The preparation process itself becomes the evidence.</p><hr id="3a5ecaf7-2d7b-80ae-8ac2-dabf181aa238" dir="auto"/><h1 id="3a5ecaf7-2d7b-80cc-8e21-d047cf1f4934" class="" dir="auto">Visual Thinking System</h1><h2 id="3a5ecaf7-2d7b-80e4-a2cf-e8a1c354f5f3" class="" dir="auto">Primary Category</h2><p id="3a5ecaf7-2d7b-80ff-a324-c79065047972" class="" dir="auto"><strong>Transformation Conceptual Ads</strong></p><p id="3a5ecaf7-2d7b-8088-aab7-eb54744fed59" class="" dir="auto">The normal process of preparing fruit is conceptually transformed into the process of manufacturing bottled juice.</p><p id="3a5ecaf7-2d7b-8036-a771-d19ee61df458" class="" dir="auto">Instead of fruit becoming juice through an unseen factory process, the transformation is made visible in an unexpected but understandable way.</p><hr id="3a5ecaf7-2d7b-8040-b154-cbe02ed80c1d" dir="auto"/><h2 id="3a5ecaf7-2d7b-8078-8c34-dd2ffe184f0c" class="" dir="auto">Supporting Category</h2><p id="3a5ecaf7-2d7b-800f-9d9c-dafdb898eb4f" class="" dir="auto"><strong>Symbolic Concept Ads</strong></p><p id="3a5ecaf7-2d7b-80d0-be7f-f4a30fa1c472" class="" dir="auto">The knife cutting fruit directly into the bottle symbolizes complete purity.</p><p id="3a5ecaf7-2d7b-8069-8cec-fd9fbe68c7be" class="" dir="auto">The visual is not literal.</p><p id="3a5ecaf7-2d7b-8099-bb91-c97c070873ac" class="" dir="auto">It is a symbolic demonstration of the product promise.</p><hr id="3a5ecaf7-2d7b-802f-8f94-c351b76be89f" dir="auto"/><h1 id="3a5ecaf7-2d7b-802b-9772-eaee518eaa56" class="" dir="auto">Why This Visual Thinking System?</h1><p id="3a5ecaf7-2d7b-80d9-bc4c-c0cf5a23be93" class="" dir="auto">Consumers often distrust packaged fruit juices.</p><p id="3a5ecaf7-2d7b-8060-af3f-ec3d078d35f4" class="" dir="auto">Instead of explaining ingredients, certifications or manufacturing processes, the advertisement visualizes purity through one simple conceptual action.</p><p id="3a5ecaf7-2d7b-80a6-8da8-da7c91fba3fa" class="" dir="auto">The viewer immediately understands:</p><p id="3a5ecaf7-2d7b-80ed-84eb-dce66ed538a6" class="" dir="auto">Fresh fruit</p><p id="3a5ecaf7-2d7b-8071-a560-fb06d7f8769f" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-808d-9176-c705ee6700e1" class="" dir="auto">Bottle</p><p id="3a5ecaf7-2d7b-8077-a3c1-df98fe54f99f" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-8055-8651-eef83dc8c9ca" class="" dir="auto">Nothing added.</p><p id="3a5ecaf7-2d7b-8082-a515-fb3fd882480d" class="" dir="auto">The concept reduces cognitive effort while strengthening believability.</p><hr id="3a5ecaf7-2d7b-8008-8df6-e30e25311350" dir="auto"/><h1 id="3a5ecaf7-2d7b-80f7-9084-ed401b4ac008" class="" dir="auto">Final Execution</h1><h3 id="3a5ecaf7-2d7b-80da-b7a0-f00ec9cbcaee" class="" dir="auto">Hero</h3><p id="3a5ecaf7-2d7b-801c-b5d0-d3161ce85ac9" class="" dir="auto">Pluckk Raspberry &amp; Pomegranate juice bottle.</p><h3 id="3a5ecaf7-2d7b-80c5-8c7e-fdd85deaed1b" class="" dir="auto">Supporting Elements</h3><ul id="3a5ecaf7-2d7b-804b-a32e-e3e0f8e84b47" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Fresh raspberries</li></ul><ul id="3a5ecaf7-2d7b-8040-b1b5-c08eede4d6d9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Pomegranate seeds</li></ul><ul id="3a5ecaf7-2d7b-8034-8c3b-f27b91dee953" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Knife slicing fruit directly toward the bottle</li></ul><ul id="3a5ecaf7-2d7b-80a8-8391-ea221d3af631" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Hands wearing black gloves</li></ul><ul id="3a5ecaf7-2d7b-804d-aabb-cbc1381df383" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Dark premium background</li></ul><ul id="3a5ecaf7-2d7b-80c5-935b-e999500e7214" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimal typography</li></ul><p id="3a5ecaf7-2d7b-80b5-9651-e9d7eec54abf" class="" dir="auto">The bottle remains the dominant visual throughout the composition.</p><hr id="3a5ecaf7-2d7b-8089-aaf6-ef985c9df068" dir="auto"/><h1 id="3a5ecaf7-2d7b-80f0-9cad-dd93ccb13233" class="" dir="auto">Why This Advertisement Works</h1><h3 id="3a5ecaf7-2d7b-80a7-ba97-effee99a5ddf" class="" dir="auto">1. Demonstrates instead of claims.</h3><p id="3a5ecaf7-2d7b-806f-a53a-c8382d380fa0" class="" dir="auto">The visual itself communicates the product promise.</p><p id="3a5ecaf7-2d7b-80c3-a580-fa29eb6e8dc5" class="" dir="auto">The headline merely confirms what the viewer has already understood.</p><hr id="3a5ecaf7-2d7b-803c-a10d-f9da0736f634" dir="auto"/><h3 id="3a5ecaf7-2d7b-80a4-adde-fbbff1978a28" class="" dir="auto">2. Product remains the hero.</h3><p id="3a5ecaf7-2d7b-80b6-ae83-f36a73317515" class="" dir="auto">The bottle occupies the central position.</p><p id="3a5ecaf7-2d7b-80ad-8eb8-e13072316582" class="" dir="auto">Everything else exists to strengthen its credibility.</p><hr id="3a5ecaf7-2d7b-8062-9a66-c5541521b5a6" dir="auto"/><h3 id="3a5ecaf7-2d7b-80fb-9f66-e07f3367d84b" class="" dir="auto">3. One clear visual story.</h3><p id="3a5ecaf7-2d7b-803a-bab0-ceecc9d6f195" class="" dir="auto">The viewer understands the sequence almost instantly:</p><p id="3a5ecaf7-2d7b-8037-9a22-d40592f509a4" class="" dir="auto">Fruit</p><p id="3a5ecaf7-2d7b-8093-b44b-f263cc728c1d" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-806e-a075-f6883880a2f2" class="" dir="auto">Knife</p><p id="3a5ecaf7-2d7b-80f3-87de-dcbec6766d9d" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-80b3-a665-e1315abdb9aa" class="" dir="auto">Bottle</p><p id="3a5ecaf7-2d7b-807c-a8e4-c3e0844dd5ed" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-8083-871d-e653c9ad63eb" class="" dir="auto">Pure juice</p><p id="3a5ecaf7-2d7b-8089-923d-e903c6c1d81d" class="" dir="auto">No explanation is required.</p><hr id="3a5ecaf7-2d7b-80df-8a6d-cddc607fb800" dir="auto"/><h3 id="3a5ecaf7-2d7b-80a6-85bd-e4382573ae5e" class="" dir="auto">4. Excellent consistency.</h3><p id="3a5ecaf7-2d7b-80b2-a52a-fdcfdc2b5013" class="" dir="auto">Every visual element reinforces one message:</p><blockquote id="3a5ecaf7-2d7b-80be-ab37-f2c0be28eec7" class="" dir="auto">Nothing except fruit.</blockquote><p id="3a5ecaf7-2d7b-8008-ad91-cb7f4b872f5c" class="" dir="auto">There are no distracting secondary ideas.</p><hr id="3a5ecaf7-2d7b-80ad-9375-dc141c3ffe5c" dir="auto"/><h1 id="3a5ecaf7-2d7b-8036-ac53-f83946976c88" class="" dir="auto">Reusable Principles</h1><h3 id="3a5ecaf7-2d7b-80d8-b7e5-cd3f6404cbc3" class="" dir="auto">Principle 1</h3><p id="3a5ecaf7-2d7b-803c-b973-e46f8ab69bb8" class="" dir="auto">When communicating purity, visual proof is stronger than descriptive copy.</p><hr id="3a5ecaf7-2d7b-8011-81b7-ef74ad27bcbb" dir="auto"/><h3 id="3a5ecaf7-2d7b-8085-8954-db2d596f14e5" class="" dir="auto">Principle 2</h3><p id="3a5ecaf7-2d7b-80d1-b7e2-c76c3e13d136" class="" dir="auto">The manufacturing process itself can become the creative concept.</p><hr id="3a5ecaf7-2d7b-800b-8444-f3ac1f956195" dir="auto"/><h3 id="3a5ecaf7-2d7b-80ef-b182-dc8b8d83eda5" class="" dir="auto">Principle 3</h3><p id="3a5ecaf7-2d7b-807b-98ae-d6cfe6c65a00" class="" dir="auto">Showing <em>how</em> a product is imagined to be made can communicate quality more effectively than listing ingredients.</p><hr id="3a5ecaf7-2d7b-806a-abb4-cde01d5304d2" dir="auto"/><h3 id="3a5ecaf7-2d7b-80c0-868e-eed3dea7c80f" class="" dir="auto">Principle 4</h3><p id="3a5ecaf7-2d7b-80fa-89a3-d29da656c2f0" class="" dir="auto">Strong conceptual advertisements often compress an entire process into one frozen visual moment.</p><hr id="3a5ecaf7-2d7b-8033-9843-ee503a6f8f6f" dir="auto"/><h1 id="3a5ecaf7-2d7b-80fa-ad66-cd6abbbfbf62" class="" dir="auto">Critical Evaluation</h1><h2 id="3a5ecaf7-2d7b-8067-99ae-e78e3ce63e5a" class="" dir="auto">Strengths</h2><ul id="3a5ecaf7-2d7b-80fe-97be-e91bf70aa0aa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Immediate comprehension</li></ul><ul id="3a5ecaf7-2d7b-80d5-9661-e1f914925019" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong single-minded communication</li></ul><ul id="3a5ecaf7-2d7b-80a7-ac2f-e6e3875dee71" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent product focus</li></ul><ul id="3a5ecaf7-2d7b-80a6-8fdd-c88f4701cbda" class="bulleted-list" dir="auto"><li style="list-style-type:disc">High conceptual clarity</li></ul><ul id="3a5ecaf7-2d7b-8058-9d58-fff99d698c32" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Premium visual execution</li></ul><ul id="3a5ecaf7-2d7b-80be-b9e5-e4d4a8e95fd2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Supports every claim with one central visual metaphor</li></ul><hr id="3a5ecaf7-2d7b-8077-b449-d74450ca877b" dir="auto"/><h2 id="3a5ecaf7-2d7b-8086-b7c3-d294c4477f70" class="" dir="auto">Weaknesses</h2><p id="3a5ecaf7-2d7b-80f8-9962-dfd9e1b1771f" class="" dir="auto">The knife and black gloves introduce a slightly industrial or laboratory feeling.</p><p id="3a5ecaf7-2d7b-80a2-8162-ec2e6f092ea2" class="" dir="auto">While they reinforce preparation, they are less emotionally warm than hands naturally cutting fruit in a kitchen.</p><p id="3a5ecaf7-2d7b-803a-9cb4-ffe6324c9e3f" class="" dir="auto">The concept prioritizes clarity over emotional appeal.</p><hr id="3a5ecaf7-2d7b-801f-a170-f8852ef6bd3d" dir="auto"/><h1 id="3a5ecaf7-2d7b-806b-bf51-ff03c8903c4e" class="" dir="auto">Alternative Creative Routes</h1><p id="3a5ecaf7-2d7b-8064-b014-ccae894adc6a" class="" dir="auto">Instead of cutting fruit into the bottle:</p><ul id="3a5ecaf7-2d7b-803d-9ffe-de41f94752aa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The bottle could naturally grow from a fruit tree.</li></ul><ul id="3a5ecaf7-2d7b-80cc-ae46-fdb019d344c0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Fruit could gradually transform into the bottle.</li></ul><ul id="3a5ecaf7-2d7b-80e9-b282-cc823bf173b9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The bottle could be filled by bursting fresh fruit.</li></ul><p id="3a5ecaf7-2d7b-806a-8682-dfe6efd56d2e" class="" dir="auto">These alternatives would communicate the same promise through different conceptual systems.</p><hr id="3a5ecaf7-2d7b-8029-b509-d4f2e7ce7076" dir="auto"/><h1 id="3a5ecaf7-2d7b-8013-ae68-ea9b3a4315bb" class="" dir="auto">Core Learning</h1><p id="3a5ecaf7-2d7b-8065-8097-f9cd4436c37b" class="" dir="auto">This advertisement demonstrates that <strong>product claims become significantly more believable when converted into visual evidence rather than textual statements.</strong></p><p id="3a5ecaf7-2d7b-803f-90da-f08fb4f2bcba" class="" dir="auto">Instead of asking consumers to trust the brand, the advertisement constructs a visual argument that supports the claim.</p><hr id="3a5ecaf7-2d7b-8097-a477-cdbefac53d40" dir="auto"/><h1 id="3a5ecaf7-2d7b-807e-8ec4-dcdebbccb70c" class="" dir="auto">Related Modules</h1><h2 id="3a5ecaf7-2d7b-80cb-824e-eee2ce48a9da" class="" dir="auto">Section A</h2><h3 id="3a5ecaf7-2d7b-80fd-b560-e54d81aa5469" class="" dir="auto">Module D – Visual Communication</h3><ul id="3a5ecaf7-2d7b-80d7-86db-e0e55e99c8e5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent example of replacing verbal explanation with visual reasoning.</li></ul><h3 id="3a5ecaf7-2d7b-80c3-b17d-f851e37e4fcd" class="" dir="auto">Module E – From Features to Identity</h3><ul id="3a5ecaf7-2d7b-80c3-8351-c5256764524e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Transforms the product feature (&quot;100% fruit&quot;) into the brand identity (&quot;Nature Unbottled&quot;).</li></ul><hr id="3a5ecaf7-2d7b-80e0-8481-c32b7b1041af" dir="auto"/><h2 id="3a5ecaf7-2d7b-80f2-a6df-cc606c7fe2cf" class="" dir="auto">Section B</h2><h3 id="3a5ecaf7-2d7b-809a-adab-dba19a0c8b35" class="" dir="auto">Module G – Generating Advertising Directions</h3><ul id="3a5ecaf7-2d7b-80a0-8ec7-c42115944fa1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Demonstrates selecting <strong>proof through process</strong> as the communication direction rather than relying on product claims.</li></ul><h3 id="3a5ecaf7-2d7b-80aa-9ad5-dbeb6cee63f8" class="" dir="auto">Future Module – Communication Objective</h3><ul id="3a5ecaf7-2d7b-80de-b6cb-c156af9a6a14" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong distinction between <em>claiming purity</em> and <em>making purity believable</em>.</li></ul><h3 id="3a5ecaf7-2d7b-80d1-b32e-e51c27a25c90" class="" dir="auto">Future Module – Big Idea</h3><ul id="3a5ecaf7-2d7b-803b-b404-de59a96fb563" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A good example of turning the production process into the central creative idea.</li></ul><hr id="3a5ecaf7-2d7b-8017-b161-cd997c5cfc58" dir="auto"/><h2 id="3a5ecaf7-2d7b-8062-9078-d5c04088b638" class="" dir="auto">Section C</h2><ul id="3a5ecaf7-2d7b-80ee-af94-f97e23bfa4db" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Transformation Conceptual Ads</li></ul><ul id="3a5ecaf7-2d7b-8047-8abc-e51ac5c2ec40" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Concept Ads</li></ul><hr id="3a5ecaf7-2d7b-809e-b5d9-f9e540083e5a" dir="auto"/><h1 id="3a5ecaf7-2d7b-8057-9980-ebced0ef73c3" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a5ecaf7-2d7b-8051-9d91-cf0912804dff" class="" dir="auto">Creative Reasoning ★★★★★</h3><p id="3a5ecaf7-2d7b-8065-b241-d544576ac9e6" class="" dir="auto">Excellent example of transforming a functional product claim into a visual argument.</p><h3 id="3a5ecaf7-2d7b-8032-aa17-ef39ef400635" class="" dir="auto">Visual Thinking ★★★★☆</h3><p id="3a5ecaf7-2d7b-80fa-8884-fb6037cf5cc0" class="" dir="auto">Strong use of conceptual transformation to explain product purity.</p><h3 id="3a5ecaf7-2d7b-8079-9a07-e90855afb5e4" class="" dir="auto">Graphic Design ★★★★★</h3><p id="3a5ecaf7-2d7b-80bc-9721-fae07a9616e9" class="" dir="auto">Clean composition, strong hierarchy, premium styling, and excellent focus on the hero product.</p><h3 id="3a5ecaf7-2d7b-80d3-b175-f2e03b38ff95" class="" dir="auto">Photography ★★★★★</h3><p id="3a5ecaf7-2d7b-802e-9f45-c79eda31e626" class="" dir="auto">Professional food styling with realistic textures, controlled lighting, and strong appetite appeal.</p><h3 id="3a5ecaf7-2d7b-8067-9cb3-fb4e845e2972" class="" dir="auto">Overall Contribution ★★★★★</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

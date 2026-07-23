@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>BFGoodrich - Playground Earth</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_yellow.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_yellow.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a6ecaf7-2d7b-807f-8c59-dc0d697d2f18" class="page sans" data-notion-page-icon="/icons/photo-landscape_yellow.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/></div><h1 class="page-title" dir="auto">BFGoodrich - Playground Earth</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a6ecaf7-2d7b-80dc-bed3-e2be9099631f" class="image" data-notion-image="BFGoodrich%20-%20Playground%20Earth/PDF_Gallery_20260722_102439_page-0048.jpg" dir="ltr"><a href="BFGoodrich%20-%20Playground%20Earth/PDF_Gallery_20260722_102439_page-0048.jpg"><img style="width:704px" src="BFGoodrich%20-%20Playground%20Earth/PDF_Gallery_20260722_102439_page-0048.jpg"/></a></figure><h1 id="3a6ecaf7-2d7b-8029-abd1-dd4cb2ec6035" class="" dir="auto">Advertisement Information</h1><hr id="3a6ecaf7-2d7b-8056-9e25-c4e3e84c230d" dir="auto"/><table id="3a6ecaf7-2d7b-805d-870f-ddd34996af99" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-805c-a967-ec9a1842bae2" dir="ltr"><th id="ojtn" class="simple-table-header-color simple-table-header">Field</th><th id=";}L:" class="simple-table-header-color simple-table-header">Details</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-80e4-a3b5-dc9bbebce816" dir="ltr"><td id="ojtn" class=""><strong>Brand</strong></td><td id=";}L:" class="">BFGoodrich</td></tr><tr id="3a6ecaf7-2d7b-80d3-9aee-fc0fc3927d8d" dir="ltr"><td id="ojtn" class=""><strong>Campaign</strong></td><td id=";}L:" class="">Playground Earth</td></tr><tr id="3a6ecaf7-2d7b-807f-8460-d5f5506f454c" dir="ltr"><td id="ojtn" class=""><strong>Category</strong></td><td id=";}L:" class="">Off-Road Tires</td></tr><tr id="3a6ecaf7-2d7b-804f-ba13-f20263f03262" dir="ltr"><td id="ojtn" class=""><strong>Campaign Type</strong></td><td id=";}L:" class="">Brand Building / Product Performance</td></tr><tr id="3a6ecaf7-2d7b-8055-b8d8-edebc3295b39" dir="ltr"><td id="ojtn" class=""><strong>Target Audience</strong></td><td id=";}L:" class="">Off-road enthusiasts, Jeep owners, adventure drivers</td></tr><tr id="3a6ecaf7-2d7b-8072-906c-c2ab57370b07" dir="ltr"><td id="ojtn" class=""><strong>Primary Emotion</strong></td><td id=";}L:" class="">Excitement, Confidence, Adventure</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-80d1-867b-c47aa1c8516a" dir="auto"/><h1 id="3a6ecaf7-2d7b-807f-98c1-c942f07dede1" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a6ecaf7-2d7b-8057-936f-c93b2ada1902" class="" dir="auto">Business Problem</h2><p id="3a6ecaf7-2d7b-8083-8a98-e96534edb2ba" class="" dir="auto">Off-road tires often compete on technical specifications such as tread pattern, durability, and grip, which are difficult to visualize and emotionally differentiate.</p><hr id="3a6ecaf7-2d7b-80f2-bb3b-c384e5810f44" dir="auto"/><h2 id="3a6ecaf7-2d7b-803b-b1e6-e503fc04ba78" class="" dir="auto">Business Goal</h2><p id="3a6ecaf7-2d7b-80c9-b14a-d356dce0d3e7" class="" dir="auto">Position BFGoodrich tires as the ultimate companion for extreme off-road adventures.</p><hr id="3a6ecaf7-2d7b-80d0-9cb0-e3803857dd49" dir="auto"/><h2 id="3a6ecaf7-2d7b-8029-a870-cae3344bb9a7" class="" dir="auto">Communication Objective</h2><p id="3a6ecaf7-2d7b-8050-8189-d20aa98fee54" class="" dir="auto">Convince consumers that even slow-speed off-roading becomes exciting because BFGoodrich tires enable drivers to conquer the toughest terrain.</p><hr id="3a6ecaf7-2d7b-8095-a82f-c8fb1a50ce9e" dir="auto"/><h2 id="3a6ecaf7-2d7b-8033-9303-eccb7e158133" class="" dir="auto">Communication Direction</h2><p id="3a6ecaf7-2d7b-807d-97b3-d1cda8023e84" class="" dir="auto"><strong>Adventure isn&#x27;t defined by speed—it&#x27;s defined by where your tires can take you.</strong></p><p id="3a6ecaf7-2d7b-803c-b2e4-f18f2d9d8916" class="" dir="auto">The thrill comes from conquering impossible terrain, not driving fast.</p><hr id="3a6ecaf7-2d7b-80b2-b922-ef2f0a403de6" dir="auto"/><h2 id="3a6ecaf7-2d7b-80c3-ac57-df15357f7eb7" class="" dir="auto">Big Idea</h2><p id="3a6ecaf7-2d7b-80c7-a672-f33e710a9560" class="" dir="auto"><strong>Make the tire feel like the true protagonist by dramatically changing the viewer&#x27;s sense of scale and perspective.</strong></p><p id="3a6ecaf7-2d7b-8004-ae12-e4f171132a3a" class="" dir="auto">Instead of showing a vehicle with tires, the advertisement places the viewer beneath an enormous tire, making it feel like the landscape itself.</p><hr id="3a6ecaf7-2d7b-80d7-be17-cf5835fcdc77" dir="auto"/><h1 id="3a6ecaf7-2d7b-800d-a231-ee4b23508d86" class="" dir="auto">Execution</h1><p id="3a6ecaf7-2d7b-8099-8cee-d95fd38671ad" class="" dir="auto">The composition is viewed from an extremely low angle beneath the vehicle.</p><p id="3a6ecaf7-2d7b-80f5-9165-f9be5bdc5e41" class="" dir="auto">The BFGoodrich tire dominates nearly the entire frame while the Jeep appears comparatively small as it crawls over rocky terrain.</p><p id="3a6ecaf7-2d7b-80db-bcd9-c6d380f6944e" class="" dir="auto">The oversized tire is not literally larger than reality—it is perceived as monumental because of the chosen perspective and foreground placement.</p><p id="3a6ecaf7-2d7b-809d-ad7a-d55fbe10e5b3" class="" dir="auto">Headline:</p><blockquote id="3a6ecaf7-2d7b-80e0-95e4-f4fe383f723d" class="" dir="auto"><strong>Even 7 MPH can be a thrill ride.</strong></blockquote><p id="3a6ecaf7-2d7b-8097-a50b-c1374ea028c6" class="" dir="auto">Followed by:</p><blockquote id="3a6ecaf7-2d7b-800d-9047-c82164d188f9" class="" dir="auto"><strong>Welcome to Playground Earth.</strong></blockquote><p id="3a6ecaf7-2d7b-8016-9ce5-c9006e92027a" class="" dir="auto">The copy reframes excitement from speed to capability, perfectly complementing the visual execution.</p><hr id="3a6ecaf7-2d7b-80ae-a0e1-f1cfc960e776" dir="auto"/><h1 id="3a6ecaf7-2d7b-800f-a070-d197ab35c752" class="" dir="auto">Visual Thinking Systems</h1><table id="3a6ecaf7-2d7b-8004-ae15-dffcdd91ec2d" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-80db-b025-f633f527f3ea" dir="ltr"><th id="gzEd" class="simple-table-header-color simple-table-header">Visual Thinking System</th><th id="fFHR" class="simple-table-header-color simple-table-header">Role</th><th id="IzOw" class="simple-table-header-color simple-table-header">Strength</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-8019-b324-d8e8be458740" dir="ltr"><td id="gzEd" class=""><strong>Scale and Proportion Ads</strong></td><td id="fFHR" class=""><strong>Primary</strong></td><td id="IzOw" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-80a9-8f61-cb7f56fd1fcb" dir="ltr"><td id="gzEd" class="">Product Benefit Conceptual Ads</td><td id="fFHR" class="">Secondary</td><td id="IzOw" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-804d-b841-f8c67e8fee68" dir="ltr"><td id="gzEd" class="">Perspective-Based Ads <em>(Future Module)</em></td><td id="fFHR" class="">Secondary</td><td id="IzOw" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8072-a171-ea7ef7bf272d" dir="ltr"><td id="gzEd" class="">Visual Exaggeration Ads</td><td id="fFHR" class="">Secondary</td><td id="IzOw" class="">★★★★☆</td></tr><tr id="3a6ecaf7-2d7b-80f1-99b0-f133a2a39c2c" dir="ltr"><td id="gzEd" class="">Environmental Conceptual Ads</td><td id="fFHR" class="">Secondary</td><td id="IzOw" class="">★★★☆☆</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-80b9-b594-edf7cf2f5d3e" dir="auto"/><h1 id="3a6ecaf7-2d7b-807e-a264-f6a290850fb5" class="" dir="auto">Why This Advertisement Works</h1><ul id="3a6ecaf7-2d7b-80bc-9920-f5a6396a3076" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The tire becomes the visual hero without physically altering the product.</li></ul><ul id="3a6ecaf7-2d7b-8042-a95e-c07c9da5ee70" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Forced perspective creates a feeling of power and dominance.</li></ul><ul id="3a6ecaf7-2d7b-80a6-ad0d-c797a278a810" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The environment demonstrates product capability rather than merely describing it.</li></ul><ul id="3a6ecaf7-2d7b-80f9-8bf2-f829f0ff26fa" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The headline and visual reinforce the same communication direction.</li></ul><ul id="3a6ecaf7-2d7b-803b-9cd8-f58987372618" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The advertisement immerses the viewer into the off-road experience instead of simply presenting it.</li></ul><hr id="3a6ecaf7-2d7b-80ff-94b2-f401d3e7987d" dir="auto"/><h1 id="3a6ecaf7-2d7b-8052-9871-d7175956f82c" class="" dir="auto">Reusable Principles</h1><h3 id="3a6ecaf7-2d7b-8091-b55b-f35157ce270f" class="" dir="auto">Principle 1</h3><p id="3a6ecaf7-2d7b-8012-9b09-dbd4a6464dd5" class="" dir="auto">Perspective can change perceived importance without changing the product itself.</p><hr id="3a6ecaf7-2d7b-8058-96a8-f76e0d615e8d" dir="auto"/><h3 id="3a6ecaf7-2d7b-80c1-b654-e9d992f33191" class="" dir="auto">Principle 2</h3><p id="3a6ecaf7-2d7b-8055-b5c7-ff3fa87f72fe" class="" dir="auto">Large foreground elements naturally become psychological heroes.</p><hr id="3a6ecaf7-2d7b-80b8-8be9-c6c270822e3c" dir="auto"/><h3 id="3a6ecaf7-2d7b-80ad-a234-ed733ecea997" class="" dir="auto">Principle 3</h3><p id="3a6ecaf7-2d7b-80b2-bf7b-d2cdbf884074" class="" dir="auto">Performance products become more persuasive when shown in authentic environments rather than isolated studio shots.</p><hr id="3a6ecaf7-2d7b-8058-9f21-c5b0717d3c96" dir="auto"/><h3 id="3a6ecaf7-2d7b-80db-bb9c-ddc642395937" class="" dir="auto">Principle 4</h3><p id="3a6ecaf7-2d7b-804a-870a-f67d812c7d30" class="" dir="auto">Copy should reinforce the emotional interpretation of the visual rather than repeat the obvious.</p><hr id="3a6ecaf7-2d7b-80f2-b00b-e82c1a71934c" dir="auto"/><h1 id="3a6ecaf7-2d7b-808d-831e-e56acf3d343a" class="" dir="auto">Critical Evaluation</h1><h3 id="3a6ecaf7-2d7b-802b-938b-e1e809ca1a10" class="" dir="auto">Strengths</h3><ul id="3a6ecaf7-2d7b-8088-b8c5-d32228b6fc53" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Outstanding visual hierarchy.</li></ul><ul id="3a6ecaf7-2d7b-80b6-ba1a-e5c2635bf3e5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong environmental storytelling.</li></ul><ul id="3a6ecaf7-2d7b-80de-916c-c60bbd1756cf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product remains dominant throughout.</li></ul><ul id="3a6ecaf7-2d7b-807d-808c-ecb44b865a10" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent integration of product benefit and emotion.</li></ul><ul id="3a6ecaf7-2d7b-80d8-9647-e467883a82e3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Cinematic composition enhances memorability.</li></ul><h3 id="3a6ecaf7-2d7b-804e-8439-e692f42269c7" class="" dir="auto">Weaknesses</h3><ul id="3a6ecaf7-2d7b-8039-81e4-ffd6cee448d4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The concept relies heavily on dramatic photography; recreating it requires significant production quality.</li></ul><ul id="3a6ecaf7-2d7b-80e1-93fc-cc7eb7b9613d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The exaggerated perspective could initially be interpreted as literal scale rather than photographic composition by some viewers.</li></ul><hr id="3a6ecaf7-2d7b-80e1-a200-cf2c0388dd47" dir="auto"/><h1 id="3a6ecaf7-2d7b-805e-8041-cb067f35cde3" class="" dir="auto">Alternative Creative Routes</h1><p id="3a6ecaf7-2d7b-80d8-96c7-c7d00ef4bb61" class="" dir="auto">Using the same communication direction, alternative executions could include:</p><ul id="3a6ecaf7-2d7b-800f-ab4e-d933b8be2f34" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Viewing the terrain through the tire tread as if it were a canyon.</li></ul><ul id="3a6ecaf7-2d7b-80a0-b5e5-f74f4e532408" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The tire appearing as a mountain the vehicle climbs.</li></ul><ul id="3a6ecaf7-2d7b-8036-9de1-fd976f3f5306" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A driver&#x27;s-eye perspective where obstacles seem insignificant because of the tire&#x27;s capability.</li></ul><ul id="3a6ecaf7-2d7b-808d-ac75-e9e96351758e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The tire dominating a muddy landscape with water and debris emphasizing grip.</li></ul><p id="3a6ecaf7-2d7b-8085-ad0c-e66650631c27" class="" dir="auto">Each execution maintains the same idea: <strong>the tire transforms impossible terrain into a playground.</strong></p><hr id="3a6ecaf7-2d7b-805e-a864-e55f2e79f528" dir="auto"/><h1 id="3a6ecaf7-2d7b-80ec-bd20-c84abd6a12f0" class="" dir="auto">Core Learning</h1><p id="3a6ecaf7-2d7b-802d-8e29-c1a8b38551d0" class="" dir="auto">This advertisement demonstrates that <strong>Scale and Proportion</strong> does not always require physically enlarging an object. Strategic camera perspective can create the psychological impression of dominance while maintaining realism.</p><p id="3a6ecaf7-2d7b-801f-be69-e7ace79930c5" class="" dir="auto">It also reinforces that <strong>environment can become proof of performance</strong>, allowing the product&#x27;s capabilities to be experienced visually rather than explained technically.</p><hr id="3a6ecaf7-2d7b-80f7-a197-c6c752c1d1be" dir="auto"/><h1 id="3a6ecaf7-2d7b-80be-9433-e52bdd6d774b" class="" dir="auto">Related Modules</h1><h3 id="3a6ecaf7-2d7b-8089-9724-e389ef96e20f" class="" dir="auto">Section A — Foundations</h3><ul id="3a6ecaf7-2d7b-8044-a35d-cc78247ee161" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Advertising Fundamentals</li></ul><ul id="3a6ecaf7-2d7b-8053-8e40-d5238e6a451d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Consumer Attention &amp; Visual Hierarchy</li></ul><ul id="3a6ecaf7-2d7b-809f-abc7-ef13ac50b788" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product-Centric Advertising</li></ul><ul id="3a6ecaf7-2d7b-80d9-85bd-cb67140ad53d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Communication Objectives</li></ul><ul id="3a6ecaf7-2d7b-8020-94ca-c0270a46350f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Brand Positioning</li></ul><ul id="3a6ecaf7-2d7b-80d0-8d83-f93bcfc02481" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Thinking → Scale and Proportion Ads</li></ul><h3 id="3a6ecaf7-2d7b-80fc-bbf0-d592e36b84b2" class="" dir="auto">Section B — Creative Reasoning</h3><ul id="3a6ecaf7-2d7b-80fc-92be-e7087a0f20e2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Creative Reverse Engineering</li></ul><ul id="3a6ecaf7-2d7b-80d5-9de5-f04842cd8ff5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Big Idea Framework <em>(Future Module)</em></li></ul><ul id="3a6ecaf7-2d7b-800c-a38b-ceaef9fc1f58" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Communication Direction <em>(Future Module)</em></li></ul><ul id="3a6ecaf7-2d7b-80b6-8f08-c801b7485b63" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Execution Systems <em>(Future Module)</em></li></ul><h3 id="3a6ecaf7-2d7b-80eb-b459-d2e19ed855b0" class="" dir="auto">Graphic Design System</h3><ul id="3a6ecaf7-2d7b-80e5-9b5a-e967b8fbfda3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Hierarchy</li></ul><ul id="3a6ecaf7-2d7b-8053-b611-ccbc29facc94" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale &amp; Dominance</li></ul><ul id="3a6ecaf7-2d7b-803a-8228-d97daf599dc9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Depth &amp; Perspective</li></ul><ul id="3a6ecaf7-2d7b-80df-864d-f8cbab470e33" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Focal Point Control</li></ul><ul id="3a6ecaf7-2d7b-8025-b175-ef2d1405189d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Composition Through Foreground Elements</li></ul><ul id="3a6ecaf7-2d7b-807e-ad7e-e0877c3d4471" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Composition</li></ul><h3 id="3a6ecaf7-2d7b-80e8-a525-d5cd7553c911" class="" dir="auto">Photography / CGI System</h3><ul id="3a6ecaf7-2d7b-803a-8b8c-d1620f0d9322" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Ultra Wide Perspective</li></ul><ul id="3a6ecaf7-2d7b-80fc-8882-dec92066d9be" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Low Camera Angle</li></ul><ul id="3a6ecaf7-2d7b-8021-ae3e-eb6cbedfdcd8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Hero Product Photography</li></ul><ul id="3a6ecaf7-2d7b-80ff-88df-fe6815a67a79" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Product Photography</li></ul><ul id="3a6ecaf7-2d7b-800e-b412-fc88b4e52904" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Cinematic Lighting</li></ul><ul id="3a6ecaf7-2d7b-80db-a7b3-da6617d3e1f7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Depth of Field</li></ul><ul id="3a6ecaf7-2d7b-803f-a8e1-f30e2aaa02b4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Action Photography</li></ul><h3 id="3a6ecaf7-2d7b-804b-b60c-cd2873dab6b8" class="" dir="auto">Future Research Modules</h3><ul id="3a6ecaf7-2d7b-8004-a1bc-fcf217b94b9e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Perspective-Based Advertising</li></ul><ul id="3a6ecaf7-2d7b-80be-96fe-f8e30dfe0088" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Performance Product Communication</li></ul><ul id="3a6ecaf7-2d7b-80c0-a1e5-d5c655901d6c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Storytelling</li></ul><ul id="3a6ecaf7-2d7b-806c-8342-de1b200db607" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product as Hero</li></ul><ul id="3a6ecaf7-2d7b-8058-9ad7-dcb425eb0349" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Adventure Brand Communication</li></ul><hr id="3a6ecaf7-2d7b-8089-9b48-f87d719659fb" dir="auto"/><h1 id="3a6ecaf7-2d7b-80dd-8916-e33c898c3165" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a6ecaf7-2d7b-809f-888b-fc40dcd01355" class="" dir="auto">Communication Strategy</h3><p id="3a6ecaf7-2d7b-8084-9e74-caa3efd4d317" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-80a1-a36c-d99f40456de9" class="" dir="auto">Excellent demonstration of shifting communication from technical specifications to emotional experience without losing credibility.</p><hr id="3a6ecaf7-2d7b-809c-923c-e6768138fca4" dir="auto"/><h3 id="3a6ecaf7-2d7b-80f4-95eb-c02edc03e8ed" class="" dir="auto">Visual Thinking</h3><p id="3a6ecaf7-2d7b-80c4-862d-c009b2c0f07b" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-801a-aa98-c6c833aedd83" class="" dir="auto">Strong reinforcing evidence for <strong>Scale and Proportion Ads</strong>, while also suggesting the emergence of a future <strong>Perspective-Based Advertising</strong> module.</p><hr id="3a6ecaf7-2d7b-80b9-8b69-efc37a1677a2" dir="auto"/><h3 id="3a6ecaf7-2d7b-807a-9fcd-df01bc80dd83" class="" dir="auto">Graphic Design</h3><p id="3a6ecaf7-2d7b-80eb-9ae3-d8c64c691bd7" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-80af-9c69-d246c3b2cfe3" class="" dir="auto">Exceptional control of hierarchy, foreground weighting, depth, framing, and visual balance. The composition naturally directs attention from the tire to the vehicle and finally to the copy.</p><hr id="3a6ecaf7-2d7b-8084-8f01-cb38d03ea79d" dir="auto"/><h3 id="3a6ecaf7-2d7b-80ab-a0df-c20f9cef2733" class="" dir="auto">Photography / CGI</h3><p id="3a6ecaf7-2d7b-80e2-b121-fa132fb71d3b" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-8055-adde-d45f7b9d70f8" class="" dir="auto">This advertisement is an outstanding example of perspective-driven product photography. Camera placement, focal length, terrain selection, and environmental realism work together to elevate the product without artificial manipulation.</p><hr id="3a6ecaf7-2d7b-8080-8cf3-f65426f5ee20" dir="auto"/><h3 id="3a6ecaf7-2d7b-800d-a5dc-f472c4f209c0" class="" dir="auto">Overall Contribution to the Operating System</h3><p id="3a6ecaf7-2d7b-8027-a54d-db5f8ba2302b" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-80e3-9809-d8099d78a31e" class="" dir="auto">This advertisement significantly strengthens the <strong>Scale and Proportion Ads</strong> module by introducing a different execution strategy: <strong>perceived scale through perspective rather than literal enlargement</strong>. It also contributes valuable evidence for future modules on <strong>Perspective-Based Advertising</strong>, <strong>Environmental Storytelling</strong>, and <strong>Performance Product Communication</strong>.</p><hr id="3a6ecaf7-2d7b-80d9-9514-d93becb79792" dir="auto"/><h2 id="3a6ecaf7-2d7b-800e-a3ac-c5b0f0cdce1e" class="" dir="auto">New Knowledge Discovered</h2><blockquote id="3a6ecaf7-2d7b-8054-badc-e43378a0acf7" class="" dir="auto"><strong>Scale can be communicated psychologically rather than physically.</strong> Camera perspective alone can make a product feel dominant and powerful while preserving realism, offering an alternative to literal visual exaggeration.</blockquote><hr id="3a6ecaf7-2d7b-8008-b76d-e3368677d360" dir="auto"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

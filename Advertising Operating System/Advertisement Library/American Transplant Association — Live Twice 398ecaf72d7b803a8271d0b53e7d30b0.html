@@ -1,0 +1,771 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>American Transplant Association — Live Twice</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_pink.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_pink.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="398ecaf7-2d7b-803a-8271-d0b53e7d30b0" class="page sans" data-notion-page-icon="/icons/photo-landscape_pink.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/></div><h1 class="page-title" dir="auto">American Transplant Association — Live Twice</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="398ecaf7-2d7b-807e-8393-c47688750f69" class="image" data-notion-image="American%20Transplant%20Association%20%E2%80%94%20Live%20Twice/1000371928.jpg" dir="ltr"><a href="American%20Transplant%20Association%20%E2%80%94%20Live%20Twice/1000371928.jpg"><img style="width:300px" src="American%20Transplant%20Association%20%E2%80%94%20Live%20Twice/1000371928.jpg"/></a></figure><figure id="398ecaf7-2d7b-805d-808d-c23f425a919d" class="image" data-notion-image="American%20Transplant%20Association%20%E2%80%94%20Live%20Twice/1000371926.jpg" dir="ltr"><a href="American%20Transplant%20Association%20%E2%80%94%20Live%20Twice/1000371926.jpg"><img style="width:300px" src="American%20Transplant%20Association%20%E2%80%94%20Live%20Twice/1000371926.jpg"/></a></figure><h1 id="398ecaf7-2d7b-80c0-94a5-c4f0112420aa" class="" dir="auto">Basic Information</h1><p id="398ecaf7-2d7b-8010-bfa5-cea4696d5db2" class="" dir="auto">Brand: American Transplant Association</p><p id="398ecaf7-2d7b-80e2-9f04-e6027d0eb55d" class="" dir="auto">Industry: Healthcare / Organ Donation</p><p id="398ecaf7-2d7b-80b0-83a4-da36ed78fe7d" class="" dir="auto">Advertisement Type: Public Awareness Campaign</p><p id="398ecaf7-2d7b-809b-a0ed-f3efa668a297" class="" dir="auto">Medium: Print / Social Media Static</p><hr id="398ecaf7-2d7b-80fa-a5a2-c86f50fabbf8" dir="auto"/><h1 id="398ecaf7-2d7b-80da-9a40-def0ec36a041" class="" dir="auto">Creative Reverse Engineering</h1><p id="398ecaf7-2d7b-8016-ba76-e00664adf867" class="" dir="auto">Business Goal</p><p id="398ecaf7-2d7b-80f6-9997-dda21fcb5231" class="" dir="auto">Increase organ donor registrations by demonstrating the life-changing impact of organ donation.</p><hr id="398ecaf7-2d7b-80d0-8d38-e21f096c5cd4" dir="auto"/><p id="398ecaf7-2d7b-80c1-b871-c442fd1efcb6" class="" dir="auto">Communication Objective</p><p id="398ecaf7-2d7b-80c6-bc78-d420f55f1cfb" class="" dir="auto">Convince people that organ donation gives another person the opportunity to continue living a full life.</p><hr id="398ecaf7-2d7b-80d9-9295-f8b990a87805" dir="auto"/><p id="398ecaf7-2d7b-8059-b1d4-dba660f34f7b" class="" dir="auto">Communication Direction</p><p id="398ecaf7-2d7b-804d-a4f7-c4c554a835b0" class="" dir="auto">One donor can create another life.</p><hr id="398ecaf7-2d7b-8029-8546-d804f3898c2d" dir="auto"/><p id="398ecaf7-2d7b-801c-9947-dfc1dc9d9036" class="" dir="auto">Big Idea</p><p id="398ecaf7-2d7b-8094-89c4-c772e8924707" class="" dir="auto">One body can carry two lives.</p><hr id="398ecaf7-2d7b-80f6-a67b-d1cf73c4fbf5" dir="auto"/><p id="398ecaf7-2d7b-808f-b5bb-e7ebf226d414" class="" dir="auto">Visual Thinking System</p><p id="398ecaf7-2d7b-802b-9257-d4f60e55b691" class="" dir="auto">Primary</p><p id="398ecaf7-2d7b-80bc-a3de-f55a3411caed" class="" dir="auto">Dual Reality Visual Metaphor (temporary name)</p><p id="398ecaf7-2d7b-8098-b9c7-fd91c8b4ecf4" class="" dir="auto">Supporting</p><p id="398ecaf7-2d7b-80dd-9fbf-c875882fc5b2" class="" dir="auto">Visual Contrast</p><p id="398ecaf7-2d7b-8057-857f-d2788be26369" class="" dir="auto">Minimalist Storytelling</p><hr id="398ecaf7-2d7b-80e2-aaac-d85e1df7f871" dir="auto"/><p id="398ecaf7-2d7b-80fc-8f8b-f6a645cdd1b4" class="" dir="auto">Why This Visual System?</p><p id="398ecaf7-2d7b-8046-b84b-fbcdd53d60b1" class="" dir="auto">The communication challenge is explaining an invisible concept:</p><p id="398ecaf7-2d7b-801b-9118-cacc0c3700da" class="" dir="auto">A transplant doesn&#x27;t create a new person—it allows another life to continue.</p><p id="398ecaf7-2d7b-80c4-a29a-e25731a593f6" class="" dir="auto">Showing two different lives occupying one body communicates this instantly without requiring medical explanation.</p><hr id="398ecaf7-2d7b-802c-af7d-c8687b2fe145" dir="auto"/><p id="398ecaf7-2d7b-80f9-9d31-f0819e2f2c66" class="" dir="auto">Final Execution</p><p id="398ecaf7-2d7b-802d-bdfc-f8367f150dde" class="" dir="auto">The upper half shows the recipient&#x27;s everyday life.</p><p id="398ecaf7-2d7b-805c-9d01-cf35ea88d2a6" class="" dir="auto">The lower half reveals another identity continuing beneath it.</p><p id="398ecaf7-2d7b-8001-a0e6-f055e9205a7d" class="" dir="auto">Both halves combine into a single body.</p><p id="398ecaf7-2d7b-8008-b7d2-c08961ea851d" class="" dir="auto">The headline &quot;Live Twice.&quot; completes the thought.</p><hr id="398ecaf7-2d7b-8091-9dae-d2c0d2976f8f" dir="auto"/><p id="398ecaf7-2d7b-8016-9b01-f0c4fd8a1906" class="" dir="auto">Why This Advertisement Works</p><p id="398ecaf7-2d7b-8035-a089-eb3a3d0dd076" class="" dir="auto">The visual communicates before the copy.</p><p id="398ecaf7-2d7b-8014-a2e9-cd4307558401" class="" dir="auto">Two identities become one person.</p><p id="398ecaf7-2d7b-80e2-bf05-cba4284c174c" class="" dir="auto">The split carries meaning rather than decoration.</p><p id="398ecaf7-2d7b-8073-8ce1-c91b130aad80" class="" dir="auto">The concept creates emotional impact without showing surgery.</p><p id="398ecaf7-2d7b-80fe-be0d-cf6f884f1eac" class="" dir="auto">The headline is understood immediately after seeing the visual.</p><hr id="398ecaf7-2d7b-809b-b5ef-e06212978843" dir="auto"/><p id="398ecaf7-2d7b-8085-9e1b-c3502ec07afd" class="" dir="auto">Reusable Principles</p><p id="398ecaf7-2d7b-8041-9849-dc56a7be884b" class="" dir="auto">Principle 01</p><p id="398ecaf7-2d7b-8070-9ed2-c8cfadee48d5" class="" dir="auto">Show two realities existing simultaneously when communicating transformation.</p><hr id="398ecaf7-2d7b-802f-981d-d99b318c818f" dir="auto"/><p id="398ecaf7-2d7b-80e4-98fb-d47e978c5466" class="" dir="auto">Principle 02</p><p id="398ecaf7-2d7b-8011-98a9-c6742a9a1692" class="" dir="auto">A visual division should communicate meaning, not simply separate images.</p><hr id="398ecaf7-2d7b-8001-a659-ea4f97dd63c7" dir="auto"/><p id="398ecaf7-2d7b-805f-b6d6-d48b6875404f" class="" dir="auto">Principle 03</p><p id="398ecaf7-2d7b-80db-bd5c-c5071b0f90da" class="" dir="auto">Invisible ideas become easier to understand when represented through parallel realities.</p><hr id="398ecaf7-2d7b-80ea-9350-ef11e12ea7c3" dir="auto"/><p id="398ecaf7-2d7b-8051-ae4e-cc42036470ba" class="" dir="auto">Principle 04</p><p id="398ecaf7-2d7b-80c7-ac5e-d20a564464f9" class="" dir="auto">Let the audience discover the second meaning instead of explaining it.</p><hr id="398ecaf7-2d7b-8018-b30a-d6385088576f" dir="auto"/><p id="398ecaf7-2d7b-800a-b926-e39696b32105" class="" dir="auto">Critical Evaluation</p><p id="398ecaf7-2d7b-809c-b592-fc55835a00fe" class="" dir="auto">Strength</p><p id="398ecaf7-2d7b-8067-a503-f7c9afdad65f" class="" dir="auto">The split itself becomes the communication device.</p><p id="398ecaf7-2d7b-807d-a53b-f789112e15d6" class="" dir="auto">Assumption</p><p id="398ecaf7-2d7b-803f-b420-d5db6f6f20d5" class="" dir="auto">The audience immediately understands that both halves represent different people sharing one continued life.</p><hr id="398ecaf7-2d7b-8027-8fda-ee13499603f5" dir="auto"/><p id="398ecaf7-2d7b-808d-8f4f-f11fb8161946" class="" dir="auto">Core Learning</p><blockquote id="398ecaf7-2d7b-8090-8c2c-e14e8d8a7f3d" class="" dir="auto">A visual split becomes powerful only when it communicates two connected realities—not when it merely divides the layout.</blockquote><hr id="398ecaf7-2d7b-80c2-b444-fd7e807daddb" dir="auto"/><p id="398ecaf7-2d7b-80d3-9052-c0d99c2724c6" class="" dir="auto">Related Modules</p><p id="398ecaf7-2d7b-80dd-ba71-f4e67554258e" class="" dir="auto">Section A → <a href="../Section%20A%20Foundations/Module%20C%20How%20People%20Notice,%20Think%20&amp;%20Respond%20to%20Adv%20395ecaf72d7b80e399cafa2a9d41f729.html" data-notion-page-id="395ecaf7-2d7b-80e3-99ca-fa2a9d41f729" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module C. How People Notice, Think &amp; Respond to Advertisements</a></p><p id="398ecaf7-2d7b-80f8-a05e-d2344b37ed12" class="" dir="auto">Section A → <a href="../Section%20A%20Foundations/Module%20D%20Visual%20Communication%20395ecaf72d7b8000a0ddf8d585f99551.html" data-notion-page-id="395ecaf7-2d7b-8000-a0dd-f8d585f99551" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module D. Visual Communication</a> </p><p id="398ecaf7-2d7b-80e9-8bb9-ff957836754d" class="" dir="auto">Module F → <a href="../Section%20A%20Foundations/Module%20F%20Finding%20the%20Real%20Brief%20396ecaf72d7b808dbdebee7d2fd3ddfb.html" data-notion-page-id="396ecaf7-2d7b-808d-bdeb-ee7d2fd3ddfb" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module F. Finding the Real Brief</a></p><p id="398ecaf7-2d7b-8068-add3-e74b023cf5fc" class="" dir="auto">Module G → <a href="../Section%20B%20Creative%20Reasoning/Module%20G%20Generating%20Advertising%20Directions%20397ecaf72d7b808a9de7d10f69c40502.html" data-notion-page-id="397ecaf7-2d7b-808a-9de7-d10f69c40502" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_green.svg"/>Module G. Generating Advertising Directions</a></p><p id="398ecaf7-2d7b-806d-a91d-c4bfb106bd73" class="" dir="auto">Module H → Finding the Big Idea (Future)</p><p id="398ecaf7-2d7b-80f3-9726-ccf96bec6401" class="" dir="auto">Section C → Dual Reality Visual Metaphor (Working Name)</p><hr id="398ecaf7-2d7b-804c-a8b3-f5fac4c5b213" dir="auto"/><h2 id="39cecaf7-2d7b-80ba-952e-dfdee3c38147" class="" dir="auto">Knowledge Contribution</h2><p id="39cecaf7-2d7b-8005-a855-df571ef28288" class="" dir="auto">Communication Strategy: ★★★★★</p><ul id="39cecaf7-2d7b-8014-b9f6-d062ac140e64" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Emotional Storytelling</li></ul><ul id="39cecaf7-2d7b-8020-b6de-d6e053e04b3e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Social Awareness</li></ul><p id="39cecaf7-2d7b-8066-b49f-d472f8ca971d" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-801d-a7af-c81a632e3f91" class="" dir="auto">Visual Systems: ★★★★★</p><ul id="39cecaf7-2d7b-80c2-82b4-d655a35bd2fe" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Composition</li></ul><ul id="39cecaf7-2d7b-8069-a581-fed777b4edc5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Human Narrative</li></ul><p id="39cecaf7-2d7b-8022-9b06-fcedebb3a5fe" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-80c2-82b0-eccb87f530bf" class="" dir="auto">Graphic Design: ★★★☆☆</p><p id="39cecaf7-2d7b-805a-adbf-d286845437d5" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-8050-9c9e-f78b13c5f2e3" class="" dir="auto">Photography: ★★★★☆</p><p id="39cecaf7-2d7b-80ae-83ac-f1a91c6823ed" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-8055-a06e-e29367d00f36" class="" dir="auto">Overall Contribution: Extremely High</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

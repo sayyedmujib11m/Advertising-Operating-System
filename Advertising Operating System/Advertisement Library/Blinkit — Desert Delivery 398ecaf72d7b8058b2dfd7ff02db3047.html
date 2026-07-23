@@ -1,0 +1,771 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Blinkit — Desert Delivery</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_green.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_green.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="398ecaf7-2d7b-8058-b2df-d7ff02db3047" class="page sans" data-notion-page-icon="/icons/photo-landscape_green.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/></div><h1 class="page-title" dir="auto">Blinkit — Desert Delivery</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="398ecaf7-2d7b-800e-87e8-c6c50517a7b1" class="" dir="auto">Advertisement</h2><figure id="398ecaf7-2d7b-8080-b6e4-dc211a7f6517" class="image" data-notion-image="Blinkit%20%E2%80%94%20Desert%20Delivery/1000371662.jpg" dir="ltr"><a href="Blinkit%20%E2%80%94%20Desert%20Delivery/1000371662.jpg"><img style="width:300px" src="Blinkit%20%E2%80%94%20Desert%20Delivery/1000371662.jpg"/></a></figure><h2 id="398ecaf7-2d7b-80cc-a948-c95da738c620" class="" dir="auto">Basic Information</h2><p id="398ecaf7-2d7b-80d0-b1e6-d0d6088262f9" class="" dir="auto">Brand: Blinkit</p><p id="398ecaf7-2d7b-80c2-917b-f0c760fd94d7" class="" dir="auto">Industry: Quick Commerce</p><p id="398ecaf7-2d7b-801b-9c73-f4c7114c16c9" class="" dir="auto">Advertisement Type: Brand Advertisement</p><p id="398ecaf7-2d7b-8054-b02b-dafe85d97f06" class="" dir="auto">Medium: Print / Social Media Static</p><hr id="398ecaf7-2d7b-80fa-87e3-d0179973603e" dir="auto"/><h3 id="398ecaf7-2d7b-8012-808e-e4a682c21006" class="" dir="auto"><br/>Creative Reverse Engineering</h3><p id="398ecaf7-2d7b-806c-b403-c098f6315314" class="" dir="auto"><br/>Business Goal<br/>Strengthen Blinkit&#x27;s brand positioning as a service that makes essential products accessible whenever and wherever people need them.<br/><br/>---<br/>Communication Objective<br/>Convince the audience that essential products should never feel out of reach, regardless of how difficult the situation appears.<br/><br/>---<br/>Communication Direction<br/>Distance should never prevent access to essential needs.<br/>Before arriving at the final direction, the creative team could have explored alternatives such as:<br/>Convenience everywhere<br/>Blinkit is always available<br/>Help arrives when needed<br/>Essentials should never feel unreachable<br/>Modern convenience belongs everywhere<br/><br/>The selected direction best supports the business objective while offering strong creative possibilities.<br/><br/>---<br/>Big Idea<br/>Even the most isolated place deserves modern convenience.<br/><br/>The same Big Idea could generate completely different advertisements using:<br/>Snow-covered mountains<br/>Dense forests<br/>Remote villages<br/>Small islands<br/>Flood-affected regions<br/><br/>Different executions.<br/>One Big Idea.</p><hr id="398ecaf7-2d7b-80bb-b867-e50e3e0e5fb3" dir="auto"/><p id="398ecaf7-2d7b-8062-b446-efa63ea969b8" class="" dir="auto"><br/>Visual Thinking System<br/>Primary System<br/>Environmental Conceptual Advertising<br/>The environment itself communicates the problem.<br/>The desert is not a background.<br/>It is the primary storytelling element.<br/>Supporting Systems<br/>Visual Contrast<br/>Environmental Symbolism<br/>Minimal Copy Strategy</p><hr id="398ecaf7-2d7b-8029-9442-cc73bbddc7a0" dir="auto"/><p id="398ecaf7-2d7b-80dc-a188-eb38e5845489" class="" dir="auto">Why This Visual System?<br/><br/>The communication problem is accessibility in a difficult environment. Environmental Conceptual Advertising communicates this instantly because the environment itself becomes the problem.</p><p id="398ecaf7-2d7b-80e1-9928-db2818b6719d" class="" dir="auto">Alternative visual systems such as Split Visual or Shadow Metaphor could communicate the same message, but less directly.</p><p id="398ecaf7-2d7b-8064-94b9-cf1ad6b2f08b" class="" dir="auto">The chosen visual system delivers the fastest understanding with the least amount of copy.</p><hr id="398ecaf7-2d7b-8048-a9f9-c63be73bf925" dir="auto"/><p id="398ecaf7-2d7b-800b-bfde-c432a3e146ee" class="" dir="auto"><br/>Final Execution</p><p id="398ecaf7-2d7b-80de-89c6-d6c631acc67e" class="" dir="auto"><br/>The creative team chose a desert because it is one of the world&#x27;s most universally recognised symbols of isolation and difficult access.<br/>Instead of explaining the challenge with words, the environment communicates it instantly.<br/>The product being delivered is equally important.<br/>Water represents survival.<br/>By choosing an essential product rather than a luxury or convenience item, the advertisement strengthens the emotional relevance of the message.<br/>The headline simply reinforces what the audience has already understood visually.</p><hr id="398ecaf7-2d7b-8057-8169-e196a11ab9e0" dir="auto"/><p id="398ecaf7-2d7b-80d1-babe-e4fd348a96f8" class="" dir="auto">Confidence Level</p><p id="398ecaf7-2d7b-804b-973d-f14fa06b98db" class="" dir="auto">Business Goal — High</p><p id="398ecaf7-2d7b-8010-843b-d18bcff3a1d4" class="" dir="auto">Communication Objective — High</p><p id="398ecaf7-2d7b-80ea-9bde-d882e5cc9b32" class="" dir="auto">Communication Direction — Medium</p><p id="398ecaf7-2d7b-80e5-9bdb-fb910ab3ab7d" class="" dir="auto">Big Idea — Medium</p><p id="398ecaf7-2d7b-8096-bbbc-e29001588dd6" class="" dir="auto">Visual Thinking System — High</p><hr id="398ecaf7-2d7b-80dc-b642-ee23b6d39a82" dir="auto"/><h3 id="398ecaf7-2d7b-80e9-b19f-d3e00ad51b31" class="" dir="auto"><br/><br/>Why This Advertisement Works</h3><p id="398ecaf7-2d7b-80ea-abdd-eb73ec0dbaae" class="" dir="auto"><br/>The environment instantly communicates the problem.<br/>Water naturally represents an essential human need.<br/>The product strengthens the communication instead of distracting from it.<br/>The visual tells the story before the headline is read.<br/>The unexpected placement of a Blinkit delivery partner inside a desert immediately captures attention.<br/>Every visual element supports one single communication objective.<br/><br/><br/>---<br/>Reusable Principles<br/>Principle 01<br/>The environment can communicate the problem before copy ever does.<br/><br/>---<br/>Principle 02<br/>Choose products that naturally strengthen the communication objective.<br/>The product itself should become part of the story.<br/><br/>---<br/>Principle 03<br/>Use environments that people instantly recognise.<br/>If the audience has to decode the environment, the advertisement loses impact.<br/><br/>---<br/>Principle 04<br/>When the visual already communicates the message, copy should only reinforce it—not explain it.<br/><br/>---<br/>Principle 05<br/>Unexpected contexts create attention, but they must remain believable within the conceptual world of the advertisement.<br/><br/>---<br/>Critical Evaluation<br/>Strengths<br/>Instantly understandable visual communication.<br/>Strong emotional relevance through the choice of water.<br/>Excellent use of environmental storytelling.<br/>Minimal dependence on copy.<br/><br/><br/>---<br/>Limitations<br/>The advertisement relies on the audience recognising the desert as a symbolic environment rather than interpreting it literally.<br/>If viewers believe the brand is making a literal promise, the concept becomes less convincing.<br/><br/>---<br/>Alternative Creative Routes<br/>The same Big Idea could have been executed using:<br/>A remote Himalayan village<br/>A dense jungle<br/>A flood-affected town<br/>An isolated island<br/>A snow-covered landscape<br/><br/>This demonstrates that the strength lies in the Big Idea, not in the desert itself.<br/><br/>---<br/>Core Learning<br/>&gt; When the environment can instantly communicate the problem, the product only needs to communicate the solution.<br/><br/><br/><br/>---<br/>Related Modules<br/>Section A → <a href="../Section%20A%20Foundations/Module%20A%20Advertising%20Fundamentals%20395ecaf72d7b80cd9a86ca1fd58e2a23.html" data-notion-page-id="395ecaf7-2d7b-80cd-9a86-ca1fd58e2a23" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module A. Advertising Fundamentals</a> Advertising Fundamentals<br/>Section A → <a href="../Section%20A%20Foundations/Module%20C%20How%20People%20Notice,%20Think%20&amp;%20Respond%20to%20Adv%20395ecaf72d7b80e399cafa2a9d41f729.html" data-notion-page-id="395ecaf7-2d7b-80e3-99ca-fa2a9d41f729" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module C. How People Notice, Think &amp; Respond to Advertisements</a><br/>Section A → <a href="../Section%20A%20Foundations/Module%20D%20Visual%20Communication%20395ecaf72d7b8000a0ddf8d585f99551.html" data-notion-page-id="395ecaf7-2d7b-8000-a0dd-f8d585f99551" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module D. Visual Communication</a><br/>Module F → <a href="../Section%20A%20Foundations/Module%20F%20Finding%20the%20Real%20Brief%20396ecaf72d7b808dbdebee7d2fd3ddfb.html" data-notion-page-id="396ecaf7-2d7b-808d-bdeb-ee7d2fd3ddfb" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module F. Finding the Real Brief</a><br/>Module G → <a href="../Section%20B%20Creative%20Reasoning/Module%20G%20Generating%20Advertising%20Directions%20397ecaf72d7b808a9de7d10f69c40502.html" data-notion-page-id="397ecaf7-2d7b-808a-9de7-d10f69c40502" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_green.svg"/>Module G. Generating Advertising Directions</a><br/>Module H → Finding the Big Idea (Future)<br/>Section C → Environmental Conceptual Advertising (Future)<br/><br/></p><hr id="39cecaf7-2d7b-80dc-86ed-dba718a5fe02" dir="auto"/><p id="39cecaf7-2d7b-80ef-b45c-e05e00fb885b" class="" dir="auto">
+</p><h2 id="39cecaf7-2d7b-80c4-bb52-d2afe36c34fd" class="" dir="auto">Knowledge Contribution</h2><p id="39cecaf7-2d7b-80bd-ad8f-d1335f4825e9" class="" dir="auto">Communication Strategy: ★★★★★</p><ul id="39cecaf7-2d7b-8043-a7b9-f292ed1367cf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Problem Amplification</li></ul><ul id="39cecaf7-2d7b-80a5-9b5f-c1a279707ec8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Instant Gratification</li></ul><ul id="39cecaf7-2d7b-805a-939c-ece2de99bc6a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Contrast</li></ul><p id="39cecaf7-2d7b-80ca-bf0b-ee12a9a884ef" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-8075-a417-c7c4bc15bd6b" class="" dir="auto">Visual Systems: ★★★★★</p><ul id="39cecaf7-2d7b-8045-b009-f6d81f552d22" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Split Environment</li></ul><ul id="39cecaf7-2d7b-80df-8ecf-f05d82b744cc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Storytelling</li></ul><ul id="39cecaf7-2d7b-8054-9166-f83bf5b35b71" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Subject Transition</li></ul><p id="39cecaf7-2d7b-80ed-9430-ea31e751d609" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-80bc-915a-f660ea5d606f" class="" dir="auto">Graphic Design: ★★★☆☆</p><ul id="39cecaf7-2d7b-8052-9dd4-d6b4f0396405" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Clear hierarchy</li></ul><ul id="39cecaf7-2d7b-8038-b8ed-d6dffe5c92ae" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Color contrast</li></ul><p id="39cecaf7-2d7b-804d-ad0b-ecf03c6227e8" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-8066-8cd7-d083c2b80377" class="" dir="auto">Photography: ★★★★☆</p><ul id="39cecaf7-2d7b-803d-b33f-fd6c895cf140" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Composite scene integration</li></ul><ul id="39cecaf7-2d7b-8002-b50f-f5aac34842f3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Overall Contribution: Very High</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

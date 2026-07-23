@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Knowledge</title><meta name="data-notion-page-icon" content="/icons/move_green.svg"/><link rel="icon" href="https://app.notion.com/icons/move_green.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="397ecaf7-2d7b-804a-a6aa-d0810d68e3cd" class="page sans" data-notion-page-icon="/icons/move_green.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/move_green.svg"/></div><h1 class="page-title" dir="auto">Knowledge</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="397ecaf7-2d7b-802a-b591-f9f9b3342b75" class="" dir="auto">Don’t Look for Ideas First.</h2><p id="397ecaf7-2d7b-802d-a6cb-e001726c67ee" class="" dir="auto">Look for Directions.</p><p id="397ecaf7-2d7b-8061-adf6-c05abfecb2e5" class="" dir="auto">One of the biggest misconceptions in advertising is that the first good idea you think of is the one you should design.</p><p id="397ecaf7-2d7b-8050-b5a6-d0ed6d98d8ec" class="" dir="auto">It rarely is.</p><p id="397ecaf7-2d7b-80fe-bdd8-f6f24f44acb2" class="" dir="auto">Experienced creatives don’t begin by searching for concepts.</p><p id="397ecaf7-2d7b-8077-81a7-f3c18971a816" class="" dir="auto">They begin by searching for directions.</p><p id="397ecaf7-2d7b-8011-aff6-c6465bafe82a" class="" dir="auto">A direction defines the conversation.</p><p id="397ecaf7-2d7b-80df-a66f-f52ae03ff76e" class="" dir="auto">A concept defines how that conversation is expressed.</p><p id="397ecaf7-2d7b-8057-ae58-f9d424b4d592" class="" dir="auto">Understanding the difference is one of the biggest steps from being a graphic designer to becoming an advertising creative.</p><hr id="397ecaf7-2d7b-80b7-a8fb-c4715612fc55" dir="auto"/><h2 id="397ecaf7-2d7b-80a8-99e2-de597ab7e650" class="" dir="auto">What Is A Direction?</h2><p id="397ecaf7-2d7b-809e-913a-fe5bdec197d9" class="" dir="auto">A direction is a possible way of looking at the same product.</p><p id="397ecaf7-2d7b-80b5-9d7d-fddb55dac8b9" class="" dir="auto">It is not a layout.</p><p id="397ecaf7-2d7b-80af-b043-d612a9cf603b" class="" dir="auto">It is not a headline.</p><p id="397ecaf7-2d7b-80c8-aef5-cc6e6184c423" class="" dir="auto">It is not a visual.</p><p id="397ecaf7-2d7b-80e1-977e-e1a97e36aba6" class="" dir="auto">It is simply a communication path.</p><p id="397ecaf7-2d7b-8079-84a1-cf4bdff24418" class="" dir="auto">Imagine ten different people advertising the same jewellery store.</p><p id="397ecaf7-2d7b-800f-a4f5-c65c940dd324" class="" dir="auto">Every one of them may create a different advertisement.</p><p id="397ecaf7-2d7b-80ad-91a8-d5578c193d5b" class="" dir="auto">Not because they have different design skills.</p><p id="397ecaf7-2d7b-806e-881d-de4165f2549e" class="" dir="auto">Because they chose different directions.</p><p id="397ecaf7-2d7b-80e8-9292-e11cb2c27604" class="" dir="auto">The direction always comes before the design.</p><hr id="397ecaf7-2d7b-80ad-ae7d-c44505e918ac" dir="auto"/><h2 id="397ecaf7-2d7b-80c1-945d-f117a0b91020" class="" dir="auto">One Product. Many Directions.</h2><p id="397ecaf7-2d7b-8061-a1f1-fb96382c6967" class="" dir="auto">Consider this brief.</p><blockquote id="397ecaf7-2d7b-8049-b066-e3648e23be53" class="" dir="auto"><strong>Product: </strong>Gold Jewellery</blockquote><blockquote id="397ecaf7-2d7b-80e8-8cb6-c405bcbf7ed6" class="" dir="auto"><strong>Occasion: </strong>Akshaya Tritiya</blockquote><blockquote id="397ecaf7-2d7b-809b-87fb-e032387f6cf8" class="" dir="auto"><strong>Offer: </strong>0% Making Charges</blockquote><p id="397ecaf7-2d7b-8023-956e-ec2725bd52aa" class="" dir="auto">Now ask yourself.</p><p id="397ecaf7-2d7b-801f-af45-fd608ec74661" class="" dir="auto">What conversation should this advertisement have?</p><p id="397ecaf7-2d7b-8003-81fc-ca2d7d8e1b75" class="" dir="auto">Possible directions could be:</p><p id="397ecaf7-2d7b-805b-9d1d-e8f67283b385" class="" dir="auto">Invest in your future.</p><p id="397ecaf7-2d7b-80fa-82c7-d31151f9d9da" class="" dir="auto">Celebrate tradition.</p><p id="397ecaf7-2d7b-80ad-9146-fc8daf8330bb" class="" dir="auto">The perfect family gift.</p><p id="397ecaf7-2d7b-8099-ae01-d0c50de3fac6" class="" dir="auto">The beginning of prosperity.</p><p id="397ecaf7-2d7b-80be-8dc1-ec3b04d94ae0" class="" dir="auto">Pure gold. Pure trust.</p><p id="397ecaf7-2d7b-8065-beef-dd1a623003de" class="" dir="auto">The offer hasn&#x27;t changed.</p><p id="397ecaf7-2d7b-800a-bdd1-c2b75a0d2921" class="" dir="auto">The product hasn&#x27;t changed.</p><p id="397ecaf7-2d7b-801f-919b-ced637daf43d" class="" dir="auto">Only the communication direction has.</p><hr id="397ecaf7-2d7b-804e-965c-f09ab2660008" dir="auto"/><h2 id="397ecaf7-2d7b-80d6-96c0-ed95bc2b50f3" class="" dir="auto">Why Most Designers Get Stuck.</h2><p id="397ecaf7-2d7b-80f4-9df0-d956394d5544" class="" dir="auto">Many designers open Pinterest before deciding what they want to communicate.</p><p id="397ecaf7-2d7b-80e4-ac31-ef20a91114c1" class="" dir="auto">As a result, they start copying executions instead of creating ideas.</p><p id="397ecaf7-2d7b-8073-8141-c4d7f363dae9" class="" dir="auto">The real problem isn&#x27;t a lack of creativity.</p><p id="397ecaf7-2d7b-8066-a342-f76fbfbdbcf9" class="" dir="auto">It&#x27;s the absence of direction.</p><p id="397ecaf7-2d7b-804f-9748-fb85765e271e" class="" dir="auto">Without direction, every reference looks equally good.</p><p id="397ecaf7-2d7b-80c9-b5ee-c82db2985d16" class="" dir="auto">Once the direction is clear, choosing references becomes much easier.</p><hr id="397ecaf7-2d7b-8056-a79f-ef9497a4ab7f" dir="auto"/><h2 id="397ecaf7-2d7b-8035-9721-f32a30fdfe5a" class="" dir="auto">A Direction Is Not A Concept.</h2><p id="397ecaf7-2d7b-8072-989e-f4bb2516a823" class="" dir="auto">This is an important distinction.</p><p id="397ecaf7-2d7b-80e9-a251-cffdb3a13401" class="" dir="auto">Direction: &quot;Security.&quot;</p><p id="397ecaf7-2d7b-8061-a6fb-f48107970072" class="" dir="auto">Possible concepts:</p><p id="397ecaf7-2d7b-8068-9fe4-fcdf3fabde53" class="" dir="auto">A CCTV camera watching over sleeping children.</p><p id="397ecaf7-2d7b-8061-aad0-f64895a90246" class="" dir="auto">A CCTV camera replacing a guardian.</p><p id="397ecaf7-2d7b-8081-9e62-c8a5b527b405" class="" dir="auto">A CCTV camera casting the shadow of a security guard.</p><p id="397ecaf7-2d7b-805f-b1bf-da55b840bc1a" class="" dir="auto">Three different concepts.</p><p id="397ecaf7-2d7b-80d8-9d0c-f2bd839067bf" class="" dir="auto">One direction.</p><p id="397ecaf7-2d7b-80f7-82c9-e4cf2c654119" class="" dir="auto">Directions create possibilities; concepts choose one.</p><hr id="397ecaf7-2d7b-804a-a0d3-fef21e652638" dir="auto"/><h2 id="397ecaf7-2d7b-8072-a673-f5be96ddc216" class="" dir="auto">Where Do Directions Come From?</h2><p id="397ecaf7-2d7b-8006-832f-cf14c37eba3d" class="" dir="auto">Strong advertising directions usually emerge from one of these sources.</p><hr id="397ecaf7-2d7b-804f-9974-cdb1332f4d9d" dir="auto"/><ul id="397ecaf7-2d7b-8033-86f0-db1daeedc9d5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The Product</li></ul><p id="397ecaf7-2d7b-80c3-8d99-f17a81f7efb6" class="" dir="auto">What makes the product different?</p><p id="397ecaf7-2d7b-802d-b62e-f58d3b918651" class="" dir="auto">What is its strongest characteristic?</p><p id="397ecaf7-2d7b-809c-99e1-ef08efb1c2ed" class="" dir="auto">Sometimes the product itself provides the direction.</p><hr id="397ecaf7-2d7b-8095-821a-d4e61f8bec05" dir="auto"/><ul id="397ecaf7-2d7b-8019-8afa-dba6f3711623" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The Customer</li></ul><p id="397ecaf7-2d7b-80e5-8802-ce17159dfb80" class="" dir="auto">What matters most to the customer?</p><p id="397ecaf7-2d7b-801a-bfd1-da3ce1e3f758" class="" dir="auto">What problem are they trying to solve?</p><p id="397ecaf7-2d7b-80d7-a949-c97eb3dbde27" class="" dir="auto">What are they afraid of?</p><p id="397ecaf7-2d7b-8082-a066-c350ff0e6ddf" class="" dir="auto">What are they hoping for?</p><p id="397ecaf7-2d7b-8003-8c88-c3481bf4e3d6" class="" dir="auto">Customer thinking often creates stronger directions than product thinking.</p><hr id="397ecaf7-2d7b-80d8-a431-f81dceb04b31" dir="auto"/><ul id="397ecaf7-2d7b-8098-84ce-c3810d4b7576" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The Occasion</li></ul><p id="397ecaf7-2d7b-80a3-84e9-c230ebaa99df" class="" dir="auto">Festivals.</p><p id="397ecaf7-2d7b-8000-925b-f53d9060f8fb" class="" dir="auto">Seasons.</p><p id="397ecaf7-2d7b-80f5-9a7c-da5dcb1e9181" class="" dir="auto">Life events.</p><p id="397ecaf7-2d7b-8094-a0ff-d688d105c415" class="" dir="auto">National events.</p><p id="397ecaf7-2d7b-8090-ac90-e4e60126457d" class="" dir="auto">Local culture.</p><p id="397ecaf7-2d7b-80ce-9f8c-d437cbca2844" class="" dir="auto">Sometimes the timing itself suggests the direction.</p><hr id="397ecaf7-2d7b-80c6-9d82-d8c621c342c1" dir="auto"/><ul id="397ecaf7-2d7b-805a-987a-f8c735c6da7b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The Emotion</li></ul><p id="397ecaf7-2d7b-8050-b699-fa14c60c26c4" class="" dir="auto">Ask yourself.</p><p id="397ecaf7-2d7b-802a-8b7a-cd897731d197" class="" dir="auto">What should people feel?</p><p id="397ecaf7-2d7b-80d0-8a0c-efc01de0eced" class="" dir="auto">Relief.</p><p id="397ecaf7-2d7b-80a7-982b-ee8df69b2163" class="" dir="auto">Excitement.</p><p id="397ecaf7-2d7b-800e-8246-c2e3b2c849aa" class="" dir="auto">Trust.</p><p id="397ecaf7-2d7b-80f6-b232-e3027dcc0422" class="" dir="auto">Pride.</p><p id="397ecaf7-2d7b-8055-be40-e9e9ee3c51e4" class="" dir="auto">Love.</p><p id="397ecaf7-2d7b-80ef-9ef2-e7267d82b6e8" class="" dir="auto">Confidence.</p><p id="397ecaf7-2d7b-809d-bef6-cbb94d53303a" class="" dir="auto">Emotion is often the fastest path toward memorable advertising.</p><hr id="397ecaf7-2d7b-805d-a0c1-ce84387b4301" dir="auto"/><ul id="397ecaf7-2d7b-80a5-a375-d20835ea0fbe" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The Brand</li></ul><p id="397ecaf7-2d7b-8027-ab18-cf32b08b2442" class="" dir="auto">Every brand has a personality.</p><p id="397ecaf7-2d7b-800b-b1fa-c1efd7cf5c72" class="" dir="auto">Premium.</p><p id="397ecaf7-2d7b-80af-ae5e-faae9193b064" class="" dir="auto">Affordable.</p><p id="397ecaf7-2d7b-805f-bca6-d4b34951ec48" class="" dir="auto">Reliable.</p><p id="397ecaf7-2d7b-80fb-8bac-fea846b07b30" class="" dir="auto">Modern.</p><p id="397ecaf7-2d7b-8008-89da-fb343e87c9f6" class="" dir="auto">Traditional.</p><p id="397ecaf7-2d7b-80d1-bf69-d3c7c9df0c65" class="" dir="auto">Your direction should strengthen that personality, not contradict it.</p><hr id="397ecaf7-2d7b-806c-bc7b-ea0a3fe4930f" dir="auto"/><h2 id="397ecaf7-2d7b-802e-813f-e75dee24c71a" class="" dir="auto">Generate Quantity Before Quality.</h2><p id="397ecaf7-2d7b-801f-b63a-f074b5eeed24" class="" dir="auto">One of the biggest mistakes creatives make is judging ideas too early.</p><p id="397ecaf7-2d7b-802f-8f23-cce09e1a8385" class="" dir="auto">Instead of searching for one brilliant direction...</p><p id="397ecaf7-2d7b-8015-b547-e95d7aef2351" class="" dir="auto">Generate many ordinary ones.</p><p id="397ecaf7-2d7b-80e0-b844-f2cdb0541c28" class="" dir="auto">Write ten.</p><p id="397ecaf7-2d7b-80a4-8da8-e7e894ea60e7" class="" dir="auto">Even if the first five feel obvious.</p><p id="397ecaf7-2d7b-8074-a070-f7e8d892ea8f" class="" dir="auto">Creative thinking improves through exploration, not expectation.</p><p id="397ecaf7-2d7b-80c3-8925-fe8617e319eb" class="" dir="auto">The strongest direction often appears after the obvious ones have been exhausted.</p><hr id="397ecaf7-2d7b-8034-8549-d87b418f6176" dir="auto"/><h2 id="397ecaf7-2d7b-805d-bd32-f27a9f0b216d" class="" dir="auto">Don&#x27;t Fall In Love With The First Direction.</h2><p id="397ecaf7-2d7b-806d-837f-cd317b604795" class="" dir="auto">The first direction is usually based on what everyone already thinks.</p><p id="397ecaf7-2d7b-804a-b728-cb3ef367fad3" class="" dir="auto">The second explores alternatives.</p><p id="397ecaf7-2d7b-8046-bd29-c13df5155dbf" class="" dir="auto">The third challenges assumptions.</p><p id="397ecaf7-2d7b-8038-963e-d693c0069e3a" class="" dir="auto">The fourth begins to surprise you.</p><p id="397ecaf7-2d7b-8002-a63d-cfadda0da471" class="" dir="auto">Great advertising rarely comes from the first thought.</p><p id="397ecaf7-2d7b-80bd-9b26-f57ba664b514" class="" dir="auto">It often comes from the first thought you almost ignored.</p><hr id="397ecaf7-2d7b-80a4-a076-e370f5ca2825" dir="auto"/><h2 id="397ecaf7-2d7b-8062-ad3f-f67548c03300" class="" dir="auto">Test Every Direction.</h2><p id="397ecaf7-2d7b-80fa-a1d9-f741a9f38f22" class="" dir="auto">Before turning a direction into a concept, ask yourself:</p><p id="397ecaf7-2d7b-8054-b3f1-d1d09de3ee64" class="" dir="auto">Is it relevant to the product?</p><p id="397ecaf7-2d7b-8042-9eac-e9bd5d26af22" class="" dir="auto">Does it support the communication objective?</p><p id="397ecaf7-2d7b-801e-83fe-e8e3388e4be4" class="" dir="auto">Is it different from what competitors usually say?</p><p id="397ecaf7-2d7b-8074-a91e-cdaae1e19ab7" class="" dir="auto">Can it generate multiple concepts?</p><p id="397ecaf7-2d7b-80b6-82ee-ff08d14e0635" class="" dir="auto">Would customers actually care?</p><p id="397ecaf7-2d7b-8069-bf81-c8193568bc12" class="" dir="auto">If the answer to most of these questions is no...</p><p id="397ecaf7-2d7b-806d-af23-c11e7c2ab25f" class="" dir="auto">Find another direction.</p><hr id="397ecaf7-2d7b-8033-9009-ee369130f321" dir="auto"/><h2 id="397ecaf7-2d7b-80b0-9f57-ef723ae790fb" class="" dir="auto">Example</h2><p id="397ecaf7-2d7b-8027-8d62-d8ea8d9d5b5e" class="" dir="auto">Imagine a client says:</p><p id="397ecaf7-2d7b-808e-8f18-f83ca9c81834" class="" dir="auto">&quot;We sell premium office chairs.&quot;</p><p id="397ecaf7-2d7b-80a2-8c12-d4c3a65b0e1d" class="" dir="auto">Possible directions:</p><ul id="397ecaf7-2d7b-80b0-91f0-db08be22244c" class="to-do-list" dir="auto"><li><input type="checkbox" class="checkbox checkbox-off" disabled=""/> <span class="to-do-children-unchecked">Comfort during long working hours.</span><div class="indented"></div></li></ul><ul id="397ecaf7-2d7b-8058-bec2-f35fd61b84fa" class="to-do-list" dir="auto"><li><input type="checkbox" class="checkbox checkbox-off" disabled=""/> <span class="to-do-children-unchecked">Better posture.</span><div class="indented"></div></li></ul><ul id="397ecaf7-2d7b-8006-b0c0-c6c79d6915ed" class="to-do-list" dir="auto"><li><input type="checkbox" class="checkbox checkbox-off" disabled=""/> <span class="to-do-children-unchecked">Professional workspace.</span><div class="indented"></div></li></ul><ul id="397ecaf7-2d7b-801e-8269-ff29c6152346" class="to-do-list" dir="auto"><li><input type="checkbox" class="checkbox checkbox-off" disabled=""/> <span class="to-do-children-unchecked">Health over productivity.</span><div class="indented"></div></li></ul><ul id="397ecaf7-2d7b-80f2-8c80-d9a74fc0c50e" class="to-do-list" dir="auto"><li><input type="checkbox" class="checkbox checkbox-off" disabled=""/> <span class="to-do-children-unchecked">Work without fatigue.</span><div class="indented"></div></li></ul><ul id="397ecaf7-2d7b-800b-9b1e-fa15544aee1d" class="to-do-list" dir="auto"><li><input type="checkbox" class="checkbox checkbox-off" disabled=""/> <span class="to-do-children-unchecked">Confidence during important meetings.</span><div class="indented"></div></li></ul><p id="397ecaf7-2d7b-8017-b3e1-e281d09b1a71" class="" dir="auto">Each direction can produce completely different advertisements.</p><p id="397ecaf7-2d7b-80cd-a611-e597bd04d52f" class="" dir="auto">The direction determines the creative journey.</p><hr id="397ecaf7-2d7b-80d4-9f9b-f866ba469a62" dir="auto"/><h2 id="397ecaf7-2d7b-804a-babc-dbc3123fcfa9" class="" dir="auto">Direction Before Reference.</h2><p id="397ecaf7-2d7b-804f-88f2-c5754632a47d" class="" dir="auto">Only after choosing a direction should you begin collecting references.</p><p id="397ecaf7-2d7b-80af-a09e-f3cba3836004" class="" dir="auto">Without direction, references influence your thinking.</p><p id="397ecaf7-2d7b-8076-8e3c-c0a831cb5174" class="" dir="auto">With direction, references support your thinking.</p><p id="397ecaf7-2d7b-8044-b422-dad553a8338f" class="" dir="auto">This small difference often determines whether an advertisement becomes original or derivative.</p><hr id="397ecaf7-2d7b-80cb-baa5-ce55ddbc76f7" dir="auto"/><h2 id="397ecaf7-2d7b-80db-8f24-dcd7a2e03bac" class="" dir="auto">What This Means For An Advertising Creative.</h2><p id="397ecaf7-2d7b-804e-9506-eff76d81adcb" class="" dir="auto">A direction is a decision.</p><p id="397ecaf7-2d7b-80b9-b56a-d9596d8eba78" class="" dir="auto">It defines the conversation you’re about to have with the customer.</p><p id="397ecaf7-2d7b-80b5-b6cd-c3876bfc7a23" class="" dir="auto">Everything that follows—</p><p id="397ecaf7-2d7b-8023-b841-d12967e7ad63" class="" dir="auto">The concept.</p><p id="397ecaf7-2d7b-80ca-9c02-c8300cf5bc15" class="" dir="auto">The visual metaphor.</p><p id="397ecaf7-2d7b-80c2-a250-ee1caa46ddee" class="" dir="auto">The composition.</p><p id="397ecaf7-2d7b-808c-8c07-fa4ec4a6505e" class="" dir="auto">The typography.</p><p id="397ecaf7-2d7b-80b4-8097-cfe2b6d692d5" class="" dir="auto">The colour palette.</p><p id="397ecaf7-2d7b-80f8-a304-f8488f8647fd" class="" dir="auto">Should reinforce that direction.</p><p id="397ecaf7-2d7b-8055-a17f-e911b47a7f2b" class="" dir="auto">Never begin with execution.</p><p id="397ecaf7-2d7b-801a-8d91-f51fe15970fe" class="" dir="auto">Begin with the conversation.</p><hr id="397ecaf7-2d7b-8099-931e-d4a3e8a412e3" dir="auto"/><h2 id="397ecaf7-2d7b-808f-b32a-f2ad69ec5472" class="" dir="auto">Practical Principles</h2><p id="397ecaf7-2d7b-8078-a989-c1e0b9ab0068" class="" dir="auto">Whenever you begin a project, ask yourself:</p><p id="397ecaf7-2d7b-80f3-9d67-c904414082d3" class="" dir="auto">What conversation should this advertisement start?</p><p id="397ecaf7-2d7b-800e-9d6d-ff27db10187c" class="" dir="auto">Can I think of at least five different directions?</p><p id="397ecaf7-2d7b-80ba-b310-ee290676dc88" class="" dir="auto">Which direction is most relevant to the audience?</p><p id="397ecaf7-2d7b-805f-a616-dd46ea6dad6f" class="" dir="auto">Which direction best supports the communication objective?</p><p id="397ecaf7-2d7b-8089-9030-fdd0a8ccc652" class="" dir="auto">Which direction has the greatest concept potential?</p><p id="397ecaf7-2d7b-809e-a20a-e6f0263cfd3c" class="" dir="auto">Am I choosing a direction or copying an execution?</p><p id="397ecaf7-2d7b-80fa-ae10-c3e4768c1fd8" class="" dir="auto">Never confuse the two.</p><hr id="397ecaf7-2d7b-80aa-834e-e7a9a9c91167" dir="auto"/><p id="397ecaf7-2d7b-80c6-bc76-c7179411b86d" class="" dir="auto">Key Takeaways</p><p id="397ecaf7-2d7b-8000-9a5e-f2c28f8d5d19" class="" dir="auto">Directions come before concepts.</p><p id="397ecaf7-2d7b-80f5-9321-c269115efc35" class="" dir="auto">Concepts come before execution.</p><p id="397ecaf7-2d7b-8002-adb9-e19426354c61" class="" dir="auto">One product can generate many different communication directions.</p><p id="397ecaf7-2d7b-801d-9689-c4dfbac9d095" class="" dir="auto">Great creatives explore multiple directions before choosing one.</p><p id="397ecaf7-2d7b-80f9-87fd-fd739fc7a9c7" class="" dir="auto">References should support a chosen direction—not define it.</p><p id="397ecaf7-2d7b-808e-8e04-e928c99c7a72" class="" dir="auto">The quality of your concepts depends on the quality of your direction.</p><p id="397ecaf7-2d7b-8061-802f-f58eeb60034a" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

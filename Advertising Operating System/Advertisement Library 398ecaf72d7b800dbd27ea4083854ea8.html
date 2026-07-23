@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Advertisement Library</title><meta name="data-notion-page-icon" content="/icons/list-indent_orange.svg"/><link rel="icon" href="https://app.notion.com/icons/list-indent_orange.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="398ecaf7-2d7b-800d-bd27-ea4083854ea8" class="page sans" data-notion-page-icon="/icons/list-indent_orange.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/list-indent_orange.svg"/></div><h1 class="page-title" dir="auto">Advertisement Library</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="ca5f6b21-5471-4f70-9a0d-ce9fafca0ef8" class="link-to-page"><a href="Advertisement%20Library/00%20%E2%80%94%20Advertisement%20Deconstruction%20Template%20ca5f6b2154714f709a0dce9fafca0ef8.html" data-notion-page-id="ca5f6b21-5471-4f70-9a0d-ce9fafca0ef8" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434">00 — Advertisement Deconstruction Template</a></figure><hr id="39fecaf7-2d7b-80ea-8781-ebaf52fb3bd0" dir="auto"/><figure id="398ecaf7-2d7b-8058-b2df-d7ff02db3047" class="link-to-page"><a href="Advertisement%20Library/Blinkit%20%E2%80%94%20Desert%20Delivery%20398ecaf72d7b8058b2dfd7ff02db3047.html" data-notion-page-id="398ecaf7-2d7b-8058-b2df-d7ff02db3047" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/>Blinkit — Desert Delivery</a></figure><figure id="398ecaf7-2d7b-80b9-80d7-c286447927e9" class="link-to-page"><a href="Advertisement%20Library/ENO%20%E2%80%94%20Relief%20Can&#x27;t%20Wait%20398ecaf72d7b80b980d7c286447927e9.html" data-notion-page-id="398ecaf7-2d7b-80b9-80d7-c286447927e9" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/>ENO — Relief Can&#x27;t Wait</a></figure><figure id="398ecaf7-2d7b-80fd-9ab6-ff8c8661bcfc" class="link-to-page"><a href="Advertisement%20Library/Otrivin%20%E2%80%94%20Break%20the%20Block%20398ecaf72d7b80fd9ab6ff8c8661bcfc.html" data-notion-page-id="398ecaf7-2d7b-80fd-9ab6-ff8c8661bcfc" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/>Otrivin — Break the Block</a></figure><figure id="398ecaf7-2d7b-803a-8271-d0b53e7d30b0" class="link-to-page"><a href="Advertisement%20Library/American%20Transplant%20Association%20%E2%80%94%20Live%20Twice%20398ecaf72d7b803a8271d0b53e7d30b0.html" data-notion-page-id="398ecaf7-2d7b-803a-8271-d0b53e7d30b0" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/>American Transplant Association — Live Twice</a></figure><figure id="398ecaf7-2d7b-80b5-8bd6-d16555ea9696" class="link-to-page"><a href="Advertisement%20Library/EcoOrigin%20%E2%80%94%20Escape%20the%20Summer%20Heat%20398ecaf72d7b80b58bd6d16555ea9696.html" data-notion-page-id="398ecaf7-2d7b-80b5-8bd6-d16555ea9696" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_red.svg"/>EcoOrigin — Escape the Summer Heat</a></figure><figure id="398ecaf7-2d7b-80ef-86ee-fbbf25ed40f0" class="link-to-page"><a href="Advertisement%20Library/Aquasoft%20%E2%80%94%20Win%20Every%20Dry-Skin%20Battle%20398ecaf72d7b80ef86eefbbf25ed40f0.html" data-notion-page-id="398ecaf7-2d7b-80ef-86ee-fbbf25ed40f0" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/>Aquasoft — Win Every Dry-Skin Battle</a></figure><figure id="398ecaf7-2d7b-8006-9b3b-fb1095286a18" class="link-to-page"><a href="Advertisement%20Library/Claire%20Cosmetics%20%E2%80%93%20Kids%20Sunscreen%20SPF%2050%20398ecaf72d7b80069b3bfb1095286a18.html" data-notion-page-id="398ecaf7-2d7b-8006-9b3b-fb1095286a18" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/>Claire Cosmetics – Kids Sunscreen SPF 50</a></figure><figure id="398ecaf7-2d7b-80f9-96fb-de110214d76a" class="link-to-page"><a href="Advertisement%20Library/Knowledge%20Creates%20Freedom%20398ecaf72d7b80f996fbde110214d76a.html" data-notion-page-id="398ecaf7-2d7b-80f9-96fb-de110214d76a" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/>Knowledge Creates Freedom</a></figure><figure id="398ecaf7-2d7b-80b8-86e1-ff189603afb0" class="link-to-page"><a href="Advertisement%20Library/Colgate%20%E2%80%94%20Brightness%20100%25%20398ecaf72d7b80b886e1ff189603afb0.html" data-notion-page-id="398ecaf7-2d7b-80b8-86e1-ff189603afb0" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/>Colgate — Brightness 100%</a></figure><figure id="398ecaf7-2d7b-80a6-8586-fbbdf6fb6fc8" class="link-to-page"><a href="Advertisement%20Library/Toy%20House%20%E2%80%94%20Father&#x27;s%20Day%20398ecaf72d7b80a68586fbbdf6fb6fc8.html" data-notion-page-id="398ecaf7-2d7b-80a6-8586-fbbdf6fb6fc8" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_gray.svg"/>Toy House — Father&#x27;s Day</a></figure><hr id="39cecaf7-2d7b-80ce-a8e5-efcd8f47c27b" dir="auto"/><figure id="39cecaf7-2d7b-8090-8fb6-d48cc8195b4f" class="link-to-page"><a href="Advertisement%20Library/Unzip%20the%20Taste%20of%20Summer%2039cecaf72d7b80908fb6d48cc8195b4f.html" data-notion-page-id="39cecaf7-2d7b-8090-8fb6-d48cc8195b4f" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_red.svg"/>Unzip the Taste of Summer</a></figure><figure id="39cecaf7-2d7b-80c1-8ed7-c5fb53199fec" class="link-to-page"><a href="Advertisement%20Library/Jewellery%20-%20Tradition%20Never%20Loses%20Its%20Shine%2039cecaf72d7b80c18ed7c5fb53199fec.html" data-notion-page-id="39cecaf7-2d7b-80c1-8ed7-c5fb53199fec" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/>Jewellery - Tradition Never Loses Its Shine</a></figure><figure id="39cecaf7-2d7b-809c-908a-f8f458bb1500" class="link-to-page"><a href="Advertisement%20Library/Kisna%20Jewellery%20%E2%80%93%20Akshaya%20Tritiya%20Collection%2039cecaf72d7b809c908af8f458bb1500.html" data-notion-page-id="39cecaf7-2d7b-809c-908a-f8f458bb1500" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/>Kisna Jewellery – Akshaya Tritiya Collection</a></figure><figure id="39cecaf7-2d7b-808c-a898-f93be4a8f7e0" class="link-to-page"><a href="Advertisement%20Library/Oriana%20Jewellery%20%E2%80%93%20Passing%20on%20the%20Sparkle%20and%20Bles%2039cecaf72d7b808ca898f93be4a8f7e0.html" data-notion-page-id="39cecaf7-2d7b-808c-a898-f93be4a8f7e0" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/>Oriana Jewellery – Passing on the Sparkle and Blessings</a></figure><figure id="39cecaf7-2d7b-8075-8533-d9363fd9be60" class="link-to-page"><a href="Advertisement%20Library/Rabitobank%20%E2%80%93%20Upgrade%20Your%20Business%2039cecaf72d7b80758533d9363fd9be60.html" data-notion-page-id="39cecaf7-2d7b-8075-8533-d9363fd9be60" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/>Rabitobank – Upgrade Your Business</a></figure><figure id="39cecaf7-2d7b-80d6-8cc3-f255eadcf0bf" class="link-to-page"><a href="Advertisement%20Library/Esso%20Synergy%20%E2%80%93%20A%20Cleaner%20Engine%20Means%20an%20Enjoyable%2039cecaf72d7b80d68cc3f255eadcf0bf.html" data-notion-page-id="39cecaf7-2d7b-80d6-8cc3-f255eadcf0bf" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_gray.svg"/>Esso Synergy – A Cleaner Engine Means an Enjoyable</a></figure><figure id="39cecaf7-2d7b-801f-a33f-ee6c3c6cf60a" class="link-to-page"><a href="Advertisement%20Library/Tesori%20Silver%20Jewellery%20%E2%80%93%20Where%20Shine%20is%20Shared,%20S%2039cecaf72d7b801fa33fee6c3c6cf60a.html" data-notion-page-id="39cecaf7-2d7b-801f-a33f-ee6c3c6cf60a" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/>Tesori Silver Jewellery – Where Shine is Shared, Smiles Multiply</a></figure><figure id="39cecaf7-2d7b-807e-b3f2-f7d1202d2ce3" class="link-to-page"><a href="Advertisement%20Library/Nutrition%20For%20Less%20-%20Discount%20Offer%2039cecaf72d7b807eb3f2f7d1202d2ce3.html" data-notion-page-id="39cecaf7-2d7b-807e-b3f2-f7d1202d2ce3" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/>Nutrition For Less - Discount Offer</a></figure><figure id="39cecaf7-2d7b-80da-8f54-deb37d811a8d" class="link-to-page"><a href="Advertisement%20Library/Latin%20Juice%20%E2%80%93%20Drink%20the%20Apple%20Taste%20the%20Truth%2039cecaf72d7b80da8f54deb37d811a8d.html" data-notion-page-id="39cecaf7-2d7b-80da-8f54-deb37d811a8d" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/>Latin Juice – Drink the Apple. Taste the Truth.</a></figure><figure id="39cecaf7-2d7b-8029-a55f-f914d78a6bc7" class="link-to-page"><a href="Advertisement%20Library/CCTV%20Security%20%E2%80%93%20Trust%20the%20Eye%20That%20Never%20Blinks%2039cecaf72d7b8029a55ff914d78a6bc7.html" data-notion-page-id="39cecaf7-2d7b-8029-a55f-f914d78a6bc7" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/>CCTV Security – Trust the Eye That Never Blinks</a></figure><hr id="39cecaf7-2d7b-80ab-b961-f4e5800ee246" dir="auto"/><figure id="39cecaf7-2d7b-80d0-8037-e3137fa2dc48" class="link-to-page"><a href="Advertisement%20Library/Gree%20Air%20Conditioner%20%E2%80%93%20Desert%20Comfort%2039cecaf72d7b80d08037e3137fa2dc48.html" data-notion-page-id="39cecaf7-2d7b-80d0-8037-e3137fa2dc48" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_gray.svg"/>Gree Air Conditioner – Desert Comfort</a></figure><figure id="39cecaf7-2d7b-8075-800a-cd6f9c219851" class="link-to-page"><a href="Advertisement%20Library/Metro%20Tulsa%20Foot%20&amp;%20Ankle%20Specialists%20%E2%80%93%20Early%20Care%20%2039cecaf72d7b8075800acd6f9c219851.html" data-notion-page-id="39cecaf7-2d7b-8075-800a-cd6f9c219851" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/>Metro Tulsa Foot &amp; Ankle Specialists – Early Care = Quicker Recovery</a></figure><figure id="39cecaf7-2d7b-8009-8cec-f0df95c7fc06" class="link-to-page"><a href="Advertisement%20Library/Indore%20Arthroscopy%20Center%20%E2%80%93%20Father&#x27;s%20Day%2039cecaf72d7b80098cecf0df95c7fc06.html" data-notion-page-id="39cecaf7-2d7b-8009-8cec-f0df95c7fc06" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/>Indore Arthroscopy Center – Father&#x27;s Day</a></figure><figure id="39cecaf7-2d7b-8072-8083-c6b10b03b7c5" class="link-to-page"><a href="Advertisement%20Library/Aashirvaad%20Select%20Atta%20%E2%80%93%20Gehu%20Ka%20Sartaj%E2%80%9D%2039cecaf72d7b80728083c6b10b03b7c5.html" data-notion-page-id="39cecaf7-2d7b-8072-8083-c6b10b03b7c5" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/>Aashirvaad Select Atta – &quot;Gehu Ka Sartaj”</a></figure><figure id="39cecaf7-2d7b-8001-9a14-c1770befbefe" class="link-to-page"><a href="Advertisement%20Library/Nivea%20%E2%80%93%20Nivea%20It%E2%80%9D%2039cecaf72d7b80019a14c1770befbefe.html" data-notion-page-id="39cecaf7-2d7b-8001-9a14-c1770befbefe" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/>Nivea – &quot;Nivea It”</a></figure><figure id="39cecaf7-2d7b-8033-8978-d37c38b5b3c2" class="link-to-page"><a href="Advertisement%20Library/Yendra%20Techno%20%E2%80%93%20Diwali%20CCTV%2039cecaf72d7b80338978d37c38b5b3c2.html" data-notion-page-id="39cecaf7-2d7b-8033-8978-d37c38b5b3c2" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/>Yendra Techno – Diwali CCTV</a></figure><figure id="39cecaf7-2d7b-80d4-92a5-ea7f3fe51d92" class="link-to-page"><a href="Advertisement%20Library/Finance%20Investment%20Banking%2039cecaf72d7b80d492a5ea7f3fe51d92.html" data-notion-page-id="39cecaf7-2d7b-80d4-92a5-ea7f3fe51d92" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/>Finance / Investment / Banking</a></figure><figure id="39eecaf7-2d7b-805d-a52f-f962c1e4df0d" class="link-to-page"><a href="Advertisement%20Library/Banking%20and%20Finance%20Ad%2039eecaf72d7b805da52ff962c1e4df0d.html" data-notion-page-id="39eecaf7-2d7b-805d-a52f-f962c1e4df0d" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/>Banking and Finance Ad</a></figure><figure id="39eecaf7-2d7b-8063-bc83-f23d2f6ff5a1" class="link-to-page"><a href="Advertisement%20Library/Metro%20Shoes%20-%20Happy%20Feet%2039eecaf72d7b8063bc83f23d2f6ff5a1.html" data-notion-page-id="39eecaf7-2d7b-8063-bc83-f23d2f6ff5a1" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_red.svg"/>Metro Shoes - Happy Feet</a></figure><figure id="39eecaf7-2d7b-8057-8565-d26beb25755e" class="link-to-page"><a href="Advertisement%20Library/United%20Steps%20-%20Awareness%2039eecaf72d7b80578565d26beb25755e.html" data-notion-page-id="39eecaf7-2d7b-8057-8565-d26beb25755e" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/>United Steps - Awareness</a></figure><hr id="39eecaf7-2d7b-8080-afca-c5ff86a77a8d" dir="auto"/><figure id="3a3ecaf7-2d7b-80f5-b4d8-c008786d981f" class="link-to-page"><a href="Advertisement%20Library/Town%20Bakery%20-%20Diwali%20Festival%20of%20light%203a3ecaf72d7b80f5b4d8c008786d981f.html" data-notion-page-id="3a3ecaf7-2d7b-80f5-b4d8-c008786d981f" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_red.svg"/>Town Bakery - Diwali Festival of light</a></figure><figure id="3a3ecaf7-2d7b-8035-9963-d211e441f7ae" class="link-to-page"><a href="Advertisement%20Library/Mickey%20Thompson-%20UNSTOPABLE%20PERFORMANCE%20EVERY%20TIME%203a3ecaf72d7b80359963d211e441f7ae.html" data-notion-page-id="3a3ecaf7-2d7b-8035-9963-d211e441f7ae" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_gray.svg"/>Mickey Thompson- UNSTOPABLE PERFORMANCE EVERY TIME</a></figure><figure id="3a3ecaf7-2d7b-807e-bf81-e98fa0cfc02e" class="link-to-page"><a href="Advertisement%20Library/Domino&#x27;s%20Pizza%20-%20Happiness%20for%20your%20Valentine%203a3ecaf72d7b807ebf81e98fa0cfc02e.html" data-notion-page-id="3a3ecaf7-2d7b-807e-bf81-e98fa0cfc02e" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/>Domino&#x27;s Pizza - Happiness for your Valentine</a></figure><figure id="3a3ecaf7-2d7b-809b-a0a0-dbce8b36c327" class="link-to-page"><a href="Advertisement%20Library/Sunrise%20Diagnostics%20&amp;%20Speciality%20Lab%20-%20Sugar%20traps%203a3ecaf72d7b809ba0a0dbce8b36c327.html" data-notion-page-id="3a3ecaf7-2d7b-809b-a0a0-dbce8b36c327" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/>Sunrise Diagnostics &amp; Speciality Lab - Sugar traps before it treats.</a></figure><figure id="3a5ecaf7-2d7b-809e-9ceb-f3a9ad4f8c6b" class="link-to-page"><a href="Advertisement%20Library/LuxYou%20-%20Every%20love%20story%20begins%20with%20YOU%203a5ecaf72d7b809e9cebf3a9ad4f8c6b.html" data-notion-page-id="3a5ecaf7-2d7b-809e-9ceb-f3a9ad4f8c6b" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/>LuxYou - Every love story begins with YOU.</a></figure><figure id="3a5ecaf7-2d7b-8089-a945-cab37c95d2f5" class="link-to-page"><a href="Advertisement%20Library/Washy%20Wash%20-%20An%20unmatched%20washing%20experience%203a5ecaf72d7b8089a945cab37c95d2f5.html" data-notion-page-id="3a5ecaf7-2d7b-8089-a945-cab37c95d2f5" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/>Washy Wash - An unmatched washing experience.</a></figure><figure id="3a5ecaf7-2d7b-804e-8579-ebbdc4213a3e" class="link-to-page"><a href="Advertisement%20Library/Crompton%20-%20WRINKLES%20WE%20LEFT%20THEM%20OUT%203a5ecaf72d7b804e8579ebbdc4213a3e.html" data-notion-page-id="3a5ecaf7-2d7b-804e-8579-ebbdc4213a3e" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/>Crompton - WRINKLES? WE LEFT THEM OUT.</a></figure><figure id="3a5ecaf7-2d7b-80fd-a32d-cf4f444a4227" class="link-to-page"><a href="Advertisement%20Library/Pluckk%20-%20Taste%20the%20Freshness%203a5ecaf72d7b80fda32dcf4f444a4227.html" data-notion-page-id="3a5ecaf7-2d7b-80fd-a32d-cf4f444a4227" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/>Pluckk - Taste the Freshness</a></figure><figure id="3a5ecaf7-2d7b-8077-9d5e-c5a771c6b4ec" class="link-to-page"><a href="Advertisement%20Library/Wild%20Stone%20-%20Garmi%20Ke%20Double%20Maze%20Lo%203a5ecaf72d7b80779d5ec5a771c6b4ec.html" data-notion-page-id="3a5ecaf7-2d7b-8077-9d5e-c5a771c6b4ec" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/>Wild Stone - Garmi Ke Double Maze Lo</a></figure><figure id="3a5ecaf7-2d7b-8092-b377-c4dd2e45a7cc" class="link-to-page"><a href="Advertisement%20Library/Fresh%20Orange%20Juice%20-%20100%25%20Orange%200%25%20Can%203a5ecaf72d7b8092b377c4dd2e45a7cc.html" data-notion-page-id="3a5ecaf7-2d7b-8092-b377-c4dd2e45a7cc" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/>Fresh Orange Juice - 100% Orange. 0% Can.</a></figure><hr id="3a5ecaf7-2d7b-80e1-b7fb-f7c444d7cddb" dir="auto"/><figure id="3a5ecaf7-2d7b-8025-b1e2-e3174a6072f0" class="link-to-page"><a href="Advertisement%20Library/Fenix%20-%20Experience%20the%20Power%203a5ecaf72d7b8025b1e2e3174a6072f0.html" data-notion-page-id="3a5ecaf7-2d7b-8025-b1e2-e3174a6072f0" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/>Fenix - Experience the Power</a></figure><figure id="3a5ecaf7-2d7b-80bf-8834-dfbf4b95392b" class="link-to-page"><a href="Advertisement%20Library/Beyerdynamic%20-%20wireless%20gaming%20that%20pulls%20you%20deep%203a5ecaf72d7b80bf8834dfbf4b95392b.html" data-notion-page-id="3a5ecaf7-2d7b-80bf-8834-dfbf4b95392b" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/>Beyerdynamic - wireless gaming that pulls you deeper into the action</a></figure><figure id="3a5ecaf7-2d7b-80a0-8193-e986c6a70e95" class="link-to-page"><a href="Advertisement%20Library/Air%20Conditioner%20-%20Even%20the%20heat%20is%20taking%20a%20rest%20n%203a5ecaf72d7b80a08193e986c6a70e95.html" data-notion-page-id="3a5ecaf7-2d7b-80a0-8193-e986c6a70e95" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/>Air Conditioner - Even the heat is taking a rest now</a></figure><figure id="3a5ecaf7-2d7b-8019-a609-e9ba02df43a6" class="link-to-page"><a href="Advertisement%20Library/Cadbury%20Dairy%20Milk%20-%20Cadbury&#x27;s%20sweetness%20in%20life&#x27;s%203a5ecaf72d7b8019a609e9ba02df43a6.html" data-notion-page-id="3a5ecaf7-2d7b-8019-a609-e9ba02df43a6" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/>Cadbury Dairy Milk - Cadbury&#x27;s sweetness in life&#x27;s slippery memories</a></figure><figure id="3a5ecaf7-2d7b-8055-a6d5-dfceab922118" class="link-to-page"><a href="Advertisement%20Library/AGM%20Global%20School%20-%20For%20the%20little%20hearts%20that%20wil%203a5ecaf72d7b8055a6d5dfceab922118.html" data-notion-page-id="3a5ecaf7-2d7b-8055-a6d5-dfceab922118" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/>AGM Global School - For the little hearts that will build our nation&#x27;s tomorrow</a></figure><figure id="3a5ecaf7-2d7b-807e-b699-edfdd1741fea" class="link-to-page"><a href="Advertisement%20Library/Mercedes-Benz%20-%20Unofficial%20Service%20Can%20Be%20Dangerou%203a5ecaf72d7b807eb699edfdd1741fea.html" data-notion-page-id="3a5ecaf7-2d7b-807e-b699-edfdd1741fea" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/>Mercedes-Benz - Unofficial Service Can Be Dangerous</a></figure><figure id="3a5ecaf7-2d7b-80f4-a007-e458c2428479" class="link-to-page"><a href="Advertisement%20Library/Apsara%20-%20Explore%20Your%20Imagination%203a5ecaf72d7b80f4a007e458c2428479.html" data-notion-page-id="3a5ecaf7-2d7b-80f4-a007-e458c2428479" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_gray.svg"/>Apsara - Explore Your Imagination</a></figure><figure id="3a5ecaf7-2d7b-80a5-8fb7-d9a7b6cb261c" class="link-to-page"><a href="Advertisement%20Library/Blinkit%20-%20Delivery%20On%20Time%203a5ecaf72d7b80a58fb7d9a7b6cb261c.html" data-notion-page-id="3a5ecaf7-2d7b-80a5-8fb7-d9a7b6cb261c" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/>Blinkit - Delivery On Time</a></figure><figure id="3a5ecaf7-2d7b-800f-b121-cb6d8006840e" class="link-to-page"><a href="Advertisement%20Library/Coca-Cola%20-%20Valentine&#x27;s%20Day%203a5ecaf72d7b800fb121cb6d8006840e.html" data-notion-page-id="3a5ecaf7-2d7b-800f-b121-cb6d8006840e" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/>Coca-Cola - Valentine&#x27;s Day</a></figure><figure id="3a5ecaf7-2d7b-8053-a623-c5568893b4b9" class="link-to-page"><a href="Advertisement%20Library/LAYORA%20-%20Eid%20al-Adha%20Greeting%20Luxury%20Fragrance%203a5ecaf72d7b8053a623c5568893b4b9.html" data-notion-page-id="3a5ecaf7-2d7b-8053-a623-c5568893b4b9" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_red.svg"/>LAYORA - Eid al-Adha Greeting / Luxury Fragrance</a></figure><hr id="3a5ecaf7-2d7b-8038-a26c-f494ce813662" dir="auto"/><figure id="3a6ecaf7-2d7b-8073-bab5-d80b311043aa" class="link-to-page"><a href="Advertisement%20Library/Prestige%20-%20The%20King%20Has%20Changed%203a6ecaf72d7b8073bab5d80b311043aa.html" data-notion-page-id="3a6ecaf7-2d7b-8073-bab5-d80b311043aa" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_green.svg"/>Prestige - The King Has Changed</a></figure><figure id="3a6ecaf7-2d7b-8019-959b-d5d3b179c0e5" class="link-to-page"><a href="Advertisement%20Library/All%20Out%20Ultra%20-%20Every%20Move%20Counts%203a6ecaf72d7b8019959bd5d3b179c0e5.html" data-notion-page-id="3a6ecaf7-2d7b-8019-959b-d5d3b179c0e5" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/>All Out Ultra - Every Move Counts</a></figure><figure id="3a6ecaf7-2d7b-80ed-8a77-f599f1afe4a2" class="link-to-page"><a href="Advertisement%20Library/Sleepwell%20-%20Wrapped%20in%20Comfort%203a6ecaf72d7b80ed8a77f599f1afe4a2.html" data-notion-page-id="3a6ecaf7-2d7b-80ed-8a77-f599f1afe4a2" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/>Sleepwell - Wrapped in Comfort</a></figure><figure id="3a6ecaf7-2d7b-807f-8c59-dc0d697d2f18" class="link-to-page"><a href="Advertisement%20Library/BFGoodrich%20-%20Playground%20Earth%203a6ecaf72d7b807f8c59dc0d697d2f18.html" data-notion-page-id="3a6ecaf7-2d7b-807f-8c59-dc0d697d2f18" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_yellow.svg"/>BFGoodrich - Playground Earth</a></figure><figure id="3a6ecaf7-2d7b-807b-9213-f3accdf3c717" class="link-to-page"><a href="Advertisement%20Library/page2%203a6ecaf72d7b807b9213f3accdf3c717.html" data-notion-page-id="3a6ecaf7-2d7b-807b-9213-f3accdf3c717" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_red.svg"/>page2</a></figure><figure id="3a6ecaf7-2d7b-8058-960a-fd839d871d99" class="link-to-page"><a href="Advertisement%20Library/pag3%203a6ecaf72d7b8058960afd839d871d99.html" data-notion-page-id="3a6ecaf7-2d7b-8058-960a-fd839d871d99" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_orange.svg"/>pag3</a></figure><figure id="3a6ecaf7-2d7b-8016-b74b-dbb8ca43a9df" class="link-to-page"><a href="Advertisement%20Library/page%203a6ecaf72d7b8016b74bdbb8ca43a9df.html" data-notion-page-id="3a6ecaf7-2d7b-8016-b74b-dbb8ca43a9df" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_pink.svg"/>page</a></figure><figure id="3a6ecaf7-2d7b-80ef-bba4-fd053daea7ec" class="link-to-page"><a href="Advertisement%20Library/page2%203a6ecaf72d7b80efbba4fd053daea7ec.html" data-notion-page-id="3a6ecaf7-2d7b-80ef-bba4-fd053daea7ec" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/>page2</a></figure><figure id="3a6ecaf7-2d7b-808e-9475-fab5a2e84b52" class="link-to-page"><a href="Advertisement%20Library/pag3%203a6ecaf72d7b808e9475fab5a2e84b52.html" data-notion-page-id="3a6ecaf7-2d7b-808e-9475-fab5a2e84b52" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/>pag3</a></figure><figure id="3a6ecaf7-2d7b-80b9-a618-d0dee709da06" class="link-to-page"><a href="Advertisement%20Library/page%203a6ecaf72d7b80b9a618d0dee709da06.html" data-notion-page-id="3a6ecaf7-2d7b-80b9-a618-d0dee709da06" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_gray.svg"/>page</a></figure><hr id="3a6ecaf7-2d7b-8030-a419-ec8de9271ea0" dir="auto"/><p id="3a6ecaf7-2d7b-800e-837a-e358368241a5" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

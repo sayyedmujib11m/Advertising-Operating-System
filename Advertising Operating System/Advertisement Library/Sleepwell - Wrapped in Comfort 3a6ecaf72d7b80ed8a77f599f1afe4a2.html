@@ -1,0 +1,768 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sleepwell - Wrapped in Comfort</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_purple.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_purple.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a6ecaf7-2d7b-80ed-8a77-f599f1afe4a2" class="page sans" data-notion-page-icon="/icons/photo-landscape_purple.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/></div><h1 class="page-title" dir="auto">Sleepwell - Wrapped in Comfort</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a6ecaf7-2d7b-80b0-9eb5-f4f720144bb2" class="image" data-notion-image="Sleepwell%20-%20Wrapped%20in%20Comfort/image.png" dir="ltr"><a href="Sleepwell%20-%20Wrapped%20in%20Comfort/image.png"><img style="width:703.984375px" src="Sleepwell%20-%20Wrapped%20in%20Comfort/image.png"/></a></figure><h1 id="3a6ecaf7-2d7b-80b1-95b2-e7f75633390b" class="" dir="auto">Advertisement Information</h1><hr id="3a6ecaf7-2d7b-80d9-ad5e-d0e22453745a" dir="auto"/><table id="3a6ecaf7-2d7b-8035-93b5-cef85fac7169" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-80b8-9997-f35aba315871" dir="ltr"><th id="}?Dz" class="simple-table-header-color simple-table-header">Field</th><th id="qaRP" class="simple-table-header-color simple-table-header">Details</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-8030-8a49-fbc7e2cd1d15" dir="ltr"><td id="}?Dz" class=""><strong>Brand</strong></td><td id="qaRP" class="">Sleepwell</td></tr><tr id="3a6ecaf7-2d7b-80c7-a9c1-f212d60cf6be" dir="ltr"><td id="}?Dz" class=""><strong>Campaign</strong></td><td id="qaRP" class="">Wrapped in Comfort</td></tr><tr id="3a6ecaf7-2d7b-802e-8584-dd61bd1d1c5a" dir="ltr"><td id="}?Dz" class=""><strong>Category</strong></td><td id="qaRP" class="">Bedding / Premium Blankets</td></tr><tr id="3a6ecaf7-2d7b-809b-9e2c-de4fd3e0c923" dir="ltr"><td id="}?Dz" class=""><strong>Campaign Type</strong></td><td id="qaRP" class="">Product Benefit Campaign</td></tr><tr id="3a6ecaf7-2d7b-80f7-97ca-c7c465e7e1e9" dir="ltr"><td id="}?Dz" class=""><strong>Target Audience</strong></td><td id="qaRP" class="">Adults seeking comfort, better sleep, premium home products</td></tr><tr id="3a6ecaf7-2d7b-8060-b5a9-e327f9f98d3b" dir="ltr"><td id="}?Dz" class=""><strong>Primary Emotion</strong></td><td id="qaRP" class="">Comfort, Escape, Peace, Relaxation</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-8017-bc7a-c2473193b6b7" dir="auto"/><h1 id="3a6ecaf7-2d7b-800d-8d96-d68dfb3a42ee" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a6ecaf7-2d7b-8078-91ff-d8a73e6ae24b" class="" dir="auto">Business Problem</h2><p id="3a6ecaf7-2d7b-808c-8356-f10622ea7d1a" class="" dir="auto">Consumers often perceive blankets as basic utility products, making it difficult to communicate emotional comfort and justify premium positioning.</p><hr id="3a6ecaf7-2d7b-8038-a0a3-c8a6dd243737" dir="auto"/><h2 id="3a6ecaf7-2d7b-80b9-a202-f2e735f979d9" class="" dir="auto">Business Goal</h2><p id="3a6ecaf7-2d7b-8078-8b50-cb9d1d9c6702" class="" dir="auto">Position Sleepwell blankets as more than a source of warmth—they provide a comforting sleep experience that transports you into restful dreams.</p><hr id="3a6ecaf7-2d7b-8060-986c-efe49a218d6e" dir="auto"/><h2 id="3a6ecaf7-2d7b-80a1-91e8-d5d6296526c1" class="" dir="auto">Communication Objective</h2><p id="3a6ecaf7-2d7b-80c2-9e5f-fe4f85c8cd4d" class="" dir="auto">Communicate that Sleepwell blankets completely envelop the user in comfort, leading to peaceful and better sleep.</p><hr id="3a6ecaf7-2d7b-8061-9245-d2fad3e3f3b6" dir="auto"/><h2 id="3a6ecaf7-2d7b-800c-b51b-e76c924a3188" class="" dir="auto">Communication Direction</h2><p id="3a6ecaf7-2d7b-803d-bcc8-eb5b7680887c" class="" dir="auto"><strong>Comfort is so complete that it carries you into a dream world.</strong></p><p id="3a6ecaf7-2d7b-80d8-8c08-fcca99b34ac8" class="" dir="auto">Instead of simply keeping you warm, the blanket becomes the vehicle that delivers deep, relaxing sleep.</p><hr id="3a6ecaf7-2d7b-8000-b360-da3e3b5d7b18" dir="auto"/><h2 id="3a6ecaf7-2d7b-8063-b2b4-ea9a1b84eb1f" class="" dir="auto">Big Idea</h2><p id="3a6ecaf7-2d7b-80c6-b42c-c10d59294519" class="" dir="auto"><strong>The blanket transforms into a hot air balloon carrying the dream version of the sleeper through the clouds.</strong></p><p id="3a6ecaf7-2d7b-8021-b056-dc8f2d024c55" class="" dir="auto">The physical blanket remains on the bed while simultaneously becoming the metaphorical vehicle for peaceful dreams.</p><hr id="3a6ecaf7-2d7b-801c-8077-facb1c021014" dir="auto"/><h1 id="3a6ecaf7-2d7b-8033-bfd7-f0758331738e" class="" dir="auto">Execution</h1><p id="3a6ecaf7-2d7b-808a-b8fa-cfae8344eddd" class="" dir="auto">The advertisement uses a split reality.</p><p id="3a6ecaf7-2d7b-80d3-91c2-cb79dcebcda6" class="" dir="auto">On the left, a person sleeps peacefully under the blanket.</p><p id="3a6ecaf7-2d7b-8079-9eac-db525c63ec97" class="" dir="auto">The blanket gradually extends beyond the bed and seamlessly transforms into a giant hot air balloon floating above the clouds. Suspended beneath it, the same person appears awake and peacefully enjoying the journey.</p><p id="3a6ecaf7-2d7b-808e-a2c7-d15c4b82216f" class="" dir="auto">This creates a visual narrative:</p><p id="3a6ecaf7-2d7b-803f-8f1c-c5d1215e3dab" class="" dir="auto"><strong>Sleep → Comfort → Dreams → Escape</strong></p><p id="3a6ecaf7-2d7b-8068-8785-ec82c9233588" class="" dir="auto">The headline,</p><blockquote id="3a6ecaf7-2d7b-80e7-af05-ccbd13198eda" class="" dir="auto"><strong>WRAPPED IN COMFORT</strong></blockquote><p id="3a6ecaf7-2d7b-80a9-982c-e970905fe1eb" class="" dir="auto">perfectly supports the visual metaphor, while the supporting copy,</p><blockquote id="3a6ecaf7-2d7b-8020-90c4-f544162e5da1" class="" dir="auto"><em>Premium blankets for better sleep</em></blockquote><p id="3a6ecaf7-2d7b-8008-afd2-dbea3254436c" class="" dir="auto">grounds the imaginative execution in a functional product benefit.</p><hr id="3a6ecaf7-2d7b-806b-8b83-d0364dead89a" dir="auto"/><h1 id="3a6ecaf7-2d7b-8043-9f5c-dc759a8da090" class="" dir="auto">Visual Thinking Systems</h1><table id="3a6ecaf7-2d7b-8071-a7fe-c5fa0fb60fa3" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-8023-b2cc-c4ca4ec94eb2" dir="ltr"><th id="OoZN" class="simple-table-header-color simple-table-header">Visual Thinking System</th><th id="nELK" class="simple-table-header-color simple-table-header">Role</th><th id="qtd~" class="simple-table-header-color simple-table-header">Strength</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-8091-9fe6-e4cf4c85db70" dir="ltr"><td id="OoZN" class=""><strong>Visual Metaphor Ads</strong></td><td id="nELK" class=""><strong>Primary</strong></td><td id="qtd~" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8018-b99f-cd435c71df63" dir="ltr"><td id="OoZN" class="">Product Benefit Conceptual Ads</td><td id="nELK" class="">Secondary</td><td id="qtd~" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-80ed-9284-f4f110641909" dir="ltr"><td id="OoZN" class="">Transformation Conceptual Ads</td><td id="nELK" class="">Secondary</td><td id="qtd~" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8056-835f-daf4ed737d16" dir="ltr"><td id="OoZN" class="">Environmental Conceptual Ads</td><td id="nELK" class="">Secondary</td><td id="qtd~" class="">★★★★☆</td></tr><tr id="3a6ecaf7-2d7b-80e2-afe3-f8ed5d527465" dir="ltr"><td id="OoZN" class="">Visual Storytelling Ads</td><td id="nELK" class="">Secondary</td><td id="qtd~" class="">★★★★☆</td></tr><tr id="3a6ecaf7-2d7b-80f3-9bab-fa82b1bf394d" dir="ltr"><td id="OoZN" class="">Scale &amp; Proportion Ads</td><td id="nELK" class="">Secondary</td><td id="qtd~" class="">★★★☆☆</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-804a-af7e-c522139ca283" dir="auto"/><h1 id="3a6ecaf7-2d7b-8079-9b10-e3c4951bda9b" class="" dir="auto">Why This Advertisement Works</h1><ul id="3a6ecaf7-2d7b-8095-a406-ed05986e16bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The metaphor directly visualizes the emotional benefit of the product.</li></ul><ul id="3a6ecaf7-2d7b-8069-af62-f7b1b480d150" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The blanket remains the hero while gaining symbolic meaning.</li></ul><ul id="3a6ecaf7-2d7b-80a4-8f24-c8e1fce62318" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The dream world naturally emerges from the blanket, making the transition believable.</li></ul><ul id="3a6ecaf7-2d7b-8073-9a8d-d786ac3410bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The visual explains the headline without requiring additional copy.</li></ul><ul id="3a6ecaf7-2d7b-8060-b13a-c8b006e1fac5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The execution creates emotional aspiration rather than focusing on technical features.</li></ul><hr id="3a6ecaf7-2d7b-80fb-8e60-ffe3edc4dee9" dir="auto"/><h1 id="3a6ecaf7-2d7b-80ee-b27f-cd161be386f5" class="" dir="auto">Reusable Principles</h1><h3 id="3a6ecaf7-2d7b-8013-baac-d84b89303e0b" class="" dir="auto">Principle 1</h3><p id="3a6ecaf7-2d7b-8006-b8ee-d6786e76383d" class="" dir="auto">When selling comfort, visualize the emotional destination instead of the physical product feature.</p><hr id="3a6ecaf7-2d7b-80be-bffd-e92da71e7580" dir="auto"/><h3 id="3a6ecaf7-2d7b-8085-a16f-ed2e5bf9b71e" class="" dir="auto">Principle 2</h3><p id="3a6ecaf7-2d7b-80da-8b79-e608ef54eea0" class="" dir="auto">Products that support human experiences can become vehicles for those experiences through metaphor.</p><hr id="3a6ecaf7-2d7b-8004-b01f-f8673d70a750" dir="auto"/><h3 id="3a6ecaf7-2d7b-80dc-b1eb-f6de1b6ee246" class="" dir="auto">Principle 3</h3><p id="3a6ecaf7-2d7b-809c-afca-f8bd5e2397c8" class="" dir="auto">A single continuous visual transformation strengthens storytelling more than separate symbolic elements.</p><hr id="3a6ecaf7-2d7b-8048-9c87-ce78c3a5f4f1" dir="auto"/><h3 id="3a6ecaf7-2d7b-8042-abc4-ec6a33f2a5ec" class="" dir="auto">Principle 4</h3><p id="3a6ecaf7-2d7b-80af-832f-fcbb1beef156" class="" dir="auto">Showing both reality and imagination in one composition helps consumers connect functional benefits with emotional outcomes.</p><hr id="3a6ecaf7-2d7b-80eb-b423-f4335cecefd9" dir="auto"/><h1 id="3a6ecaf7-2d7b-809c-9d50-ef0a44ade4c6" class="" dir="auto">Critical Evaluation</h1><h3 id="3a6ecaf7-2d7b-803f-bb44-f25b93f0b3cb" class="" dir="auto">Strengths</h3><ul id="3a6ecaf7-2d7b-80f9-97a0-e5d002ff63c4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent emotional storytelling.</li></ul><ul id="3a6ecaf7-2d7b-80c3-8270-dab02df6dec8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Highly memorable transformation.</li></ul><ul id="3a6ecaf7-2d7b-8094-817e-c1101be3bf97" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong integration between headline and visual.</li></ul><ul id="3a6ecaf7-2d7b-8043-92fa-cc95216235b6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product remains central to the narrative.</li></ul><ul id="3a6ecaf7-2d7b-808c-be20-e5badb8e8c6f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Premium cinematic execution.</li></ul><h3 id="3a6ecaf7-2d7b-80ba-abc2-cef470d742c6" class="" dir="auto">Weaknesses</h3><ul id="3a6ecaf7-2d7b-808f-8693-d04595f03a8e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The dream narrative is aspirational rather than evidence-based, making it less persuasive for highly rational buyers.</li></ul><ul id="3a6ecaf7-2d7b-8094-8f97-f2490cb14939" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The imaginative execution may slightly overshadow the blanket&#x27;s physical attributes such as softness, material, or warmth.</li></ul><hr id="3a6ecaf7-2d7b-80a1-8328-de47b03cd8fa" dir="auto"/><h1 id="3a6ecaf7-2d7b-800b-96ae-fe2b7e092fc1" class="" dir="auto">Alternative Creative Routes</h1><p id="3a6ecaf7-2d7b-80a3-97d6-dfc713e530b4" class="" dir="auto">Using the same communication direction, alternative executions could include:</p><ul id="3a6ecaf7-2d7b-8064-b8b9-fd4b1bdf7a01" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The blanket transforming into a protective cloud surrounding the sleeper.</li></ul><ul id="3a6ecaf7-2d7b-8072-8d57-dcc54dd5ba49" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The blanket becoming gentle ocean waves carrying the sleeper.</li></ul><ul id="3a6ecaf7-2d7b-80e1-ba28-ed50220af6d1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The blanket unfolding into a pair of wings embracing the user.</li></ul><ul id="3a6ecaf7-2d7b-8003-ae06-e6e4281b647b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The blanket transforming into a floating hammock suspended among clouds.</li></ul><p id="3a6ecaf7-2d7b-80e9-9a9e-faad632d2065" class="" dir="auto">Each execution preserves the idea that <strong>comfort transports the user into restful sleep</strong>.</p><hr id="3a6ecaf7-2d7b-800a-804c-f19e3d70ec1a" dir="auto"/><h1 id="3a6ecaf7-2d7b-8072-9165-c9e03046b646" class="" dir="auto">Core Learning</h1><p id="3a6ecaf7-2d7b-8015-8f9c-fb80370a02f3" class="" dir="auto">This advertisement demonstrates that <strong>Visual Metaphor</strong> can communicate emotional product benefits more effectively than literal demonstrations.</p><p id="3a6ecaf7-2d7b-8081-b71f-da7e747a72ef" class="" dir="auto">Rather than showing the blanket as simply warm or soft, Sleepwell visualizes the <em>experience</em> of comfort by making the blanket itself become the dream journey. This shifts the communication from <strong>feature advertising</strong> to <strong>experience advertising</strong>.</p><hr id="3a6ecaf7-2d7b-80b7-af80-c48b00fe5566" dir="auto"/><h1 id="3a6ecaf7-2d7b-80e1-9e84-fd82cbbcb07a" class="" dir="auto">Related Modules</h1><h2 id="3a6ecaf7-2d7b-8097-84d0-eb08d8ea455d" class="" dir="auto">Section A — Foundations</h2><ul id="3a6ecaf7-2d7b-806c-a11d-facdf3cdd607" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Advertising Fundamentals</li></ul><ul id="3a6ecaf7-2d7b-8015-94df-e7acc157f19f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Consumer Psychology</li></ul><ul id="3a6ecaf7-2d7b-80fc-b0f5-ea423b12a68c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product Benefit Communication</li></ul><ul id="3a6ecaf7-2d7b-809e-8371-fbe921a0d084" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Emotional Positioning</li></ul><ul id="3a6ecaf7-2d7b-80d7-83e3-e6984d763e66" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Thinking → Visual Metaphor Ads</li></ul><h2 id="3a6ecaf7-2d7b-803a-ac91-f3d20391d203" class="" dir="auto">Section B — Creative Reasoning</h2><ul id="3a6ecaf7-2d7b-8078-a770-e1676113bbca" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Creative Reverse Engineering</li></ul><ul id="3a6ecaf7-2d7b-80e3-b215-eb41a1e8a38a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Communication Objective</li></ul><ul id="3a6ecaf7-2d7b-80d0-9fe8-d1a16c424e98" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Communication Direction</li></ul><ul id="3a6ecaf7-2d7b-800c-a95b-d7deb0d616eb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Big Idea Framework <em>(future)</em></li></ul><ul id="3a6ecaf7-2d7b-80d5-b4a5-c6ddaf846c69" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Execution Framework <em>(future)</em></li></ul><h2 id="3a6ecaf7-2d7b-800a-abce-d94cb75c8141" class="" dir="auto">Graphic Design System</h2><ul id="3a6ecaf7-2d7b-80cc-8759-d55e502759f4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Hierarchy</li></ul><ul id="3a6ecaf7-2d7b-80c6-a070-e4615440330e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Composition Flow</li></ul><ul id="3a6ecaf7-2d7b-8089-8fa5-d42e64b59d83" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Leading Lines</li></ul><ul id="3a6ecaf7-2d7b-80c7-90c0-c4e363895df1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Color Psychology</li></ul><ul id="3a6ecaf7-2d7b-8088-b621-fa3f62ea3ea1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale Management</li></ul><ul id="3a6ecaf7-2d7b-80ef-94d8-f8ce5ced786c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Subject Isolation</li></ul><ul id="3a6ecaf7-2d7b-80ac-989b-ec7c07bd6cc4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Contrast &amp; Focus</li></ul><h2 id="3a6ecaf7-2d7b-8014-ac7d-f9db9a02e8a4" class="" dir="auto">Photography / CGI System</h2><ul id="3a6ecaf7-2d7b-805b-b2d4-e5e1adda8f78" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Composite Photography</li></ul><ul id="3a6ecaf7-2d7b-807f-a17f-e09adcacc9c9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Surreal CGI Integration</li></ul><ul id="3a6ecaf7-2d7b-808e-bfe2-c80e9dea4a97" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Lighting</li></ul><ul id="3a6ecaf7-2d7b-80c0-a192-c1ca93f4811f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Fabric Rendering</li></ul><ul id="3a6ecaf7-2d7b-8087-8d63-c6ebe9bb9e26" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Atmospheric Perspective</li></ul><ul id="3a6ecaf7-2d7b-8028-a5c8-d266447cc253" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Cinematic Color Grading</li></ul><h2 id="3a6ecaf7-2d7b-8060-bea0-cc5f6ebf8c90" class="" dir="auto">Future Research Modules</h2><ul id="3a6ecaf7-2d7b-8004-b1d7-c1fb3da7d3d2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Experience Advertising</li></ul><ul id="3a6ecaf7-2d7b-8003-bb7b-d82fc19fae72" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Emotional Benefit Communication</li></ul><ul id="3a6ecaf7-2d7b-8011-a640-c714895fcea1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Surreal Storytelling</li></ul><ul id="3a6ecaf7-2d7b-805e-8687-eaddc795d182" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Dream-State Visualization</li></ul><ul id="3a6ecaf7-2d7b-8014-ae92-ebd5f749ad45" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product-as-Vehicle Framework</li></ul><hr id="3a6ecaf7-2d7b-802b-b8a8-e5f75454e10e" dir="auto"/><h1 id="3a6ecaf7-2d7b-8041-92bb-ec41918467ce" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a6ecaf7-2d7b-8074-8deb-cab458bba274" class="" dir="auto">Communication Strategy</h3><p id="3a6ecaf7-2d7b-807d-bbe2-f55b6dfa88b3" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-80c8-91ce-c0a1b5f1b92b" class="" dir="auto">Excellent evidence that emotional experiences can become the primary communication strategy for functional home products.</p><hr id="3a6ecaf7-2d7b-80ef-8821-efb04ef920f0" dir="auto"/><h3 id="3a6ecaf7-2d7b-8015-8f89-d5ce88749a57" class="" dir="auto">Visual Thinking</h3><p id="3a6ecaf7-2d7b-807d-81bf-d648e0283e41" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-801c-a660-ddeb2d9f37c2" class="" dir="auto">Strong new evidence showing <strong>Visual Metaphor</strong> combined with <strong>Transformation</strong> to communicate an intangible emotional benefit through one seamless visual narrative.</p><hr id="3a6ecaf7-2d7b-802d-a5dd-dba0dc411685" dir="auto"/><h3 id="3a6ecaf7-2d7b-80ca-9d5b-c2cefed243ef" class="" dir="auto">Graphic Design</h3><p id="3a6ecaf7-2d7b-80fe-9668-cc9666d530f1" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-801b-94c0-f5fa2ac0ef32" class="" dir="auto">Outstanding composition using directional flow from reality to imagination, clear visual hierarchy, balanced negative space, and strong integration of typography with imagery.</p><hr id="3a6ecaf7-2d7b-8013-be0a-ffb3e9920b12" dir="auto"/><h3 id="3a6ecaf7-2d7b-80a9-b680-c53b63c98b9c" class="" dir="auto">Photography / CGI</h3><p id="3a6ecaf7-2d7b-801d-b5b6-ede0f53a2bf0" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-805b-9d30-eb940268d0b0" class="" dir="auto">Exceptional CGI compositing, fabric simulation, environmental integration, lighting consistency, and surreal realism. The transformation feels physically impossible yet visually believable.</p><hr id="3a6ecaf7-2d7b-80d5-8a26-ec8f608b1552" dir="auto"/><h3 id="3a6ecaf7-2d7b-80b4-9661-e413afde7f81" class="" dir="auto">Overall Contribution to the Operating System</h3><p id="3a6ecaf7-2d7b-8040-8e59-e8564ed4b0e5" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-80be-9388-dec8e94803f7" class="" dir="auto">This advertisement introduces valuable evidence for <strong>Experience Advertising</strong>, demonstrating that products can be positioned as gateways to emotional experiences rather than simply providers of functional benefits. It also strengthens the relationship between <strong>Visual Metaphor</strong>, <strong>Product Benefit Communication</strong>, and <strong>Narrative Execution</strong>, making it an important reference for future modules on emotional storytelling and experiential advertising.</p><hr id="3a6ecaf7-2d7b-804a-b901-fd369296935c" dir="auto"/><h2 id="3a6ecaf7-2d7b-80e3-876c-e892ecd2cee3" class="" dir="auto">New Knowledge Discovered</h2><blockquote id="3a6ecaf7-2d7b-806a-a3f5-d3fc1d5c5247" class="" dir="auto"><strong>A product does not need to physically transform into its benefit—it can transform into the journey that leads to the benefit.</strong> This expands the use of visual metaphor from <em>symbolizing outcomes</em> to <em>visualizing experiences</em>, opening a distinct creative direction for products that sell comfort, relaxation, wellness, or other intangible emotions.</blockquote><p id="3a6ecaf7-2d7b-8072-afdd-ef3633db8cea" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

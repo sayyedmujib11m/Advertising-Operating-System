@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Crompton - WRINKLES? WE LEFT THEM OUT.</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_blue.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_blue.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a5ecaf7-2d7b-804e-8579-ebbdc4213a3e" class="page sans" data-notion-page-icon="/icons/photo-landscape_blue.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_blue.svg"/></div><h1 class="page-title" dir="auto">Crompton - <strong>WRINKLES? WE LEFT THEM OUT.</strong></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a5ecaf7-2d7b-8029-8888-d72465ac1559" class="image" data-notion-image="Crompton%20-%20WRINKLES%20WE%20LEFT%20THEM%20OUT/image.png" dir="ltr"><a href="Crompton%20-%20WRINKLES%20WE%20LEFT%20THEM%20OUT/image.png"><img style="width:704px" src="Crompton%20-%20WRINKLES%20WE%20LEFT%20THEM%20OUT/image.png"/></a></figure><h1 id="3a5ecaf7-2d7b-80dc-835a-e561247c0261" class="" dir="auto">Advertisement Deconstruction</h1><h2 id="3a5ecaf7-2d7b-80b4-934f-c035b8f90496" class="" dir="auto">Basic Information</h2><p id="3a5ecaf7-2d7b-8007-88f7-e4077691ecb2" class="" dir="auto"><strong>Brand:</strong> Crompton</p><p id="3a5ecaf7-2d7b-80c7-b087-d421f541fafc" class="" dir="auto"><strong>Product:</strong> RhinoPlus Dry Iron</p><p id="3a5ecaf7-2d7b-80c6-9156-d644e18ec2f2" class="" dir="auto"><strong>Industry:</strong> Home Appliances</p><p id="3a5ecaf7-2d7b-8047-b82e-fc92cde56c4f" class="" dir="auto"><strong>Campaign Type:</strong> Product Benefit Advertisement</p><p id="3a5ecaf7-2d7b-8003-907f-c9160ea1e405" class="" dir="auto"><strong>Objective Type:</strong> Feature Communication / Product Performance</p><p id="3a5ecaf7-2d7b-808d-8bd1-ffa305c25295" class="" dir="auto"><strong>Headline</strong></p><blockquote id="3a5ecaf7-2d7b-8010-8b5f-dee98baa8fd1" class="" dir="auto"><strong>WRINKLES? WE LEFT THEM OUT.</strong></blockquote><hr id="3a5ecaf7-2d7b-8025-a845-f1f63d94902b" dir="auto"/><h1 id="3a5ecaf7-2d7b-8030-9c75-e5abcb9cadb6" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a5ecaf7-2d7b-8064-bf12-f29530bbd123" class="" dir="auto">Business Goal</h2><p id="3a5ecaf7-2d7b-80b0-bef4-d9e90b537f66" class="" dir="auto">Communicate the wrinkle-removal performance of the Crompton RhinoPlus iron and differentiate it from competing irons through a memorable visual concept.</p><hr id="3a5ecaf7-2d7b-80f5-82aa-c5a08bfebe0d" dir="auto"/><h2 id="3a5ecaf7-2d7b-8006-a336-d06683783169" class="" dir="auto">Communication Objective</h2><p id="3a5ecaf7-2d7b-8074-965c-dd1029650060" class="" dir="auto">Convince consumers that RhinoPlus delivers wrinkle-free clothes effortlessly, making ironing easier and more reliable.</p><hr id="3a5ecaf7-2d7b-8002-9d16-f90e339ba748" dir="auto"/><h2 id="3a5ecaf7-2d7b-80c5-bdf7-d6fd203e7bd6" class="" dir="auto">Communication Direction</h2><p id="3a5ecaf7-2d7b-80dc-a182-f5d22522221c" class="" dir="auto">Rather than saying:</p><blockquote id="3a5ecaf7-2d7b-8008-8236-eeebf245501d" class="" dir="auto">&quot;Our iron removes wrinkles.&quot;</blockquote><p id="3a5ecaf7-2d7b-80f0-afc1-e0e5bf3ec2ac" class="" dir="auto">the advertisement communicates:</p><blockquote id="3a5ecaf7-2d7b-8014-970c-c7b1b8b41456" class="" dir="auto"><strong>The iron is so effective that wrinkles never even make it onto the clothes.</strong></blockquote><p id="3a5ecaf7-2d7b-80f2-9a86-f4abd8d71946" class="" dir="auto">The communication exaggerates the outcome instead of explaining the feature.</p><hr id="3a5ecaf7-2d7b-8060-bae8-ebebeb122e86" dir="auto"/><h2 id="3a5ecaf7-2d7b-809b-bfc7-e39489067531" class="" dir="auto">Big Idea</h2><p id="3a5ecaf7-2d7b-803a-a752-dd8c48f902fe" class="" dir="auto"><strong>The iron functions like a production line that &quot;filters out&quot; wrinkles before the clothes leave it.</strong></p><p id="3a5ecaf7-2d7b-807c-9172-e35f2755c3be" class="" dir="auto">Instead of showing ironing as an action, the advertisement imagines the iron as a machine through which wrinkle-free clothes emerge.</p><p id="3a5ecaf7-2d7b-800d-9330-db68c7780079" class="" dir="auto">This transforms a functional benefit into a memorable visual story.</p><hr id="3a5ecaf7-2d7b-808e-999f-cde87aeb18bb" dir="auto"/><h1 id="3a5ecaf7-2d7b-80cb-8922-e001adca73e2" class="" dir="auto">Visual Thinking System</h1><h3 id="3a5ecaf7-2d7b-8000-a997-db21832b62d4" class="" dir="auto">Primary Category</h3><p id="3a5ecaf7-2d7b-801e-aaff-d929a597d27e" class="" dir="auto"><strong>Visual Metaphor Ads</strong></p><p id="3a5ecaf7-2d7b-80ca-b3cd-fbc452745f23" class="" dir="auto">The iron is metaphorically presented as a processing machine through which clothes pass, visually representing wrinkle removal.</p><hr id="3a5ecaf7-2d7b-80a7-a6b2-fb3e6dd260ea" dir="auto"/><h3 id="3a5ecaf7-2d7b-8083-b3cc-dd452957fcf3" class="" dir="auto">Supporting Category</h3><p id="3a5ecaf7-2d7b-80c0-8f26-d988526607b8" class="" dir="auto"><strong>Visual Exaggeration Ads</strong></p><p id="3a5ecaf7-2d7b-8073-8b27-d60a96dd6363" class="" dir="auto">The benefit is exaggerated to an impossible but instantly understandable level—clothes pass through the iron itself.</p><hr id="3a5ecaf7-2d7b-80a2-a05e-eefb595bef57" dir="auto"/><h2 id="3a5ecaf7-2d7b-806c-b061-d246d29f3367" class="" dir="auto">Why This Visual Thinking System?</h2><p id="3a5ecaf7-2d7b-80b8-9974-dd3d023b90d0" class="" dir="auto">Showing someone ironing would communicate the feature literally.</p><p id="3a5ecaf7-2d7b-807c-9b04-d82214889cca" class="" dir="auto">Instead, the advertisement asks:</p><blockquote id="3a5ecaf7-2d7b-802f-886c-db15672aacca" class="" dir="auto"><em>&quot;What if the iron itself became the entire ironing process?&quot;</em></blockquote><p id="3a5ecaf7-2d7b-8053-aaa5-e81579ca57c8" class="" dir="auto">This compresses the entire benefit into one instantly understandable visual.</p><p id="3a5ecaf7-2d7b-8064-bce9-e7424a3a0b83" class="" dir="auto">The metaphor makes the functional claim memorable without sacrificing product clarity.</p><hr id="3a5ecaf7-2d7b-802f-bb56-d39b9bdcd86e" dir="auto"/><h1 id="3a5ecaf7-2d7b-80a6-9bf0-dd99c1eda1db" class="" dir="auto">Final Execution</h1><h3 id="3a5ecaf7-2d7b-803f-97ee-cc9e155caa9e" class="" dir="auto">Hero</h3><p id="3a5ecaf7-2d7b-8024-be75-c9a2781ccfc6" class="" dir="auto">Crompton RhinoPlus iron.</p><h3 id="3a5ecaf7-2d7b-80e5-b91d-f1ffc18be497" class="" dir="auto">Supporting Elements</h3><ul id="3a5ecaf7-2d7b-806d-8cb7-f9efc2fb442b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Clothes hanging on a rod passing through the iron.</li></ul><ul id="3a5ecaf7-2d7b-80db-a9e2-da29a1ef1a9d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Wrinkle-free shirts emerging from the opposite side.</li></ul><ul id="3a5ecaf7-2d7b-8075-abd3-c8504601db27" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Clean purple background.</li></ul><ul id="3a5ecaf7-2d7b-8071-90fc-e790c82ca8fb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Large benefit-driven headline.</li></ul><ul id="3a5ecaf7-2d7b-80c7-a9ef-f362d65f90a9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Feature icons.</li></ul><ul id="3a5ecaf7-2d7b-805e-9f8d-e9e80e8182e9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimal distractions.</li></ul><p id="3a5ecaf7-2d7b-8097-aa72-fe8c03f83b3b" class="" dir="auto">The product remains dominant while the metaphor explains the benefit.</p><hr id="3a5ecaf7-2d7b-80ed-8f0a-e0e9bc9eeb10" dir="auto"/><h1 id="3a5ecaf7-2d7b-80d0-8944-c134baa95694" class="" dir="auto">Why This Advertisement Works</h1><h3 id="3a5ecaf7-2d7b-8086-8dbb-f177a236c29f" class="" dir="auto">1. Feature Becomes the Visual</h3><p id="3a5ecaf7-2d7b-8040-8aed-ffdac0cd4874" class="" dir="auto">The product benefit is demonstrated visually instead of being described.</p><hr id="3a5ecaf7-2d7b-805e-bfce-f455caa47ee6" dir="auto"/><h3 id="3a5ecaf7-2d7b-808a-8602-cf9fb99504b1" class="" dir="auto">2. Immediate Understanding</h3><p id="3a5ecaf7-2d7b-80bc-9ef4-f9812a567386" class="" dir="auto">Within a few seconds, the viewer understands:</p><blockquote id="3a5ecaf7-2d7b-80f2-8d47-d84558514417" class="" dir="auto">Clothes go in.</blockquote><p id="3a5ecaf7-2d7b-8021-9ba6-c38989cddbf4" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-8023-896e-c5f1e650bd9b" class="" dir="auto">Wrinkles disappear.</p><p id="3a5ecaf7-2d7b-803d-88ee-eb538080d688" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-802c-aa3f-ccdc00d54978" class="" dir="auto">Perfect clothes come out.</p><p id="3a5ecaf7-2d7b-806b-aa9b-ceba9fbe511c" class="" dir="auto">No lengthy explanation is required.</p><hr id="3a5ecaf7-2d7b-80cc-8e8e-febdafb2bb0f" dir="auto"/><h3 id="3a5ecaf7-2d7b-80fd-a281-cb82245c7612" class="" dir="auto">3. Product Remains the Hero</h3><p id="3a5ecaf7-2d7b-80eb-a717-ef23aa4185a4" class="" dir="auto">The concept is built around the iron rather than replacing or hiding it.</p><p id="3a5ecaf7-2d7b-809c-8618-f6f64715b889" class="" dir="auto">Consumers immediately know what is being advertised.</p><hr id="3a5ecaf7-2d7b-80f3-9442-fb48f1708910" dir="auto"/><h3 id="3a5ecaf7-2d7b-8026-b08e-f38145e3ba1a" class="" dir="auto">4. Strong Recall</h3><p id="3a5ecaf7-2d7b-802c-9744-e542581c9030" class="" dir="auto">The impossible scenario makes the advertisement memorable while remaining relevant to the product.</p><hr id="3a5ecaf7-2d7b-80ca-ab89-e06d345fddb5" dir="auto"/><h1 id="3a5ecaf7-2d7b-80cf-a6e2-c3a53786150e" class="" dir="auto">Reusable Principles</h1><h3 id="3a5ecaf7-2d7b-807f-bf49-d184b3e8ffaa" class="" dir="auto">Principle 1</h3><p id="3a5ecaf7-2d7b-800c-9732-eb5d1521bd74" class="" dir="auto">Functional benefits become more memorable when converted into visual processes.</p><hr id="3a5ecaf7-2d7b-80c7-8b9a-e6a5e7c359ba" dir="auto"/><h3 id="3a5ecaf7-2d7b-8058-bc1f-f56e04c32579" class="" dir="auto">Principle 2</h3><p id="3a5ecaf7-2d7b-802e-8edb-d0fb78998867" class="" dir="auto">A product can be imagined performing an impossible version of its real function if the exaggeration reinforces the actual benefit.</p><hr id="3a5ecaf7-2d7b-8019-9e07-cb554cc72ad2" dir="auto"/><h3 id="3a5ecaf7-2d7b-80c4-8d38-c523b5a6fa7b" class="" dir="auto">Principle 3</h3><p id="3a5ecaf7-2d7b-806b-b78c-cd643eed4bf8" class="" dir="auto">Visual demonstrations are often stronger than written feature claims.</p><hr id="3a5ecaf7-2d7b-8017-a047-ed22cb5beac6" dir="auto"/><h3 id="3a5ecaf7-2d7b-8092-bcaf-d754f39a2821" class="" dir="auto">Principle 4</h3><p id="3a5ecaf7-2d7b-80b6-be3c-ff482c5a707e" class="" dir="auto">Keep the product physically central even when using conceptual execution.</p><hr id="3a5ecaf7-2d7b-804b-b393-f486e315954c" dir="auto"/><h1 id="3a5ecaf7-2d7b-80d6-b433-ca037075d135" class="" dir="auto">Critical Evaluation</h1><h2 id="3a5ecaf7-2d7b-806c-9ad9-f2b9a99779a5" class="" dir="auto">Strengths</h2><ul id="3a5ecaf7-2d7b-8071-acfa-fa047187ab55" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong benefit visualization.</li></ul><ul id="3a5ecaf7-2d7b-8006-baeb-ea2fd8666a48" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product remains dominant.</li></ul><ul id="3a5ecaf7-2d7b-80d4-8974-c6d91e6acf33" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Immediate comprehension.</li></ul><ul id="3a5ecaf7-2d7b-8028-8f76-d79386647f2c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">High memorability.</li></ul><ul id="3a5ecaf7-2d7b-80a3-868d-c61c4b4cfe46" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimal clutter.</li></ul><ul id="3a5ecaf7-2d7b-80ff-a68e-f1305f35a884" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Good balance between realism and exaggeration.</li></ul><hr id="3a5ecaf7-2d7b-8010-981d-e7c80af214fb" dir="auto"/><h2 id="3a5ecaf7-2d7b-803d-ba21-f51e61edf837" class="" dir="auto">Weaknesses</h2><p id="3a5ecaf7-2d7b-804c-8aad-c58798abf3ea" class="" dir="auto">The execution demonstrates the outcome but not the product&#x27;s unique technology.</p><p id="3a5ecaf7-2d7b-80b5-84c6-d3ab0d237840" class="" dir="auto">The same metaphor could potentially be adapted for almost any iron brand.</p><p id="3a5ecaf7-2d7b-80cd-9fcc-f73a1e1bd144" class="" dir="auto">The advertisement strengthens category understanding more than brand differentiation.</p><hr id="3a5ecaf7-2d7b-80d6-b9fe-f1699f3d4413" dir="auto"/><h1 id="3a5ecaf7-2d7b-80b3-b5eb-d3f8554f6674" class="" dir="auto">Alternative Creative Routes</h1><p id="3a5ecaf7-2d7b-807d-bd67-c6f3e23656bf" class="" dir="auto">Alternative conceptual directions could include:</p><ul id="3a5ecaf7-2d7b-8084-b298-eb548161367a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A shirt casting a perfectly smooth shadow while a wrinkled shirt casts a distorted one (<strong>Shadow Metaphor Ads</strong>).</li></ul><ul id="3a5ecaf7-2d7b-8044-8b2b-c6d22883d33e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Wrinkles visually &quot;escaping&quot; from clothes before the iron reaches them (<strong>Transformation Conceptual Ads</strong>).</li></ul><ul id="3a5ecaf7-2d7b-8017-a129-d50889c3b056" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A close-up comparison where wrinkles dissolve into steam (<strong>Visual Metaphor Ads</strong> with a different execution).</li></ul><hr id="3a5ecaf7-2d7b-8015-85c9-e1028d70a5ca" dir="auto"/><h1 id="3a5ecaf7-2d7b-80f7-a432-e13aa444b128" class="" dir="auto">Core Learning</h1><p id="3a5ecaf7-2d7b-80ef-8b40-fdb5c4f2347f" class="" dir="auto">This advertisement demonstrates that <strong>functional product benefits can be communicated more effectively through a visual process than through literal product usage</strong>.</p><p id="3a5ecaf7-2d7b-8067-ad70-f4fc33757f8b" class="" dir="auto">Instead of depicting ironing, it visualizes the <em>result</em> of ironing as an impossible but believable metaphor. This significantly increases memorability while keeping the communication simple.</p><hr id="3a5ecaf7-2d7b-800b-ba3e-fa6a0ebacb54" dir="auto"/><h1 id="3a5ecaf7-2d7b-8004-86f9-fef169facfe5" class="" dir="auto">Related Modules</h1><h2 id="3a5ecaf7-2d7b-801d-89fd-f2905036d1af" class="" dir="auto">Section A</h2><ul id="3a5ecaf7-2d7b-807d-9c42-fdfadd522166" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module D – Visual Communication</strong><p id="3a5ecaf7-2d7b-8023-8961-e22312239c80" class="" dir="auto">Demonstrates how a visual metaphor communicates a product benefit faster than explanatory copy.</p></li></ul><ul id="3a5ecaf7-2d7b-80c2-8676-ce52471b2ef8" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module E – From Features to Identity</strong><p id="3a5ecaf7-2d7b-801d-9e38-e7160b0f18e9" class="" dir="auto">Converts a functional feature (wrinkle removal) into a distinctive brand expression.</p></li></ul><hr id="3a5ecaf7-2d7b-803a-a1ff-ec46a7ea34ab" dir="auto"/><h2 id="3a5ecaf7-2d7b-80a3-8c6c-ed605d11b1f2" class="" dir="auto">Section B</h2><ul id="3a5ecaf7-2d7b-8050-94ea-ef943d72d6b3" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Module G – Generating Advertising Directions</strong><p id="3a5ecaf7-2d7b-8065-98c5-c1f7ad895a54" class="" dir="auto">A strong example of choosing a demonstration-based communication direction instead of listing specifications.</p></li></ul><ul id="3a5ecaf7-2d7b-803e-bc02-fcaca805b654" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Future Module – Communication Objective</strong><p id="3a5ecaf7-2d7b-80cd-ab20-ffbfbf802986" class="" dir="auto">Separates the business benefit (&quot;sell the iron&quot;) from the communication task (&quot;make wrinkle removal instantly believable&quot;).</p></li></ul><ul id="3a5ecaf7-2d7b-809c-a888-d87aed55a8cf" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Future Module – Big Idea</strong><p id="3a5ecaf7-2d7b-80ea-bdf6-ddc381397af8" class="" dir="auto">Shows how a simple product feature can be transformed into one dominant visual concept.</p></li></ul><hr id="3a5ecaf7-2d7b-802d-aa86-ee411b39388e" dir="auto"/><h2 id="3a5ecaf7-2d7b-803f-bd81-e53cc69c005a" class="" dir="auto">Section C</h2><ul id="3a5ecaf7-2d7b-807c-88ad-e070546cfe0a" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Visual Metaphor Ads</strong></li></ul><ul id="3a5ecaf7-2d7b-8024-8f66-e3d148880f10" class="bulleted-list" dir="auto"><li style="list-style-type:disc"><strong>Visual Exaggeration Ads</strong></li></ul><hr id="3a5ecaf7-2d7b-8019-9d16-d19f95603c17" dir="auto"/><h1 id="3a5ecaf7-2d7b-8022-874b-ea33107c3efb" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a5ecaf7-2d7b-8081-84a5-c8f2efb11d67" class="" dir="auto">Creative Reasoning ★★★★☆</h3><p id="3a5ecaf7-2d7b-8035-88e3-d4a175c13a6c" class="" dir="auto">Excellent evidence for transforming a functional product claim into a memorable visual demonstration.</p><h3 id="3a5ecaf7-2d7b-8084-819f-f4f3808b47fe" class="" dir="auto">Visual Thinking ★★★★★</h3><p id="3a5ecaf7-2d7b-80f9-93b5-fcf5759bb56e" class="" dir="auto">A strong example of combining <strong>Visual Metaphor</strong> with <strong>Visual Exaggeration</strong> while maintaining product clarity.</p><h3 id="3a5ecaf7-2d7b-80aa-971a-f2fdd7fb632b" class="" dir="auto">Graphic Design ★★★★☆</h3><p id="3a5ecaf7-2d7b-8016-b504-e7941cae1e42" class="" dir="auto">Clean composition, clear hierarchy, and effective focus on the hero product. The concept remains immediately readable.</p><h3 id="3a5ecaf7-2d7b-803e-adbd-dca8510ed5be" class="" dir="auto">Photography ★★★★☆</h3><p id="3a5ecaf7-2d7b-80ba-b0e7-c386bac00bd1" class="" dir="auto">Good product rendering and compositing support the illusion without distracting from the message.</p><h3 id="3a5ecaf7-2d7b-80f3-963d-f95342d39dfd" class="" dir="auto">Overall Contribution ★★★★☆</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

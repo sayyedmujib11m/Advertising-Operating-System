@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Module F. Finding the Real Brief</title><meta name="data-notion-page-icon" content="/icons/brightness-high_orange.svg"/><link rel="icon" href="https://app.notion.com/icons/brightness-high_orange.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="396ecaf7-2d7b-808d-bdeb-ee7d2fd3ddfb" class="page sans" data-notion-page-icon="/icons/brightness-high_orange.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/></div><h1 class="page-title" dir="auto">Module F. Finding the Real Brief</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h1 id="396ecaf7-2d7b-8015-97f5-f66cab14c205" class="" dir="auto">Every Project Starts With Information.</h1><p id="396ecaf7-2d7b-8072-9e8a-ccdf73889522" class="" dir="auto">Not Every Project Starts With a Brief.</p><p id="396ecaf7-2d7b-80e3-8dad-f82baa583980" class="" dir="auto">One of the biggest differences between advertising books and real agency work is the assumption that every project begins with a detailed creative brief.</p><p id="396ecaf7-2d7b-802c-bd01-d33a1a6010db" class="" dir="auto">In reality, many designers never receive one.</p><p id="396ecaf7-2d7b-8003-86f9-e1b2b72b4dca" class="" dir="auto">Especially when working with local businesses, retailers, small agencies or social media clients.</p><p id="396ecaf7-2d7b-804c-a52e-e1418165ca8a" class="" dir="auto">Instead, they receive:</p><p id="396ecaf7-2d7b-80c1-a1eb-d2590dd7022a" class="" dir="auto">A WhatsApp message.</p><p id="396ecaf7-2d7b-8003-ad72-c5b1f64ec585" class="" dir="auto">A few product photographs.</p><p id="396ecaf7-2d7b-8058-878e-f4a2049c6152" class="" dir="auto">A price list.</p><p id="396ecaf7-2d7b-8012-8c4b-d0250e091ba8" class="" dir="auto">A festival greeting.</p><p id="396ecaf7-2d7b-80f1-8a6b-c27437597a69" class="" dir="auto">Or simply a block of text with the instruction,</p><p id="396ecaf7-2d7b-80f2-8bda-e97544c49895" class="" dir="auto"><em>&quot;Make a creative.&quot;</em></p><p id="396ecaf7-2d7b-80d0-85c0-c137e812bbfe" class="" dir="auto">The designer now faces a problem.</p><p id="396ecaf7-2d7b-801f-914e-ebce69108d6a" class="" dir="auto">They&#x27;re expected to create an advertisement without knowing what the advertisement is actually trying to achieve.</p><p id="396ecaf7-2d7b-8053-bbbf-c0cacb0e5293" class="" dir="auto">The missing brief doesn&#x27;t remove the problem.</p><p id="396ecaf7-2d7b-80e7-be6e-c7d3f79c8f52" class="" dir="auto">It simply becomes your responsibility to discover it.</p><hr id="396ecaf7-2d7b-80c3-acf4-d563fe65fe26" dir="auto"/><h1 id="396ecaf7-2d7b-80e4-a4f7-c4f42b578f4a" class="" dir="auto">Information Is Not a Brief.</h1><p id="396ecaf7-2d7b-8054-bcb9-ddcd71d40a02" class="" dir="auto">Many designers mistake information for direction.</p><p id="396ecaf7-2d7b-806f-8dea-d429254ee04c" class="" dir="auto">Consider this.</p><blockquote id="396ecaf7-2d7b-80a2-a875-d84eb7ba1c38" class="" dir="auto">22K Hallmarked Jewellery<br/><br/>0% Making Charges<br/><br/>Akshaya Tritiya Offer<br/><br/>Visit Today</blockquote><p id="396ecaf7-2d7b-8087-9172-e0b973c5dc2e" class="" dir="auto">This is information. It isn&#x27;t a brief. A brief answers questions. Information simply provides material. Your first job isn&#x27;t designing. Your first job is understanding.</p><hr id="396ecaf7-2d7b-800a-b343-dc0e9bf2c16c" dir="auto"/><h1 id="396ecaf7-2d7b-803c-a984-d70e4e429fc5" class="" dir="auto">Every Advertisement Begins With Questions.</h1><p id="396ecaf7-2d7b-8029-8140-df3d4a0406e1" class="" dir="auto">Whenever a client provides content instead of a brief, slow down.</p><p id="396ecaf7-2d7b-8082-b13d-e162420d9b3b" class="" dir="auto">Don&#x27;t ask,</p><p id="396ecaf7-2d7b-8010-b8a0-fa9420badce5" class="" dir="auto"><em>&quot;How should I arrange this?&quot;</em></p><p id="396ecaf7-2d7b-80c8-b5a7-f7f9ccaa6f5e" class="" dir="auto">Ask,</p><p id="396ecaf7-2d7b-80ea-9e6c-cf1215f8af2f" class="" dir="auto"><em>&quot;Why am I being asked to communicate this?&quot;</em></p><p id="396ecaf7-2d7b-80f1-a068-de0a913ea61e" class="" dir="auto">The answer changes everything.</p><hr id="396ecaf7-2d7b-8061-b5b4-d5c1267a9a25" dir="auto"/><h1 id="396ecaf7-2d7b-80b3-aeab-c86c1410ceb3" class="" dir="auto">The Seven Questions That Reveal the Real Brief.</h1><p id="396ecaf7-2d7b-804b-82c0-c1bf24b45f60" class="" dir="auto">Before opening Photoshop, answer these questions.</p><hr id="396ecaf7-2d7b-805f-976c-dbcc3ffbdfc4" dir="auto"/><h2 id="396ecaf7-2d7b-8086-ae59-cf7623c64eb6" class="" dir="auto">1. What is being advertised?</h2><p id="396ecaf7-2d7b-809d-9321-d2d0e8130b39" class="" dir="auto">Not the design.</p><p id="396ecaf7-2d7b-8057-a83c-c73f0b77014a" class="" dir="auto">The actual product or service.</p><p id="396ecaf7-2d7b-805d-bfdd-cdb18f21d3e7" class="" dir="auto">Be specific.</p><p id="396ecaf7-2d7b-8085-a3fb-ead824cf5a2a" class="" dir="auto">Not jewellery.</p><p id="396ecaf7-2d7b-8052-b8da-e2620d78c9e9" class="" dir="auto">Wedding jewellery.</p><p id="396ecaf7-2d7b-80c5-a40c-ca79859ce381" class="" dir="auto">Not solar.</p><p id="396ecaf7-2d7b-80d1-9458-e392b3f7d116" class="" dir="auto">Residential rooftop solar systems.</p><p id="396ecaf7-2d7b-8033-81f8-c939849a116a" class="" dir="auto">Specific products create specific ideas.</p><hr id="396ecaf7-2d7b-80b3-91b0-c47df42102da" dir="auto"/><h2 id="396ecaf7-2d7b-80d9-bac4-f90159e6b619" class="" dir="auto">2. Why is this advertisement being made?</h2><p id="396ecaf7-2d7b-8000-8351-ed012ae2650e" class="" dir="auto">Every advertisement exists for a reason.</p><p id="396ecaf7-2d7b-805d-a84e-eef8fcf2a157" class="" dir="auto">Launching something?</p><p id="396ecaf7-2d7b-8023-875e-fc9007c1ad94" class="" dir="auto">Increasing enquiries?</p><p id="396ecaf7-2d7b-80a6-9f4f-cc8cb36abb8c" class="" dir="auto">Festival promotion?</p><p id="396ecaf7-2d7b-80b4-836a-c5f8de00a7a1" class="" dir="auto">Building trust?</p><p id="396ecaf7-2d7b-801b-b82e-c016c734dd3f" class="" dir="auto">Clearing stock?</p><p id="396ecaf7-2d7b-80dc-b1a4-cda052e72c88" class="" dir="auto">Announcing a new branch?</p><p id="396ecaf7-2d7b-80e1-9028-df94bb986850" class="" dir="auto">If you don&#x27;t know, ask.</p><p id="396ecaf7-2d7b-8042-9a75-f2ef1fc79b06" class="" dir="auto">If you can&#x27;t ask, infer it from the content.</p><hr id="396ecaf7-2d7b-802d-860d-e57c627f07c8" dir="auto"/><h2 id="396ecaf7-2d7b-802e-b9dc-f1bf23954896" class="" dir="auto">3. Who should care?</h2><p id="396ecaf7-2d7b-80e1-9900-e4da8aafac1f" class="" dir="auto">Not everyone.</p><p id="396ecaf7-2d7b-8080-bf10-dd0171e2a953" class="" dir="auto">Who is most likely to respond?</p><p id="396ecaf7-2d7b-8093-a1fc-c8d8176110be" class="" dir="auto">Parents?</p><p id="396ecaf7-2d7b-8067-9edb-faeece22a722" class="" dir="auto">Business owners?</p><p id="396ecaf7-2d7b-8031-9a9b-d90ac8bcb568" class="" dir="auto">Young couples?</p><p id="396ecaf7-2d7b-80aa-90ad-fd0cfd34ca19" class="" dir="auto">Students?</p><p id="396ecaf7-2d7b-8026-a226-f0276d6d9cf8" class="" dir="auto">Farmers?</p><p id="396ecaf7-2d7b-80af-a424-cc79ea8a75ee" class="" dir="auto">Understanding the audience eliminates many weak ideas.</p><hr id="396ecaf7-2d7b-80b1-85cc-cf26abd067ee" dir="auto"/><h2 id="396ecaf7-2d7b-804b-acbd-f4b068c03982" class="" dir="auto">4. What is the strongest value?</h2><p id="396ecaf7-2d7b-808e-a5fa-df59f6780b32" class="" dir="auto">Look beyond the product.</p><p id="396ecaf7-2d7b-8002-87f2-e54fd50fbbbe" class="" dir="auto">Ask,</p><p id="396ecaf7-2d7b-8076-8918-eb8474bb9e75" class="" dir="auto">&quot;What matters most to the customer?&quot;</p><p id="396ecaf7-2d7b-8031-a55f-c182dacd12fe" class="" dir="auto">Not:</p><p id="396ecaf7-2d7b-8023-a608-d8eab7062d66" class="" dir="auto">22K Gold.</p><p id="396ecaf7-2d7b-805c-b52b-caf6214a69be" class="" dir="auto">Instead:</p><p id="396ecaf7-2d7b-8092-a480-dffcee631f2a" class="" dir="auto">Confidence in purity.</p><p id="396ecaf7-2d7b-8003-9030-cfe795ec01bf" class="" dir="auto">Not:</p><p id="396ecaf7-2d7b-8086-a76d-d0a185704bfa" class="" dir="auto">4K CCTV.</p><p id="396ecaf7-2d7b-8081-8094-e0612f037734" class="" dir="auto">Instead:</p><p id="396ecaf7-2d7b-80e2-af9a-e45243913ae3" class="" dir="auto">Reliable evidence when something goes wrong.</p><hr id="396ecaf7-2d7b-80e5-81cc-ff326ebaeae4" dir="auto"/><h2 id="396ecaf7-2d7b-80b8-a626-e38b35ca6c1f" class="" dir="auto">5. What should people remember?</h2><p id="396ecaf7-2d7b-8077-a40c-d60dc038df8a" class="" dir="auto">After seeing the advertisement, complete this sentence.</p><p id="396ecaf7-2d7b-806d-91e2-fe02010ad08e" class="" dir="auto"><em>&quot;This brand is the one that...&quot;</em></p><p id="396ecaf7-2d7b-8036-ae39-ce97fa4f8348" class="" dir="auto">If you can&#x27;t finish it clearly, the communication still isn&#x27;t focused.</p><hr id="396ecaf7-2d7b-804c-9a01-c6a2d062e91f" dir="auto"/><h2 id="396ecaf7-2d7b-803d-afe3-d4cd25836f6f" class="" dir="auto">6. What action should people take?</h2><p id="396ecaf7-2d7b-8069-89fa-d9968ceafa05" class="" dir="auto">Visit.</p><p id="396ecaf7-2d7b-804c-b6d9-c7ce0852f44c" class="" dir="auto">Call.</p><p id="396ecaf7-2d7b-809e-ab56-c73459bf8f88" class="" dir="auto">Book.</p><p id="396ecaf7-2d7b-80a6-aede-ee5004029fe9" class="" dir="auto">Enquire.</p><p id="396ecaf7-2d7b-80ed-a150-e8979f2c22b6" class="" dir="auto">Save.</p><p id="396ecaf7-2d7b-808b-aaa5-e95c398c71dc" class="" dir="auto">Share.</p><p id="396ecaf7-2d7b-80e9-be6d-c8347711770f" class="" dir="auto">Remember.</p><p id="396ecaf7-2d7b-8045-b017-ee8054efa07d" class="" dir="auto">Every advertisement should move the customer somewhere.</p><hr id="396ecaf7-2d7b-803e-8755-c6c9990bb83d" dir="auto"/><h2 id="396ecaf7-2d7b-8012-9212-cd5923315d9e" class="" dir="auto">7. What should this advertisement NOT communicate?</h2><p id="396ecaf7-2d7b-80f4-be74-e71b88524634" class="" dir="auto">This question is rarely asked.</p><p id="396ecaf7-2d7b-80cc-87d0-d20444015868" class="" dir="auto">It should be.</p><p id="396ecaf7-2d7b-801c-8908-ef3c95b42c16" class="" dir="auto">If today&#x27;s campaign is about affordability...</p><p id="396ecaf7-2d7b-8077-81f1-de768c9356a6" class="" dir="auto">Don&#x27;t accidentally communicate luxury.</p><p id="396ecaf7-2d7b-80e3-8241-c7db3aaadb26" class="" dir="auto">If today&#x27;s campaign is about trust...</p><p id="396ecaf7-2d7b-8046-afb7-d8046f389bbc" class="" dir="auto">Don&#x27;t let flashy effects overpower the message.</p><p id="396ecaf7-2d7b-80ea-a244-e25c56d336e4" class="" dir="auto">Clarity often comes from deciding what to leave out.</p><hr id="396ecaf7-2d7b-80e5-82b9-c00a2948cd8b" dir="auto"/><h1 id="396ecaf7-2d7b-806b-a92f-ef6ec693aefc" class="" dir="auto">When There Is Only Content.</h1><p id="396ecaf7-2d7b-80c6-945f-c86033b1961c" class="" dir="auto">Let&#x27;s imagine a real situation.</p><p id="396ecaf7-2d7b-80af-82c0-f4b2394d85c5" class="" dir="auto">The client sends:</p><blockquote id="396ecaf7-2d7b-8077-a096-e0778596fc72" class="" dir="auto">Happy Diwali<br/><br/>30% Discount<br/><br/>Men&#x27;s Collection<br/><br/>Visit Today<br/><br/>9876543210</blockquote><p id="396ecaf7-2d7b-80da-b8a6-da4b8ce51490" class="" dir="auto">Most designers immediately start looking for design references.</p><p id="396ecaf7-2d7b-80fb-bc3a-c723fb2c1b4d" class="" dir="auto">Instead... Break it down.</p><p id="396ecaf7-2d7b-80f5-a1a0-deb40e1cf4ee" class="" dir="auto">Product:</p><p id="396ecaf7-2d7b-806e-8750-eb21c375aa92" class="" dir="auto">Men&#x27;s clothing.</p><p id="396ecaf7-2d7b-80b7-acd9-df4c1c603772" class="" dir="auto">Occasion:</p><p id="396ecaf7-2d7b-8077-81f1-c6c82ea2d798" class="" dir="auto">Diwali.</p><p id="396ecaf7-2d7b-8042-8bfc-d54a5a9458a9" class="" dir="auto">Offer:</p><p id="396ecaf7-2d7b-803a-9b2c-e43aa54cf8da" class="" dir="auto">30% Discount.</p><p id="396ecaf7-2d7b-8069-b547-fcca264b590c" class="" dir="auto">Business Goal:</p><p id="396ecaf7-2d7b-8062-9167-ff04b75d53a4" class="" dir="auto">Increase festive sales.</p><p id="396ecaf7-2d7b-8048-ba9c-c2a11829fd4d" class="" dir="auto">Communication Goal:</p><p id="396ecaf7-2d7b-802d-8172-c4e7b866ef0a" class="" dir="auto">Convince customers that now is the right time to shop.</p><p id="396ecaf7-2d7b-80b9-9557-f1006ed302ca" class="" dir="auto">Now you have a brief. You created it.</p><hr id="396ecaf7-2d7b-80e7-b37e-ccf0aaee668e" dir="auto"/><h1 id="396ecaf7-2d7b-809b-af3c-d4e9441cf85e" class="" dir="auto">Don&#x27;t Design the Content.</h1><p id="396ecaf7-2d7b-80e4-86a3-c298ad03f846" class="" dir="auto">Design the Communication.</p><p id="396ecaf7-2d7b-80cf-ae26-f9400d95fba1" class="" dir="auto">Clients often believe they&#x27;ve given you everything you need.</p><p id="396ecaf7-2d7b-8017-917c-d40406131bfa" class="" dir="auto">They haven&#x27;t.</p><p id="396ecaf7-2d7b-8080-8fcd-f2d1fc8393e7" class="" dir="auto">They&#x27;ve given you information.</p><p id="396ecaf7-2d7b-807a-810e-d9c5c7d2dd4f" class="" dir="auto">It&#x27;s your responsibility to transform that information into communication.</p><p id="396ecaf7-2d7b-8078-9dea-dccbb8aad08e" class="" dir="auto">That&#x27;s what separates an operator from an advertising designer.</p><hr id="396ecaf7-2d7b-8058-95f3-cc3b2fc4ec96" dir="auto"/><h1 id="396ecaf7-2d7b-80f0-a31f-e89f67688477" class="" dir="auto">Every Brief Can Be Reduced to One Sentence.</h1><p id="396ecaf7-2d7b-80cb-b48c-eb93826e9c02" class="" dir="auto">After answering all seven questions, write one sentence.</p><blockquote id="396ecaf7-2d7b-808d-a093-e521d146d1c9" class="" dir="auto"><strong>This advertisement exists to convince __________ that __________.</strong></blockquote><p id="396ecaf7-2d7b-80b9-a458-daeb9dc3135c" class="" dir="auto">Examples.</p><p id="396ecaf7-2d7b-8091-95e7-d55ced4a6492" class="" dir="auto">&quot;This advertisement exists to convince homeowners that installing solar panels is a smart long-term investment.&quot;</p><p id="396ecaf7-2d7b-80b8-b336-f39ca824e5f4" class="" dir="auto">&quot;This advertisement exists to convince parents that this school provides a safe learning environment.&quot;</p><p id="396ecaf7-2d7b-806f-82b4-fd08ca1c427d" class="" dir="auto">&quot;This advertisement exists to convince jewellery buyers that Akshaya Tritiya is the right time to purchase gold.&quot;</p><p id="396ecaf7-2d7b-80b1-9a2e-d3a43c024a35" class="" dir="auto">Everything that follows should support that sentence.</p><p id="396ecaf7-2d7b-80a2-a986-c7628d2f05e6" class="" dir="auto">If it doesn&#x27;t...</p><p id="396ecaf7-2d7b-809d-894a-ca1821c307b7" class="" dir="auto">It probably doesn&#x27;t belong in the advertisement.</p><hr id="396ecaf7-2d7b-803f-b545-f173a2538902" dir="auto"/><h1 id="396ecaf7-2d7b-80d9-81d6-fc63d86cdfbd" class="" dir="auto">What This Means for an Advertising Designer.</h1><p id="396ecaf7-2d7b-8021-a54b-f9dee83ab569" class="" dir="auto">Design software should never be the first tool you open.</p><p id="396ecaf7-2d7b-809e-b3ae-ffd51609c12b" class="" dir="auto">Your first tool is curiosity.</p><p id="396ecaf7-2d7b-8065-bfa6-dc1e008d3ed2" class="" dir="auto">The better you understand the real problem...</p><p id="396ecaf7-2d7b-8007-b487-dd0eec351408" class="" dir="auto">The better your concepts become.</p><p id="396ecaf7-2d7b-803c-b671-f897eca870a0" class="" dir="auto">A weak brief creates weak communication.</p><p id="396ecaf7-2d7b-802e-b00d-fa34d1e85e2c" class="" dir="auto">A missing brief doesn&#x27;t stop a great designer.</p><p id="396ecaf7-2d7b-8083-a21f-f0a0b44f9d7f" class="" dir="auto">They know how to find it.</p><hr id="396ecaf7-2d7b-80c3-baac-cae5323e0235" dir="auto"/><h1 id="396ecaf7-2d7b-80d6-b4d8-c5b1d79ae4ec" class="" dir="auto">Practical Principles</h1><p id="396ecaf7-2d7b-806c-9945-d44a1f4ffba7" class="" dir="auto">Whenever you receive a project, ask yourself:</p><ul id="396ecaf7-2d7b-80ee-a941-da7dcd92fb4b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What is actually being advertised?</li></ul><ul id="396ecaf7-2d7b-8045-9abb-fad7c281dd49" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Why is this advertisement needed?</li></ul><ul id="396ecaf7-2d7b-80eb-8d02-ee2a2427b5bf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Who should respond?</li></ul><ul id="396ecaf7-2d7b-80de-8b31-ede9a456be8d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What value matters most?</li></ul><ul id="396ecaf7-2d7b-8071-979b-c2e5a84a34f0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What should people remember?</li></ul><ul id="396ecaf7-2d7b-801e-98b0-ebe665e9d058" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What action should they take?</li></ul><ul id="396ecaf7-2d7b-8065-a782-dbfeb856bda3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">What single sentence defines this advertisement?</li></ul><p id="396ecaf7-2d7b-80f0-8e3e-d44d876c1f5b" class="" dir="auto">If you can answer these questions before designing, you&#x27;ve already solved the hardest part of the project.</p><hr id="396ecaf7-2d7b-8083-9ed5-cf2f27925190" dir="auto"/><h1 id="396ecaf7-2d7b-8084-b457-dda47b126f4d" class="" dir="auto">Key Takeaways</h1><ul id="396ecaf7-2d7b-80b6-8727-c1bb3a0e4302" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Information is not the same as a brief.</li></ul><ul id="396ecaf7-2d7b-8079-b67b-c65b0c7cdfbd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Many clients provide content instead of communication direction.</li></ul><ul id="396ecaf7-2d7b-8057-acf6-c9475bdcbb33" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Good designers don&#x27;t wait for perfect briefs.</li></ul><ul id="396ecaf7-2d7b-8041-b804-f3a26e8a46d0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">They discover the real brief themselves.</li></ul><ul id="396ecaf7-2d7b-8020-a64c-f241402272a7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Every advertisement should be reduced to one communication objective.</li></ul><ul id="396ecaf7-2d7b-8019-8b19-ebc8abd86c70" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Great concepts begin with understanding, not software.</li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

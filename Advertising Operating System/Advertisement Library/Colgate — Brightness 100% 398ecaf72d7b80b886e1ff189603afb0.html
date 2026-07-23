@@ -1,0 +1,772 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Colgate — Brightness 100%</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_lightgray.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_lightgray.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="398ecaf7-2d7b-80b8-86e1-ff189603afb0" class="page sans" data-notion-page-icon="/icons/photo-landscape_lightgray.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/></div><h1 class="page-title" dir="auto">Colgate — Brightness 100%</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="398ecaf7-2d7b-80e7-a146-e3d27d61fb3e" class="image" data-notion-image="Colgate%20%E2%80%94%20Brightness%20100%25/1000371923.jpg" dir="ltr"><a href="Colgate%20%E2%80%94%20Brightness%20100%25/1000371923.jpg"><img style="width:300px" src="Colgate%20%E2%80%94%20Brightness%20100%25/1000371923.jpg"/></a></figure><h1 id="398ecaf7-2d7b-802f-800c-d91e42b96451" class="" dir="auto">Basic Information</h1><p id="398ecaf7-2d7b-80ad-a35b-daf107ae12da" class="" dir="auto">Brand: Colgate</p><p id="398ecaf7-2d7b-808c-874b-d5acadad173a" class="" dir="auto">Industry: Oral Care</p><p id="398ecaf7-2d7b-8094-8abe-f3d65ef42ed9" class="" dir="auto">Advertisement Type: Product Benefit Advertisement</p><p id="398ecaf7-2d7b-800b-b848-e647cd189cf7" class="" dir="auto">Medium: Print / Social Media Static</p><hr id="398ecaf7-2d7b-80b5-81d2-cd86dc00709a" dir="auto"/><p id="398ecaf7-2d7b-80e5-96ce-cd0010ec7823" class="" dir="auto">Creative Reverse Engineering</p><p id="398ecaf7-2d7b-8069-9fd2-d0a543f0e0b4" class="" dir="auto">Business Goal</p><p id="398ecaf7-2d7b-80fd-9ca2-d9dd94298f15" class="" dir="auto">Position Colgate as a toothpaste that noticeably whitens teeth.</p><hr id="398ecaf7-2d7b-8010-a8fa-e37e410cd01b" dir="auto"/><p id="398ecaf7-2d7b-808c-bf11-eb96f6a831aa" class="" dir="auto">Communication Objective</p><p id="398ecaf7-2d7b-8020-b72f-fe4a78b3cb3e" class="" dir="auto">Convince people that Colgate increases the brightness of their teeth.</p><hr id="398ecaf7-2d7b-8071-906d-e156ed028d1c" dir="auto"/><p id="398ecaf7-2d7b-802a-bd34-ebe6afb9db55" class="" dir="auto">Communication Direction</p><p id="398ecaf7-2d7b-803c-8ef9-c96174acbae4" class="" dir="auto">Whiter teeth are like increasing brightness.</p><hr id="398ecaf7-2d7b-8055-aea0-f2d20977aa0b" dir="auto"/><p id="398ecaf7-2d7b-8034-b637-f5796438c752" class="" dir="auto">Big Idea</p><p id="398ecaf7-2d7b-80d1-a0ca-edd8a875851d" class="" dir="auto">Whitening teeth is as simple and noticeable as turning up a brightness slider.</p><hr id="398ecaf7-2d7b-8072-84cc-d702fc73d23e" dir="auto"/><p id="398ecaf7-2d7b-808f-8e82-de1c2943783c" class="" dir="auto">Visual Thinking System</p><p id="398ecaf7-2d7b-80f8-a11e-cba864476516" class="" dir="auto">Primary</p><p id="398ecaf7-2d7b-8065-b177-f7000441b254" class="" dir="auto">Visual Metaphor</p><p id="398ecaf7-2d7b-8036-86d1-e6d2c1438d04" class="" dir="auto">Supporting</p><p id="398ecaf7-2d7b-8009-b758-f808b58183b0" class="" dir="auto">Product Benefit Conceptual Advertising</p><p id="398ecaf7-2d7b-806e-a7d0-edf4f1282252" class="" dir="auto">Minimalist Conceptual Advertising</p><hr id="398ecaf7-2d7b-807c-8c8d-d12fd1575dad" dir="auto"/><p id="398ecaf7-2d7b-8063-9cc3-e75db50f2c9c" class="" dir="auto">Why This Visual System?</p><p id="398ecaf7-2d7b-80c6-b942-e419303dc3a1" class="" dir="auto">Everyone understands how a brightness slider works on a phone, TV or computer.</p><p id="398ecaf7-2d7b-8021-b3a6-c24dcd6107d1" class="" dir="auto">The advertisement borrows this familiar interaction and applies it to teeth whitening, making the benefit instantly understandable.</p><hr id="398ecaf7-2d7b-80b3-9b53-ff4bf8660327" dir="auto"/><p id="398ecaf7-2d7b-8086-8ade-eb6e26e97e6a" class="" dir="auto">Final Execution</p><p id="398ecaf7-2d7b-80e8-bdd8-c33d53e042e3" class="" dir="auto">A brightness slider is placed beneath a row of teeth.</p><p id="398ecaf7-2d7b-80c0-81a7-f45cdd6b536d" class="" dir="auto">As the slider moves toward maximum brightness, the teeth become progressively whiter.</p><p id="398ecaf7-2d7b-8027-a7c3-fcdcd49a0655" class="" dir="auto">The interface itself becomes the demonstration of the product benefit.</p><hr id="398ecaf7-2d7b-805e-98a3-d49e4dc663f2" dir="auto"/><p id="398ecaf7-2d7b-80ad-bc39-e75686893514" class="" dir="auto">Why This Advertisement Works</p><p id="398ecaf7-2d7b-80a5-8e33-fc12d49552c8" class="" dir="auto">Uses a universally familiar interface.</p><p id="398ecaf7-2d7b-8054-9f77-ed5611140d19" class="" dir="auto">The benefit is demonstrated instead of described.</p><p id="398ecaf7-2d7b-8064-8e26-c4cc2fcf057d" class="" dir="auto">Almost no copy is required.</p><p id="398ecaf7-2d7b-80b1-a44c-c2fdb3e1fe77" class="" dir="auto">The progression from dull to bright is instantly understood.</p><p id="398ecaf7-2d7b-80bb-89cb-c5fdfc09e689" class="" dir="auto">The visual and headline communicate the same message.</p><hr id="398ecaf7-2d7b-8079-907d-cfd9bc028660" dir="auto"/><p id="398ecaf7-2d7b-8010-bef1-f58d8de3329e" class="" dir="auto">Reusable Principles</p><p id="398ecaf7-2d7b-808b-ba51-f0f8b1385313" class="" dir="auto">Principle 01</p><p id="398ecaf7-2d7b-80b5-bac1-d39145d092ba" class="" dir="auto">Borrow familiar interfaces to explain unfamiliar or invisible product benefits.</p><hr id="398ecaf7-2d7b-808d-afb2-d6709b51552e" dir="auto"/><p id="398ecaf7-2d7b-80ce-a26b-c80041fd57b6" class="" dir="auto">Principle 02</p><p id="398ecaf7-2d7b-803a-a43e-cd07a097d172" class="" dir="auto">Demonstrate the benefit instead of stating it.</p><hr id="398ecaf7-2d7b-8069-ad85-df8d1b3dbb29" dir="auto"/><p id="398ecaf7-2d7b-8030-9280-e5ad722fc07c" class="" dir="auto">Principle 03</p><p id="398ecaf7-2d7b-806d-ac06-da662ab9d07f" class="" dir="auto">The audience understands faster when the metaphor comes from everyday interactions.</p><hr id="398ecaf7-2d7b-80e0-a07b-f9fec5fd8104" dir="auto"/><p id="398ecaf7-2d7b-80ff-8805-d691eebad6f3" class="" dir="auto">Principle 04</p><p id="398ecaf7-2d7b-8071-af67-c3ce2c194c35" class="" dir="auto">Simple visual analogies often outperform technical explanations.</p><hr id="398ecaf7-2d7b-801e-b1c8-c21edc6ecb26" dir="auto"/><p id="398ecaf7-2d7b-80b7-951d-e540901b4062" class="" dir="auto">Critical Evaluation</p><p id="398ecaf7-2d7b-80cc-8f49-ccf7f2dd3b47" class="" dir="auto">Strength</p><p id="398ecaf7-2d7b-80ed-bfd4-cb31eb35bb53" class="" dir="auto">The concept is understood almost instantly because it relies on a familiar digital interaction.</p><p id="398ecaf7-2d7b-8095-af92-fcdd2aef9fc4" class="" dir="auto">Assumption</p><p id="398ecaf7-2d7b-8038-82aa-cce6ae283763" class="" dir="auto">The audience recognizes the brightness slider interface and naturally transfers that understanding to teeth whitening.</p><hr id="398ecaf7-2d7b-8054-9516-ee9913cdec16" dir="auto"/><p id="398ecaf7-2d7b-805b-95bb-cedf36734840" class="" dir="auto">Core Learning</p><blockquote id="398ecaf7-2d7b-80bd-ab1d-f3b571c94afa" class="" dir="auto">The fastest way to communicate a product benefit is often to borrow a familiar experience that people already understand.</blockquote><hr id="398ecaf7-2d7b-8004-b8a0-d09068f40ad6" dir="auto"/><p id="398ecaf7-2d7b-80e8-b183-efe49ab31dad" class="" dir="auto">Related Modules</p><p id="398ecaf7-2d7b-80cf-81c7-ca0393fbf6c2" class="" dir="auto">Section A → Consumer Psychology <a href="../Section%20A%20Foundations/Module%20C%20How%20People%20Notice,%20Think%20&amp;%20Respond%20to%20Adv%20395ecaf72d7b80e399cafa2a9d41f729.html" data-notion-page-id="395ecaf7-2d7b-80e3-99ca-fa2a9d41f729" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module C. How People Notice, Think &amp; Respond to Advertisements</a> </p><p id="398ecaf7-2d7b-8013-b9ae-fe125c56ff75" class="" dir="auto">Section A → Visual Communication <a href="../Section%20A%20Foundations/Module%20D%20Visual%20Communication%20395ecaf72d7b8000a0ddf8d585f99551.html" data-notion-page-id="395ecaf7-2d7b-8000-a0dd-f8d585f99551" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module D. Visual Communication</a> </p><p id="398ecaf7-2d7b-8023-b908-e14e83ed30e1" class="" dir="auto">Module F → Finding the Real Brief <a href="../Section%20A%20Foundations/Module%20F%20Finding%20the%20Real%20Brief%20396ecaf72d7b808dbdebee7d2fd3ddfb.html" data-notion-page-id="396ecaf7-2d7b-808d-bdeb-ee7d2fd3ddfb" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/>Module F. Finding the Real Brief</a> </p><p id="398ecaf7-2d7b-80c0-acc8-d45c9f9d767f" class="" dir="auto">Module G → <a href="../Section%20B%20Creative%20Reasoning/Module%20G%20Generating%20Advertising%20Directions%20397ecaf72d7b808a9de7d10f69c40502.html" data-notion-page-id="397ecaf7-2d7b-808a-9de7-d10f69c40502" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_green.svg"/>Module G. Generating Advertising Directions</a> </p><p id="398ecaf7-2d7b-8000-8413-d745a868b437" class="" dir="auto">Module H → Big Idea</p><p id="398ecaf7-2d7b-809a-8db9-cba9d5b19a70" class="" dir="auto">Section C →  <a href="../Section%20C%20Visual%20Thinking/3%20Visual%20Metaphor%20Ads%20395ecaf72d7b8005830efb30a1450440.html" data-notion-page-id="395ecaf7-2d7b-8005-830e-fb30a1450440" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/forward_orange.svg"/>3. Visual Metaphor Ads</a> </p><p id="398ecaf7-2d7b-802a-91cb-dc1568d66521" class="" dir="auto">Section C →  <a href="../Section%20C%20Visual%20Thinking/2%20Product%20Benifit%20Conceptual%20Ads%20395ecaf72d7b80ebb874d12ccb891bb3.html" data-notion-page-id="395ecaf7-2d7b-80eb-b874-d12ccb891bb3" data-notion-space-id="02fecaf7-2d7b-8128-ba40-000305530434"><img class="icon notion-static-icon" src="https://app.notion.com/icons/forward_orange.svg"/>2. Product Benifit Conceptual Ads</a> </p><hr id="398ecaf7-2d7b-8001-bf54-c3373ac311ef" dir="auto"/><p id="398ecaf7-2d7b-80b1-9293-ca0edf4d503d" class="" dir="auto">One observation for our system</p><blockquote id="398ecaf7-2d7b-80cf-875c-db71a221de52" class="" dir="auto">The strongest visual metaphors often come from experiences the audience performs daily.</blockquote><p id="398ecaf7-2d7b-800a-b9c4-e0a4c57b8f82" class="" dir="auto">The brightness slider works because almost everyone has adjusted screen brightness before. The metaphor requires virtually no interpretation, so the product benefit is understood immediately. That&#x27;s not a new visual system—it&#x27;s a guideline for choosing effective metaphors.</p><hr id="39cecaf7-2d7b-80fb-ba9c-e6af30555d9a" dir="auto"/><h2 id="39cecaf7-2d7b-809d-95b3-f72ddda4aedf" class="" dir="auto">Knowledge Contribution</h2><p id="39cecaf7-2d7b-8084-8995-e561a57f3d9e" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-80b2-800f-e9fcd5f1bfaa" class="" dir="auto">Communication Strategy: ★★★★☆</p><ul id="39cecaf7-2d7b-80e3-aa95-ef267e5b3dd6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Feature Demonstration</li></ul><p id="39cecaf7-2d7b-80fc-a0a5-fc25dd36a213" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-807a-8308-e062a7d01944" class="" dir="auto">Visual Systems: ★★★★☆</p><ul id="39cecaf7-2d7b-802f-b1e0-db5161e0d457" class="bulleted-list" dir="auto"><li style="list-style-type:disc">UI Analogy</li></ul><ul id="39cecaf7-2d7b-8026-a4b1-f6c01294c1a3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Interface Metaphor</li></ul><p id="39cecaf7-2d7b-804c-bca8-d7af947a3edc" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-80a5-a453-d716e84f80dd" class="" dir="auto">Graphic Design: ★★★☆☆</p><p id="39cecaf7-2d7b-8086-a310-fbe7d846a2ff" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-80f2-a18a-e7bf93d64812" class="" dir="auto">Photography: ★★☆☆☆</p><p id="39cecaf7-2d7b-8057-abbe-d78ca2f4f50a" class="" dir="auto">
+</p><p id="39cecaf7-2d7b-80c1-a357-c04e8f2ab113" class="" dir="auto">Overall Contribution: High</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

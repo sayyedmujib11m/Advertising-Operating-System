@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Fenix - Experience the Power</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_purple.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_purple.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a5ecaf7-2d7b-8025-b1e2-e3174a6072f0" class="page sans" data-notion-page-icon="/icons/photo-landscape_purple.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_purple.svg"/></div><h1 class="page-title" dir="auto">Fenix - <strong>Experience the Power</strong></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a5ecaf7-2d7b-80d0-beee-f97dca9b9b07" class="image" data-notion-image="Fenix%20-%20Experience%20the%20Power/image.png" dir="ltr"><a href="Fenix%20-%20Experience%20the%20Power/image.png"><img style="width:704px" src="Fenix%20-%20Experience%20the%20Power/image.png"/></a></figure><h1 id="3a5ecaf7-2d7b-800c-8497-e4d23251c2d5" class="" dir="auto">Advertisement Deconstruction</h1><h2 id="3a5ecaf7-2d7b-804f-88da-d034f5c83b31" class="" dir="auto">Basic Information</h2><p id="3a5ecaf7-2d7b-80f7-9f80-c1abb72fe6a0" class="" dir="auto"><strong>Brand:</strong> Fenix (Garmin Fenix Smartwatch)</p><p id="3a5ecaf7-2d7b-8085-a8dc-f0ebbf06b263" class="" dir="auto"><strong>Industry:</strong> Smartwatch / Wearable Technology</p><p id="3a5ecaf7-2d7b-80fb-b254-eeb4cb476b84" class="" dir="auto"><strong>Campaign Type:</strong> Product Branding</p><p id="3a5ecaf7-2d7b-801c-8107-c23112dbc05f" class="" dir="auto"><strong>Objective Type:</strong> Feature Communication + Brand Positioning</p><p id="3a5ecaf7-2d7b-80b5-9c2f-c357c120387c" class="" dir="auto"><strong>Tagline:</strong></p><blockquote id="3a5ecaf7-2d7b-8030-be97-ef4a96fa0cfa" class="" dir="auto"><strong>Experience the Power</strong></blockquote><hr id="3a5ecaf7-2d7b-8058-946f-c2e9c82359b0" dir="auto"/><h1 id="3a5ecaf7-2d7b-8081-bc3d-d818ae646353" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a5ecaf7-2d7b-80bb-969c-c29e196889e9" class="" dir="auto">Business Goal</h2><p id="3a5ecaf7-2d7b-80cd-8a69-f163bc1b0a9f" class="" dir="auto">Communicate the smartwatch&#x27;s <strong>performance and power</strong> while positioning it as a premium sports wearable built for athletes and active users.</p><p id="3a5ecaf7-2d7b-80a5-867c-dd8c084b194a" class="" dir="auto">Rather than listing specifications, the advertisement aims to make the audience <em>feel</em> the product&#x27;s power.</p><hr id="3a5ecaf7-2d7b-8084-ad8b-c41cde526808" dir="auto"/><h2 id="3a5ecaf7-2d7b-800c-9611-ca0988729f4c" class="" dir="auto">Communication Objective</h2><p id="3a5ecaf7-2d7b-80c2-a876-c0879df77644" class="" dir="auto">Convince consumers that the Fenix smartwatch is not merely a device for tracking activity, but a powerful companion that enhances athletic performance.</p><p id="3a5ecaf7-2d7b-80c9-a3d1-d23bc5b911c0" class="" dir="auto">The product should be perceived as <strong>performance equipment</strong>, not just a smartwatch.</p><hr id="3a5ecaf7-2d7b-801c-ab01-ee0aec58c506" dir="auto"/><h2 id="3a5ecaf7-2d7b-8053-9c16-c3a9709c53d0" class="" dir="auto">Communication Direction</h2><p id="3a5ecaf7-2d7b-80fb-a307-f97ba080e610" class="" dir="auto">Instead of communicating:</p><blockquote id="3a5ecaf7-2d7b-80d3-81c3-d2ea09087827" class="" dir="auto">&quot;Our watch has many features.&quot;</blockquote><p id="3a5ecaf7-2d7b-80ae-8bac-f3c54d751aae" class="" dir="auto">the campaign communicates:</p><blockquote id="3a5ecaf7-2d7b-8043-9b5c-f6fa5b084190" class="" dir="auto"><strong>The power of the watch is equivalent to the power and intensity of competitive sports.</strong></blockquote><p id="3a5ecaf7-2d7b-80eb-8894-d1b45756967f" class="" dir="auto">The watch becomes associated with energy, competition and athletic excellence.</p><hr id="3a5ecaf7-2d7b-804d-93af-f1e4826df77b" dir="auto"/><h2 id="3a5ecaf7-2d7b-80a1-9c20-df969ba12f83" class="" dir="auto">Big Idea</h2><p id="3a5ecaf7-2d7b-80a9-8da0-e2c09a2d1446" class="" dir="auto"><strong>The smartwatch becomes part of the basketball court itself.</strong></p><p id="3a5ecaf7-2d7b-8059-8195-e3ad50ca52e4" class="" dir="auto">The watch isn&#x27;t shown beside sports.</p><p id="3a5ecaf7-2d7b-8010-b226-c57abb01853a" class="" dir="auto">It visually <strong>shares the same environment</strong>, making the product feel naturally connected to athletic performance.</p><hr id="3a5ecaf7-2d7b-8067-9728-cd73678d9da4" dir="auto"/><h1 id="3a5ecaf7-2d7b-807b-853e-e430512edccf" class="" dir="auto">Visual Thinking System</h1><h3 id="3a5ecaf7-2d7b-8091-8582-ef3ef542dd07" class="" dir="auto">Primary</h3><p id="3a5ecaf7-2d7b-80f6-bb6a-c279f08ac6a8" class="" dir="auto"><strong>Environmental Conceptual Ads</strong></p><p id="3a5ecaf7-2d7b-8017-8e56-fde6d1e772a1" class="" dir="auto">The product and the sporting environment are integrated into one composition.</p><p id="3a5ecaf7-2d7b-80a5-9154-ded451d01866" class="" dir="auto">The environment isn&#x27;t merely a background—it becomes part of the communication.</p><hr id="3a5ecaf7-2d7b-80ff-8867-dc690d12e6dc" dir="auto"/><h3 id="3a5ecaf7-2d7b-8065-b386-d155e8446d9a" class="" dir="auto">Supporting</h3><p id="3a5ecaf7-2d7b-80f0-8392-f57f7eadcd6c" class="" dir="auto"><strong>Scale and Proportion Ads</strong></p><p id="3a5ecaf7-2d7b-80d4-ad32-c3fc3216f35c" class="" dir="auto">The oversized smartwatch compared to the basketball players creates an intentional scale distortion.</p><p id="3a5ecaf7-2d7b-80ac-981a-c417dcc8965e" class="" dir="auto">The exaggerated size establishes the product as the dominant hero while reinforcing its importance.</p><hr id="3a5ecaf7-2d7b-8016-a91b-fe60eef1bf6e" dir="auto"/><h1 id="3a5ecaf7-2d7b-8054-bdc2-f5302dcd4a57" class="" dir="auto">Why This Visual Thinking System?</h1><p id="3a5ecaf7-2d7b-80dc-a3ca-fdec81179d49" class="" dir="auto">Instead of showing an athlete wearing the watch, the designer transforms the watch into part of the sporting world.</p><p id="3a5ecaf7-2d7b-80cd-981b-ce0163faf4b6" class="" dir="auto">The exaggerated scale immediately communicates:</p><ul id="3a5ecaf7-2d7b-80fd-96d9-fbf052d421e3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">power</li></ul><ul id="3a5ecaf7-2d7b-80bf-b666-f822c9a7e99c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">dominance</li></ul><ul id="3a5ecaf7-2d7b-80ee-b952-d843af2d8a85" class="bulleted-list" dir="auto"><li style="list-style-type:disc">performance</li></ul><p id="3a5ecaf7-2d7b-809a-ba0d-c7ea29b468b1" class="" dir="auto">without requiring lengthy copy.</p><p id="3a5ecaf7-2d7b-8099-8453-ee1605751177" class="" dir="auto">The environment reinforces the product message instead of simply decorating the advertisement.</p><hr id="3a5ecaf7-2d7b-807d-88fd-c6568af42bc1" dir="auto"/><h1 id="3a5ecaf7-2d7b-8094-ba12-ef98d521f995" class="" dir="auto">Final Execution</h1><h3 id="3a5ecaf7-2d7b-80ae-bfaf-c6effee94458" class="" dir="auto">Hero</h3><p id="3a5ecaf7-2d7b-8076-abb5-dff4c78f4fee" class="" dir="auto">Large Fenix smartwatch occupying nearly half of the composition.</p><h3 id="3a5ecaf7-2d7b-80ca-95de-dc1680ef5d99" class="" dir="auto">Supporting Elements</h3><ul id="3a5ecaf7-2d7b-8024-a9d2-f76a9774348a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Basketball court</li></ul><ul id="3a5ecaf7-2d7b-8047-83fe-c51d09f064a5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Two players</li></ul><ul id="3a5ecaf7-2d7b-809c-85e3-c2c1ad86e7df" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Basketball</li></ul><ul id="3a5ecaf7-2d7b-800c-9f4f-c98078c89ec4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Hoop</li></ul><ul id="3a5ecaf7-2d7b-80ec-8e10-f1ebf4c4f448" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Court typography (&quot;OWN THE COURT&quot;)</li></ul><ul id="3a5ecaf7-2d7b-80df-9569-c0a35a9565b8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Dark premium colour palette</li></ul><ul id="3a5ecaf7-2d7b-8028-ba15-d504aa4f2b5c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Orange highlights matching both basketball and watch interface</li></ul><p id="3a5ecaf7-2d7b-8061-96ff-e75ec9a0df20" class="" dir="auto">The composition naturally leads the eye from the watch toward the basketball action.</p><hr id="3a5ecaf7-2d7b-80a1-84e3-ef42f1a9cd78" dir="auto"/><h1 id="3a5ecaf7-2d7b-80da-b5ef-e194b8a135aa" class="" dir="auto">Why This Advertisement Works</h1><h3 id="3a5ecaf7-2d7b-8006-ba99-f8c5715e3600" class="" dir="auto">1. Product remains dominant.</h3><p id="3a5ecaf7-2d7b-805d-8727-ca3cfa02a4ea" class="" dir="auto">The oversized watch immediately establishes itself as the hero.</p><p id="3a5ecaf7-2d7b-801b-b696-ccee2e005e38" class="" dir="auto">The sports scene supports rather than competes with it.</p><hr id="3a5ecaf7-2d7b-800c-a0d8-d4250d0925b8" dir="auto"/><h3 id="3a5ecaf7-2d7b-80d2-8b27-d72eaa3f5aa7" class="" dir="auto">2. Strong environment integration.</h3><p id="3a5ecaf7-2d7b-8080-8a0c-eae10682755c" class="" dir="auto">The basketball court isn&#x27;t decorative.</p><p id="3a5ecaf7-2d7b-808c-8aea-d9d16358ef84" class="" dir="auto">It becomes the storytelling device.</p><p id="3a5ecaf7-2d7b-80de-a72e-f5ab322050e8" class="" dir="auto">Without the court, the concept loses much of its meaning.</p><hr id="3a5ecaf7-2d7b-800f-afbb-ed27b9c8dfde" dir="auto"/><h3 id="3a5ecaf7-2d7b-8022-9557-ec60683bc5e1" class="" dir="auto">3. Immediate category association.</h3><p id="3a5ecaf7-2d7b-80e4-953e-fa7d82ab84fa" class="" dir="auto">Within seconds the audience understands:</p><p id="3a5ecaf7-2d7b-8078-8937-d807f91a0df9" class="" dir="auto">Sports</p><p id="3a5ecaf7-2d7b-8022-9c59-e5a13fe93301" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-80c4-8292-c25eeb1502e6" class="" dir="auto">Performance</p><p id="3a5ecaf7-2d7b-8043-82e2-f55c538b2618" class="" dir="auto">↓</p><p id="3a5ecaf7-2d7b-80e7-b9c7-c0c493c2ffdb" class="" dir="auto">Smartwatch</p><p id="3a5ecaf7-2d7b-8053-9a55-c157cffe6657" class="" dir="auto">No explanation is required.</p><hr id="3a5ecaf7-2d7b-8097-b6b6-c680eef6618c" dir="auto"/><h3 id="3a5ecaf7-2d7b-808e-b116-cc4cf41f8262" class="" dir="auto">4. Consistent visual language.</h3><p id="3a5ecaf7-2d7b-8001-b43b-da1e0b43bb25" class="" dir="auto">The orange accents on:</p><ul id="3a5ecaf7-2d7b-806e-b34c-e0868c0e380f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">watch display</li></ul><ul id="3a5ecaf7-2d7b-80e3-beb9-eade64b942d0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">basketball</li></ul><ul id="3a5ecaf7-2d7b-80f5-bf10-d5a0de5fcb19" class="bulleted-list" dir="auto"><li style="list-style-type:disc">CTA</li></ul><p id="3a5ecaf7-2d7b-80d3-aff1-cf10fac83f15" class="" dir="auto">create visual harmony throughout the composition.</p><hr id="3a5ecaf7-2d7b-8097-a5ea-f59a359a5b45" dir="auto"/><h1 id="3a5ecaf7-2d7b-8072-bbc8-cc3733bbf964" class="" dir="auto">Reusable Principles</h1><h3 id="3a5ecaf7-2d7b-808e-8fa9-e88534119556" class="" dir="auto">Principle 1</h3><p id="3a5ecaf7-2d7b-806e-972b-d70b782a711d" class="" dir="auto">Products can communicate their purpose by being integrated into the environment where they naturally belong.</p><hr id="3a5ecaf7-2d7b-8087-bed5-fe8c2c90b864" dir="auto"/><h3 id="3a5ecaf7-2d7b-8069-b722-f7c0d7764602" class="" dir="auto">Principle 2</h3><p id="3a5ecaf7-2d7b-80e6-85ec-ff6ebe79e9a0" class="" dir="auto">Scale exaggeration can establish product importance without compromising recognition.</p><hr id="3a5ecaf7-2d7b-80de-a56b-e5f34ac599bf" dir="auto"/><h3 id="3a5ecaf7-2d7b-8063-9339-d3c01be2406f" class="" dir="auto">Principle 3</h3><p id="3a5ecaf7-2d7b-80d0-93e9-cd979766ca49" class="" dir="auto">The environment should reinforce the communication objective rather than simply providing context.</p><hr id="3a5ecaf7-2d7b-807c-a4fd-e917b93d7869" dir="auto"/><h3 id="3a5ecaf7-2d7b-8097-a9c3-fd81087f719d" class="" dir="auto">Principle 4</h3><p id="3a5ecaf7-2d7b-80a8-a454-d42cd028f2f3" class="" dir="auto">Colour repetition across product and supporting elements strengthens visual cohesion.</p><hr id="3a5ecaf7-2d7b-803e-86dc-d0b74a042f75" dir="auto"/><h1 id="3a5ecaf7-2d7b-80c2-aff5-dda0423167fc" class="" dir="auto">Critical Evaluation</h1><h2 id="3a5ecaf7-2d7b-80c9-bdae-f3d73969b3fc" class="" dir="auto">Strengths</h2><ul id="3a5ecaf7-2d7b-8073-8238-d5397ac98840" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong product dominance</li></ul><ul id="3a5ecaf7-2d7b-80c9-96bf-f84af5b1f9e5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent environmental integration</li></ul><ul id="3a5ecaf7-2d7b-805d-8c9b-d59085622f4a" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Clear communication</li></ul><ul id="3a5ecaf7-2d7b-8011-bf3e-cb8c9178a103" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Premium visual execution</li></ul><ul id="3a5ecaf7-2d7b-8058-88e4-e0b4e9fdbaad" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Immediate sports association</li></ul><ul id="3a5ecaf7-2d7b-8058-bf3a-daa59e4fe6d9" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Good use of scale exaggeration</li></ul><hr id="3a5ecaf7-2d7b-8054-b704-f80317267af2" dir="auto"/><h2 id="3a5ecaf7-2d7b-80de-a740-d9da6cc656b7" class="" dir="auto">Weaknesses</h2><p id="3a5ecaf7-2d7b-80b1-9b6b-db9b18d4ab13" class="" dir="auto">The visual communicates <strong>sports</strong> effectively.</p><p id="3a5ecaf7-2d7b-806b-8934-d09b57f834bf" class="" dir="auto">However, it communicates <strong>&quot;power&quot;</strong> only symbolically.</p><p id="3a5ecaf7-2d7b-80b1-8bea-db97b9b4828b" class="" dir="auto">The advertisement doesn&#x27;t demonstrate a specific capability of the watch (battery, GPS, durability, training metrics, etc.).</p><p id="3a5ecaf7-2d7b-8095-9dfb-c084a5a8fa80" class="" dir="auto">As a result, the message remains broad rather than feature-specific.</p><hr id="3a5ecaf7-2d7b-80cb-87c6-c39ef1b3c327" dir="auto"/><h1 id="3a5ecaf7-2d7b-80c0-aa14-eb78b77146de" class="" dir="auto">Alternative Creative Routes</h1><p id="3a5ecaf7-2d7b-80e5-97a7-c029753a2996" class="" dir="auto">Instead of integrating the watch with a basketball court:</p><ul id="3a5ecaf7-2d7b-805e-a59f-e15ba8fe63c5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Show the watch interface physically interacting with a running track.</li></ul><ul id="3a5ecaf7-2d7b-800f-b3f9-c4efc4479273" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Integrate the watch into a mountain climbing environment.</li></ul><ul id="3a5ecaf7-2d7b-8008-ad12-e187af625118" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Build the concept around endurance, navigation, or ruggedness depending on the product&#x27;s strongest differentiator.</li></ul><p id="3a5ecaf7-2d7b-8012-ad57-dbe8549acbf2" class="" dir="auto">These alternatives would communicate more specific aspects of the product while maintaining the same conceptual approach.</p><hr id="3a5ecaf7-2d7b-808b-8f93-c254c3a7d612" dir="auto"/><h1 id="3a5ecaf7-2d7b-80c1-b7a5-f67a7bbf1221" class="" dir="auto">Core Learning</h1><p id="3a5ecaf7-2d7b-802c-8fc8-d70ae2a7833f" class="" dir="auto">This advertisement demonstrates that <strong>placing a product inside its natural performance environment can communicate positioning more effectively than simply showing someone using it.</strong></p><p id="3a5ecaf7-2d7b-80cc-bfe3-dc5bfeb63cea" class="" dir="auto">The oversized scale elevates the product from an accessory to the central element of the athletic experience.</p><hr id="3a5ecaf7-2d7b-8080-9077-f5e34f64fabc" dir="auto"/><h1 id="3a5ecaf7-2d7b-80fa-ae83-d7231bdacc82" class="" dir="auto">Related Modules</h1><h2 id="3a5ecaf7-2d7b-80ed-b5c0-cd99ece03708" class="" dir="auto">Section A</h2><h3 id="3a5ecaf7-2d7b-80c4-8642-ec316288a636" class="" dir="auto">Module D – Visual Communication</h3><p id="3a5ecaf7-2d7b-80e2-83e3-f4bcb4405fec" class="" dir="auto">Demonstrates how environment, composition and scale work together to communicate performance without relying on extensive copy.</p><h3 id="3a5ecaf7-2d7b-8092-b78d-cbc40c929865" class="" dir="auto">Module E – From Features to Identity</h3><p id="3a5ecaf7-2d7b-8024-ace0-e03221adbb9c" class="" dir="auto">The advertisement shifts the watch from being a collection of specifications to an identity associated with athletic power and competition.</p><hr id="3a5ecaf7-2d7b-8091-84f2-c3daf6480627" dir="auto"/><h2 id="3a5ecaf7-2d7b-80ea-99f6-dd0471a17504" class="" dir="auto">Section B</h2><h3 id="3a5ecaf7-2d7b-8044-bfde-d2ec315bfe31" class="" dir="auto">Module G – Generating Advertising Directions</h3><p id="3a5ecaf7-2d7b-80ee-aff1-deb1b9cfcefd" class="" dir="auto">A strong example of choosing an aspirational communication direction (&quot;own the court&quot;) rather than promoting technical specifications.</p><h3 id="3a5ecaf7-2d7b-80cf-8b8b-dc65ed54376f" class="" dir="auto">Future Module – Big Idea</h3><p id="3a5ecaf7-2d7b-8085-9fc0-df6c7f96133b" class="" dir="auto">Illustrates how an abstract product promise (&quot;power&quot;) can be translated into a single dominant visual concept.</p><h3 id="3a5ecaf7-2d7b-8035-8a0a-ff49fcdaad72" class="" dir="auto">Future Module – Execution Direction</h3><p id="3a5ecaf7-2d7b-80ff-bdaf-f068845826f7" class="" dir="auto">Useful evidence for how a communication direction (&quot;performance&quot;) is transformed into a visual execution through environmental integration and scale.</p><hr id="3a5ecaf7-2d7b-80ca-afce-feed76c047a7" dir="auto"/><h2 id="3a5ecaf7-2d7b-8085-96a7-df4412e84d78" class="" dir="auto">Section C</h2><ul id="3a5ecaf7-2d7b-8093-a548-c9e712a9caed" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Conceptual Ads</li></ul><ul id="3a5ecaf7-2d7b-806a-9733-e49a00b2d843" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale and Proportion Ads</li></ul><hr id="3a5ecaf7-2d7b-8071-a073-cee83ff5cb85" dir="auto"/><h1 id="3a5ecaf7-2d7b-8005-ad54-f7a89d641a54" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a5ecaf7-2d7b-8018-a841-d8030e1a7912" class="" dir="auto">Creative Reasoning ★★★★☆</h3><p id="3a5ecaf7-2d7b-8048-a21d-f66c0a7d7283" class="" dir="auto">Strong example of translating a brand promise into an environmental visual concept instead of relying on feature lists.</p><h3 id="3a5ecaf7-2d7b-8022-af26-e80fcb5c400c" class="" dir="auto">Visual Thinking ★★★★☆</h3><p id="3a5ecaf7-2d7b-8010-895a-db1154ddc311" class="" dir="auto">Reinforces <strong>Environmental Conceptual Ads</strong> and <strong>Scale and Proportion Ads</strong> through a clean, product-led execution.</p><h3 id="3a5ecaf7-2d7b-8077-86a5-c43a6d74bb1d" class="" dir="auto">Graphic Design ★★★★★</h3><p id="3a5ecaf7-2d7b-80f1-8823-f70965a0e69b" class="" dir="auto">Excellent composition, clear hierarchy, balanced colour palette, and effective integration of typography with the visual concept.</p><h3 id="3a5ecaf7-2d7b-80c9-91fe-fc89e0d62ab2" class="" dir="auto">Photography / Image Construction ★★★★☆</h3><p id="3a5ecaf7-2d7b-80db-99ec-c00aaad8b2ac" class="" dir="auto">Although this is a composited advertisement rather than a single photograph, the perspective, lighting, and integration are convincing and maintain realism.</p><h3 id="3a5ecaf7-2d7b-8046-9729-e1f23cef8de6" class="" dir="auto">Overall Contribution ★★★★☆</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

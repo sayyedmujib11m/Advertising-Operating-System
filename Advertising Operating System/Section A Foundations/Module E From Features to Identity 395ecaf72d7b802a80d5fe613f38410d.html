@@ -1,0 +1,769 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Module E. From Features to Identity</title><meta name="data-notion-page-icon" content="/icons/brightness-high_orange.svg"/><link rel="icon" href="https://app.notion.com/icons/brightness-high_orange.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="395ecaf7-2d7b-802a-80d5-fe613f38410d" class="page sans" data-notion-page-icon="/icons/brightness-high_orange.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/brightness-high_orange.svg"/></div><h1 class="page-title" dir="auto">Module E. From Features to Identity</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><h2 id="395ecaf7-2d7b-8024-8d75-e8151fe397bf" class="" dir="auto"><br/>People Don&#x27;t Buy Products. They Buy What Products Do for Them.</h2><p id="395ecaf7-2d7b-8068-8977-c6edfd63cfbf" class="" dir="auto"><br/>One of the biggest reasons advertisements fail is because they stop at describing the product.<br/>They proudly list specifications.<br/>They highlight features.<br/>They mention certifications.<br/>Everything they say is true.<br/>Yet the advertisement feels ordinary.<br/>Not because the product is bad.<br/>Because the communication never reaches what the customer actually values.<br/>The purpose of advertising isn&#x27;t to explain the product.<br/>It&#x27;s to explain why the product matters.</p><hr id="395ecaf7-2d7b-8002-b555-e459ce12a426" dir="auto"/><h2 id="395ecaf7-2d7b-802b-ae61-cf632f9c57ee" class="" dir="auto">Every Product Exists to Solve Something.</h2><p id="395ecaf7-2d7b-80ed-8ea7-c7bb02a0a45e" class="" dir="auto"><br/>Every product begins as a solution to a problem.<br/>A water purifier exists because people want safe drinking water.<br/>A CCTV camera exists because people want security.<br/>A solar panel exists because people want to reduce electricity expenses.<br/>A jewellery store exists because people want to celebrate life&#x27;s important moments.<br/>The product is the means through which the customer achieves something they truly value.<br/>Your job as an advertising designer is to communicate where that bridge leads.</p><hr id="395ecaf7-2d7b-80af-9971-e1db9df7ada2" dir="auto"/><h2 id="395ecaf7-2d7b-8097-b540-d4bbc7fa8b70" class="" dir="auto">The Six Levels of Value</h2><p id="395ecaf7-2d7b-8016-8d81-c5a7e3643268" class="" dir="auto"><br/>Most advertisements stop at the first or second level.<br/>The strongest advertisements often communicate the last two.<br/>Understanding these six levels changes how you think about every product.</p><p id="395ecaf7-2d7b-8034-ba51-e7ab8c104edb" class="" dir="auto">There&#x27;s no universally &quot;correct&quot; level to communicate. The right level depends on the product, the audience and the communication objective. A luxury brand may speak to identity, while an industrial product may only need to communicate a clear benefit.</p><details id="395ecaf7-2d7b-80d9-9e63-c7f815e5365e" open="" class="toggle" dir="auto"><summary>Level 1 : Feature</summary><div class="indented"><p id="395ecaf7-2d7b-80c1-a396-d568b74b87f3" class="" dir="auto">A feature is simply what the product has.Examples:22K Hallmarked Gold4K Ultra HD Camera550W Solar Panel120Hz AMOLED DisplayFive-Year WarrantyFeatures are factual.They describe the product.Nothing more.</p></div></details><details id="395ecaf7-2d7b-80df-935f-f6ce212fd677" open="" class="toggle" dir="auto"><summary>Level 2 : Advantage</summary><div class="indented"><p id="395ecaf7-2d7b-80a9-a1d5-f5538a766c93" class="" dir="auto">An advantage explains why that feature is technically better.For example,A 550W solar panel generates more electricity than a lower-capacity panel.A 4K camera records clearer footage.A 120Hz display feels smoother.Advantages compare performance.They answer one question.&quot;Why is this feature better?”</p></div></details><details id="395ecaf7-2d7b-8006-bca9-d82db4dda90e" open="" class="toggle" dir="auto"><summary>Level 3 : Benefit</summary><div class="indented"><p id="395ecaf7-2d7b-80be-a5eb-ed863c6c3e2f" class="" dir="auto">Benefits answer the customer&#x27;s question.&quot;How does this help me?&quot;Clearer CCTV footage makes it easier to identify people.Higher power generation reduces dependence on the electricity grid.Hallmarked jewellery gives confidence in purity.Benefits begin shifting the conversation away from the product and toward the customer.</p><p id="395ecaf7-2d7b-8052-961f-d1ecd7c940cd" class="" dir="auto">
+</p></div></details><details id="395ecaf7-2d7b-809d-8d44-c4d13232fb6a" open="" class="toggle" dir="auto"><summary>Level 4 : Outcome</summary><div class="indented"><p id="395ecaf7-2d7b-80df-8c9b-e7a6f6ab202f" class="" dir="auto">Outcomes describe what changes in the customer&#x27;s life.Lower electricity bills.A safer home.Healthier drinking water.A more comfortable summer.This is where many effective advertisements live.Customers don&#x27;t wake up wanting specifications.They wake up wanting better outcomes.</p></div></details><details id="395ecaf7-2d7b-80a5-845f-ca6cde92bb44" open="" class="toggle" dir="auto"><summary>Level 5 : Emotion</summary><div class="indented"><p id="395ecaf7-2d7b-8037-afb6-ee7cc34c27a6" class="" dir="auto">Every meaningful outcome creates a feeling.Lower bills create relief.A secure home creates peace of mind.Beautiful jewellery creates happiness.A reliable vehicle creates confidence.People remember feelings longer than they remember product specifications.This is why emotional advertising remains powerful across almost every industry.</p></div></details><details id="395ecaf7-2d7b-808a-90c2-f4cee4073396" open="" class="toggle" dir="auto"><summary>Level 6 : Identity</summary><div class="indented"><p id="395ecaf7-2d7b-80aa-b632-ce556993dc78" class="" dir="auto">The deepest level of advertising is identity.This isn&#x27;t about what the customer owns.It&#x27;s about what owning the product says about them.A luxury watch may communicate success.An electric vehicle may communicate responsibility.Premium jewellery may communicate love and commitment.A well-designed home may communicate achievement.Identity answers the question,&quot;Who does this product allow me to become?&quot;Brands that operate at this level are rarely competing only on price.</p></div></details><hr id="395ecaf7-2d7b-8060-8331-c38f762f7e51" dir="auto"/><h2 id="395ecaf7-2d7b-8047-b195-e94e5c400e51" class="" dir="auto"><br/>One Product. Six Different Advertisements.</h2><p id="395ecaf7-2d7b-80e9-ab95-d1f5204b0e40" class="" dir="auto"><br/>Imagine you&#x27;re advertising a solar panel.<br/>Each level creates a completely different advertisement.<br/>Feature<br/>550W Mono PERC Solar Panel.<br/>Advantage<br/>Generates more electricity than conventional panels.<br/>Benefit<br/>Produce more power from the same roof area.<br/>Outcome<br/>Reduce your monthly electricity bill.<br/>Emotion<br/>Enjoy the peace of knowing your energy costs are under control.<br/>Identity<br/>Be the kind of family that invests in a smarter future.<br/>The product hasn&#x27;t changed.<br/>Only the communication has.</p><p id="395ecaf7-2d7b-802b-9f2c-e75ffbb4c144" class="" dir="auto">Notice what happened. The product never changed. Only the conversation changed. This is one of the most valuable skills an advertising creative can develop. Before searching for references or sketching concepts, decide which level of value you&#x27;re communicating. That single decision influences almost every creative choice that follows.</p><hr id="395ecaf7-2d7b-804f-b4a0-c34a4c2c06cc" dir="auto"/><h2 id="395ecaf7-2d7b-8030-9b76-e1d70e962f67" class="" dir="auto"><br/>Why Most Retail Advertisements Stay at the Surface.</h2><p id="395ecaf7-2d7b-806c-b54c-cf2d849b4f3e" class="" dir="auto"><br/>Walk through any market or browse social media.<br/>You&#x27;ll find advertisements saying things like:<br/>&quot;Best Quality.&quot;<br/>&quot;Premium Product.&quot;<br/>&quot;Latest Collection.&quot;<br/>&quot;Affordable Price.&quot;<br/>These statements describe products.<br/>They rarely explain value.<br/>Customers don&#x27;t become interested because something is &quot;premium.&quot;<br/>They become interested when they understand what that premium quality means in their own lives.</p><hr id="395ecaf7-2d7b-80c5-b0d8-f1f4687c0a82" dir="auto"/><h2 id="395ecaf7-2d7b-8097-ae0e-d7832d872b08" class="" dir="auto"><br/>Features Explain. Emotions Persuade.</h2><p id="395ecaf7-2d7b-809b-826f-cae6121c44da" class="" dir="auto"><br/>Imagine two jewellery advertisements.<br/>The first says,<br/>&quot;22K Hallmarked Gold Jewellery.&quot;<br/>The second says,<br/>&quot;The jewellery she&#x27;ll remember every anniversary.&quot;<br/>Both are advertising jewellery.<br/>One describes the product.<br/>The other describes the experience.<br/>Facts create understanding.<br/>Emotions create memory.<br/>Strong advertising uses both.</p><hr id="395ecaf7-2d7b-80f7-9bf2-e141addde2eb" dir="auto"/><h2 id="395ecaf7-2d7b-80bf-8135-db9c541b37c8" class="" dir="auto"><br/>Not Every Advertisement Needs Emotion.</h2><p id="395ecaf7-2d7b-8020-ba1f-c9258774acdd" class="" dir="auto"><br/>This is an important distinction.<br/>Some advertisements are purely informational.<br/>A government notice.<br/>An emergency announcement.<br/>A technical product brochure.<br/>A product comparison sheet.<br/>These exist to communicate information clearly.<br/>Advertising, however, usually exists to influence a decision.<br/>When influencing behaviour is the goal, moving beyond features becomes increasingly important.</p><hr id="395ecaf7-2d7b-80a7-8c56-f0fd43b35498" dir="auto"/><h2 id="395ecaf7-2d7b-8053-8e37-f72b95f9b189" class="" dir="auto"><br/>Keep Asking &quot;Why?”</h2><p id="395ecaf7-2d7b-8050-9bf6-ec6fb418c19a" class="" dir="auto"><br/>Whenever you receive a product brief, don&#x27;t stop after identifying its features.<br/>Keep asking questions.<br/>What advantage does this create?<br/>What benefit does that advantage provide?<br/>What changes in the customer&#x27;s life?<br/>How does that change make them feel?<br/>What does that feeling say about the kind of person they become?<br/>The deeper you go, the stronger your concepts become.</p><hr id="395ecaf7-2d7b-80fa-8eb5-f73c909ef649" dir="auto"/><h2 id="395ecaf7-2d7b-8000-ab7c-d0db02b5a649" class="" dir="auto"><br/>What This Means for an Advertising Designer.</h2><p id="395ecaf7-2d7b-8052-a271-ea1171b592fd" class="" dir="auto"><br/>Concepts don&#x27;t come from product specifications.<br/>They come from value.<br/>A feature can explain.<br/>A benefit can convince.<br/>An outcome can inspire.<br/>An emotion can connect.<br/>An identity can build brands.<br/>Before searching for visual ideas, decide which level you&#x27;re communicating.<br/>That decision shapes every concept that follows.</p><hr id="395ecaf7-2d7b-8094-bf04-deb34567d52a" dir="auto"/><h2 id="395ecaf7-2d7b-80b9-8e3d-dd465fe3e960" class="" dir="auto"><br/>Practical Principles</h2><p id="395ecaf7-2d7b-80ab-a416-e4e55657a3d2" class="" dir="auto"><br/>Before designing any advertisement, ask yourself:<br/>What are the product&#x27;s features?<br/>What technical advantage do they create?<br/>What benefit does the customer receive?<br/>What real-life outcome does that benefit produce?<br/>What emotion naturally follows?<br/>What identity or aspiration does the product support?<br/>Which of these six levels should this advertisement communicate?<br/><br/>The answer should guide your concept—not the other way around.</p><hr id="395ecaf7-2d7b-8087-95c4-d2119f2de50c" dir="auto"/><h2 id="395ecaf7-2d7b-8008-a2d2-c4980566f69b" class="" dir="auto"><br/>Key Takeaways</h2><p id="395ecaf7-2d7b-80a1-b03d-f8938f5a524f" class="" dir="auto"><br/>Features describe the product.<br/>Advantages explain technical superiority.<br/>Benefits explain customer value.<br/>Outcomes describe real-life change.<br/>Emotions create connection.<br/>Identity builds long-term brand preference.<br/>Strong advertising chooses the right level instead of stopping at product specifications.</p><hr id="395ecaf7-2d7b-8013-abd1-fc7614291c42" dir="auto"/><p id="395ecaf7-2d7b-80b1-b0bd-e77d42774bb5" class="" dir="auto">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

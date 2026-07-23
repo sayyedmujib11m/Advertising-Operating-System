@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Section C Advertisement Research</title><meta name="data-notion-page-icon" content="/icons/paste_red.svg"/><link rel="icon" href="https://app.notion.com/icons/paste_red.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="398ecaf7-2d7b-803f-9d64-f0c2ea502098" class="page sans" data-notion-page-icon="/icons/paste_red.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/paste_red.svg"/></div><h1 class="page-title" dir="auto">Section C Advertisement Research</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><p id="398ecaf7-2d7b-80fc-9871-cc320a6326ef" class="" dir="auto">Observation #01<br/>Split Visual may not be a visual thinking system.<br/>It appears to be an execution method.<br/>The actual creative pattern is communicating two realities within one subject.</p><p id="398ecaf7-2d7b-80ee-a72e-ff3da5dc5877" class="" dir="auto">I think this should go into your Research Notes, not the advertisement page.</p><hr id="398ecaf7-2d7b-80f3-9e54-ee022167e592" dir="auto"/><p id="398ecaf7-2d7b-80d0-baac-d8679bcee996" class="" dir="auto">Research Note #02</p><p id="398ecaf7-2d7b-8054-a541-fa7392b58a04" class="" dir="auto">Subject</p><p id="398ecaf7-2d7b-80e9-b018-eb260beafd5b" class="" dir="auto">Is Split Visual really a Visual Thinking System?</p><hr id="398ecaf7-2d7b-807b-b71b-d299f31e8be9" dir="auto"/><p id="398ecaf7-2d7b-8020-ad7a-d1c2c400953f" class="" dir="auto">Observation</p><p id="398ecaf7-2d7b-8026-ae32-f87d046242c3" class="" dir="auto">After analysing multiple advertisements, a pattern has started to emerge.</p><p id="398ecaf7-2d7b-80b9-884d-f473cbb2eee7" class="" dir="auto">The visual split itself does not communicate the idea.</p><p id="398ecaf7-2d7b-80d3-a615-e830e8943579" class="" dir="auto">Instead, the split is simply an execution method used to reveal two contrasting states, realities or environments.</p><p id="398ecaf7-2d7b-803c-aa5a-dd6df44b9683" class="" dir="auto">Examples observed so far:</p><p id="398ecaf7-2d7b-8041-bba0-c2f2239af7fc" class="" dir="auto">American Transplant Association</p><p id="398ecaf7-2d7b-8009-8b7e-c61ec1a1b33f" class="" dir="auto">Two lives.</p><p id="398ecaf7-2d7b-8058-b22c-de9cb2297f36" class="" dir="auto">One body.</p><p id="398ecaf7-2d7b-805f-8681-df8bdeafcb05" class="" dir="auto">The split reveals both realities simultaneously.</p><p id="398ecaf7-2d7b-8003-88ee-fb687fd2cba9" class="" dir="auto">EcoOrigin Air Conditioner</p><p id="398ecaf7-2d7b-80a2-9623-c85767eb6cb5" class="" dir="auto">Extreme heat.</p><p id="398ecaf7-2d7b-80d8-80de-c4726f4281e2" class="" dir="auto">Indoor comfort.</p><p id="398ecaf7-2d7b-8060-a283-e26b22a5dad8" class="" dir="auto">The split reveals both environments simultaneously.</p><hr id="398ecaf7-2d7b-807c-9b5d-eee9365c7a97" dir="auto"/><p id="398ecaf7-2d7b-801e-9c4e-d81eb6fd1185" class="" dir="auto">Hypothesis</p><p id="398ecaf7-2d7b-8039-9d1c-feb87c0f9b56" class="" dir="auto">Split Visual may not be a primary visual thinking system.</p><p id="398ecaf7-2d7b-80db-99e1-d65e44b9add3" class="" dir="auto">It appears to function as an execution technique used to communicate another underlying concept.</p><hr id="398ecaf7-2d7b-8087-8d7a-e703dc433ba1" dir="auto"/><p id="398ecaf7-2d7b-809d-bded-ed8404a7e692" class="" dir="auto">Evidence</p><p id="398ecaf7-2d7b-8001-b957-f6bb16bc6379" class="" dir="auto">Removing the visible split line from both advertisements would weaken the composition but would not destroy the central idea.</p><p id="398ecaf7-2d7b-8076-b64a-f994682ca735" class="" dir="auto">This suggests the split is supporting the communication rather than creating it.</p><hr id="398ecaf7-2d7b-80c3-8342-f8861e7d0cfb" dir="auto"/><p id="398ecaf7-2d7b-8038-828d-f375ca098a6f" class="" dir="auto">Working Principle</p><p id="398ecaf7-2d7b-8039-9565-f136989c0b74" class="" dir="auto">The creative idea exists before the split.</p><p id="398ecaf7-2d7b-8093-9712-d010578b62bb" class="" dir="auto">The split is one possible method of expressing that idea.</p><hr id="398ecaf7-2d7b-80fc-89e1-e26bb1c08ab5" dir="auto"/><p id="398ecaf7-2d7b-801a-89b7-d45eddf61b71" class="" dir="auto">Questions to Investigate</p><p id="398ecaf7-2d7b-8064-958e-ccf4d3987c80" class="" dir="auto">Can the same Big Idea be executed without using a split layout?</p><p id="398ecaf7-2d7b-80d9-ba6b-d98eec418291" class="" dir="auto">Are there advertisements where the split itself is the core communication device?</p><p id="398ecaf7-2d7b-805a-98cc-f945a60a457d" class="" dir="auto">What underlying concepts most commonly use split execution?</p><p id="398ecaf7-2d7b-8019-8fb2-cfa8c6f5c087" class="" dir="auto">Contrast</p><p id="398ecaf7-2d7b-8054-b621-cec1bcaab91b" class="" dir="auto">Transformation</p><p id="398ecaf7-2d7b-80e0-ba0b-dcca8fb6c139" class="" dir="auto">Before vs After</p><p id="398ecaf7-2d7b-80ef-8c77-d5c6cfdd62c7" class="" dir="auto">Dual Reality</p><p id="398ecaf7-2d7b-80ca-93c4-c18b9cdd854d" class="" dir="auto">Parallel Lives</p><p id="398ecaf7-2d7b-8067-a479-e7352fa541e8" class="" dir="auto">Cause vs Effect</p><hr id="398ecaf7-2d7b-807d-b2d4-cbdd2025efa4" dir="auto"/><p id="398ecaf7-2d7b-8064-ba82-d48b1096d99b" class="" dir="auto">Current Status</p><p id="398ecaf7-2d7b-802a-8c5e-c96e8883f676" class="" dir="auto">Evidence collected: 2 advertisements</p><p id="398ecaf7-2d7b-8075-825e-f02e37182918" class="" dir="auto">Conclusion: Not enough evidence to rename or remove the &quot;Split Visual&quot; category.</p><p id="398ecaf7-2d7b-8027-93f0-d829551ef753" class="" dir="auto">Continue collecting examples before making any architectural changes to Section C.</p><hr id="398ecaf7-2d7b-80e5-9c65-cca8f2903e1c" dir="auto"/><p id="398ecaf7-2d7b-8018-bb2f-f01e427d7762" class="" dir="auto">Impact on the Advertising Operating System</p><p id="398ecaf7-2d7b-80ed-b636-f75e9960b494" class="" dir="auto">If future evidence supports this hypothesis, Section C should classify advertisements based on creative reasoning rather than layout execution.</p><p id="398ecaf7-2d7b-80e2-aa57-f2a1216217ec" class="" dir="auto">Execution techniques (split, diagonal division, overlay, masking, etc.) may eventually become a separate section focused on visual execution methods, while conceptual systems remain focused on how ideas are generated.</p><hr id="398ecaf7-2d7b-8071-a251-dde25a79d87c" dir="auto"/><h1 id="3a6ecaf7-2d7b-80b7-843d-dde9935b8e4d" class="" dir="auto">CRN 001 — Characterization / Anthropomorphism Ads</h1><h2 id="3a6ecaf7-2d7b-8067-bbc0-c982cdaa9f1c" class="" dir="auto">Observation</h2><p id="3a6ecaf7-2d7b-8084-b3e4-c47391f475ba" class="" dir="auto">This advertisement does not rely on object transformation, visual metaphor, or product exaggeration as its primary communication device. Instead, it gives <strong>human identity, emotions, body language, and social roles</strong> to products.</p><p id="3a6ecaf7-2d7b-80cd-bdc4-e3cec4767ed2" class="" dir="auto">The induction cooktop behaves like a victorious king, while the LPG cylinder behaves like a defeated opponent.</p><p id="3a6ecaf7-2d7b-801f-a09c-f1f8a3b8ea63" class="" dir="auto">The advertisement communicates entirely through <strong>character interaction</strong>.</p><hr id="3a6ecaf7-2d7b-80c7-9105-ee9365629aea" dir="auto"/><h2 id="3a6ecaf7-2d7b-807e-919a-c2fbd49ad117" class="" dir="auto">Initial Definition</h2><p id="3a6ecaf7-2d7b-80ed-b3f2-d87aeb58169d" class="" dir="auto"><strong>Characterization / Anthropomorphism Ads</strong> are advertisements in which products or objects are assigned human characteristics—including facial expressions, emotions, gestures, posture, personalities, or social roles—to communicate the advertising message.</p><p id="3a6ecaf7-2d7b-8031-8686-f77bd5819843" class="" dir="auto">Unlike Product Transformation Ads, the product remains physically recognizable while its behavior becomes human.</p><hr id="3a6ecaf7-2d7b-8086-9dac-c484d2ebf657" dir="auto"/><h2 id="3a6ecaf7-2d7b-8087-bef2-f9b2b7aae0b3" class="" dir="auto">Core Communication Principle</h2><p id="3a6ecaf7-2d7b-80fd-9a78-ffa04d3e4289" class="" dir="auto">People naturally understand emotions faster than technical comparisons.</p><p id="3a6ecaf7-2d7b-80a3-a978-f63624c0fb18" class="" dir="auto">By assigning personalities to products, the advertisement transforms functional competition into an emotional story.</p><p id="3a6ecaf7-2d7b-8020-ab11-f74f01d13208" class="" dir="auto">Consumers understand:</p><ul id="3a6ecaf7-2d7b-80b3-813b-fa9d0761a275" class="bulleted-list" dir="auto"><li style="list-style-type:disc">who wins</li></ul><ul id="3a6ecaf7-2d7b-80b1-afcb-eab83e042c91" class="bulleted-list" dir="auto"><li style="list-style-type:disc">who loses</li></ul><ul id="3a6ecaf7-2d7b-802d-b201-e62ac1fe6487" class="bulleted-list" dir="auto"><li style="list-style-type:disc">who is confident</li></ul><ul id="3a6ecaf7-2d7b-8069-890e-c96b4c5eb1b1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">who is weak</li></ul><p id="3a6ecaf7-2d7b-8045-a78e-f50488584077" class="" dir="auto">without reading specifications.</p><hr id="3a6ecaf7-2d7b-8013-9a54-d7130cb85b86" dir="auto"/><h2 id="3a6ecaf7-2d7b-80dc-9cc8-ee99e68a7b99" class="" dir="auto">Characteristics Observed</h2><ul id="3a6ecaf7-2d7b-801f-ab86-c5024b38f9e4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Human facial expressions</li></ul><ul id="3a6ecaf7-2d7b-8044-b564-f6ead26ffbaf" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Human body language</li></ul><ul id="3a6ecaf7-2d7b-8004-bcc3-f0ec1de0b3a3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Human emotions</li></ul><ul id="3a6ecaf7-2d7b-80ca-ae25-dac13e835806" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Social identity (king, hero, villain, loser)</li></ul><ul id="3a6ecaf7-2d7b-80b2-a827-f3f78bd81665" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Character interaction</li></ul><ul id="3a6ecaf7-2d7b-800f-8efc-e904401751e8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Emotional storytelling</li></ul><ul id="3a6ecaf7-2d7b-800f-9d87-dfc721857aa7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product identity remains intact</li></ul><hr id="3a6ecaf7-2d7b-8039-9753-d185a854e207" dir="auto"/><h2 id="3a6ecaf7-2d7b-8094-aa61-e53bf4e34cd4" class="" dir="auto">Difference From Existing Modules</h2><h3 id="3a6ecaf7-2d7b-8020-b688-e7adcea0cdc9" class="" dir="auto">Product Transformation Ads</h3><p id="3a6ecaf7-2d7b-80f6-9b79-d050595b4dc8" class="" dir="auto">Product physically becomes another object.</p><p id="3a6ecaf7-2d7b-8042-89b7-c2308fc2a509" class="" dir="auto">Example:</p><p id="3a6ecaf7-2d7b-8064-899f-e0899d0ba23a" class="" dir="auto">Pencil becomes an airplane.</p><hr id="3a6ecaf7-2d7b-8075-8655-e3711349f78b" dir="auto"/><h3 id="3a6ecaf7-2d7b-8000-bb77-d95141d9e3bb" class="" dir="auto">Visual Metaphor Ads</h3><p id="3a6ecaf7-2d7b-8019-9609-de3f0207242e" class="" dir="auto">Product represents another concept.</p><p id="3a6ecaf7-2d7b-802c-a460-c3198962d07a" class="" dir="auto">Example:</p><p id="3a6ecaf7-2d7b-808c-b8b4-ee2880265c2a" class="" dir="auto">Perfume shadow becomes a mosque.</p><hr id="3a6ecaf7-2d7b-8043-bbd8-dd527879c0cc" dir="auto"/><h3 id="3a6ecaf7-2d7b-8061-bd39-c761eca93cf1" class="" dir="auto">Characterization / Anthropomorphism Ads</h3><p id="3a6ecaf7-2d7b-80cb-b323-de82217342dd" class="" dir="auto">Product behaves like a human.</p><p id="3a6ecaf7-2d7b-806c-a895-cbe310de5fc2" class="" dir="auto">Example:</p><p id="3a6ecaf7-2d7b-80b3-9372-e615a683b631" class="" dir="auto">Induction cooktop becomes a victorious king.</p><hr id="3a6ecaf7-2d7b-8043-9a56-e53385c2c6e3" dir="auto"/><h2 id="3a6ecaf7-2d7b-80c2-89e4-d7ecaa416ad2" class="" dir="auto">Communication Advantages</h2><ul id="3a6ecaf7-2d7b-80ae-b3d2-f4928932c838" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Makes technical products emotionally engaging.</li></ul><ul id="3a6ecaf7-2d7b-809a-be01-c7808f40ae6e" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Simplifies competitive messaging.</li></ul><ul id="3a6ecaf7-2d7b-8056-9228-d46b65cf4e93" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Creates memorable brand personalities.</li></ul><ul id="3a6ecaf7-2d7b-80dc-86ec-e1ac9e71e416" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Improves recall through storytelling.</li></ul><ul id="3a6ecaf7-2d7b-8072-8218-f3b965844c72" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Allows products to &quot;act&quot; instead of simply being displayed.</li></ul><hr id="3a6ecaf7-2d7b-802c-a3b1-f0327458400f" dir="auto"/><h2 id="3a6ecaf7-2d7b-8015-8163-facf5d40543f" class="" dir="auto">Limitations</h2><p id="3a6ecaf7-2d7b-80b2-9de5-f6b0d398a2fd" class="" dir="auto">May reduce premium perception if overused.</p><p id="3a6ecaf7-2d7b-80da-86b8-fb67f6710998" class="" dir="auto">Requires expressive illustration or CGI.</p><p id="3a6ecaf7-2d7b-8026-9eab-f4f9fb183369" class="" dir="auto">Works better for emotional positioning than factual product demonstrations.</p><hr id="3a6ecaf7-2d7b-80d5-bf18-faab69d14b9a" dir="auto"/><h2 id="3a6ecaf7-2d7b-806e-ace7-e925d18c3e0e" class="" dir="auto">Evidence Collected</h2><h3 id="3a6ecaf7-2d7b-800a-b42b-ed218fc148a7" class="" dir="auto">Prestige — The King Has Changed</h3><p id="3a6ecaf7-2d7b-80c5-be86-c79acac0e984" class="" dir="auto">Evidence Strength:</p><p id="3a6ecaf7-2d7b-8091-bdd7-c250a7c54e4f" class="" dir="auto">★★★★★</p><p id="3a6ecaf7-2d7b-80a6-b7ec-dc0a60719904" class="" dir="auto">Contribution:</p><p id="3a6ecaf7-2d7b-8037-bb27-ce398f753825" class="" dir="auto">Introduces product rivalry through character interaction rather than feature comparison.</p><hr id="3a6ecaf7-2d7b-80a5-bdcb-de03775a16a9" dir="auto"/><h2 id="3a6ecaf7-2d7b-8078-8793-f76f2433bd28" class="" dir="auto">Hypothesis</h2><p id="3a6ecaf7-2d7b-8092-8af7-d893216fc81e" class="" dir="auto">This may represent a completely separate Visual Thinking System rather than a subtype of Visual Metaphor.</p><p id="3a6ecaf7-2d7b-8004-860c-d9b8e7ed8be5" class="" dir="auto">Further evidence is required.</p><p id="3a6ecaf7-2d7b-80a6-8e45-cf510914f2b5" class="" dir="auto">Look for advertisements where:</p><ul id="3a6ecaf7-2d7b-80b8-b5e9-daee4a57b320" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products argue</li></ul><ul id="3a6ecaf7-2d7b-8040-b0d5-e055507a9895" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products celebrate</li></ul><ul id="3a6ecaf7-2d7b-8027-ba88-f79a05e3fd5b" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products compete</li></ul><ul id="3a6ecaf7-2d7b-8019-a30c-d4dcb84a58b8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products become friends</li></ul><ul id="3a6ecaf7-2d7b-8022-8f3e-ebc67c1ab986" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products express fear</li></ul><ul id="3a6ecaf7-2d7b-8047-815d-c4c3c71b6be0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products express confidence</li></ul><ul id="3a6ecaf7-2d7b-8038-a313-d5be822c9034" class="bulleted-list" dir="auto"><li style="list-style-type:disc">products exhibit human behavior while retaining their original form</li></ul><hr id="3a6ecaf7-2d7b-80ea-b4d4-cc014d166a70" dir="auto"/><h2 id="3a6ecaf7-2d7b-80b3-bb2a-dcae6f5c3c57" class="" dir="auto">Current Module Status</h2><p id="3a6ecaf7-2d7b-8069-9f6f-d74cdb5210b8" class="" dir="auto"><strong>Evidence Level:</strong> 🟡 Research Candidate</p><p id="3a6ecaf7-2d7b-802c-8f1a-cd6c7a080978" class="" dir="auto">Current Evidence: <strong>1 Strong Advertisement</strong></p><p id="3a6ecaf7-2d7b-803a-b227-f0dd44a79ab9" class="" dir="auto">Status:</p><p id="3a6ecaf7-2d7b-80ad-8ec5-c6b52bd13b1d" class="" dir="auto">Not enough evidence to create a dedicated Section C module.</p><p id="3a6ecaf7-2d7b-8005-ade7-f021e62c66c3" class="" dir="auto">Continue collecting advertisements to determine whether Characterization / Anthropomorphism Ads emerge as a distinct Visual Thinking System or remain a subcategory of Symbolic/Storytelling Ads.</p><hr id="3a6ecaf7-2d7b-8011-8297-d96534f5473f" dir="auto"/><p id="3a6ecaf7-2d7b-8090-b69a-e92546c0cbfd" class="" dir="auto">I would <strong>not</strong> add this as the 20th Visual Thinking module yet. Following your evidence-first philosophy, it should remain in <strong>Section C → Research Notes</strong> until you gather <strong>at least 5–10 strong examples</strong> that consistently demonstrate the same visual reasoning pattern. Only then should it graduate into a standalone module.</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

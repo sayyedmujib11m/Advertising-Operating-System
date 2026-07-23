@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>All Out Ultra - Every Move Counts</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_lightgray.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_lightgray.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a6ecaf7-2d7b-8019-959b-d5d3b179c0e5" class="page sans" data-notion-page-icon="/icons/photo-landscape_lightgray.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_lightgray.svg"/></div><h1 class="page-title" dir="auto">All Out Ultra - Every Move Counts</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a6ecaf7-2d7b-8002-8bb7-e7f01ce4c2b5" class="image" data-notion-image="All%20Out%20Ultra%20-%20Every%20Move%20Counts/PDF_Gallery_20260722_102439_page-0050.jpg" dir="ltr"><a href="All%20Out%20Ultra%20-%20Every%20Move%20Counts/PDF_Gallery_20260722_102439_page-0050.jpg"><img style="width:704px" src="All%20Out%20Ultra%20-%20Every%20Move%20Counts/PDF_Gallery_20260722_102439_page-0050.jpg"/></a></figure><h1 id="3a6ecaf7-2d7b-80f4-80c9-f942c45e16e2" class="" dir="auto">Advertisement Information</h1><hr id="3a6ecaf7-2d7b-80e1-9f89-f4d36a63cf9a" dir="auto"/><table id="3a6ecaf7-2d7b-8067-9236-ddbc3ba4d5ba" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-80c0-9e63-fafc1b35066d" dir="ltr"><th id="rIA&lt;" class="simple-table-header-color simple-table-header">Field</th><th id="fOeA" class="simple-table-header-color simple-table-header">Details</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-8049-9d3a-f81e1264ba25" dir="ltr"><td id="rIA&lt;" class=""><strong>Brand</strong></td><td id="fOeA" class="">All Out Ultra</td></tr><tr id="3a6ecaf7-2d7b-80f0-973e-da14c2c75122" dir="ltr"><td id="rIA&lt;" class=""><strong>Campaign</strong></td><td id="fOeA" class="">Every Move Counts</td></tr><tr id="3a6ecaf7-2d7b-80c7-8cf7-fb88f3c990e8" dir="ltr"><td id="rIA&lt;" class=""><strong>Category</strong></td><td id="fOeA" class="">Mosquito Repellent</td></tr><tr id="3a6ecaf7-2d7b-8071-b193-ca9461177011" dir="ltr"><td id="rIA&lt;" class=""><strong>Campaign Type</strong></td><td id="fOeA" class="">Product Benefit Campaign</td></tr><tr id="3a6ecaf7-2d7b-8097-8c12-dee774cc1bb1" dir="ltr"><td id="rIA&lt;" class=""><strong>Target Audience</strong></td><td id="fOeA" class="">Families, Homeowners</td></tr><tr id="3a6ecaf7-2d7b-806c-a9bb-d6dcdca8d961" dir="ltr"><td id="rIA&lt;" class=""><strong>Primary Emotion</strong></td><td id="fOeA" class="">Protection, Control, Victory</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-80d3-8c96-e766963e231d" dir="auto"/><h1 id="3a6ecaf7-2d7b-80c7-9101-f06fc00706ac" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a6ecaf7-2d7b-8030-bb9c-db0312be61e2" class="" dir="auto">Business Problem</h2><p id="3a6ecaf7-2d7b-805d-a530-ebd2e2af1ee2" class="" dir="auto">Mosquito repellents often communicate effectiveness through generic claims such as &quot;kills mosquitoes fast&quot; or by showing insects dying. These approaches lack memorability and fail to differentiate the product.</p><hr id="3a6ecaf7-2d7b-80a9-800d-ce7c579f5b86" dir="auto"/><h2 id="3a6ecaf7-2d7b-802d-9465-e4209ba49185" class="" dir="auto">Business Goal</h2><p id="3a6ecaf7-2d7b-80c7-9249-efdf32cc6353" class="" dir="auto">Position All Out Ultra as the product that strategically protects the home by eliminating mosquitoes with precision and effectiveness.</p><hr id="3a6ecaf7-2d7b-80a4-8d18-fa032da050cf" dir="auto"/><h2 id="3a6ecaf7-2d7b-8099-8ae0-dc04075e4eb0" class="" dir="auto">Communication Objective</h2><p id="3a6ecaf7-2d7b-803d-8f6b-cd63a33dff26" class="" dir="auto">Convince consumers that every action of the product contributes to winning the battle against mosquitoes.</p><hr id="3a6ecaf7-2d7b-8017-a9ca-d3d7e51156a8" dir="auto"/><h2 id="3a6ecaf7-2d7b-80ac-b273-fbc2f34cc325" class="" dir="auto">Communication Direction</h2><p id="3a6ecaf7-2d7b-806a-ae20-f34d6b33bc37" class="" dir="auto"><strong>Protecting your home is like winning a strategic battle—every move matters.</strong></p><p id="3a6ecaf7-2d7b-8073-9293-d021c586e6ba" class="" dir="auto">The campaign reframes mosquito control as a calculated game of strategy rather than simple pest elimination.</p><hr id="3a6ecaf7-2d7b-8001-b68b-ef3089205157" dir="auto"/><h2 id="3a6ecaf7-2d7b-80fa-bebf-e014a5af2a87" class="" dir="auto">Big Idea</h2><p id="3a6ecaf7-2d7b-80c1-8907-fc0f05b27388" class="" dir="auto"><strong>Mosquitoes become chess pieces, while the All Out bottle becomes the winning chess king.</strong></p><p id="3a6ecaf7-2d7b-80b6-b532-cf7b2278e573" class="" dir="auto">Instead of showing insects as insects alone, they are transformed into defeated chess pieces, turning pest control into a visual metaphor for strategic victory.</p><hr id="3a6ecaf7-2d7b-8070-a0d2-f27228853e57" dir="auto"/><h1 id="3a6ecaf7-2d7b-80cf-a380-c48a29570272" class="" dir="auto">Execution</h1><p id="3a6ecaf7-2d7b-8011-a638-f2e490d23615" class="" dir="auto">The product is designed as the central chess king, dominating the board both visually and symbolically.</p><p id="3a6ecaf7-2d7b-80a5-ab54-e1f17628483c" class="" dir="auto">The surrounding mosquitoes are transformed into chess pieces—many lying shattered or fallen—indicating defeat.</p><p id="3a6ecaf7-2d7b-8026-8804-fc0040a10189" class="" dir="auto">The clean chessboard provides immediate context without unnecessary background distractions.</p><p id="3a6ecaf7-2d7b-8011-b60b-f8bc141e79e6" class="" dir="auto">The headline,</p><blockquote id="3a6ecaf7-2d7b-80e3-928b-cafb9b5c4c84" class="" dir="auto"><strong>EVERY MOVE COUNTS</strong></blockquote><p id="3a6ecaf7-2d7b-8013-81d0-d416fc1a0c40" class="" dir="auto">supports the chess metaphor perfectly while reinforcing the product benefit.</p><p id="3a6ecaf7-2d7b-801d-8573-f0a80b779c44" class="" dir="auto">The supporting copy,</p><blockquote id="3a6ecaf7-2d7b-8017-bebf-cc68730d14d8" class="" dir="auto"><strong>Protect your home with every move</strong></blockquote><p id="3a6ecaf7-2d7b-803a-ad81-f3918001e2fd" class="" dir="auto">bridges the metaphor back to the real-world product benefit.</p><hr id="3a6ecaf7-2d7b-8052-b222-e3588c16baef" dir="auto"/><h1 id="3a6ecaf7-2d7b-80ad-b1b7-c4a6130f4a13" class="" dir="auto">Visual Thinking Systems</h1><table id="3a6ecaf7-2d7b-8077-b51d-f42a71e9a45b" class="simple-table" dir="ltr"><thead class="simple-table-header"><tr id="3a6ecaf7-2d7b-8007-89f0-c3fceaa183da" dir="ltr"><th id="bgZb" class="simple-table-header-color simple-table-header">Visual Thinking System</th><th id="&gt;drX" class="simple-table-header-color simple-table-header">Role</th><th id="v:kn" class="simple-table-header-color simple-table-header">Strength</th></tr></thead><tbody><tr id="3a6ecaf7-2d7b-80d9-a08e-c6805e43ab6d" dir="ltr"><td id="bgZb" class=""><strong>Object Replacement Metaphor Ads</strong></td><td id="&gt;drX" class=""><strong>Primary</strong></td><td id="v:kn" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8001-a2b5-eb238dc9e0b2" dir="ltr"><td id="bgZb" class="">Visual Metaphor Ads</td><td id="&gt;drX" class="">Secondary</td><td id="v:kn" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-80e9-b2b3-cc62d7daff48" dir="ltr"><td id="bgZb" class="">Symbolic Concept Ads</td><td id="&gt;drX" class="">Secondary</td><td id="v:kn" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8056-b1d4-f85dc8573e90" dir="ltr"><td id="bgZb" class="">Product Benefit Conceptual Ads</td><td id="&gt;drX" class="">Secondary</td><td id="v:kn" class="">★★★★★</td></tr><tr id="3a6ecaf7-2d7b-8003-9f36-f252a0634801" dir="ltr"><td id="bgZb" class="">Scale and Proportion Ads</td><td id="&gt;drX" class="">Secondary</td><td id="v:kn" class="">★★★☆☆</td></tr></tbody></table><hr id="3a6ecaf7-2d7b-800f-8dec-df425b3b2124" dir="auto"/><h1 id="3a6ecaf7-2d7b-8080-836f-e63e48201d19" class="" dir="auto">Why This Advertisement Works</h1><ul id="3a6ecaf7-2d7b-8018-a005-e9124e23e6bd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The metaphor is immediately understandable.</li></ul><ul id="3a6ecaf7-2d7b-80fb-a7f2-e7ff11cca33d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The product itself becomes the hero rather than merely sitting inside the composition.</li></ul><ul id="3a6ecaf7-2d7b-8055-b659-d08cfa4834bd" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Chess naturally communicates intelligence, planning, and victory.</li></ul><ul id="3a6ecaf7-2d7b-8009-ac0b-e4a4162a09de" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The visual and headline reinforce each other instead of communicating separate ideas.</li></ul><ul id="3a6ecaf7-2d7b-804b-a000-f4377276829d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Every object in the composition contributes to the central message.</li></ul><hr id="3a6ecaf7-2d7b-8086-8634-d871f79b7486" dir="auto"/><h1 id="3a6ecaf7-2d7b-8070-abf4-d9b983205108" class="" dir="auto">Reusable Principles</h1><h3 id="3a6ecaf7-2d7b-80f9-9ef4-e7c1ddd397dd" class="" dir="auto">Principle 1</h3><p id="3a6ecaf7-2d7b-8021-9351-f5d7d5854db6" class="" dir="auto">Choose a metaphor whose inherent meaning already supports the communication objective.</p><hr id="3a6ecaf7-2d7b-8018-85a3-e97a9bb860ff" dir="auto"/><h3 id="3a6ecaf7-2d7b-8044-a4b3-f94bf3a2be5b" class="" dir="auto">Principle 2</h3><p id="3a6ecaf7-2d7b-806c-bd08-eb72e5cc0ef5" class="" dir="auto">Transform both the product and the problem into elements of the same conceptual world.</p><p id="3a6ecaf7-2d7b-80de-8390-ed9b9a00638f" class="" dir="auto">Here, the product and mosquitoes both belong to the &quot;game of chess,&quot; making the visual system coherent.</p><hr id="3a6ecaf7-2d7b-809c-8467-c9ee75a7f896" dir="auto"/><h3 id="3a6ecaf7-2d7b-8078-9ab6-d808921e626c" class="" dir="auto">Principle 3</h3><p id="3a6ecaf7-2d7b-8072-860f-fea3c6aaccd2" class="" dir="auto">A successful replacement metaphor preserves instant recognizability of both the original object and the replacement object.</p><p id="3a6ecaf7-2d7b-8078-b505-c790430846bf" class="" dir="auto">The viewer simultaneously recognizes:</p><ul id="3a6ecaf7-2d7b-805d-96af-c8dde3b451e7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">mosquito</li></ul><ul id="3a6ecaf7-2d7b-80f3-a583-f2f49980d927" class="bulleted-list" dir="auto"><li style="list-style-type:disc">chess piece</li></ul><p id="3a6ecaf7-2d7b-80ab-8f4b-fdc0a0570536" class="" dir="auto">This dual recognition creates the &quot;aha&quot; moment.</p><hr id="3a6ecaf7-2d7b-8068-96ab-dc6f240b8e1e" dir="auto"/><h3 id="3a6ecaf7-2d7b-80f2-8dd6-caf26cb58aff" class="" dir="auto">Principle 4</h3><p id="3a6ecaf7-2d7b-80ce-a26f-f415942f09d4" class="" dir="auto">When the metaphor is strong, the headline can remain extremely simple because the image carries most of the communication.</p><hr id="3a6ecaf7-2d7b-80f9-803c-ee1ae1bf33f4" dir="auto"/><h1 id="3a6ecaf7-2d7b-80d4-be93-faf4fba7dc97" class="" dir="auto">Critical Evaluation</h1><h3 id="3a6ecaf7-2d7b-804c-8716-f0479d854e44" class="" dir="auto">Strengths</h3><ul id="3a6ecaf7-2d7b-807e-95ea-c0149a60b1c4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent conceptual clarity.</li></ul><ul id="3a6ecaf7-2d7b-80de-8687-e788cc2131f5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong integration between headline and visual.</li></ul><ul id="3a6ecaf7-2d7b-80f4-b226-d910593da85d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product remains dominant.</li></ul><ul id="3a6ecaf7-2d7b-8059-bc38-da0500a7410f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimal composition with no distracting elements.</li></ul><ul id="3a6ecaf7-2d7b-8082-9801-cab84822b861" class="bulleted-list" dir="auto"><li style="list-style-type:disc">High memorability through a familiar strategic metaphor.</li></ul><h3 id="3a6ecaf7-2d7b-803a-91c4-c417af98de62" class="" dir="auto">Weaknesses</h3><ul id="3a6ecaf7-2d7b-80db-a588-dd3d118b36d6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The king-piece symbolism may not be equally familiar to audiences who don&#x27;t recognize chess hierarchy.</li></ul><ul id="3a6ecaf7-2d7b-80e4-b633-e08f48d952e0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The metaphor emphasizes strategy more than the product&#x27;s unique technological advantage.</li></ul><hr id="3a6ecaf7-2d7b-80ad-83d8-d41c1587ec5c" dir="auto"/><h1 id="3a6ecaf7-2d7b-8014-a162-e9ea7dfddf95" class="" dir="auto">Alternative Creative Routes</h1><p id="3a6ecaf7-2d7b-8024-ab2c-e4d6abd8d55c" class="" dir="auto">Using the same communication direction (&quot;Every move protects your home&quot;), alternative executions could include:</p><ul id="3a6ecaf7-2d7b-80d8-abe9-d95f85d74d74" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The product becoming a chess queen while mosquitoes become pawns.</li></ul><ul id="3a6ecaf7-2d7b-808c-ace7-f59e09180a49" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The product represented as the final winning move in a checkmate position.</li></ul><ul id="3a6ecaf7-2d7b-80cb-927e-cd1727b90ddc" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A chess clock where every second represents continuous protection.</li></ul><ul id="3a6ecaf7-2d7b-8017-bc8d-d2d70daf6233" class="bulleted-list" dir="auto"><li style="list-style-type:disc">A strategic board with mosquitoes trapped in unavoidable positions.</li></ul><p id="3a6ecaf7-2d7b-80ce-ac82-eef67649f812" class="" dir="auto">These maintain the same Big Idea while exploring different aspects of strategic gameplay.</p><hr id="3a6ecaf7-2d7b-803d-86f1-c58ad96efcf7" dir="auto"/><h1 id="3a6ecaf7-2d7b-800c-a22c-d19a54d85741" class="" dir="auto">Core Learning</h1><p id="3a6ecaf7-2d7b-80b8-91b7-e499be611f92" class="" dir="auto">This advertisement demonstrates that <strong>Object Replacement Metaphor</strong> can communicate <strong>strategic superiority</strong>, not just visual similarity.</p><p id="3a6ecaf7-2d7b-8078-8e3a-e5ae58aeac7b" class="" dir="auto">The metaphor succeeds because chess already represents intelligence, planning, and inevitable victory. By replacing mosquitoes with chess pieces and the product with the king, the campaign transfers those associations directly to the brand.</p><hr id="3a6ecaf7-2d7b-8061-9f2b-d3d30a67608b" dir="auto"/><h1 id="3a6ecaf7-2d7b-80a2-90f3-cff45e277516" class="" dir="auto">Related Modules</h1><h3 id="3a6ecaf7-2d7b-80a1-84e7-d4b5026c9e7e" class="" dir="auto">Primary Module</h3><ul id="3a6ecaf7-2d7b-80e4-9698-fb5924f80d9d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Object Replacement Metaphor Ads</li></ul><h3 id="3a6ecaf7-2d7b-80be-9eee-e2d86fd1d6e6" class="" dir="auto">Supporting Modules</h3><ul id="3a6ecaf7-2d7b-8041-a362-d16886f5eb88" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Visual Metaphor Ads</li></ul><ul id="3a6ecaf7-2d7b-8031-9db7-cc95a958a3c4" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Symbolic Concept Ads</li></ul><ul id="3a6ecaf7-2d7b-80d2-99ba-f384ab44858c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product Benefit Conceptual Ads</li></ul><ul id="3a6ecaf7-2d7b-80a6-bb06-c3566b0f5f1d" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale and Proportion Ads</li></ul><h3 id="3a6ecaf7-2d7b-803d-a1ae-d185ec875375" class="" dir="auto">Research Modules</h3><ul id="3a6ecaf7-2d7b-8079-95da-c380823ea9d6" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strategic Metaphors</li></ul><ul id="3a6ecaf7-2d7b-8083-aac8-c460cd2a48c0" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Product-as-Hero</li></ul><ul id="3a6ecaf7-2d7b-80ec-ba91-d2a96d754e98" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Headline–Visual Reinforcement</li></ul><ul id="3a6ecaf7-2d7b-8071-851c-d2a78370c949" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Conceptual World Building</li></ul><hr id="3a6ecaf7-2d7b-80ac-b7b0-c9af03ff19c2" dir="auto"/><h1 id="3a6ecaf7-2d7b-807a-a077-de45a004ffb8" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a6ecaf7-2d7b-8014-abbe-e44caf887f65" class="" dir="auto">Communication Strategy</h3><p id="3a6ecaf7-2d7b-800f-b378-c24c00aa05e7" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-808d-8ef1-e3f4026c37b3" class="" dir="auto">Demonstrates how a familiar strategic system (chess) can communicate product effectiveness without relying on literal demonstrations.</p><hr id="3a6ecaf7-2d7b-803d-a095-cff9f8c9465a" dir="auto"/><h3 id="3a6ecaf7-2d7b-80e8-a969-c0d84fc178d5" class="" dir="auto">Visual Thinking</h3><p id="3a6ecaf7-2d7b-801a-9346-e103bfeeb586" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-8063-952a-ec96623be37a" class="" dir="auto">Provides strong new evidence for the <strong>Object Replacement Metaphor Ads</strong> module by showing that multiple objects (product and mosquitoes) can be transformed into a unified conceptual system rather than replacing only a single object.</p><hr id="3a6ecaf7-2d7b-80b3-a726-c5892f147858" dir="auto"/><h3 id="3a6ecaf7-2d7b-8021-a42d-d488d8191cee" class="" dir="auto">Graphic Design</h3><p id="3a6ecaf7-2d7b-8020-848a-e1ba30ad63d7" class="" dir="auto">⭐⭐⭐⭐☆</p><p id="3a6ecaf7-2d7b-808e-a0a8-e5507fcdd6ab" class="" dir="auto">Excellent composition with clear hierarchy, restrained typography, strong use of negative space, and consistent visual focus. The chessboard acts as both setting and narrative device.</p><hr id="3a6ecaf7-2d7b-8059-bd7d-ead1decccded" dir="auto"/><h3 id="3a6ecaf7-2d7b-80ab-ac65-fd89d10e7843" class="" dir="auto">Photography / CGI</h3><p id="3a6ecaf7-2d7b-80c7-aceb-f0b2246e9a67" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-80ef-8f03-cc543c8f78a5" class="" dir="auto">The realism of the transformed chess pieces, material consistency, reflections, lighting, and broken fragments make the metaphor believable and visually convincing.</p><hr id="3a6ecaf7-2d7b-802e-a0ec-fba5cda855ca" dir="auto"/><h3 id="3a6ecaf7-2d7b-800f-95dc-cf0c45dcd74b" class="" dir="auto">Overall Contribution to the Operating System</h3><p id="3a6ecaf7-2d7b-80b1-9d1b-d97602494c6d" class="" dir="auto">⭐⭐⭐⭐⭐</p><p id="3a6ecaf7-2d7b-8079-986b-dd76ab305464" class="" dir="auto">This advertisement significantly strengthens the <strong>Object Replacement Metaphor Ads</strong> module. More importantly, it introduces evidence for a broader principle: <strong>the strongest replacement metaphors build an entire conceptual world</strong>, where the product, the problem, and the environment all obey the same visual logic instead of existing as isolated symbolic elements.</p><hr id="3a6ecaf7-2d7b-8031-b37b-d850d2fa7db2" dir="auto"/><h2 id="3a6ecaf7-2d7b-80bf-b3ce-eaf0538edfd5" class="" dir="auto">New Knowledge Discovered</h2><blockquote id="3a6ecaf7-2d7b-8029-a1d6-f7fae31212ec" class="" dir="auto"><strong>Replacement metaphors become substantially stronger when they transform the entire visual ecosystem rather than a single object.</strong> In this advertisement, the product, mosquitoes, battlefield, and headline all belong to the same conceptual framework (chess), creating a highly cohesive and memorable communication.</blockquote><hr id="3a6ecaf7-2d7b-808b-90ef-ef5c8b6dd75d" dir="auto"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,767 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Beyerdynamic - wireless gaming that pulls you deeper into the action</title><meta name="data-notion-page-icon" content="/icons/photo-landscape_brown.svg"/><link rel="icon" href="https://app.notion.com/icons/photo-landscape_brown.svg"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+/* For default-background callouts, render the border outline. */
+.callout.block-color-default_background {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+figure,
+aside,
+details {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding-inline: 0.125rem;
+	padding-block: 0.375rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+/*
+ * Render emoji icons using a ::before pseudo-element to keep the glyph
+ * out of the DOM textContent traversal. This avoids double-rendering icons
+ * in callouts and page titles.
+ * NOTE(slim/html-export-pseudo-icons): I can't tagref this because it will
+ * flag as a duplicate tag after codegen.
+ */
+.icon[data-emoji]::before {
+	content: attr(data-emoji);
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	margin-right: 0.4em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.tab {
+	margin: 1.25em 0;
+	padding-inline: 1rem;
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style><style>@import url('https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex-swap.min.css')</style></head><body><article id="3a5ecaf7-2d7b-80bf-8834-dfbf4b95392b" class="page sans" data-notion-page-icon="/icons/photo-landscape_brown.svg"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://app.notion.com/icons/photo-landscape_brown.svg"/></div><h1 class="page-title" dir="auto">Beyerdynamic - <em>wireless gaming that pulls you deeper into the action</em></h1><p class="page-description" dir="auto"></p></header><div class="page-body"><figure id="3a5ecaf7-2d7b-8035-b417-e17909ce24ba" class="image" data-notion-image="Beyerdynamic%20-%20wireless%20gaming%20that%20pulls%20you%20deep/image.png" dir="ltr"><a href="Beyerdynamic%20-%20wireless%20gaming%20that%20pulls%20you%20deep/image.png"><img style="width:704px" src="Beyerdynamic%20-%20wireless%20gaming%20that%20pulls%20you%20deep/image.png"/></a></figure><h1 id="3a5ecaf7-2d7b-8033-b08c-ef0144760099" class="" dir="auto">Advertisement Deconstruction</h1><h2 id="3a5ecaf7-2d7b-8017-beac-faef9ad9b363" class="" dir="auto">Basic Information</h2><p id="3a5ecaf7-2d7b-80fc-a810-cddc7d74a7d0" class="" dir="auto"><strong>Brand:</strong> Beyerdynamic</p><p id="3a5ecaf7-2d7b-8069-9827-d2747866f109" class="" dir="auto"><strong>Product:</strong> MMX 200 Wireless Gaming Headset</p><p id="3a5ecaf7-2d7b-8083-94aa-e54d072d6f94" class="" dir="auto"><strong>Industry:</strong> Gaming Audio / Consumer Electronics</p><p id="3a5ecaf7-2d7b-8025-b1f5-ca7d9416d943" class="" dir="auto"><strong>Campaign Type:</strong> Product Campaign</p><p id="3a5ecaf7-2d7b-8014-acb0-f0b090c4f958" class="" dir="auto"><strong>Headline</strong></p><blockquote id="3a5ecaf7-2d7b-80c5-a6db-e23378a66a05" class="" dir="auto"><strong>Next-Gen Sound for Next-Level Play</strong></blockquote><p id="3a5ecaf7-2d7b-80c8-b18c-dc32e24ccf2c" class="" dir="auto"><strong>Supporting Copy</strong></p><blockquote id="3a5ecaf7-2d7b-80e4-ba59-e7c0a19aa449" class="" dir="auto"><em>Feel every sound, move without limits—wireless gaming that pulls you deeper into the action.</em></blockquote><hr id="3a5ecaf7-2d7b-8023-a276-dafc0f1354ad" dir="auto"/><h1 id="3a5ecaf7-2d7b-80a4-bf8c-f9e20d6f1002" class="" dir="auto">Creative Reverse Engineering</h1><h2 id="3a5ecaf7-2d7b-8022-9454-d50e4f00c8b1" class="" dir="auto">Business Goal</h2><p id="3a5ecaf7-2d7b-8040-84c0-e64069a313bd" class="" dir="auto">Position the MMX 200 as a premium wireless gaming headset that delivers an immersive gaming experience and justifies its premium positioning.</p><hr id="3a5ecaf7-2d7b-802c-9dcc-cb20571067d4" dir="auto"/><h2 id="3a5ecaf7-2d7b-80ae-a7a8-f9df581c5d77" class="" dir="auto">Communication Objective</h2><p id="3a5ecaf7-2d7b-8088-a58d-d592bc7b8383" class="" dir="auto">Convince gamers that the headset doesn&#x27;t simply reproduce sound—it transports them into the game world.</p><p id="3a5ecaf7-2d7b-8041-bd6b-de343476e51d" class="" dir="auto">The product promise shifts from:</p><blockquote id="3a5ecaf7-2d7b-80e3-b279-c83eed093aae" class="" dir="auto">Better Audio</blockquote><p id="3a5ecaf7-2d7b-80d1-bfa6-cd9afca30323" class="" dir="auto">to</p><blockquote id="3a5ecaf7-2d7b-806e-b720-e30566ff7ef8" class="" dir="auto">Complete Immersion.</blockquote><hr id="3a5ecaf7-2d7b-80d4-9947-d150d9bd216d" dir="auto"/><h2 id="3a5ecaf7-2d7b-8079-8819-f7d744ecbb26" class="" dir="auto">Communication Direction</h2><p id="3a5ecaf7-2d7b-808b-94ca-ccb5268eff2b" class="" dir="auto">Instead of talking about:</p><ul id="3a5ecaf7-2d7b-807d-9f38-d32e0952d9a1" class="bulleted-list" dir="auto"><li style="list-style-type:disc">frequency response</li></ul><ul id="3a5ecaf7-2d7b-802a-b2c6-f11f4e41f2a8" class="bulleted-list" dir="auto"><li style="list-style-type:disc">drivers</li></ul><ul id="3a5ecaf7-2d7b-803f-8b06-ea744aa48dfb" class="bulleted-list" dir="auto"><li style="list-style-type:disc">latency</li></ul><ul id="3a5ecaf7-2d7b-808d-be1c-ce8dda3221d5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">codecs</li></ul><p id="3a5ecaf7-2d7b-80df-b2d8-fcaff551fa9a" class="" dir="auto">the campaign communicates:</p><blockquote id="3a5ecaf7-2d7b-80f2-823a-c495fca5557b" class="" dir="auto"><strong>The game becomes your reality.</strong></blockquote><p id="3a5ecaf7-2d7b-8010-82ab-c496cf24eec1" class="" dir="auto">The experience is more important than the specifications.</p><hr id="3a5ecaf7-2d7b-803b-98d3-f6d39f8b574d" dir="auto"/><h2 id="3a5ecaf7-2d7b-806d-9fd7-d0de30ffe139" class="" dir="auto">Big Idea</h2><p id="3a5ecaf7-2d7b-80b1-9381-f6d06e18d651" class="" dir="auto"><strong>The headset is so immersive that the game world escapes the screen and surrounds the player.</strong></p><p id="3a5ecaf7-2d7b-8038-a573-e5968eaceec8" class="" dir="auto">Instead of placing the gamer inside the game,</p><p id="3a5ecaf7-2d7b-8005-b316-c8b4dc5df72c" class="" dir="auto">the game is placed around the headset.</p><p id="3a5ecaf7-2d7b-8087-9dac-eb44fbf955dc" class="" dir="auto">This inversion makes the concept memorable.</p><hr id="3a5ecaf7-2d7b-8037-9650-fd9e611aa73d" dir="auto"/><h1 id="3a5ecaf7-2d7b-805a-b6cf-e021cd0b6f7a" class="" dir="auto">Visual Thinking System</h1><h2 id="3a5ecaf7-2d7b-80d8-9571-d910a78ddcfe" class="" dir="auto">Primary</h2><p id="3a5ecaf7-2d7b-8083-a679-fd05199c9bc6" class="" dir="auto"><strong>Scale and Proportion Ads</strong></p><p id="3a5ecaf7-2d7b-8083-aa39-dfa1070bcc04" class="" dir="auto">The headset becomes an enormous object dominating the landscape.</p><p id="3a5ecaf7-2d7b-80ee-914c-f94556d8aedb" class="" dir="auto">Miniature game characters reinforce the exaggerated scale.</p><hr id="3a5ecaf7-2d7b-80f2-b045-dba1ea80fae5" dir="auto"/><h2 id="3a5ecaf7-2d7b-8054-b45c-d056aa278b89" class="" dir="auto">Supporting</h2><p id="3a5ecaf7-2d7b-80bb-a3a7-d7d20037a9f5" class="" dir="auto"><strong>Environmental Conceptual Ads</strong></p><p id="3a5ecaf7-2d7b-80e4-8ee8-c1a2caee1a24" class="" dir="auto">The real environment is transformed into an extension of the gaming world.</p><p id="3a5ecaf7-2d7b-8081-b5fe-ef929f6f4440" class="" dir="auto">The battlefield exists around the product rather than inside a monitor.</p><hr id="3a5ecaf7-2d7b-80d9-8d88-fd15bd32cd0d" dir="auto"/><h1 id="3a5ecaf7-2d7b-8096-b435-f96c9453c81b" class="" dir="auto">Why This Visual Thinking System?</h1><p id="3a5ecaf7-2d7b-80a8-9b94-e25dc30d4a25" class="" dir="auto">Immersion is an invisible feature.</p><p id="3a5ecaf7-2d7b-80e7-92b9-c1cf1dcae5b4" class="" dir="auto">The designer needed a way to visualize something people cannot physically see.</p><p id="3a5ecaf7-2d7b-805a-9448-f179d6efda52" class="" dir="auto">By enlarging the headset into an environment and shrinking the game characters, the advertisement converts an abstract product benefit into an immediately understandable visual.</p><p id="3a5ecaf7-2d7b-804f-9a72-ed765076f156" class="" dir="auto">The viewer understands immersion before reading any copy.</p><hr id="3a5ecaf7-2d7b-80f5-a9bd-d5acd250f7a2" dir="auto"/><h1 id="3a5ecaf7-2d7b-805e-9143-ddeb736e4c47" class="" dir="auto">Final Execution</h1><h3 id="3a5ecaf7-2d7b-8066-81aa-c47ec4ec244c" class="" dir="auto">Hero</h3><p id="3a5ecaf7-2d7b-80c1-84e5-c5c04bcdca62" class="" dir="auto">The MMX 200 gaming headset.</p><h3 id="3a5ecaf7-2d7b-8008-9ae3-d112c5fc177d" class="" dir="auto">Supporting Elements</h3><ul id="3a5ecaf7-2d7b-8034-a873-f062278f5b7c" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Giant product dominating the composition.</li></ul><ul id="3a5ecaf7-2d7b-80e2-acbf-ea96031fc013" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Miniature soldiers.</li></ul><ul id="3a5ecaf7-2d7b-8059-8ca7-f6066b751fda" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Aircraft in the sky.</li></ul><ul id="3a5ecaf7-2d7b-8013-85af-df233335f6c5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Battlefield atmosphere.</li></ul><ul id="3a5ecaf7-2d7b-802a-9a5e-fa013f5d09db" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Natural landscape transformed into a gaming scene.</li></ul><ul id="3a5ecaf7-2d7b-806d-bd65-d3287bdbf0ed" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Minimal typography.</li></ul><ul id="3a5ecaf7-2d7b-8054-8a8f-f07a0d4aeec5" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong product visibility.</li></ul><p id="3a5ecaf7-2d7b-807d-af93-ee767d919e81" class="" dir="auto">The product remains unmistakably identifiable while functioning as the centre of the conceptual world.</p><hr id="3a5ecaf7-2d7b-80d7-b926-e464d02bcb7a" dir="auto"/><h1 id="3a5ecaf7-2d7b-8073-b0c6-da46a32bc39d" class="" dir="auto">Why This Advertisement Works</h1><h2 id="3a5ecaf7-2d7b-804a-ae27-c5568e15eb55" class="" dir="auto">1. Invisible Benefit Becomes Visible</h2><p id="3a5ecaf7-2d7b-8009-8052-cf95a8cc9738" class="" dir="auto">Immersion cannot normally be photographed.</p><p id="3a5ecaf7-2d7b-8078-8276-f9ebf6f3a799" class="" dir="auto">The visual makes it tangible.</p><hr id="3a5ecaf7-2d7b-80f5-a82b-fb75693ca88b" dir="auto"/><h2 id="3a5ecaf7-2d7b-8044-b664-e875483e436d" class="" dir="auto">2. Product Remains the Hero</h2><p id="3a5ecaf7-2d7b-80b4-abf6-c94f98eb2cad" class="" dir="auto">Despite the conceptual environment, the headset occupies most of the frame.</p><p id="3a5ecaf7-2d7b-8079-a07a-fdac9b46d78d" class="" dir="auto">The campaign never sacrifices product recognition.</p><hr id="3a5ecaf7-2d7b-80cd-a32c-cf3d3bd2391b" dir="auto"/><h2 id="3a5ecaf7-2d7b-8016-bbff-dcfaf4789c6e" class="" dir="auto">3. Immediate Storytelling</h2><p id="3a5ecaf7-2d7b-8058-a2db-ca97d365ad78" class="" dir="auto">Within seconds the viewer understands:</p><blockquote id="3a5ecaf7-2d7b-805f-b481-e651a4634afb" class="" dir="auto">This headset puts you inside the game.</blockquote><p id="3a5ecaf7-2d7b-80ca-82b1-dd06140f2bd9" class="" dir="auto">No lengthy explanation is required.</p><hr id="3a5ecaf7-2d7b-807d-bc59-dc319447fc95" dir="auto"/><h2 id="3a5ecaf7-2d7b-8032-9acc-ed3816850f4f" class="" dir="auto">4. Strong Relationship Between Copy and Visual</h2><p id="3a5ecaf7-2d7b-80ed-a23f-c757ce14cf31" class="" dir="auto">The headline,</p><blockquote id="3a5ecaf7-2d7b-802d-96ab-e918e03bad02" class="" dir="auto"><strong>Next-Level Play</strong></blockquote><p id="3a5ecaf7-2d7b-8024-b3c1-cde3af004e97" class="" dir="auto">is reinforced by the environment rather than simply describing the product.</p><p id="3a5ecaf7-2d7b-8010-95f0-ed9a0996b022" class="" dir="auto">The visual proves the promise.</p><hr id="3a5ecaf7-2d7b-8073-a4f0-da78b91b4ea2" dir="auto"/><h1 id="3a5ecaf7-2d7b-8033-975c-e9cfd58bbb68" class="" dir="auto">Reusable Principles</h1><h3 id="3a5ecaf7-2d7b-80ab-bb41-e6f1fe648764" class="" dir="auto">Principle 1</h3><p id="3a5ecaf7-2d7b-8031-b468-c2253c1bd196" class="" dir="auto">Invisible product benefits should be converted into visible experiences.</p><hr id="3a5ecaf7-2d7b-80bd-bfc8-fce3e0688206" dir="auto"/><h3 id="3a5ecaf7-2d7b-8033-b4eb-f255ce61c473" class="" dir="auto">Principle 2</h3><p id="3a5ecaf7-2d7b-8032-b51c-f9d45c434795" class="" dir="auto">Scale manipulation can communicate emotional intensity rather than physical size.</p><hr id="3a5ecaf7-2d7b-80f9-92d5-f1b923017236" dir="auto"/><h3 id="3a5ecaf7-2d7b-800e-b974-d01a0422a574" class="" dir="auto">Principle 3</h3><p id="3a5ecaf7-2d7b-80e9-8170-f3a8a791c650" class="" dir="auto">A product can become the environment without losing its identity.</p><hr id="3a5ecaf7-2d7b-8015-9bfb-d83600a0cb44" dir="auto"/><h3 id="3a5ecaf7-2d7b-80bf-8c51-c545f55f076a" class="" dir="auto">Principle 4</h3><p id="3a5ecaf7-2d7b-8062-a242-c8f043ff7076" class="" dir="auto">Conceptual exaggeration is effective when it explains the core product promise.</p><hr id="3a5ecaf7-2d7b-8073-86f3-dfb58a04e63e" dir="auto"/><h1 id="3a5ecaf7-2d7b-804b-9b3a-cb12ee0368d1" class="" dir="auto">Critical Evaluation</h1><h2 id="3a5ecaf7-2d7b-80d4-889f-d42c0d55e43d" class="" dir="auto">Strengths</h2><ul id="3a5ecaf7-2d7b-80cd-96fe-c673dd8679a7" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Excellent visualization of an intangible benefit.</li></ul><ul id="3a5ecaf7-2d7b-80cf-a4cf-eb195d779150" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Strong product dominance.</li></ul><ul id="3a5ecaf7-2d7b-808e-baf0-d8687d5227e2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Memorable execution.</li></ul><ul id="3a5ecaf7-2d7b-80b0-ac09-d7898f6ae938" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Immediate communication.</li></ul><ul id="3a5ecaf7-2d7b-80af-a717-dc06263d72e3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">High production quality.</li></ul><ul id="3a5ecaf7-2d7b-8015-b2af-c7a1b7d071ae" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Clear storytelling.</li></ul><hr id="3a5ecaf7-2d7b-800e-857b-ff6a88f24f20" dir="auto"/><h2 id="3a5ecaf7-2d7b-8058-81cb-f08ee479dec0" class="" dir="auto">Weaknesses</h2><p id="3a5ecaf7-2d7b-8082-9e3c-d46f340eccfb" class="" dir="auto">The concept is strongly tied to shooter games.</p><p id="3a5ecaf7-2d7b-809f-9478-daae169e772a" class="" dir="auto">Gamers who primarily play racing, sports, strategy, or casual games may not identify with the battlefield setting, making the communication slightly narrower than the universal promise of immersive audio.</p><hr id="3a5ecaf7-2d7b-80cd-a6bc-fe3b6e625a99" dir="auto"/><h1 id="3a5ecaf7-2d7b-806b-9dd1-dafb58225e41" class="" dir="auto">Alternative Creative Routes</h1><p id="3a5ecaf7-2d7b-808a-b72e-e0f8e02d39b9" class="" dir="auto">Alternative approaches could communicate the same promise through different visual systems:</p><ul id="3a5ecaf7-2d7b-804e-a712-c378c24ccc1f" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Different game genres (racing, fantasy, sci-fi) emerging around the headset.</li></ul><ul id="3a5ecaf7-2d7b-8085-adba-c462a1160819" class="bulleted-list" dir="auto"><li style="list-style-type:disc">The headset acting as a portal into multiple gaming worlds.</li></ul><ul id="3a5ecaf7-2d7b-8099-8500-e2784c1679c3" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental elements reacting dynamically to sound rather than military characters occupying the scene.</li></ul><hr id="3a5ecaf7-2d7b-8055-bbcf-e3017fba154f" dir="auto"/><h1 id="3a5ecaf7-2d7b-80e3-8aeb-da05fd17939b" class="" dir="auto">Core Learning</h1><p id="3a5ecaf7-2d7b-802f-93c9-fee3e11a4c5d" class="" dir="auto">This advertisement demonstrates that <strong>abstract technological benefits become more persuasive when translated into a physical visual experience</strong>.</p><p id="3a5ecaf7-2d7b-80f6-8324-ccd578bfc49d" class="" dir="auto">Rather than explaining immersion, the campaign constructs a believable world that allows the audience to experience the promise instantly.</p><hr id="3a5ecaf7-2d7b-809f-aa07-d9cd356af4d3" dir="auto"/><h1 id="3a5ecaf7-2d7b-8031-9ab1-ec56844b771e" class="" dir="auto">Related Modules</h1><h2 id="3a5ecaf7-2d7b-8008-ab65-e4b9dd3ca0ec" class="" dir="auto">Section A</h2><h3 id="3a5ecaf7-2d7b-800e-bb59-e90d104cd7c6" class="" dir="auto">Module D – Visual Communication</h3><p id="3a5ecaf7-2d7b-8045-8e6f-c1bc53f59a0a" class="" dir="auto">Transforms an invisible product feature into a visual narrative without relying on technical diagrams.</p><h3 id="3a5ecaf7-2d7b-8012-a897-fb173079516a" class="" dir="auto">Module E – From Features to Identity</h3><p id="3a5ecaf7-2d7b-803a-b89f-e516c6e3b9b1" class="" dir="auto">Moves beyond &quot;wireless gaming headset&quot; and positions the product as a gateway to immersive gaming.</p><hr id="3a5ecaf7-2d7b-808f-9f93-f1fc8d48c826" dir="auto"/><h2 id="3a5ecaf7-2d7b-8013-818e-e6b60ec02b0d" class="" dir="auto">Section B</h2><h3 id="3a5ecaf7-2d7b-802d-9a20-cf62be469436" class="" dir="auto">Module G – Generating Advertising Directions</h3><p id="3a5ecaf7-2d7b-803e-80ff-f27a3bae75f6" class="" dir="auto">Excellent example of selecting an experiential communication direction instead of a specification-driven one.</p><h3 id="3a5ecaf7-2d7b-8011-b44f-dba7e136cd15" class="" dir="auto">Future Module – Communication Objective</h3><p id="3a5ecaf7-2d7b-80de-b061-e3e59e6f6860" class="" dir="auto">Demonstrates the transition from a functional product claim to an emotional user benefit.</p><h3 id="3a5ecaf7-2d7b-802e-8e16-d7134b754774" class="" dir="auto">Future Module – Big Idea</h3><p id="3a5ecaf7-2d7b-80c0-9a6c-c7e9b8d6c139" class="" dir="auto">Strong evidence of converting a communication direction (&quot;feel inside the game&quot;) into a simple, defensible visual concept.</p><hr id="3a5ecaf7-2d7b-809b-a606-d28fd054f00f" dir="auto"/><h2 id="3a5ecaf7-2d7b-809c-bcd0-f84c6c3e09f9" class="" dir="auto">Section C</h2><ul id="3a5ecaf7-2d7b-805b-b6ef-d7e712d308a2" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Scale and Proportion Ads</li></ul><ul id="3a5ecaf7-2d7b-8090-8b28-dd671f6e32ed" class="bulleted-list" dir="auto"><li style="list-style-type:disc">Environmental Conceptual Ads</li></ul><hr id="3a5ecaf7-2d7b-8030-8c20-d94e361e8ebf" dir="auto"/><h1 id="3a5ecaf7-2d7b-80d5-bc3f-c1ff9da6e62d" class="" dir="auto">Knowledge Contribution</h1><h3 id="3a5ecaf7-2d7b-80ab-babe-d30d41d1dc64" class="" dir="auto">Creative Reasoning ★★★★★</h3><p id="3a5ecaf7-2d7b-8085-b7db-fc24b86731a4" class="" dir="auto">A strong case study in communicating an intangible product benefit through experiential storytelling rather than specifications.</p><h3 id="3a5ecaf7-2d7b-80a1-a090-d47fcfbdf96c" class="" dir="auto">Visual Thinking ★★★★★</h3><p id="3a5ecaf7-2d7b-80a9-a3ad-da7c50f646ae" class="" dir="auto">Excellent integration of <strong>Scale and Proportion Ads</strong> with <strong>Environmental Conceptual Ads</strong> to visualize immersion.</p><h3 id="3a5ecaf7-2d7b-8050-b469-ea8bd62e08f9" class="" dir="auto">Graphic Design ★★★★★</h3><p id="3a5ecaf7-2d7b-8087-8668-fe24f836d59e" class="" dir="auto">Strong composition, hierarchy, cinematic depth, and seamless integration of product and environment without compromising product recognition.</p><h3 id="3a5ecaf7-2d7b-804b-a1f8-f280ce86ed66" class="" dir="auto">Photography ★★★★★</h3><p id="3a5ecaf7-2d7b-8096-8a08-e7c7e2c61f4e" class="" dir="auto">High-end compositing, lighting consistency, perspective control, and realistic scale manipulation support the concept convincingly.</p><h3 id="3a5ecaf7-2d7b-80f9-b400-eaee65d69226" class="" dir="auto">Overall Contribution ★★★★★</h3></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
